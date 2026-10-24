@@ -1,0 +1,182 @@
+{
+  "adaptive_ladder": [
+    {
+      "start": "easy",
+      "streak": 0,
+      "correct": true,
+      "expected_diff": "easy",
+      "expected_streak": 1
+    },
+    {
+      "start": "easy",
+      "streak": 1,
+      "correct": true,
+      "expected_diff": "medium",
+      "expected_streak": 0
+    },
+    {
+      "start": "medium",
+      "streak": 0,
+      "correct": true,
+      "expected_diff": "medium",
+      "expected_streak": 1
+    },
+    {
+      "start": "medium",
+      "streak": 1,
+      "correct": true,
+      "expected_diff": "hard",
+      "expected_streak": 0
+    },
+    {
+      "start": "hard",
+      "streak": 1,
+      "correct": true,
+      "expected_diff": "hard",
+      "expected_streak": 0
+    },
+    {
+      "start": "hard",
+      "streak": 0,
+      "correct": false,
+      "expected_diff": "medium",
+      "expected_streak": 0
+    },
+    {
+      "start": "medium",
+      "streak": 1,
+      "correct": false,
+      "expected_diff": "easy",
+      "expected_streak": 0
+    },
+    {
+      "start": "easy",
+      "streak": 0,
+      "correct": false,
+      "expected_diff": "easy",
+      "expected_streak": 0
+    }
+  ],
+  "xp_calculations": [
+    {
+      "difficulty": "easy",
+      "combo": 1,
+      "attempt": 1,
+      "expected_xp": 10
+    },
+    {
+      "difficulty": "easy",
+      "combo": 3,
+      "attempt": 1,
+      "expected_xp": 12
+    },
+    {
+      "difficulty": "medium",
+      "combo": 1,
+      "attempt": 1,
+      "expected_xp": 20
+    },
+    {
+      "difficulty": "medium",
+      "combo": 5,
+      "attempt": 1,
+      "expected_xp": 28
+    },
+    {
+      "difficulty": "hard",
+      "combo": 1,
+      "attempt": 1,
+      "expected_xp": 35
+    },
+    {
+      "difficulty": "hard",
+      "combo": 15,
+      "attempt": 1,
+      "expected_xp": 70
+    },
+    {
+      "difficulty": "hard",
+      "combo": 1,
+      "attempt": 2,
+      "expected_xp": 17
+    },
+    {
+      "difficulty": "easy",
+      "combo": 2,
+      "attempt": 2,
+      "expected_xp": 5
+    }
+  ],
+  "bkt_updates": [
+    {
+      "p_known": 0.2,
+      "correct": true,
+      "difficulty": "easy",
+      "expected_p": 0.5189
+    },
+    {
+      "p_known": 0.2,
+      "correct": false,
+      "difficulty": "easy",
+      "expected_p": 0.1736
+    },
+    {
+      "p_known": 0.5,
+      "correct": true,
+      "difficulty": "medium",
+      "expected_p": 0.8152
+    },
+    {
+      "p_known": 0.5,
+      "correct": false,
+      "difficulty": "medium",
+      "expected_p": 0.25
+    },
+    {
+      "p_known": 0.8,
+      "correct": true,
+      "difficulty": "hard",
+      "expected_p": 0.9641
+    },
+    {
+      "p_known": 0.8,
+      "correct": false,
+      "difficulty": "hard",
+      "expected_p": 0.5017
+    }
+  ],
+  "mastery_labels": [
+    {
+      "p": 0.15,
+      "expected_label": "Novice"
+    },
+    {
+      "p": 0.39,
+      "expected_label": "Novice"
+    },
+    {
+      "p": 0.4,
+      "expected_label": "Learning"
+    },
+    {
+      "p": 0.69,
+      "expected_label": "Learning"
+    },
+    {
+      "p": 0.7,
+      "expected_label": "Proficient"
+    },
+    {
+      "p": 0.84,
+      "expected_label": "Proficient"
+    },
+    {
+      "p": 0.85,
+      "expected_label": "Mastered"
+    },
+    {
+      "p": 0.99,
+      "expected_label": "Mastered"
+    }
+  ]
+}
