@@ -20,9 +20,34 @@ const {
 } = useQuestState()
 
 const activeNav = ref<string>('command-center')
+const apiStatus = ref<'checking' | 'online' | 'offline'>('checking')
+
+const checkApiHealth = async () => {
+  try {
+    const res = await fetch('http://localhost:8000/api/health')
+    if (res.ok) {
+      const data = await res.json()
+      if (data.status === 'online') {
+        apiStatus.value = 'online'
+        return
+      }
+    }
+  } catch (e) {
+    // try relative url in case hosted on same origin
+    try {
+      const resRel = await fetch('/api/health')
+      if (resRel.ok) {
+        apiStatus.value = 'online'
+        return
+      }
+    } catch {}
+  }
+  apiStatus.value = 'offline'
+}
 
 onMounted(() => {
   initFromStorage()
+  checkApiHealth()
 })
 
 const handleSelectRealm = (id: RealmId) => {
@@ -178,6 +203,11 @@ const handleSolveTrial = (optionIndex: number) => {
           <button type="button" class="btn-link" @click="activeNav = 'achievements'">Vault of Glory</button>
           <span class="sep">•</span>
           <button type="button" class="btn-link" @click="resetDemoState">Reset Demo Data</button>
+          <span class="sep">•</span>
+          <div class="api-status-pill" :class="`status-${apiStatus}`" title="Vercel Python FastAPI Server Status">
+            <span class="status-dot" />
+            <span class="status-text font-mono">API: {{ apiStatus }}</span>
+          </div>
         </div>
       </div>
     </footer>
@@ -379,6 +409,49 @@ const handleSolveTrial = (optionIndex: number) => {
 
 .sep {
   color: var(--quest-parchment-faint);
+}
+
+.api-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  background: rgba(11, 19, 39, 0.6);
+  border: 1px solid var(--border-subtle);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status-online .status-dot {
+  background: #28745B;
+  box-shadow: 0 0 6px #7AE0BF;
+}
+
+.status-online .status-text {
+  color: #7AE0BF;
+}
+
+.status-offline .status-dot {
+  background: #b85042;
+  box-shadow: 0 0 6px #e07a5f;
+}
+
+.status-offline .status-text {
+  color: #e07a5f;
+}
+
+.status-checking .status-dot {
+  background: var(--quest-gold);
+}
+
+.status-checking .status-text {
+  color: var(--quest-gold);
 }
 
 @media (max-width: 1080px) {

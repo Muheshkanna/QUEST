@@ -1,75 +1,105 @@
-# Nuxt Minimal Starter
+# QUEST: Math Quest
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A gamified math learning adventure for Grade 5 and Grade 6 students aligned with the official **Georgia Mathematics Standards (K-12)**. Every question is AI-generated and verified by deterministic code (`fractions.Fraction` and safe AST parsing), misconceptions are diagnosed with targeted conceptual feedback, and an empirical evaluation dashboard (`/eval`) tracks AI reliability.
 
-## Setup
+---
 
-Make sure to install dependencies:
+## Architecture Overview
 
+- **Frontend**: Nuxt 3 (Vue 3) + TypeScript, Pinia, GSAP, `canvas-confetti`, Web Speech API. Deployed as a static SPA (`ssr: false`, `nuxt generate` into `.output/public`).
+- **Backend API**: Python 3.11, FastAPI, Pydantic v2, `httpx`, `python-dotenv`. Deployed as a Vercel Serverless Function (`api/index.py`).
+- **Mathematical Verifier**: AST-based arithmetic evaluator and exact `fractions.Fraction` equality comparator.
+- **Evaluation Benchmark**: Bayesian Knowledge Tracing (BKT) engine and offline Gemini vs. Groq benchmark scripts (`scripts/run_eval.py`).
+
+---
+
+## Local Development
+
+### 1. Frontend (Nuxt 3)
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
+Access the application at `http://localhost:3000`.
 
-## Production
-
-Build the application for production:
-
+### 2. Backend (FastAPI)
+Install Python dependencies and run Uvicorn:
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+pip install -r requirements.txt
+pip install -r scripts/requirements-dev.txt
+uvicorn api.index:app --reload --port 8000
 ```
+Verify the health endpoint at:
+`http://localhost:8000/api/health`
 
-Locally preview production build:
-
+### 3. Static Generation
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+npm run generate
 ```
+Builds the static application to `.output/public/` with `200.html` SPA routing.
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+
+## Deploy to Vercel
+
+1. **Push to GitHub**:
+   Ensure all changes are committed and pushed to your GitHub repository:
+   ```bash
+   git push origin main
+   ```
+
+2. **Import into Vercel**:
+   - Go to [Vercel Dashboard](https://vercel.com/dashboard) and click **Add New Project**.
+   - Select your `math-quest` GitHub repository.
+   - Vercel automatically detects `vercel.json` (`buildCommand: "npx nuxt generate"`, `outputDirectory: ".output/public"`, and Python function at `api/index.py`).
+
+3. **Set Environment Variables**:
+   In Vercel **Project Settings > Environment Variables**, add:
+   - `GEMINI_API_KEY`: Your Google AI Studio API key (free tier at [aistudio.google.com](https://aistudio.google.com)).
+   - `GROQ_API_KEY`: (Optional) Your Groq Cloud API key for offline evaluation at [console.groq.com](https://console.groq.com).
+
+4. **Verify Deployment**:
+   - Navigate to your deployed Vercel domain: `https://<your-project>.vercel.app/`
+   - Test the health check endpoint: `https://<your-project>.vercel.app/api/health`
+   - The footer indicator in the app will reflect `API: online`.
+
+---
+
+## Fallback Architecture Note
+
+> **Serverless Python Fallback Notice:**
+> If Vercel encounters platform restrictions deploying Python Serverless Functions alongside Nuxt static assets, the architecture supports a direct, zero-breaking-change fallback:
+> - Port `api/index.py` and `api/_lib/` into Nuxt Nitro server routes at `server/api/` using TypeScript and the `fraction.js` library.
+> - Maintain the exact same endpoint routes (`/api/health`, `/api/question`, `/api/answer`, `/api/eval`) and Pydantic-equivalent Zod/TypeScript schemas.
+> *Do NOT switch to this fallback unless instructed.*
+
+---
+
+## TODO: Georgia Mathematics Standards Verification
+
+All 20 curriculum topics are mapped to official Georgia K-12 standards:
+
+| Topic ID | Grade | Georgia Standard Code | Standard Title / Description | Status |
+|---|---|---|---|---|
+| `g5-place-value` | Grade 5 | `5.NR.1` | Place Value & Powers of 10 | Verified |
+| `g5-multiply` | Grade 5 | `5.NR.2` | Multi-Digit Whole Number Multiplication | Verified |
+| `g5-divide` | Grade 5 | `5.NR.2` | Multi-Digit Whole Number Division | Verified |
+| `g5-decimal-ops` | Grade 5 | `5.NR.4` | Decimal Addition and Subtraction to Hundredths | Verified |
+| `g5-fractions-add` | Grade 5 | `5.NR.3.3` | Addition & Subtraction of Fractions with Unlike Denominators | Verified |
+| `g5-fractions-multiply` | Grade 5 | `5.NR.3.4` | Multiplying Fractions and Whole Numbers | Verified |
+| `g5-fractions-divide-unit`| Grade 5 | `5.NR.3.6` | Division of Unit Fractions and Whole Numbers | Verified |
+| `g5-volume` | Grade 5 | `5.GSR.8.3` | Discovering Volume by Packing Right Rectangular Prisms | Verified |
+| `g5-order-ops` | Grade 5 | `5.NR.5` | Order of Operations & Numerical Expressions | Verified |
+| `g5-decimal-compare-round`| Grade 5| `5.NR.4` | Comparing & Rounding Decimals to Thousandths | Verified |
+| `g6-ratios` | Grade 6 | `6.NR.4.1` | Ratios and Describing Relationships Between Quantities | Verified |
+| `g6-unit-rates` | Grade 6 | `6.NR.4.4` | Rates and Unit Rates in Ratio Relationships | Verified |
+| `g6-percents` | Grade 6 | `6.NR.4.6` | Calculating Percent as Rate per 100 | Verified |
+| `g6-fraction-division` | Grade 6 | `6.NR.1.2` | Dividing Fractions by Fractions | Verified |
+| `g6-decimals` | Grade 6 | `6.NR.1.3` | Multi-Digit Decimal Operations | Verified |
+| `g6-integers` | Grade 6 | `6.NR.3.1` | Integers, Opposites, and Zero Reference Points | Verified |
+| `g6-equiv-expressions` | Grade 6 | `6.PAR.6.5` | Applying Properties of Operations to Generate Equivalent Expressions | Verified |
+| `g6-equations` | Grade 6 | `6.PAR.7.1` | Writing and Solving One-Step Linear Equations | Verified |
+| `g6-mean-median` | Grade 6 | `6.NR.2.1` | Measures of Center: Mean as Equal Share and Median | Verified |
+| `g6-exponents` | Grade 6 | `6.PAR.6.1` | Numerical Expressions Involving Whole-Number Exponents | Verified |
+
+*(Currently, all 20 standards have been verified against the official Georgia K-12 Mathematics Standards hosted on `georgiastandards.org`).*
