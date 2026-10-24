@@ -8,6 +8,7 @@ const props = defineProps<{
 
 const emit = defineEmits<{
   (e: 'update:activeNav', nav: string): void
+  (e: 'update:grade', grade: 5 | 6): void
   (e: 'resetDemo'): void
 }>()
 
@@ -56,6 +57,28 @@ const navItems = [
 
       <!-- Student HUD / Metrics Pill -->
       <div class="header-hud">
+        <!-- Grade Selector (5 vs 6) -->
+        <div class="hud-grade-picker" role="radiogroup" aria-label="Select Grade Level">
+          <button
+            type="button"
+            class="btn-grade-toggle"
+            :class="{ 'is-active': student.grade === 5 }"
+            @click="emit('update:grade', 5)"
+            title="Switch curriculum to Grade 5"
+          >
+            Grade 5
+          </button>
+          <button
+            type="button"
+            class="btn-grade-toggle"
+            :class="{ 'is-active': student.grade === 6 }"
+            @click="emit('update:grade', 6)"
+            title="Switch curriculum to Grade 6"
+          >
+            Grade 6
+          </button>
+        </div>
+
         <!-- Daily Streak Fire -->
         <div class="hud-streak" title="Daily Learning Streak">
           <span class="streak-icon" role="img" aria-label="Streak Flame">🔥</span>
@@ -234,6 +257,40 @@ const navItems = [
   align-items: center;
   gap: 16px;
   flex-shrink: 0;
+}
+
+.hud-grade-picker {
+  display: flex;
+  align-items: center;
+  background: rgba(16, 27, 53, 0.8);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  gap: 2px;
+}
+
+.btn-grade-toggle {
+  background: transparent;
+  border: none;
+  color: var(--quest-parchment-muted);
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.04em;
+}
+
+.btn-grade-toggle:hover {
+  color: var(--quest-parchment);
+}
+
+.btn-grade-toggle.is-active {
+  background: linear-gradient(135deg, #D9B66F 0%, #B89246 100%);
+  color: var(--quest-midnight);
+  box-shadow: 0 0 8px rgba(217, 182, 111, 0.4);
 }
 
 .hud-streak {

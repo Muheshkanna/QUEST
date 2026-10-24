@@ -163,6 +163,11 @@ export const useQuestState = () => {
     return realms.value.find((r) => r.id === selectedRealmId.value) || realms.value[0]
   })
 
+  const setGrade = (grade: 5 | 6) => {
+    student.value.grade = grade
+    persistToStorage()
+  }
+
   return {
     student,
     realms,
@@ -179,6 +184,7 @@ export const useQuestState = () => {
     awardXp,
     submitDailyTrial,
     continueAdventure,
-    resetDemoState
+    resetDemoState,
+    setGrade
   }
 }

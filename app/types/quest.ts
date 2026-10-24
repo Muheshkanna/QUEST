@@ -9,6 +9,7 @@ export interface StudentProfile {
   streakDays: number
   streakShields: number
   equippedTitle: string
+  grade: 5 | 6
 }
 
 export type RealmId = 'enchanted-forest' | 'temple-of-wisdom' | 'celestial-frontier'

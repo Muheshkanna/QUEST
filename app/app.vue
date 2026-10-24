@@ -16,11 +16,13 @@ const {
   initFromStorage,
   submitDailyTrial,
   continueAdventure,
-  resetDemoState
+  resetDemoState,
+  setGrade
 } = useQuestState()
 
 const activeNav = ref<string>('command-center')
 const apiStatus = ref<'checking' | 'online' | 'offline'>('checking')
+const selectedTopic = ref<any>(null)
 
 const checkApiHealth = async () => {
   try {
@@ -58,6 +60,18 @@ const handleContinueAdventure = () => {
   continueAdventure()
 }
 
+const handleSelectTopic = (topic: any) => {
+  selectedTopic.value = topic
+  // If the topic has an associated realm, also align the realm
+  if (topic.realm === 'Enchanted Forest') selectedRealmId.value = 'enchanted-forest'
+  else if (topic.realm === 'Temple of Wisdom') selectedRealmId.value = 'temple-of-wisdom'
+  else if (topic.realm === 'Celestial Frontier') selectedRealmId.value = 'celestial-frontier'
+}
+
+const handleUpdateGrade = (grade: 5 | 6) => {
+  setGrade(grade)
+}
+
 const handleSolveTrial = (optionIndex: number) => {
   submitDailyTrial(optionIndex)
 }
@@ -69,6 +83,7 @@ const handleSolveTrial = (optionIndex: number) => {
     <QuestHeader
       :student="student"
       v-model:active-nav="activeNav"
+      @update:grade="handleUpdateGrade"
       @reset-demo="resetDemoState"
     />
 
@@ -109,6 +124,14 @@ const handleSolveTrial = (optionIndex: number) => {
             :selected-realm-id="selectedRealmId"
             @select-realm="handleSelectRealm"
           />
+
+          <!-- Georgia Standards 20 Curriculum Topics Explorer -->
+          <TopicPicker
+            :current-grade="student.grade || 5"
+            :selected-topic-id="selectedTopic?.id"
+            @select-topic="handleSelectTopic"
+            @update:grade="handleUpdateGrade"
+          />
         </div>
 
         <!-- Character Codex Column (Right 1/3) -->
@@ -132,10 +155,10 @@ const handleSolveTrial = (optionIndex: number) => {
         <div class="subpage-header">
           <div class="subpage-breadcrumb">
             <span class="badge badge-gold">Sanctuary Map</span>
-            <span class="crumb-text">All Sectors Unlocked</span>
+            <span class="crumb-text">Grade {{ student.grade || 5 }} Territory</span>
           </div>
-          <h2 class="subpage-title font-display">The Realms of Study</h2>
-          <p class="subpage-desc">Explore the ancient tri-realm territory: from the biological proportions of the Enchanted Forest, through the deductive symmetry of the Temple of Wisdom, to the cosmic equations of the Celestial Frontier.</p>
+          <h2 class="subpage-title font-display">The Realms of Study & Curriculum Islands</h2>
+          <p class="subpage-desc">Explore the 20 official Georgia K-12 Standards topics distributed across the Enchanted Forest, Temple of Wisdom, and Celestial Frontier.</p>
         </div>
 
         <HeroBanner
@@ -147,6 +170,13 @@ const handleSolveTrial = (optionIndex: number) => {
           :realms="realms"
           :selected-realm-id="selectedRealmId"
           @select-realm="handleSelectRealm"
+        />
+
+        <TopicPicker
+          :current-grade="student.grade || 5"
+          :selected-topic-id="selectedTopic?.id"
+          @select-topic="handleSelectTopic"
+          @update:grade="handleUpdateGrade"
         />
       </div>
 

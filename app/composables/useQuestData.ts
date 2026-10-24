@@ -10,7 +10,8 @@ export const defaultStudent: StudentProfile = {
   totalXp: 18450,
   streakDays: 14,
   streakShields: 2,
-  equippedTitle: 'Seeker of Primes'
+  equippedTitle: 'Seeker of Primes',
+  grade: 5
 }
 
 export const defaultRealms: Realm[] = [
