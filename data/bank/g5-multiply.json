@@ -1,0 +1,787 @@
+{
+  "topic_id": "g5-multiply",
+  "generated_at": "2026-10-25T18:25:29.351663+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v2",
+  "counts": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6
+  },
+  "questions": [
+    {
+      "id": "g5-multiply-easy-1",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-easy-games",
+      "params": {
+        "a": 19,
+        "b": 15
+      },
+      "stem": "A player completes 15 quests. Each quest awards 19 gold coins. How much gold was earned in total?",
+      "expression": "19 * 15",
+      "options": [
+        {
+          "id": "A",
+          "text": "114",
+          "misconception_id": "forgot_the_placeholder_zero"
+        },
+        {
+          "id": "B",
+          "text": "285",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "95",
+          "misconception_id": "multiplied_only_the_ones_digit"
+        },
+        {
+          "id": "D",
+          "text": "145",
+          "misconception_id": "skipped_the_cross_products"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "285",
+      "hint": "Multiply by the ones digit first, then multiply by the tens digit with a placeholder zero.",
+      "explanation": "Multiply 19 by the ones digit 5: 19 × 5 = 95. Multiply 19 by the tens digit 1 (which is 10): 19 × 10 = 190. Add the two partial products together: 95 + 190 = 285.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-easy-2",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-easy-sports",
+      "params": {
+        "a": 16,
+        "b": 13
+      },
+      "stem": "A youth league has 13 teams. Each team has 16 players. How many players are in the league?",
+      "expression": "16 * 13",
+      "options": [
+        {
+          "id": "A",
+          "text": "48",
+          "misconception_id": "multiplied_only_the_ones_digit"
+        },
+        {
+          "id": "B",
+          "text": "118",
+          "misconception_id": "skipped_the_cross_products"
+        },
+        {
+          "id": "C",
+          "text": "208",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "29",
+          "misconception_id": "added_instead_of_multiplying"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "208",
+      "hint": "Multiply by the ones digit first, then multiply by the tens digit with a placeholder zero.",
+      "explanation": "Multiply 16 by the ones digit 3: 16 × 3 = 48. Multiply 16 by the tens digit 1 (which is 10): 16 × 10 = 160. Add the two partial products together: 48 + 160 = 208.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-easy-3",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-easy-school",
+      "params": {
+        "a": 33,
+        "b": 13
+      },
+      "stem": "A teacher orders 13 packs of colored pencils. Each pack contains 33 pencils. How many pencils were ordered?",
+      "expression": "33 * 13",
+      "options": [
+        {
+          "id": "A",
+          "text": "429",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "309",
+          "misconception_id": "skipped_the_cross_products"
+        },
+        {
+          "id": "C",
+          "text": "46",
+          "misconception_id": "added_instead_of_multiplying"
+        },
+        {
+          "id": "D",
+          "text": "1023",
+          "misconception_id": "put_the_zero_on_the_wrong_row"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "429",
+      "hint": "Multiply by the ones digit first, then multiply by the tens digit with a placeholder zero.",
+      "explanation": "Multiply 33 by the ones digit 3: 33 × 3 = 99. Multiply 33 by the tens digit 1 (which is 10): 33 × 10 = 330. Add the two partial products together: 99 + 330 = 429.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-easy-4",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-easy-nature",
+      "params": {
+        "a": 13,
+        "b": 12
+      },
+      "stem": "A garden has 12 flower beds. Each bed contains 13 tulips. How many tulips are there in total?",
+      "expression": "13 * 12",
+      "options": [
+        {
+          "id": "A",
+          "text": "25",
+          "misconception_id": "added_instead_of_multiplying"
+        },
+        {
+          "id": "B",
+          "text": "156",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "273",
+          "misconception_id": "put_the_zero_on_the_wrong_row"
+        },
+        {
+          "id": "D",
+          "text": "39",
+          "misconception_id": "forgot_the_placeholder_zero"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "156",
+      "hint": "Multiply by the ones digit first, then multiply by the tens digit with a placeholder zero.",
+      "explanation": "Multiply 13 by the ones digit 2: 13 × 2 = 26. Multiply 13 by the tens digit 1 (which is 10): 13 × 10 = 130. Add the two partial products together: 26 + 130 = 156.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-easy-5",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-easy-food",
+      "params": {
+        "a": 14,
+        "b": 15
+      },
+      "stem": "A bakery packs 15 boxes of muffins. Each box contains 14 muffins. How many muffins are there in total?",
+      "expression": "14 * 15",
+      "options": [
+        {
+          "id": "A",
+          "text": "210",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "714",
+          "misconception_id": "put_the_zero_on_the_wrong_row"
+        },
+        {
+          "id": "C",
+          "text": "84",
+          "misconception_id": "forgot_the_placeholder_zero"
+        },
+        {
+          "id": "D",
+          "text": "70",
+          "misconception_id": "multiplied_only_the_ones_digit"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "210",
+      "hint": "Multiply by the ones digit first, then multiply by the tens digit with a placeholder zero.",
+      "explanation": "Multiply 14 by the ones digit 5: 14 × 5 = 70. Multiply 14 by the tens digit 1 (which is 10): 14 × 10 = 140. Add the two partial products together: 70 + 140 = 210.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-easy-6",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-easy-games",
+      "params": {
+        "a": 19,
+        "b": 12
+      },
+      "stem": "A player completes 12 quests. Each quest awards 19 gold coins. How much gold was earned in total?",
+      "expression": "19 * 12",
+      "options": [
+        {
+          "id": "A",
+          "text": "57",
+          "misconception_id": "forgot_the_placeholder_zero"
+        },
+        {
+          "id": "B",
+          "text": "38",
+          "misconception_id": "multiplied_only_the_ones_digit"
+        },
+        {
+          "id": "C",
+          "text": "118",
+          "misconception_id": "skipped_the_cross_products"
+        },
+        {
+          "id": "D",
+          "text": "228",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "228",
+      "hint": "Multiply by the ones digit first, then multiply by the tens digit with a placeholder zero.",
+      "explanation": "Multiply 19 by the ones digit 2: 19 × 2 = 38. Multiply 19 by the tens digit 1 (which is 10): 19 × 10 = 190. Add the two partial products together: 38 + 190 = 228.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-medium-1",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-medium-food",
+      "params": {
+        "a": 37,
+        "b": 42
+      },
+      "stem": "A restaurant uses 42 sacks of potatoes each month. Each sack weighs 37 pounds. How many pounds are used in total?",
+      "expression": "37 * 42",
+      "options": [
+        {
+          "id": "A",
+          "text": "1554",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "74",
+          "misconception_id": "multiplied_only_the_ones_digit"
+        },
+        {
+          "id": "C",
+          "text": "1214",
+          "misconception_id": "skipped_the_cross_products"
+        },
+        {
+          "id": "D",
+          "text": "79",
+          "misconception_id": "added_instead_of_multiplying"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "1554",
+      "hint": "Remember to include the placeholder zero on the second row before multiplying by the tens digit.",
+      "explanation": "Multiply 37 by the ones digit 2: 37 × 2 = 74. Multiply 37 by the tens digit 4 (which is 40): 37 × 40 = 1480. Add the two partial products together: 74 + 1480 = 1554.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-medium-2",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-medium-games",
+      "params": {
+        "a": 23,
+        "b": 24
+      },
+      "stem": "An armorer crafts 24 complete suits of plate mail. Each suit requires 23 metal plates. How many plates are needed?",
+      "expression": "23 * 24",
+      "options": [
+        {
+          "id": "A",
+          "text": "412",
+          "misconception_id": "skipped_the_cross_products"
+        },
+        {
+          "id": "B",
+          "text": "47",
+          "misconception_id": "added_instead_of_multiplying"
+        },
+        {
+          "id": "C",
+          "text": "966",
+          "misconception_id": "put_the_zero_on_the_wrong_row"
+        },
+        {
+          "id": "D",
+          "text": "552",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "552",
+      "hint": "Remember to include the placeholder zero on the second row before multiplying by the tens digit.",
+      "explanation": "Multiply 23 by the ones digit 4: 23 × 4 = 92. Multiply 23 by the tens digit 2 (which is 20): 23 × 20 = 460. Add the two partial products together: 92 + 460 = 552.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-medium-3",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-medium-school",
+      "params": {
+        "a": 67,
+        "b": 41
+      },
+      "stem": "A school library receives 41 crates of reading books. Each crate holds 67 books. How many books were received?",
+      "expression": "67 * 41",
+      "options": [
+        {
+          "id": "A",
+          "text": "108",
+          "misconception_id": "added_instead_of_multiplying"
+        },
+        {
+          "id": "B",
+          "text": "2747",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "938",
+          "misconception_id": "put_the_zero_on_the_wrong_row"
+        },
+        {
+          "id": "D",
+          "text": "335",
+          "misconception_id": "forgot_the_placeholder_zero"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "2747",
+      "hint": "Remember to include the placeholder zero on the second row before multiplying by the tens digit.",
+      "explanation": "Multiply 67 by the ones digit 1: 67 × 1 = 67. Multiply 67 by the tens digit 4 (which is 40): 67 × 40 = 2680. Add the two partial products together: 67 + 2680 = 2747.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-medium-4",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-medium-sports",
+      "params": {
+        "a": 44,
+        "b": 31
+      },
+      "stem": "A city fun run has 31 running clubs participating. Each club has 44 runners. How many runners are participating?",
+      "expression": "44 * 31",
+      "options": [
+        {
+          "id": "A",
+          "text": "572",
+          "misconception_id": "put_the_zero_on_the_wrong_row"
+        },
+        {
+          "id": "B",
+          "text": "176",
+          "misconception_id": "forgot_the_placeholder_zero"
+        },
+        {
+          "id": "C",
+          "text": "1364",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "44",
+          "misconception_id": "multiplied_only_the_ones_digit"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "1364",
+      "hint": "Remember to include the placeholder zero on the second row before multiplying by the tens digit.",
+      "explanation": "Multiply 44 by the ones digit 1: 44 × 1 = 44. Multiply 44 by the tens digit 3 (which is 30): 44 × 30 = 1320. Add the two partial products together: 44 + 1320 = 1364.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-medium-5",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-medium-nature",
+      "params": {
+        "a": 32,
+        "b": 27
+      },
+      "stem": "An apple orchard has 27 rows of fruit trees. Each row has 32 trees. How many fruit trees are in the orchard?",
+      "expression": "32 * 27",
+      "options": [
+        {
+          "id": "A",
+          "text": "288",
+          "misconception_id": "forgot_the_placeholder_zero"
+        },
+        {
+          "id": "B",
+          "text": "224",
+          "misconception_id": "multiplied_only_the_ones_digit"
+        },
+        {
+          "id": "C",
+          "text": "864",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "614",
+          "misconception_id": "skipped_the_cross_products"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "864",
+      "hint": "Remember to include the placeholder zero on the second row before multiplying by the tens digit.",
+      "explanation": "Multiply 32 by the ones digit 7: 32 × 7 = 224. Multiply 32 by the tens digit 2 (which is 20): 32 × 20 = 640. Add the two partial products together: 224 + 640 = 864.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-medium-6",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-medium-food",
+      "params": {
+        "a": 28,
+        "b": 38
+      },
+      "stem": "A restaurant uses 38 sacks of potatoes each month. Each sack weighs 28 pounds. How many pounds are used in total?",
+      "expression": "28 * 38",
+      "options": [
+        {
+          "id": "A",
+          "text": "1064",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "224",
+          "misconception_id": "multiplied_only_the_ones_digit"
+        },
+        {
+          "id": "C",
+          "text": "664",
+          "misconception_id": "skipped_the_cross_products"
+        },
+        {
+          "id": "D",
+          "text": "66",
+          "misconception_id": "added_instead_of_multiplying"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "1064",
+      "hint": "Remember to include the placeholder zero on the second row before multiplying by the tens digit.",
+      "explanation": "Multiply 28 by the ones digit 8: 28 × 8 = 224. Multiply 28 by the tens digit 3 (which is 30): 28 × 30 = 840. Add the two partial products together: 224 + 840 = 1064.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-hard-1",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-hard-nature",
+      "params": {
+        "a": 96,
+        "b": 29
+      },
+      "stem": "A conservation group planted 29 designated zones of forest. Each zone received 96 oak saplings. How many saplings were planted in total?",
+      "expression": "96 * 29",
+      "options": [
+        {
+          "id": "A",
+          "text": "1854",
+          "misconception_id": "skipped_the_cross_products"
+        },
+        {
+          "id": "B",
+          "text": "125",
+          "misconception_id": "added_instead_of_multiplying"
+        },
+        {
+          "id": "C",
+          "text": "2784",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "8832",
+          "misconception_id": "put_the_zero_on_the_wrong_row"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "2784",
+      "hint": "Calculate both partial products carefully, aligning by place value before adding.",
+      "explanation": "Multiply 96 by the ones digit 9: 96 × 9 = 864. Multiply 96 by the tens digit 2 (which is 20): 96 × 20 = 1920. Add the two partial products together: 864 + 1920 = 2784.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-hard-2",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-hard-games",
+      "params": {
+        "a": 91,
+        "b": 82
+      },
+      "stem": "A fortress wall is constructed in 82 defensive tiers. Each tier requires 91 heavy granite stones. How many stones are needed to finish the wall?",
+      "expression": "91 * 82",
+      "options": [
+        {
+          "id": "A",
+          "text": "173",
+          "misconception_id": "added_instead_of_multiplying"
+        },
+        {
+          "id": "B",
+          "text": "2548",
+          "misconception_id": "put_the_zero_on_the_wrong_row"
+        },
+        {
+          "id": "C",
+          "text": "910",
+          "misconception_id": "forgot_the_placeholder_zero"
+        },
+        {
+          "id": "D",
+          "text": "7462",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "7462",
+      "hint": "Calculate both partial products carefully, aligning by place value before adding.",
+      "explanation": "Multiply 91 by the ones digit 2: 91 × 2 = 182. Multiply 91 by the tens digit 8 (which is 80): 91 × 80 = 7280. Add the two partial products together: 182 + 7280 = 7462.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-hard-3",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-hard-sports",
+      "params": {
+        "a": 79,
+        "b": 39
+      },
+      "stem": "An international track meet booked 39 accommodation suites. Each suite housed 79 athletes. How many athletes were housed in total?",
+      "expression": "79 * 39",
+      "options": [
+        {
+          "id": "A",
+          "text": "7347",
+          "misconception_id": "put_the_zero_on_the_wrong_row"
+        },
+        {
+          "id": "B",
+          "text": "948",
+          "misconception_id": "forgot_the_placeholder_zero"
+        },
+        {
+          "id": "C",
+          "text": "3081",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "711",
+          "misconception_id": "multiplied_only_the_ones_digit"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "3081",
+      "hint": "Calculate both partial products carefully, aligning by place value before adding.",
+      "explanation": "Multiply 79 by the ones digit 9: 79 × 9 = 711. Multiply 79 by the tens digit 3 (which is 30): 79 × 30 = 2370. Add the two partial products together: 711 + 2370 = 3081.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-hard-4",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-hard-school",
+      "params": {
+        "a": 69,
+        "b": 34
+      },
+      "stem": "A county school district purchased 34 mobile learning carts. Each cart holds 69 student tablets. How many tablets were purchased in total?",
+      "expression": "69 * 34",
+      "options": [
+        {
+          "id": "A",
+          "text": "2346",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "483",
+          "misconception_id": "forgot_the_placeholder_zero"
+        },
+        {
+          "id": "C",
+          "text": "276",
+          "misconception_id": "multiplied_only_the_ones_digit"
+        },
+        {
+          "id": "D",
+          "text": "1836",
+          "misconception_id": "skipped_the_cross_products"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "2346",
+      "hint": "Calculate both partial products carefully, aligning by place value before adding.",
+      "explanation": "Multiply 69 by the ones digit 4: 69 × 4 = 276. Multiply 69 by the tens digit 3 (which is 30): 69 × 30 = 2070. Add the two partial products together: 276 + 2070 = 2346.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-hard-5",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-hard-food",
+      "params": {
+        "a": 81,
+        "b": 48
+      },
+      "stem": "A regional food bank distributed 48 shipping pallets of canned goods. Each pallet carried 81 cans. How many cans were distributed in total?",
+      "expression": "81 * 48",
+      "options": [
+        {
+          "id": "A",
+          "text": "648",
+          "misconception_id": "multiplied_only_the_ones_digit"
+        },
+        {
+          "id": "B",
+          "text": "3208",
+          "misconception_id": "skipped_the_cross_products"
+        },
+        {
+          "id": "C",
+          "text": "129",
+          "misconception_id": "added_instead_of_multiplying"
+        },
+        {
+          "id": "D",
+          "text": "3888",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "3888",
+      "hint": "Calculate both partial products carefully, aligning by place value before adding.",
+      "explanation": "Multiply 81 by the ones digit 8: 81 × 8 = 648. Multiply 81 by the tens digit 4 (which is 40): 81 × 40 = 3240. Add the two partial products together: 648 + 3240 = 3888.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-multiply-hard-6",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "template_id": "g5-multiply-hard-nature",
+      "params": {
+        "a": 47,
+        "b": 53
+      },
+      "stem": "A conservation group planted 53 designated zones of forest. Each zone received 47 oak saplings. How many saplings were planted in total?",
+      "expression": "47 * 53",
+      "options": [
+        {
+          "id": "A",
+          "text": "2021",
+          "misconception_id": "skipped_the_cross_products"
+        },
+        {
+          "id": "B",
+          "text": "2491",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "100",
+          "misconception_id": "added_instead_of_multiplying"
+        },
+        {
+          "id": "D",
+          "text": "1645",
+          "misconception_id": "put_the_zero_on_the_wrong_row"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "2491",
+      "hint": "Calculate both partial products carefully, aligning by place value before adding.",
+      "explanation": "Multiply 47 by the ones digit 3: 47 × 3 = 141. Multiply 47 by the tens digit 5 (which is 50): 47 × 50 = 2350. Add the two partial products together: 141 + 2350 = 2491.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    }
+  ]
+}

@@ -14,7 +14,7 @@ STEMS = {
     ],
     "medium": [
         ("food",   "A smoothie uses {a} scoops of protein for every {b} cups of fruit. Scaling by {k}, the equivalent ratio is:"),
-        ("sports", "For every {a} laps run, a swimmer rests for {b} minutes. Using a scale factor of {k}, the equivalent ratio is:"),
+        ("sports", "A swimmer swims {a} laps for every {b} minutes of rest. Using a scale factor of {k}, the equivalent ratio is:"),
         ("school", "A class has {a} boys for every {b} girls. With {k} times the students, the equivalent ratio is:"),
         ("games",  "A game spawns {a} monsters for every {b} heroes. Scaled by {k}, the equivalent ratio is:"),
         ("nature", "A birdwatcher spots {a} hawks for every {b} sparrows. Multiplied by {k}, the equivalent ratio is:"),

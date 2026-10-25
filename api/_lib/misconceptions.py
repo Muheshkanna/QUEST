@@ -272,13 +272,10 @@ def confuses_mean_with_median_applies(p):
     mean_val = sum(p['data']) / n
     return med != mean_val
 
-def divides_sum_by_arbitrary_number(p):
-    return _fmt_num(sum(p['data']) / 2)
-def divides_sum_by_arbitrary_number_applies(p):
-    s = sorted(p['data'])
-    n = len(s)
-    corr = (sum(p['data']) / n) if p.get('target') == 'mean' else (s[n // 2] if n % 2 == 1 else (s[n // 2 - 1] + s[n // 2]) / 2)
-    return n != 2 and (sum(p['data']) / 2) != corr
+def gave_the_total_instead_of_the_mean(p):
+    return _fmt_num(sum(p['data']))
+def gave_the_total_instead_of_the_mean_applies(p):
+    return True
 
 def finds_range_instead(p):
     return _fmt_num(max(p['data']) - min(p['data']))
@@ -296,6 +293,169 @@ def ignores_middle_average_for_even_count_applies(p):
     s = sorted(p['data'])
     n = len(s)
     return n % 2 == 0 and s[n // 2 - 1] != s[n // 2]
+
+# ---- BATCH B: g5-decimal-ops ----
+def _count_dec_places(x):
+    s = str(x)
+    return len(s.split(".")[1]) if "." in s else 0
+
+def ignored_the_decimal_point(p):
+    sa = str(p['a']).replace(".", "")
+    sb = str(p['b']).replace(".", "")
+    ia, ib = int(sa), int(sb)
+    max_places = max(_count_dec_places(p['a']), _count_dec_places(p['b']))
+    val = ia + ib if p.get('op', '+') == '+' else ia - ib
+    if val < 0:
+        return None
+    s_val = str(val).zfill(max_places + 1)
+    res_str = s_val[:-max_places] + "." + s_val[-max_places:]
+    return _fmt_num(float(res_str))
+
+def ignored_the_decimal_point_applies(p):
+    if p.get('op') == '-':
+        sa = str(p['a']).replace(".", "")
+        sb = str(p['b']).replace(".", "")
+        return int(sa) - int(sb) >= 0
+    return True
+
+def subtracted_smaller_digit_from_larger(p):
+    if p.get('op', '+') != '-':
+        return None
+    max_places = max(_count_dec_places(p['a']), _count_dec_places(p['b']))
+    fmt = f"{{:.{max_places}f}}"
+    sa = fmt.format(p['a'])
+    sb = fmt.format(p['b'])
+    res_chars = []
+    for ca, cb in zip(sa, sb):
+        if ca == '.':
+            res_chars.append('.')
+        else:
+            res_chars.append(str(abs(int(ca) - int(cb))))
+    return _fmt_num(float("".join(res_chars)))
+
+def subtracted_smaller_digit_from_larger_applies(p):
+    if p.get('op') != '-':
+        return False
+    max_places = max(_count_dec_places(p['a']), _count_dec_places(p['b']))
+    fmt = f"{{:.{max_places}f}}"
+    sa = fmt.format(p['a'])
+    sb = fmt.format(p['b'])
+    for ca, cb in zip(sa, sb):
+        if ca != '.' and int(ca) < int(cb):
+            return True
+    return False
+
+def dropped_the_carry(p):
+    if p.get('op', '+') != '+':
+        return None
+    max_places = max(_count_dec_places(p['a']), _count_dec_places(p['b']))
+    fmt = f"{{:.{max_places}f}}"
+    sa = fmt.format(p['a'])
+    sb = fmt.format(p['b'])
+    ia_str, fa_str = sa.split('.')
+    ib_str, fb_str = sb.split('.')
+    max_int_len = max(len(ia_str), len(ib_str))
+    ia_str = ia_str.zfill(max_int_len)
+    ib_str = ib_str.zfill(max_int_len)
+    res_digits = []
+    for ca, cb in zip(ia_str, ib_str):
+        res_digits.append(str((int(ca) + int(cb)) % 10))
+    res_digits.append('.')
+    for ca, cb in zip(fa_str, fb_str):
+        res_digits.append(str((int(ca) + int(cb)) % 10))
+    val = float("".join(res_digits))
+    correct = round(p['a'] + p['b'], max_places)
+    if round(val, max_places) == correct:
+        return None
+    return _fmt_num(val)
+
+def dropped_the_carry_applies(p):
+    if p.get('op') != '+':
+        return False
+    return dropped_the_carry(p) is not None
+
+def used_the_wrong_operation(p):
+    if p.get('op', '+') == '+':
+        val = abs(p['a'] - p['b'])
+    else:
+        val = p['a'] + p['b']
+    return _fmt_num(round(val, 6))
+
+def used_the_wrong_operation_applies(p):
+    return True
+
+def forgot_the_decimal_point(p):
+    max_places = max(_count_dec_places(p['a']), _count_dec_places(p['b']))
+    if p.get('op', '+') == '+':
+        val = round(p['a'] + p['b'], max_places)
+    else:
+        val = round(p['a'] - p['b'], max_places)
+    fmt = f"{{:.{max_places}f}}"
+    s = fmt.format(val).replace(".", "").lstrip("0")
+    return s if s else "0"
+
+def forgot_the_decimal_point_applies(p):
+    return True
+
+# ---- BATCH B: g5-multiply ----
+def forgot_the_placeholder_zero(p):
+    a, b = p['a'], p['b']
+    return _fmt_num(a * (b % 10) + a * (b // 10))
+
+def forgot_the_placeholder_zero_applies(p):
+    return p['b'] // 10 > 0
+
+def multiplied_only_the_ones_digit(p):
+    a, b = p['a'], p['b']
+    return _fmt_num(a * (b % 10))
+
+def multiplied_only_the_ones_digit_applies(p):
+    return p['b'] % 10 > 0
+
+def skipped_the_cross_products(p):
+    a, b = p['a'], p['b']
+    return _fmt_num((10 * (a // 10)) * (10 * (b // 10)) + (a % 10) * (b % 10))
+
+def skipped_the_cross_products_applies(p):
+    return True
+
+def added_instead_of_multiplying(p):
+    return _fmt_num(p['a'] + p['b'])
+
+def added_instead_of_multiplying_applies(p):
+    return True
+
+def put_the_zero_on_the_wrong_row(p):
+    a, b = p['a'], p['b']
+    return _fmt_num(a * (b % 10) * 10 + a * (b // 10))
+
+def put_the_zero_on_the_wrong_row_applies(p):
+    return True
+
+# ---- BATCH B: g6-fraction-division ----
+def multiplied_without_flipping(p):
+    return _fmt_frac(Fraction(p['a'] * p['c'], p['b'] * p['d']))
+
+def multiplied_without_flipping_applies(p):
+    return True
+
+def flipped_the_first_fraction(p):
+    return _fmt_frac(Fraction(p['b'] * p['c'], p['a'] * p['d']))
+
+def flipped_the_first_fraction_applies(p):
+    return p['a'] * p['d'] != p['b'] * p['c']
+
+def flipped_both_fractions(p):
+    return _fmt_frac(Fraction(p['b'] * p['d'], p['a'] * p['c']))
+
+def flipped_both_fractions_applies(p):
+    return p['a'] * p['c'] != p['b'] * p['d']
+
+def added_instead_of_dividing(p):
+    return _fmt_frac(Fraction(p['a'], p['b']) + Fraction(p['c'], p['d']))
+
+def added_instead_of_dividing_applies(p):
+    return True
 
 RULES: Dict[str, Tuple] = {
     # Pilot
@@ -346,13 +506,29 @@ RULES: Dict[str, Tuple] = {
     'cross_multiplies_instead_of_multiplying_straight': (cross_multiplies_instead_of_multiplying_straight, cross_multiplies_instead_of_multiplying_straight_applies, ['g5-fractions-multiply']),
     'multiplies_tops_adds_bottoms':  (multiplies_tops_adds_bottoms,  multiplies_tops_adds_bottoms_applies,  ['g5-fractions-multiply']),
     'added_tops_multiplied_bottoms': (added_tops_multiplied_bottoms, added_tops_multiplied_bottoms_applies, ['g5-fractions-multiply']),
-    'multiplies_both_by_whole_number': (multiplies_both_by_whole_number, multiplies_both_by_whole_number_applies, ['g5-fractions-multiply']),
     # Batch A: g6-mean-median
     'finds_median_without_ordering_data': (finds_median_without_ordering_data, finds_median_without_ordering_data_applies, ['g6-mean-median']),
     'confuses_mean_with_median':     (confuses_mean_with_median,     confuses_mean_with_median_applies,     ['g6-mean-median']),
-    'divides_sum_by_arbitrary_number': (divides_sum_by_arbitrary_number, divides_sum_by_arbitrary_number_applies, ['g6-mean-median']),
+    'gave_the_total_instead_of_the_mean': (gave_the_total_instead_of_the_mean, gave_the_total_instead_of_the_mean_applies, ['g6-mean-median']),
     'finds_range_instead':           (finds_range_instead,           finds_range_instead_applies,           ['g6-mean-median']),
     'ignores_middle_average_for_even_count': (ignores_middle_average_for_even_count, ignores_middle_average_for_even_count_applies, ['g6-mean-median']),
+    # Batch B: g5-decimal-ops
+    'ignored_the_decimal_point':     (ignored_the_decimal_point,     ignored_the_decimal_point_applies,     ['g5-decimal-ops']),
+    'subtracted_smaller_digit_from_larger': (subtracted_smaller_digit_from_larger, subtracted_smaller_digit_from_larger_applies, ['g5-decimal-ops']),
+    'dropped_the_carry':             (dropped_the_carry,             dropped_the_carry_applies,             ['g5-decimal-ops']),
+    'used_the_wrong_operation':      (used_the_wrong_operation,      used_the_wrong_operation_applies,      ['g5-decimal-ops']),
+    'forgot_the_decimal_point':      (forgot_the_decimal_point,      forgot_the_decimal_point_applies,      ['g5-decimal-ops']),
+    # Batch B: g5-multiply
+    'forgot_the_placeholder_zero':   (forgot_the_placeholder_zero,   forgot_the_placeholder_zero_applies,   ['g5-multiply']),
+    'multiplied_only_the_ones_digit':(multiplied_only_the_ones_digit,multiplied_only_the_ones_digit_applies,['g5-multiply']),
+    'skipped_the_cross_products':    (skipped_the_cross_products,    skipped_the_cross_products_applies,    ['g5-multiply']),
+    'added_instead_of_multiplying':  (added_instead_of_multiplying,  added_instead_of_multiplying_applies,  ['g5-multiply']),
+    'put_the_zero_on_the_wrong_row': (put_the_zero_on_the_wrong_row, put_the_zero_on_the_wrong_row_applies, ['g5-multiply']),
+    # Batch B: g6-fraction-division
+    'multiplied_without_flipping':   (multiplied_without_flipping,   multiplied_without_flipping_applies,   ['g6-fraction-division']),
+    'flipped_the_first_fraction':    (flipped_the_first_fraction,    flipped_the_first_fraction_applies,    ['g6-fraction-division']),
+    'flipped_both_fractions':        (flipped_both_fractions,        flipped_both_fractions_applies,        ['g6-fraction-division']),
+    'added_instead_of_dividing':     (added_instead_of_dividing,     added_instead_of_dividing_applies,     ['g6-fraction-division']),
 }
 
 def apply_rule(tag: str, params: dict) -> Optional[str]:
@@ -365,3 +541,4 @@ def apply_rule(tag: str, params: dict) -> Optional[str]:
 
 def get_topic_rules(topic_id: str) -> list:
     return [tag for tag, (_, _, topics) in RULES.items() if topic_id in topics]
+

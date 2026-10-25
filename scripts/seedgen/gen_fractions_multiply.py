@@ -1,4 +1,7 @@
-"""Generator for g5-fractions-multiply."""
+"""Generator for g5-fractions-multiply.
+Every stem is a genuine 'part of a part' story problem where the total is a/b * c/d.
+Requires a/b != c/d.
+"""
 import random
 from fractions import Fraction
 from . import get_topic_positions, build_options, get_distractors, fmt_frac
@@ -7,25 +10,25 @@ TOPIC = "g5-fractions-multiply"
 
 STEMS = {
     "easy": [
-        ("food",   "A recipe calls for {a}/{b} cup of flour. You are making {w} batches. How much flour in total?"),
-        ("sports", "Each practice lap takes {a}/{b} of a mile. After {w} laps, how far did you run?"),
-        ("school", "A student spends {a}/{b} of an hour on homework. Over {w} days, how many hours total?"),
-        ("games",  "A potion needs {a}/{b} of a crystal per brew. Making {w} potions uses how many crystals?"),
-        ("nature", "A garden row needs {a}/{b} of a bag of seeds. Planting {w} rows takes how many bags?"),
+        ("food",   "A cake recipe uses {a}/{b} of a bag of flour. A baker makes a small batch using {c}/{d} of that amount. What fraction of the bag of flour is used?"),
+        ("sports", "A practice track covers {a}/{b} of a sports field. Cones mark off {c}/{d} of that track. What fraction of the sports field is marked by cones?"),
+        ("school", "A display board takes up {a}/{b} of a classroom wall. Science posters cover {c}/{d} of that board. What fraction of the wall is covered by science posters?"),
+        ("games",  "A game board fills {a}/{b} of a table. A castle map occupies {c}/{d} of that board. What fraction of the table does the castle map occupy?"),
+        ("nature", "A garden bed takes up {a}/{b} of a yard. Bean plants cover {c}/{d} of that bed. What fraction of the yard is planted with beans?"),
     ],
     "medium": [
-        ("food",   "What is {a}/{b} × {c}/{d}?"),
-        ("sports", "A runner covers {a}/{b} of a track in each sprint. After {c}/{d} of a full set, how much track?"),
-        ("school", "A paint set uses {a}/{b} of a tube per project. Over {c}/{d} of a week, how many tubes?"),
-        ("games",  "A spell uses {a}/{b} mana. At {c}/{d} power, how much mana is used?"),
-        ("nature", "A tree grows {a}/{b} of a foot per month. Over {c}/{d} of a year, how much growth?"),
+        ("food",   "A fruit bowl is {a}/{b} full of berries. Strawberries make up {c}/{d} of those berries. What fraction of the bowl is strawberries?"),
+        ("sports", "A gym locker holds {a}/{b} of the school's sports gear. Basketball gear takes up {c}/{d} of that locker. What fraction of the school's sports gear is basketball gear?"),
+        ("school", "A student spends {a}/{b} of a study session on math. Problem sets take up {c}/{d} of that math time. What fraction of the study session is spent on problem sets?"),
+        ("games",  "A treasure chest holds {a}/{b} of a dungeon's gold. Gold coins make up {c}/{d} of that loot. What fraction of the dungeon's gold is in coins?"),
+        ("nature", "A nature reserve covers {a}/{b} of a county. Oak trees cover {c}/{d} of that reserve. What fraction of the county is covered by oak trees?"),
     ],
     "hard": [
-        ("food",   "A farmer harvests {a}/{b} of a field per day. After {c}/{d} of a week, how much is harvested?"),
-        ("sports", "An athlete lifts {a}/{b} of their max weight. At {c}/{d} effort, what fraction of max?"),
-        ("school", "A textbook chapter is {a}/{b} of the book. Reading {c}/{d} of the chapter means what fraction of the whole book?"),
-        ("games",  "A treasure chest holds {a}/{b} of the dungeon's gold. Taking {c}/{d} of the chest gives what fraction of total gold?"),
-        ("nature", "A lake fills {a}/{b} of a reservoir. Draining {c}/{d} of the lake leaves what fraction of the reservoir?"),
+        ("food",   "A farmer's pantry is {a}/{b} stocked with grain. Wheat accounts for {c}/{d} of that grain. What fraction of the pantry is wheat?"),
+        ("sports", "A swimming pool fills {a}/{b} of a recreation area. The deep end occupies {c}/{d} of that pool. What fraction of the recreation area is the deep end?"),
+        ("school", "An art studio uses {a}/{b} of a school budget. Painting supplies take up {c}/{d} of that art budget. What fraction of the total budget goes to painting supplies?"),
+        ("games",  "A guild library stores {a}/{b} of the world's scrolls. Magic spells fill {c}/{d} of those scrolls. What fraction of the world's scrolls are magic spells?"),
+        ("nature", "A lake fills {a}/{b} of a valley. A wildlife sanctuary covers {c}/{d} of that lake. What fraction of the valley is the sanctuary?"),
     ],
 }
 
@@ -34,59 +37,45 @@ ALL_RULES = [
     "cross_multiplies_instead_of_multiplying_straight",
     "multiplies_tops_adds_bottoms",
     "added_tops_multiplied_bottoms",
-    "multiplies_both_by_whole_number",
 ]
 
 def _params(rng, diff):
-    """Generate fraction multiplication params.
-    Easy: whole_number * fraction (w * a/b).
-    Medium/Hard: fraction * fraction (a/b * c/d).
-    """
     if diff == "easy":
-        fracs = [(1, 3), (1, 4), (2, 5), (1, 6), (3, 4), (2, 3), (1, 5)]
-        ws = [2, 3, 4, 5]
-        for _ in range(100):
-            a, b = rng.choice(fracs)
-            w = rng.choice(ws)
-            # For whole number: params are a, b, w (meaning w * a/b)
-            # correct = w*a / b
-            p = {"a": a, "b": b, "w": w, "c": w, "d": 1}
-            return p
-        return {"a": 1, "b": 3, "w": 3, "c": 3, "d": 1}
+        fracs = [(1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (3, 4)]
+    elif diff == "medium":
+        fracs = [(2, 3), (3, 4), (2, 5), (3, 5), (1, 4), (1, 3), (4, 5)]
     else:
-        if diff == "medium":
-            fracs = [(1, 2), (1, 3), (2, 3), (1, 4), (3, 4), (1, 5), (2, 5)]
-        else:
-            fracs = [(2, 3), (3, 4), (3, 5), (4, 5), (2, 7), (5, 6), (3, 8)]
-        for _ in range(100):
-            a, b = rng.choice(fracs)
-            c, d = rng.choice(fracs)
-            # Ensure cross-multiply gives different result
-            if (a * d != a * c) or (b * c != b * d):
-                if (b + d) != (b * d):  # multiplies_tops_adds_bottoms differs
-                    if (a + c) != (a * c):  # added_tops_multiplied_bottoms differs
-                        return {"a": a, "b": b, "c": c, "d": d}
-        return {"a": 2, "b": 3, "c": 1, "d": 4}
+        fracs = [(3, 5), (4, 5), (5, 6), (3, 8), (2, 7), (3, 7), (5, 8)]
+
+    for _ in range(200):
+        a, b = rng.choice(fracs)
+        c, d = rng.choice(fracs)
+        # require a/b != c/d
+        if Fraction(a, b) == Fraction(c, d):
+            continue
+        # Ensure rules produce distinct options
+        corr = Fraction(a * c, b * d)
+        r_add = Fraction(a, b) + Fraction(c, d)
+        r_cross = Fraction(a * d, b * c)
+        r_top_mul = Fraction(a * c, b + d)
+        r_top_add = Fraction(a + c, b * d)
+        if len({corr, r_add, r_cross, r_top_mul, r_top_add}) == 5:
+            return {"a": a, "b": b, "c": c, "d": d}
+    return {"a": 2, "b": 3, "c": 1, "d": 4}
 
 def _explanation(p, correct):
-    if "w" in p and p.get("d", 1) == 1:
-        w, a, b = p["w"], p["a"], p["b"]
-        return (f"Multiply the whole number by the top of the fraction: "
-                f"{w} × {a} = {w*a}. Keep the bottom the same: {b}. "
-                f"The answer is {correct}.")
-    else:
-        a, b, c, d = p["a"], p["b"], p["c"], p["d"]
-        return (f"Multiply top × top: {a} × {c} = {a*c}. "
-                f"Multiply bottom × bottom: {b} × {d} = {b*d}. "
-                f"The answer is {correct}.")
+    a, b, c, d = p["a"], p["b"], p["c"], p["d"]
+    return (f"Multiply top × top: {a} × {c} = {a*c}. "
+            f"Multiply bottom × bottom: {b} × {d} = {b*d}. "
+            f"The answer is {correct}.")
 
 def _hint(diff):
     if diff == "easy":
-        return "Multiply the whole number by the top of the fraction. The bottom stays the same."
+        return "Find a fraction of a fraction by multiplying the tops together and the bottoms together."
     elif diff == "medium":
-        return "How do you combine the tops? How do you combine the bottoms?"
-    else:
         return "Multiply straight across: top times top, bottom times bottom, then simplify."
+    else:
+        return "Multiply the two fractions straight across to find what portion of the whole is used."
 
 def generate(seed: int = 42):
     rng = random.Random(seed)
@@ -98,12 +87,10 @@ def generate(seed: int = 42):
         rng.shuffle(stem_list)
         used = []
         attempts = 0
-        while len(used) < 6 and attempts < 300:
+        while len(used) < 6 and attempts < 400:
             attempts += 1
             p = _params(rng, diff)
-            a, b = p["a"], p["b"]
-            c = p.get("c", p.get("w", 1))
-            d = p.get("d", 1)
+            a, b, c, d = p["a"], p["b"], p["c"], p["d"]
             correct = Fraction(a * c, b * d)
             correct_text = fmt_frac(correct)
 
@@ -116,12 +103,8 @@ def generate(seed: int = 42):
 
             ctx, tmpl = stem_list[len(used) % len(stem_list)]
             template_id = f"{TOPIC}-{diff}-{ctx}"
-            if diff == "easy":
-                stem_text = tmpl.format(a=a, b=b, w=p["w"])
-                expr = f"({p['w']} * {a}) / {b}"
-            else:
-                stem_text = tmpl.format(a=a, b=b, c=c, d=d)
-                expr = f"({a} / {b}) * ({c} / {d})"
+            stem_text = tmpl.format(a=a, b=b, c=c, d=d)
+            expr = f"({a} / {b}) * ({c} / {d})"
             correct_pos = pos_map[diff][len(used)]
             options = build_options(correct_text, distractors, correct_pos)
 

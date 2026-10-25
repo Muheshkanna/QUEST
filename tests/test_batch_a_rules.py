@@ -128,15 +128,14 @@ class TestMeanMedian:
         p = {"data": [2, 4, 9], "target": "median"}
         assert M.confuses_mean_with_median_applies(p)
 
-    def test_divides_sum_by_arbitrary_number(self):
-        # [2, 4, 6, 8] sum=20 -> 20/2 = 10
-        p = {"data": [2, 4, 6, 8], "target": "mean"}
-        assert M.divides_sum_by_arbitrary_number(p) == "10"
+    def test_gave_the_total_instead_of_the_mean(self):
+        # [21, 5, 24, 15, 20] -> sum = 85 (correct mean = 17)
+        p = {"data": [21, 5, 24, 15, 20], "target": "mean"}
+        assert M.gave_the_total_instead_of_the_mean(p) == "85"
 
-    def test_divides_sum_by_arbitrary_number_applies(self):
-        # count is 4 != 2, so applies
-        p = {"data": [2, 4, 6, 8], "target": "mean"}
-        assert M.divides_sum_by_arbitrary_number_applies(p)
+    def test_gave_the_total_instead_of_the_mean_applies(self):
+        p = {"data": [21, 5, 24, 15, 20], "target": "mean"}
+        assert M.gave_the_total_instead_of_the_mean_applies(p)
 
     def test_finds_range_instead(self):
         # [2, 5, 9] -> 9 - 2 = 7

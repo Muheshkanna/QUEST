@@ -31,7 +31,13 @@ BATCH_A_TOPICS = [
     "g6-mean-median",
 ]
 
-ALL_SHIPPED_TOPICS = PILOT_TOPICS + BATCH_A_TOPICS
+BATCH_B_TOPICS = [
+    "g5-decimal-ops",
+    "g5-multiply",
+    "g6-fraction-division",
+]
+
+ALL_SHIPPED_TOPICS = PILOT_TOPICS + BATCH_A_TOPICS + BATCH_B_TOPICS
 
 def load_bank(path):
     with open(path, "r", encoding="utf-8") as f:

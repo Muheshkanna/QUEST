@@ -40,7 +40,7 @@ STEMS_MEDIAN = {
 ALL_RULES = [
     "finds_median_without_ordering_data",
     "confuses_mean_with_median",
-    "divides_sum_by_arbitrary_number",
+    "gave_the_total_instead_of_the_mean",
     "finds_range_instead",
     "ignores_middle_average_for_even_count",
 ]

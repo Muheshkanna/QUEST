@@ -1,6 +1,6 @@
 {
   "topic_id": "g6-ratios",
-  "generated_at": "2026-10-25T18:01:26.317351+00:00",
+  "generated_at": "2026-10-25T18:25:29.323811+00:00",
   "model": "template-seed",
   "prompt_version": "seed-v2",
   "counts": {
@@ -285,7 +285,7 @@
         "b": 8,
         "k": 5
       },
-      "stem": "For every 3 laps run, a swimmer rests for 8 minutes. Using a scale factor of 5, the equivalent ratio is:",
+      "stem": "A swimmer swims 3 laps for every 8 minutes of rest. Using a scale factor of 5, the equivalent ratio is:",
       "expression": "ratio_scale(3, 8, 5)",
       "options": [
         {
@@ -505,7 +505,7 @@
         "b": 7,
         "k": 4
       },
-      "stem": "For every 3 laps run, a swimmer rests for 7 minutes. Using a scale factor of 4, the equivalent ratio is:",
+      "stem": "A swimmer swims 3 laps for every 7 minutes of rest. Using a scale factor of 4, the equivalent ratio is:",
       "expression": "ratio_scale(3, 7, 4)",
       "options": [
         {

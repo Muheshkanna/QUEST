@@ -1,6 +1,6 @@
 {
   "topic_id": "g6-mean-median",
-  "generated_at": "2026-10-25T18:01:26.330746+00:00",
+  "generated_at": "2026-10-25T18:25:29.341036+00:00",
   "model": "template-seed",
   "prompt_version": "seed-v2",
   "counts": {
@@ -46,8 +46,8 @@
         },
         {
           "id": "D",
-          "text": "22.5",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "45",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         }
       ],
       "correct_index": 2,
@@ -90,8 +90,8 @@
         },
         {
           "id": "C",
-          "text": "27.5",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "55",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         },
         {
           "id": "D",
@@ -129,8 +129,8 @@
       "options": [
         {
           "id": "A",
-          "text": "22.5",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "45",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         },
         {
           "id": "B",
@@ -242,8 +242,8 @@
         },
         {
           "id": "D",
-          "text": "20.5",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "41",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         }
       ],
       "correct_index": 0,
@@ -286,8 +286,8 @@
         },
         {
           "id": "C",
-          "text": "23",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "46",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         },
         {
           "id": "D",
@@ -330,8 +330,8 @@
         },
         {
           "id": "B",
-          "text": "42.5",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "85",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         },
         {
           "id": "C",
@@ -379,8 +379,8 @@
         },
         {
           "id": "B",
-          "text": "27.5",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "55",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         },
         {
           "id": "C",
@@ -538,8 +538,8 @@
         },
         {
           "id": "D",
-          "text": "43",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "86",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         }
       ],
       "correct_index": 2,
@@ -578,8 +578,8 @@
         },
         {
           "id": "B",
-          "text": "38.5",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "77",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         },
         {
           "id": "C",
@@ -624,8 +624,8 @@
       "options": [
         {
           "id": "A",
-          "text": "133",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "266",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         },
         {
           "id": "B",
@@ -741,8 +741,8 @@
         },
         {
           "id": "D",
-          "text": "126",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "252",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         }
       ],
       "correct_index": 1,
@@ -791,8 +791,8 @@
         },
         {
           "id": "D",
-          "text": "100.5",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "201",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         }
       ],
       "correct_index": 0,
@@ -836,8 +836,8 @@
         },
         {
           "id": "C",
-          "text": "67",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "134",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         },
         {
           "id": "D",
@@ -876,8 +876,8 @@
       "options": [
         {
           "id": "A",
-          "text": "73",
-          "misconception_id": "divides_sum_by_arbitrary_number"
+          "text": "146",
+          "misconception_id": "gave_the_total_instead_of_the_mean"
         },
         {
           "id": "B",

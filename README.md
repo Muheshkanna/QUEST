@@ -81,16 +81,16 @@ All 20 curriculum topics are mapped to official Georgia K-12 standards:
 
 | Topic ID | Grade | Georgia Standard Code | Standard Title / Description | Status |
 |---|---|---|---|---|
-| `g5-place-value` | Grade 5 | `5.NR.1` | Place Value & Powers of 10 | Verified |
-| `g5-multiply` | Grade 5 | `5.NR.2.1` | Multi-Digit Whole Number Multiplication | Verified |
+| `g5-place-value` | Grade 5 | `5.NR.1` | Place Value & Powers of 10 | Unverified (cluster code) |
+| `g5-multiply` | Grade 5 | `5.NR.2` | Multi-Digit Whole Number Multiplication | Unverified (cluster code) |
 | `g5-divide` | Grade 5 | `5.NR.2.2` | Multi-Digit Whole Number Division | Verified |
-| `g5-decimal-ops` | Grade 5 | `5.NR.4` | Decimal Addition and Subtraction to Hundredths | Verified |
+| `g5-decimal-ops` | Grade 5 | `5.NR.4` | Decimal Addition and Subtraction to Hundredths | Unverified (cluster code) |
 | `g5-fractions-add` | Grade 5 | `5.NR.3.3` | Addition & Subtraction of Fractions with Unlike Denominators | Verified |
 | `g5-fractions-multiply` | Grade 5 | `5.NR.3.4` | Multiplying Fractions and Whole Numbers | Verified |
 | `g5-fractions-divide-unit`| Grade 5 | `5.NR.3.6` | Division of Unit Fractions and Whole Numbers | Verified |
 | `g5-volume` | Grade 5 | `5.GSR.8.3` | Discovering Volume by Packing Right Rectangular Prisms | Verified |
-| `g5-order-ops` | Grade 5 | `5.NR.5` | Order of Operations & Numerical Expressions | Verified |
-| `g5-decimal-compare-round`| Grade 5| `5.NR.4` | Comparing & Rounding Decimals to Thousandths | Verified |
+| `g5-order-ops` | Grade 5 | `5.NR.5` | Order of Operations & Numerical Expressions | Unverified (cluster code) |
+| `g5-decimal-compare-round`| Grade 5| `5.NR.4` | Comparing & Rounding Decimals to Thousandths | Unverified (cluster code) |
 | `g6-ratios` | Grade 6 | `6.NR.4.1` | Ratios and Describing Relationships Between Quantities | Verified |
 | `g6-unit-rates` | Grade 6 | `6.NR.4.4` | Rates and Unit Rates in Ratio Relationships | Verified |
 | `g6-percents` | Grade 6 | `6.NR.4.6` | Calculating Percent as Rate per 100 | Verified |
@@ -99,10 +99,10 @@ All 20 curriculum topics are mapped to official Georgia K-12 standards:
 | `g6-integers` | Grade 6 | `6.NR.3.1` | Integers, Opposites, and Zero Reference Points | Verified |
 | `g6-equiv-expressions` | Grade 6 | `6.PAR.6.5` | Applying Properties of Operations to Generate Equivalent Expressions | Verified |
 | `g6-equations` | Grade 6 | `6.PAR.7.2` | Writing and Solving One-Step Linear Equations | Verified |
-| `g6-mean-median` | Grade 6 | `6.NR.2.1` | Measures of Center: Mean as Equal Share and Median | Verified |
+| `g6-mean-median` | Grade 6 | `6.NR.2.1` | Measures of Center: Mean as Equal Share and Median | Unverified (needs 6.DS.8.2) |
 | `g6-exponents` | Grade 6 | `6.PAR.6.1` | Numerical Expressions Involving Whole-Number Exponents | Verified |
 
-*(All 20 standards have been confirmed against the official Georgia K-12 Mathematics Standards hosted on `georgiastandards.org`).*
+*(Standard codes confirmed against the official Georgia K-12 Mathematics Standards on `georgiastandards.org`; cluster-level codes 5.NR.1, 5.NR.2, 5.NR.4, 5.NR.5 and mismatched standard numbers are marked Unverified).*
 
 ---
 
@@ -117,8 +117,19 @@ In accordance with the content safety valve policy, only curriculum topics that 
 | `g6-percents` | Shipped (Pilot) | 18 questions | Verified (18/18) |
 | `g6-equations` | Shipped (Pilot) | 18 questions | Verified (18/18) |
 | `g5-divide` | Shipped (Pilot) | 18 questions | Verified (18/18) |
-| `g6-ratios` | Coming Soon (Batch A) | — | Awaiting Review (`data/BATCH_RULES.md`) |
-| `g6-unit-rates` | Coming Soon (Batch A) | — | Awaiting Review (`data/BATCH_RULES.md`) |
-| `g5-fractions-multiply` | Coming Soon (Batch A) | — | Awaiting Review (`data/BATCH_RULES.md`) |
-| `g6-mean-median` | Coming Soon (Batch A) | — | Awaiting Review (`data/BATCH_RULES.md`) |
-| *Other 11 Topics* | Coming Soon (Batches B–D) | — | Proposed in `data/BATCH_RULES.md` |
+| `g6-ratios` | Shipped (Batch A) | 18 questions | Verified (18/18) |
+| `g6-unit-rates` | Shipped (Batch A) | 18 questions | Verified (18/18) |
+| `g5-fractions-multiply` | Shipped (Batch A) | 18 questions | Verified (18/18) |
+| `g6-mean-median` | Shipped (Batch A) | 18 questions | Verified (18/18) |
+| `g5-decimal-ops` | Shipped (Batch B) | 18 questions | Verified (18/18) |
+| `g5-multiply` | Shipped (Batch B) | 18 questions | Verified (18/18) |
+| `g6-fraction-division` | Shipped (Batch B) | 18 questions | Verified (18/18) |
+| `g5-place-value` | Coming Soon (Incomplete) | 0 questions | Empty bank |
+| `g5-decimal-compare-round`| Coming Soon (Incomplete) | 0 questions | Empty bank |
+| `g5-fractions-divide-unit`| Coming Soon (Incomplete) | 0 questions | Empty bank |
+| `g5-order-ops` | Coming Soon (Incomplete) | 0 questions | Empty bank |
+| `g6-decimals` | Coming Soon (Incomplete) | 0 questions | Empty bank |
+| `g6-integers` | Coming Soon (Incomplete) | 0 questions | Empty bank |
+| `g6-equiv-expressions` | Coming Soon (Incomplete) | 0 questions | Empty bank |
+| `g6-exponents` | Coming Soon (Incomplete) | 0 questions | Empty bank |
+

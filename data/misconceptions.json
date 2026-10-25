@@ -168,9 +168,7 @@
     },
     {
       "id": "multiplies_both_by_whole_number",
-      "topic_ids": [
-        "g5-fractions-multiply"
-      ],
+      "topic_ids": [],
       "kid_label": "You multiplied both parts by a whole number",
       "diagnosis": "You multiplied numerator and denominator by the same whole number instead of each other.",
       "why_it_fails": "Multiplication of fractions requires multiplying across, not scaling both.",
@@ -519,15 +517,15 @@
       "applies_when": "operation_is_statistical_center"
     },
     {
-      "id": "divides_sum_by_arbitrary_number",
+      "id": "gave_the_total_instead_of_the_mean",
       "topic_ids": [
         "g6-mean-median"
       ],
-      "kid_label": "Divided by wrong number",
-      "diagnosis": "You divided the total by 2 instead of the count.",
-      "why_it_fails": "Mean uses the number of data points.",
-      "mini_example": "Sum 30, count 5 → 30/5 = 6, not 30/2.",
-      "applies_when": "operation_is_statistical_center"
+      "kid_label": "You added all the numbers up but forgot to divide by how many there are.",
+      "diagnosis": "Student added all numbers in the dataset together to find the sum, but omitted the division step to calculate the average per item.",
+      "why_it_fails": "The mean represents an equal share per quantity, which requires dividing the sum by the count.",
+      "mini_example": "For [21, 5, 24, 15, 20], sum is 85, correct mean is 85 / 5 = 17.",
+      "applies_when": "True"
     },
     {
       "id": "finds_median_without_ordering_data",
@@ -1112,6 +1110,160 @@
       "why_it_fails": "When a dataset has an even number of points, the median is the mean of the two central numbers.",
       "mini_example": "For [2, 4, 6, 8], the median is (4+6)/2 = 5, not 4.",
       "applies_when": "len(data) % 2 == 0 and middle1 != middle2"
+    },
+    {
+      "id": "ignored_the_decimal_point",
+      "topic_ids": [
+        "g5-decimal-ops"
+      ],
+      "kid_label": "You ignored the decimal points when adding or subtracting.",
+      "diagnosis": "Student stripped decimal points, operated on integers, and placed decimal point based on max decimal places.",
+      "why_it_fails": "Decimal digits correspond to different place values and must be aligned before operating.",
+      "mini_example": "3.5 + 1.25 -> 1.6 (correct: 4.75)",
+      "applies_when": "integer subtraction is not negative"
+    },
+    {
+      "id": "subtracted_smaller_digit_from_larger",
+      "topic_ids": [
+        "g5-decimal-ops"
+      ],
+      "kid_label": "You subtracted the smaller digit from the larger digit without regrouping.",
+      "diagnosis": "Student subtracted smaller digit from larger digit column by column without borrowing across place values.",
+      "why_it_fails": "Subtraction requires regrouping when the top digit is smaller than the bottom digit.",
+      "mini_example": "5.4 - 2.18 -> 3.38 (correct: 3.22)",
+      "applies_when": "regrouping needed"
+    },
+    {
+      "id": "dropped_the_carry",
+      "topic_ids": [
+        "g5-decimal-ops"
+      ],
+      "kid_label": "You forgot to carry into the next place value.",
+      "diagnosis": "Student added digits in each column but dropped the carried digit.",
+      "why_it_fails": "Summing columns that exceed 9 requires carrying into the higher place value.",
+      "mini_example": "0.9 + 0.8 -> 0.7 (correct: 1.7)",
+      "applies_when": "addition with carry"
+    },
+    {
+      "id": "used_the_wrong_operation",
+      "topic_ids": [
+        "g5-decimal-ops"
+      ],
+      "kid_label": "You performed the wrong operation.",
+      "diagnosis": "Student added instead of subtracting, or subtracted instead of adding.",
+      "why_it_fails": "Addition and subtraction are inverse operations; using the wrong one alters the relationship.",
+      "mini_example": "3.5 + 1.25 -> 2.25 (correct: 4.75)",
+      "applies_when": "True"
+    },
+    {
+      "id": "forgot_the_decimal_point",
+      "topic_ids": [
+        "g5-decimal-ops"
+      ],
+      "kid_label": "You forgot to include the decimal point in your answer.",
+      "diagnosis": "Student performed the computation correctly on the digits but omitted the decimal point entirely.",
+      "why_it_fails": "Omitting the decimal point changes the magnitude of the answer by powers of ten.",
+      "mini_example": "3.5 + 1.25 -> 475 (correct: 4.75)",
+      "applies_when": "True"
+    },
+    {
+      "id": "forgot_the_placeholder_zero",
+      "topic_ids": [
+        "g5-multiply"
+      ],
+      "kid_label": "You forgot the placeholder zero when multiplying by the tens digit.",
+      "diagnosis": "Student multiplied by the tens digit without shifting place value with a zero.",
+      "why_it_fails": "Multiplying by the tens digit yields tens, not ones; omitting the placeholder zero misaligns partial products.",
+      "mini_example": "23 x 14: 92 + 23 = 115 (correct: 322)",
+      "applies_when": "b >= 12"
+    },
+    {
+      "id": "multiplied_only_the_ones_digit",
+      "topic_ids": [
+        "g5-multiply"
+      ],
+      "kid_label": "You only multiplied by the ones digit.",
+      "diagnosis": "Student computed only the first partial product and forgot to multiply by the tens digit.",
+      "why_it_fails": "Two-digit multiplication requires multiplying by both the ones and tens digits, then combining.",
+      "mini_example": "23 x 14 -> 92 (correct: 322)",
+      "applies_when": "True"
+    },
+    {
+      "id": "skipped_the_cross_products",
+      "topic_ids": [
+        "g5-multiply"
+      ],
+      "kid_label": "You only multiplied tens times tens and ones times ones.",
+      "diagnosis": "Student multiplied corresponding place values only, ignoring the cross-product terms.",
+      "why_it_fails": "Multiplication distributes across both terms: (10a + b)(10c + d) includes cross terms 10ad and 10bc.",
+      "mini_example": "23 x 14: 200 + 12 = 212 (correct: 322)",
+      "applies_when": "True"
+    },
+    {
+      "id": "added_instead_of_multiplying",
+      "topic_ids": [
+        "g5-multiply"
+      ],
+      "kid_label": "You added the numbers instead of multiplying them.",
+      "diagnosis": "Student computed the sum of the two numbers instead of their product.",
+      "why_it_fails": "Multiplication scales quantities; addition merely combines them.",
+      "mini_example": "23 + 14 = 37 (correct: 322)",
+      "applies_when": "True"
+    },
+    {
+      "id": "put_the_zero_on_the_wrong_row",
+      "topic_ids": [
+        "g5-multiply"
+      ],
+      "kid_label": "You placed the placeholder zero on the wrong row.",
+      "diagnosis": "Student put the placeholder zero on the first partial product instead of the second.",
+      "why_it_fails": "The first partial product is multiplied by ones; only the tens product requires a place value shift.",
+      "mini_example": "23 x 14: 920 + 23 = 943 (correct: 322)",
+      "applies_when": "True"
+    },
+    {
+      "id": "multiplied_without_flipping",
+      "topic_ids": [
+        "g6-fraction-division"
+      ],
+      "kid_label": "You multiplied straight across without flipping the second fraction.",
+      "diagnosis": "Student multiplied the fractions directly without taking the reciprocal of the divisor.",
+      "why_it_fails": "Dividing by a fraction is equivalent to multiplying by its reciprocal, not multiplying directly.",
+      "mini_example": "2/3 / 1/4 -> 2/12 = 1/6 (correct: 8/3)",
+      "applies_when": "True"
+    },
+    {
+      "id": "flipped_the_first_fraction",
+      "topic_ids": [
+        "g6-fraction-division"
+      ],
+      "kid_label": "You flipped the first fraction instead of the second.",
+      "diagnosis": "Student took the reciprocal of the dividend rather than the divisor.",
+      "why_it_fails": "Division requires multiplying by the reciprocal of the divisor (second fraction), not the dividend.",
+      "mini_example": "2/3 / 1/4 -> 3/2 * 1/4 = 3/8 (correct: 8/3)",
+      "applies_when": "a*d != b*c"
+    },
+    {
+      "id": "flipped_both_fractions",
+      "topic_ids": [
+        "g6-fraction-division"
+      ],
+      "kid_label": "You flipped both fractions instead of just the divisor.",
+      "diagnosis": "Student took the reciprocal of both fractions before multiplying.",
+      "why_it_fails": "Only the divisor should be inverted when converting division to multiplication.",
+      "mini_example": "2/3 / 1/4 -> 3/2 * 4/1 = 12/2 = 6 (correct: 8/3)",
+      "applies_when": "a*c != b*d"
+    },
+    {
+      "id": "added_instead_of_dividing",
+      "topic_ids": [
+        "g6-fraction-division"
+      ],
+      "kid_label": "You added the fractions instead of dividing.",
+      "diagnosis": "Student added the two fractions instead of dividing.",
+      "why_it_fails": "Fraction division determines how many groups of the divisor fit in the dividend.",
+      "mini_example": "2/3 / 1/4 -> 11/12 (correct: 8/3)",
+      "applies_when": "True"
     }
   ]
 }

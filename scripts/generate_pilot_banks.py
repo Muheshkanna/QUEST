@@ -13,6 +13,9 @@ from scripts.seedgen.gen_ratios import generate as gen_ratios
 from scripts.seedgen.gen_unit_rates import generate as gen_unit_rates
 from scripts.seedgen.gen_fractions_multiply import generate as gen_frac_mul
 from scripts.seedgen.gen_mean_median import generate as gen_mean_median
+from scripts.seedgen.gen_decimal_ops import generate as gen_decimal_ops
+from scripts.seedgen.gen_multiply import generate as gen_multiply
+from scripts.seedgen.gen_fraction_division import generate as gen_frac_div
 
 GENERATORS = {
     # Pilot
@@ -26,6 +29,10 @@ GENERATORS = {
     "g6-unit-rates": gen_unit_rates,
     "g5-fractions-multiply": gen_frac_mul,
     "g6-mean-median": gen_mean_median,
+    # Batch B
+    "g5-decimal-ops": gen_decimal_ops,
+    "g5-multiply": gen_multiply,
+    "g6-fraction-division": gen_frac_div,
 }
 
 BANK_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "bank")

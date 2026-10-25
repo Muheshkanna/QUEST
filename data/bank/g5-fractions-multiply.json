@@ -1,6 +1,6 @@
 {
   "topic_id": "g5-fractions-multiply",
-  "generated_at": "2026-10-25T18:01:26.324476+00:00",
+  "generated_at": "2026-10-25T18:25:29.335800+00:00",
   "model": "template-seed",
   "prompt_version": "seed-v2",
   "counts": {
@@ -18,39 +18,38 @@
       "template_id": "g5-fractions-multiply-easy-games",
       "params": {
         "a": 1,
-        "b": 4,
-        "w": 3,
+        "b": 3,
         "c": 3,
-        "d": 1
+        "d": 4
       },
-      "stem": "A potion needs 1/4 of a crystal per brew. Making 3 potions uses how many crystals?",
-      "expression": "(3 * 1) / 4",
+      "stem": "A game board fills 1/3 of a table. A castle map occupies 3/4 of that board. What fraction of the table does the castle map occupy?",
+      "expression": "(1 / 3) * (3 / 4)",
       "options": [
         {
           "id": "A",
-          "text": "13/4",
+          "text": "13/12",
           "misconception_id": "added_fractions_instead"
         },
         {
           "id": "B",
-          "text": "3/4",
+          "text": "1/4",
           "misconception_id": null
         },
         {
           "id": "C",
-          "text": "1/12",
+          "text": "4/9",
           "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
         },
         {
           "id": "D",
-          "text": "3/5",
+          "text": "3/7",
           "misconception_id": "multiplies_tops_adds_bottoms"
         }
       ],
       "correct_index": 1,
-      "answer": "3/4",
-      "hint": "Multiply the whole number by the top of the fraction. The bottom stays the same.",
-      "explanation": "Multiply the whole number by the top of the fraction: 3 × 1 = 3. Keep the bottom the same: 4. The answer is 3/4.",
+      "answer": "1/4",
+      "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
+      "explanation": "Multiply top × top: 1 × 3 = 3. Multiply bottom × bottom: 3 × 4 = 12. The answer is 1/4.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -63,18 +62,17 @@
       "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-multiply-easy-sports",
       "params": {
-        "a": 1,
+        "a": 3,
         "b": 4,
-        "w": 2,
         "c": 2,
-        "d": 1
+        "d": 3
       },
-      "stem": "Each practice lap takes 1/4 of a mile. After 2 laps, how far did you run?",
-      "expression": "(2 * 1) / 4",
+      "stem": "A practice track covers 3/4 of a sports field. Cones mark off 2/3 of that track. What fraction of the sports field is marked by cones?",
+      "expression": "(3 / 4) * (2 / 3)",
       "options": [
         {
           "id": "A",
-          "text": "1/8",
+          "text": "9/8",
           "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
         },
         {
@@ -84,19 +82,19 @@
         },
         {
           "id": "C",
-          "text": "2/5",
+          "text": "6/7",
           "misconception_id": "multiplies_tops_adds_bottoms"
         },
         {
           "id": "D",
-          "text": "3/4",
+          "text": "5/12",
           "misconception_id": "added_tops_multiplied_bottoms"
         }
       ],
       "correct_index": 1,
       "answer": "1/2",
-      "hint": "Multiply the whole number by the top of the fraction. The bottom stays the same.",
-      "explanation": "Multiply the whole number by the top of the fraction: 2 × 1 = 2. Keep the bottom the same: 4. The answer is 1/2.",
+      "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
+      "explanation": "Multiply top × top: 3 × 2 = 6. Multiply bottom × bottom: 4 × 3 = 12. The answer is 1/2.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -109,40 +107,39 @@
       "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-multiply-easy-school",
       "params": {
-        "a": 2,
-        "b": 3,
-        "w": 2,
+        "a": 1,
+        "b": 2,
         "c": 2,
-        "d": 1
+        "d": 3
       },
-      "stem": "A student spends 2/3 of an hour on homework. Over 2 days, how many hours total?",
-      "expression": "(2 * 2) / 3",
+      "stem": "A display board takes up 1/2 of a classroom wall. Science posters cover 2/3 of that board. What fraction of the wall is covered by science posters?",
+      "expression": "(1 / 2) * (2 / 3)",
       "options": [
         {
           "id": "A",
-          "text": "4/3",
+          "text": "1/3",
           "misconception_id": null
         },
         {
           "id": "B",
-          "text": "1",
+          "text": "2/5",
           "misconception_id": "multiplies_tops_adds_bottoms"
         },
         {
           "id": "C",
-          "text": "2/3",
-          "misconception_id": "multiplies_both_by_whole_number"
+          "text": "1/2",
+          "misconception_id": "added_tops_multiplied_bottoms"
         },
         {
           "id": "D",
-          "text": "8/3",
+          "text": "7/6",
           "misconception_id": "added_fractions_instead"
         }
       ],
       "correct_index": 0,
-      "answer": "4/3",
-      "hint": "Multiply the whole number by the top of the fraction. The bottom stays the same.",
-      "explanation": "Multiply the whole number by the top of the fraction: 2 × 2 = 4. Keep the bottom the same: 3. The answer is 4/3.",
+      "answer": "1/3",
+      "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
+      "explanation": "Multiply top × top: 1 × 2 = 2. Multiply bottom × bottom: 2 × 3 = 6. The answer is 1/3.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -155,40 +152,39 @@
       "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-multiply-easy-nature",
       "params": {
-        "a": 3,
-        "b": 4,
-        "w": 5,
-        "c": 5,
-        "d": 1
+        "a": 1,
+        "b": 5,
+        "c": 1,
+        "d": 2
       },
-      "stem": "A garden row needs 3/4 of a bag of seeds. Planting 5 rows takes how many bags?",
-      "expression": "(5 * 3) / 4",
+      "stem": "A garden bed takes up 1/5 of a yard. Bean plants cover 1/2 of that bed. What fraction of the yard is planted with beans?",
+      "expression": "(1 / 5) * (1 / 2)",
       "options": [
         {
           "id": "A",
-          "text": "2",
+          "text": "1/5",
           "misconception_id": "added_tops_multiplied_bottoms"
         },
         {
           "id": "B",
-          "text": "3/4",
-          "misconception_id": "multiplies_both_by_whole_number"
+          "text": "7/10",
+          "misconception_id": "added_fractions_instead"
         },
         {
           "id": "C",
-          "text": "15/4",
+          "text": "1/10",
           "misconception_id": null
         },
         {
           "id": "D",
-          "text": "23/4",
-          "misconception_id": "added_fractions_instead"
+          "text": "2/5",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
         }
       ],
       "correct_index": 2,
-      "answer": "15/4",
-      "hint": "Multiply the whole number by the top of the fraction. The bottom stays the same.",
-      "explanation": "Multiply the whole number by the top of the fraction: 5 × 3 = 15. Keep the bottom the same: 4. The answer is 15/4.",
+      "answer": "1/10",
+      "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
+      "explanation": "Multiply top × top: 1 × 1 = 1. Multiply bottom × bottom: 5 × 2 = 10. The answer is 1/10.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -202,39 +198,38 @@
       "template_id": "g5-fractions-multiply-easy-food",
       "params": {
         "a": 1,
-        "b": 3,
-        "w": 2,
+        "b": 2,
         "c": 2,
-        "d": 1
+        "d": 3
       },
-      "stem": "A recipe calls for 1/3 cup of flour. You are making 2 batches. How much flour in total?",
-      "expression": "(2 * 1) / 3",
+      "stem": "A cake recipe uses 1/2 of a bag of flour. A baker makes a small batch using 2/3 of that amount. What fraction of the bag of flour is used?",
+      "expression": "(1 / 2) * (2 / 3)",
       "options": [
         {
           "id": "A",
-          "text": "2/3",
+          "text": "1/3",
           "misconception_id": null
         },
         {
           "id": "B",
-          "text": "1/3",
-          "misconception_id": "multiplies_both_by_whole_number"
-        },
-        {
-          "id": "C",
-          "text": "7/3",
+          "text": "7/6",
           "misconception_id": "added_fractions_instead"
         },
         {
-          "id": "D",
-          "text": "1/6",
+          "id": "C",
+          "text": "3/4",
           "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
+          "id": "D",
+          "text": "2/5",
+          "misconception_id": "multiplies_tops_adds_bottoms"
         }
       ],
       "correct_index": 0,
-      "answer": "2/3",
-      "hint": "Multiply the whole number by the top of the fraction. The bottom stays the same.",
-      "explanation": "Multiply the whole number by the top of the fraction: 2 × 1 = 2. Keep the bottom the same: 3. The answer is 2/3.",
+      "answer": "1/3",
+      "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
+      "explanation": "Multiply top × top: 1 × 2 = 2. Multiply bottom × bottom: 2 × 3 = 6. The answer is 1/3.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -249,38 +244,37 @@
       "params": {
         "a": 1,
         "b": 3,
-        "w": 3,
         "c": 3,
-        "d": 1
+        "d": 4
       },
-      "stem": "A potion needs 1/3 of a crystal per brew. Making 3 potions uses how many crystals?",
-      "expression": "(3 * 1) / 3",
+      "stem": "A game board fills 1/3 of a table. A castle map occupies 3/4 of that board. What fraction of the table does the castle map occupy?",
+      "expression": "(1 / 3) * (3 / 4)",
       "options": [
         {
           "id": "A",
-          "text": "10/3",
-          "misconception_id": "added_fractions_instead"
-        },
-        {
-          "id": "B",
-          "text": "1/9",
+          "text": "4/9",
           "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
         },
         {
-          "id": "C",
-          "text": "3/4",
+          "id": "B",
+          "text": "3/7",
           "misconception_id": "multiplies_tops_adds_bottoms"
         },
         {
+          "id": "C",
+          "text": "1/3",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        },
+        {
           "id": "D",
-          "text": "1",
+          "text": "1/4",
           "misconception_id": null
         }
       ],
       "correct_index": 3,
-      "answer": "1",
-      "hint": "Multiply the whole number by the top of the fraction. The bottom stays the same.",
-      "explanation": "Multiply the whole number by the top of the fraction: 3 × 1 = 3. Keep the bottom the same: 3. The answer is 1.",
+      "answer": "1/4",
+      "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
+      "explanation": "Multiply top × top: 1 × 3 = 3. Multiply bottom × bottom: 3 × 4 = 12. The answer is 1/4.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -291,41 +285,41 @@
       "standard": "5.NR.3.4",
       "difficulty": "medium",
       "verifier_type": "fraction_arithmetic",
-      "template_id": "g5-fractions-multiply-medium-nature",
+      "template_id": "g5-fractions-multiply-medium-school",
       "params": {
         "a": 1,
-        "b": 5,
-        "c": 1,
+        "b": 4,
+        "c": 2,
         "d": 5
       },
-      "stem": "A tree grows 1/5 of a foot per month. Over 1/5 of a year, how much growth?",
-      "expression": "(1 / 5) * (1 / 5)",
+      "stem": "A student spends 1/4 of a study session on math. Problem sets take up 2/5 of that math time. What fraction of the study session is spent on problem sets?",
+      "expression": "(1 / 4) * (2 / 5)",
       "options": [
         {
           "id": "A",
-          "text": "1",
-          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+          "text": "2/9",
+          "misconception_id": "multiplies_tops_adds_bottoms"
         },
         {
           "id": "B",
-          "text": "1/25",
+          "text": "1/10",
           "misconception_id": null
         },
         {
           "id": "C",
-          "text": "1/10",
-          "misconception_id": "multiplies_tops_adds_bottoms"
+          "text": "3/20",
+          "misconception_id": "added_tops_multiplied_bottoms"
         },
         {
           "id": "D",
-          "text": "2/25",
-          "misconception_id": "added_tops_multiplied_bottoms"
+          "text": "13/20",
+          "misconception_id": "added_fractions_instead"
         }
       ],
       "correct_index": 1,
-      "answer": "1/25",
-      "hint": "How do you combine the tops? How do you combine the bottoms?",
-      "explanation": "Multiply top × top: 1 × 1 = 1. Multiply bottom × bottom: 5 × 5 = 25. The answer is 1/25.",
+      "answer": "1/10",
+      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
+      "explanation": "Multiply top × top: 1 × 2 = 2. Multiply bottom × bottom: 4 × 5 = 20. The answer is 1/10.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -336,41 +330,41 @@
       "standard": "5.NR.3.4",
       "difficulty": "medium",
       "verifier_type": "fraction_arithmetic",
-      "template_id": "g5-fractions-multiply-medium-games",
+      "template_id": "g5-fractions-multiply-medium-sports",
       "params": {
-        "a": 1,
-        "b": 5,
-        "c": 3,
-        "d": 4
+        "a": 2,
+        "b": 3,
+        "c": 4,
+        "d": 5
       },
-      "stem": "A spell uses 1/5 mana. At 3/4 power, how much mana is used?",
-      "expression": "(1 / 5) * (3 / 4)",
+      "stem": "A gym locker holds 2/3 of the school's sports gear. Basketball gear takes up 4/5 of that locker. What fraction of the school's sports gear is basketball gear?",
+      "expression": "(2 / 3) * (4 / 5)",
       "options": [
         {
           "id": "A",
-          "text": "1/3",
-          "misconception_id": "multiplies_tops_adds_bottoms"
+          "text": "2/5",
+          "misconception_id": "added_tops_multiplied_bottoms"
         },
         {
           "id": "B",
-          "text": "3/20",
+          "text": "8/15",
           "misconception_id": null
         },
         {
           "id": "C",
-          "text": "1/5",
-          "misconception_id": "added_tops_multiplied_bottoms"
+          "text": "22/15",
+          "misconception_id": "added_fractions_instead"
         },
         {
           "id": "D",
-          "text": "19/20",
-          "misconception_id": "added_fractions_instead"
+          "text": "5/6",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
         }
       ],
       "correct_index": 1,
-      "answer": "3/20",
-      "hint": "How do you combine the tops? How do you combine the bottoms?",
-      "explanation": "Multiply top × top: 1 × 3 = 3. Multiply bottom × bottom: 5 × 4 = 20. The answer is 3/20.",
+      "answer": "8/15",
+      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
+      "explanation": "Multiply top × top: 2 × 4 = 8. Multiply bottom × bottom: 3 × 5 = 15. The answer is 8/15.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -381,41 +375,41 @@
       "standard": "5.NR.3.4",
       "difficulty": "medium",
       "verifier_type": "fraction_arithmetic",
-      "template_id": "g5-fractions-multiply-medium-school",
+      "template_id": "g5-fractions-multiply-medium-food",
       "params": {
-        "a": 1,
-        "b": 4,
-        "c": 1,
-        "d": 3
+        "a": 4,
+        "b": 5,
+        "c": 3,
+        "d": 4
       },
-      "stem": "A paint set uses 1/4 of a tube per project. Over 1/3 of a week, how many tubes?",
-      "expression": "(1 / 4) * (1 / 3)",
+      "stem": "A fruit bowl is 4/5 full of berries. Strawberries make up 3/4 of those berries. What fraction of the bowl is strawberries?",
+      "expression": "(4 / 5) * (3 / 4)",
       "options": [
         {
           "id": "A",
-          "text": "1/6",
-          "misconception_id": "added_tops_multiplied_bottoms"
-        },
-        {
-          "id": "B",
-          "text": "7/12",
+          "text": "31/20",
           "misconception_id": "added_fractions_instead"
         },
         {
+          "id": "B",
+          "text": "16/15",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
           "id": "C",
-          "text": "1/12",
+          "text": "3/5",
           "misconception_id": null
         },
         {
           "id": "D",
-          "text": "3/4",
-          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+          "text": "4/3",
+          "misconception_id": "multiplies_tops_adds_bottoms"
         }
       ],
       "correct_index": 2,
-      "answer": "1/12",
-      "hint": "How do you combine the tops? How do you combine the bottoms?",
-      "explanation": "Multiply top × top: 1 × 1 = 1. Multiply bottom × bottom: 4 × 3 = 12. The answer is 1/12.",
+      "answer": "3/5",
+      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
+      "explanation": "Multiply top × top: 4 × 3 = 12. Multiply bottom × bottom: 5 × 4 = 20. The answer is 3/5.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -426,41 +420,41 @@
       "standard": "5.NR.3.4",
       "difficulty": "medium",
       "verifier_type": "fraction_arithmetic",
-      "template_id": "g5-fractions-multiply-medium-food",
+      "template_id": "g5-fractions-multiply-medium-games",
       "params": {
         "a": 1,
-        "b": 4,
+        "b": 3,
         "c": 3,
-        "d": 4
+        "d": 5
       },
-      "stem": "What is 1/4 × 3/4?",
-      "expression": "(1 / 4) * (3 / 4)",
+      "stem": "A treasure chest holds 1/3 of a dungeon's gold. Gold coins make up 3/5 of that loot. What fraction of the dungeon's gold is in coins?",
+      "expression": "(1 / 3) * (3 / 5)",
       "options": [
         {
           "id": "A",
-          "text": "3/16",
+          "text": "1/5",
           "misconception_id": null
         },
         {
           "id": "B",
-          "text": "1",
-          "misconception_id": "added_fractions_instead"
-        },
-        {
-          "id": "C",
-          "text": "1/3",
+          "text": "5/9",
           "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
         },
         {
-          "id": "D",
+          "id": "C",
           "text": "3/8",
           "misconception_id": "multiplies_tops_adds_bottoms"
+        },
+        {
+          "id": "D",
+          "text": "4/15",
+          "misconception_id": "added_tops_multiplied_bottoms"
         }
       ],
       "correct_index": 0,
-      "answer": "3/16",
-      "hint": "How do you combine the tops? How do you combine the bottoms?",
-      "explanation": "Multiply top × top: 1 × 3 = 3. Multiply bottom × bottom: 4 × 4 = 16. The answer is 3/16.",
+      "answer": "1/5",
+      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
+      "explanation": "Multiply top × top: 1 × 3 = 3. Multiply bottom × bottom: 3 × 5 = 15. The answer is 1/5.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -471,41 +465,41 @@
       "standard": "5.NR.3.4",
       "difficulty": "medium",
       "verifier_type": "fraction_arithmetic",
-      "template_id": "g5-fractions-multiply-medium-sports",
+      "template_id": "g5-fractions-multiply-medium-nature",
       "params": {
-        "a": 2,
+        "a": 4,
         "b": 5,
-        "c": 1,
-        "d": 2
+        "c": 2,
+        "d": 5
       },
-      "stem": "A runner covers 2/5 of a track in each sprint. After 1/2 of a full set, how much track?",
-      "expression": "(2 / 5) * (1 / 2)",
+      "stem": "A nature reserve covers 4/5 of a county. Oak trees cover 2/5 of that reserve. What fraction of the county is covered by oak trees?",
+      "expression": "(4 / 5) * (2 / 5)",
       "options": [
         {
           "id": "A",
-          "text": "9/10",
-          "misconception_id": "added_fractions_instead"
-        },
-        {
-          "id": "B",
           "text": "4/5",
-          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
-        },
-        {
-          "id": "C",
-          "text": "2/7",
           "misconception_id": "multiplies_tops_adds_bottoms"
         },
         {
+          "id": "B",
+          "text": "6/25",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        },
+        {
+          "id": "C",
+          "text": "6/5",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
           "id": "D",
-          "text": "1/5",
+          "text": "8/25",
           "misconception_id": null
         }
       ],
       "correct_index": 3,
-      "answer": "1/5",
-      "hint": "How do you combine the tops? How do you combine the bottoms?",
-      "explanation": "Multiply top × top: 2 × 1 = 2. Multiply bottom × bottom: 5 × 2 = 10. The answer is 1/5.",
+      "answer": "8/25",
+      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
+      "explanation": "Multiply top × top: 4 × 2 = 8. Multiply bottom × bottom: 5 × 5 = 25. The answer is 8/25.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -516,41 +510,41 @@
       "standard": "5.NR.3.4",
       "difficulty": "medium",
       "verifier_type": "fraction_arithmetic",
-      "template_id": "g5-fractions-multiply-medium-nature",
+      "template_id": "g5-fractions-multiply-medium-school",
       "params": {
-        "a": 1,
-        "b": 3,
-        "c": 1,
-        "d": 5
+        "a": 3,
+        "b": 5,
+        "c": 2,
+        "d": 3
       },
-      "stem": "A tree grows 1/3 of a foot per month. Over 1/5 of a year, how much growth?",
-      "expression": "(1 / 3) * (1 / 5)",
+      "stem": "A student spends 3/5 of a study session on math. Problem sets take up 2/3 of that math time. What fraction of the study session is spent on problem sets?",
+      "expression": "(3 / 5) * (2 / 3)",
       "options": [
         {
           "id": "A",
-          "text": "5/3",
-          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+          "text": "1/3",
+          "misconception_id": "added_tops_multiplied_bottoms"
         },
         {
           "id": "B",
-          "text": "1/8",
-          "misconception_id": "multiplies_tops_adds_bottoms"
+          "text": "19/15",
+          "misconception_id": "added_fractions_instead"
         },
         {
           "id": "C",
-          "text": "1/15",
+          "text": "2/5",
           "misconception_id": null
         },
         {
           "id": "D",
-          "text": "2/15",
-          "misconception_id": "added_tops_multiplied_bottoms"
+          "text": "9/10",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
         }
       ],
       "correct_index": 2,
-      "answer": "1/15",
-      "hint": "How do you combine the tops? How do you combine the bottoms?",
-      "explanation": "Multiply top × top: 1 × 1 = 1. Multiply bottom × bottom: 3 × 5 = 15. The answer is 1/15.",
+      "answer": "2/5",
+      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
+      "explanation": "Multiply top × top: 3 × 2 = 6. Multiply bottom × bottom: 5 × 3 = 15. The answer is 2/5.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -561,41 +555,41 @@
       "standard": "5.NR.3.4",
       "difficulty": "hard",
       "verifier_type": "fraction_arithmetic",
-      "template_id": "g5-fractions-multiply-hard-nature",
+      "template_id": "g5-fractions-multiply-hard-food",
       "params": {
-        "a": 3,
-        "b": 4,
+        "a": 5,
+        "b": 8,
         "c": 3,
-        "d": 8
+        "d": 5
       },
-      "stem": "A lake fills 3/4 of a reservoir. Draining 3/8 of the lake leaves what fraction of the reservoir?",
-      "expression": "(3 / 4) * (3 / 8)",
+      "stem": "A farmer's pantry is 5/8 stocked with grain. Wheat accounts for 3/5 of that grain. What fraction of the pantry is wheat?",
+      "expression": "(5 / 8) * (3 / 5)",
       "options": [
         {
           "id": "A",
-          "text": "3/4",
-          "misconception_id": "multiplies_tops_adds_bottoms"
-        },
-        {
-          "id": "B",
-          "text": "3/16",
-          "misconception_id": "added_tops_multiplied_bottoms"
-        },
-        {
-          "id": "C",
-          "text": "9/8",
+          "text": "49/40",
           "misconception_id": "added_fractions_instead"
         },
         {
+          "id": "B",
+          "text": "25/24",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
+          "id": "C",
+          "text": "15/13",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        },
+        {
           "id": "D",
-          "text": "9/32",
+          "text": "3/8",
           "misconception_id": null
         }
       ],
       "correct_index": 3,
-      "answer": "9/32",
-      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
-      "explanation": "Multiply top × top: 3 × 3 = 9. Multiply bottom × bottom: 4 × 8 = 32. The answer is 9/32.",
+      "answer": "3/8",
+      "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
+      "explanation": "Multiply top × top: 5 × 3 = 15. Multiply bottom × bottom: 8 × 5 = 40. The answer is 3/8.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -606,41 +600,41 @@
       "standard": "5.NR.3.4",
       "difficulty": "hard",
       "verifier_type": "fraction_arithmetic",
-      "template_id": "g5-fractions-multiply-hard-food",
+      "template_id": "g5-fractions-multiply-hard-sports",
       "params": {
         "a": 3,
-        "b": 5,
-        "c": 2,
-        "d": 3
+        "b": 7,
+        "c": 3,
+        "d": 8
       },
-      "stem": "A farmer harvests 3/5 of a field per day. After 2/3 of a week, how much is harvested?",
-      "expression": "(3 / 5) * (2 / 3)",
+      "stem": "A swimming pool fills 3/7 of a recreation area. The deep end occupies 3/8 of that pool. What fraction of the recreation area is the deep end?",
+      "expression": "(3 / 7) * (3 / 8)",
       "options": [
         {
           "id": "A",
-          "text": "2/5",
+          "text": "9/56",
           "misconception_id": null
         },
         {
           "id": "B",
-          "text": "1/3",
-          "misconception_id": "added_tops_multiplied_bottoms"
+          "text": "8/7",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
         },
         {
           "id": "C",
-          "text": "19/15",
-          "misconception_id": "added_fractions_instead"
+          "text": "3/5",
+          "misconception_id": "multiplies_tops_adds_bottoms"
         },
         {
           "id": "D",
-          "text": "9/10",
-          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+          "text": "3/28",
+          "misconception_id": "added_tops_multiplied_bottoms"
         }
       ],
       "correct_index": 0,
-      "answer": "2/5",
-      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
-      "explanation": "Multiply top × top: 3 × 2 = 6. Multiply bottom × bottom: 5 × 3 = 15. The answer is 2/5.",
+      "answer": "9/56",
+      "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
+      "explanation": "Multiply top × top: 3 × 3 = 9. Multiply bottom × bottom: 7 × 8 = 56. The answer is 9/56.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -651,41 +645,41 @@
       "standard": "5.NR.3.4",
       "difficulty": "hard",
       "verifier_type": "fraction_arithmetic",
-      "template_id": "g5-fractions-multiply-hard-sports",
+      "template_id": "g5-fractions-multiply-hard-games",
       "params": {
         "a": 2,
-        "b": 3,
-        "c": 4,
+        "b": 7,
+        "c": 3,
         "d": 5
       },
-      "stem": "An athlete lifts 2/3 of their max weight. At 4/5 effort, what fraction of max?",
-      "expression": "(2 / 3) * (4 / 5)",
+      "stem": "A guild library stores 2/7 of the world's scrolls. Magic spells fill 3/5 of those scrolls. What fraction of the world's scrolls are magic spells?",
+      "expression": "(2 / 7) * (3 / 5)",
       "options": [
         {
           "id": "A",
-          "text": "22/15",
-          "misconception_id": "added_fractions_instead"
-        },
-        {
-          "id": "B",
-          "text": "5/6",
-          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
-        },
-        {
-          "id": "C",
-          "text": "1",
+          "text": "1/2",
           "misconception_id": "multiplies_tops_adds_bottoms"
         },
         {
+          "id": "B",
+          "text": "1/7",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        },
+        {
+          "id": "C",
+          "text": "31/35",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
           "id": "D",
-          "text": "8/15",
+          "text": "6/35",
           "misconception_id": null
         }
       ],
       "correct_index": 3,
-      "answer": "8/15",
-      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
-      "explanation": "Multiply top × top: 2 × 4 = 8. Multiply bottom × bottom: 3 × 5 = 15. The answer is 8/15.",
+      "answer": "6/35",
+      "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
+      "explanation": "Multiply top × top: 2 × 3 = 6. Multiply bottom × bottom: 7 × 5 = 35. The answer is 6/35.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -696,41 +690,41 @@
       "standard": "5.NR.3.4",
       "difficulty": "hard",
       "verifier_type": "fraction_arithmetic",
-      "template_id": "g5-fractions-multiply-hard-school",
+      "template_id": "g5-fractions-multiply-hard-nature",
       "params": {
-        "a": 2,
-        "b": 3,
+        "a": 3,
+        "b": 8,
         "c": 3,
         "d": 5
       },
-      "stem": "A textbook chapter is 2/3 of the book. Reading 3/5 of the chapter means what fraction of the whole book?",
-      "expression": "(2 / 3) * (3 / 5)",
+      "stem": "A lake fills 3/8 of a valley. A wildlife sanctuary covers 3/5 of that lake. What fraction of the valley is the sanctuary?",
+      "expression": "(3 / 8) * (3 / 5)",
       "options": [
         {
           "id": "A",
-          "text": "19/15",
-          "misconception_id": "added_fractions_instead"
+          "text": "3/20",
+          "misconception_id": "added_tops_multiplied_bottoms"
         },
         {
           "id": "B",
-          "text": "10/9",
-          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+          "text": "39/40",
+          "misconception_id": "added_fractions_instead"
         },
         {
           "id": "C",
-          "text": "2/5",
+          "text": "9/40",
           "misconception_id": null
         },
         {
           "id": "D",
-          "text": "3/4",
-          "misconception_id": "multiplies_tops_adds_bottoms"
+          "text": "5/8",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
         }
       ],
       "correct_index": 2,
-      "answer": "2/5",
-      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
-      "explanation": "Multiply top × top: 2 × 3 = 6. Multiply bottom × bottom: 3 × 5 = 15. The answer is 2/5.",
+      "answer": "9/40",
+      "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
+      "explanation": "Multiply top × top: 3 × 3 = 9. Multiply bottom × bottom: 8 × 5 = 40. The answer is 9/40.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -741,41 +735,41 @@
       "standard": "5.NR.3.4",
       "difficulty": "hard",
       "verifier_type": "fraction_arithmetic",
-      "template_id": "g5-fractions-multiply-hard-games",
+      "template_id": "g5-fractions-multiply-hard-school",
       "params": {
-        "a": 3,
-        "b": 8,
-        "c": 3,
-        "d": 5
+        "a": 2,
+        "b": 7,
+        "c": 5,
+        "d": 6
       },
-      "stem": "A treasure chest holds 3/8 of the dungeon's gold. Taking 3/5 of the chest gives what fraction of total gold?",
-      "expression": "(3 / 8) * (3 / 5)",
+      "stem": "An art studio uses 2/7 of a school budget. Painting supplies take up 5/6 of that art budget. What fraction of the total budget goes to painting supplies?",
+      "expression": "(2 / 7) * (5 / 6)",
       "options": [
         {
           "id": "A",
-          "text": "5/8",
-          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+          "text": "47/42",
+          "misconception_id": "added_fractions_instead"
         },
         {
           "id": "B",
-          "text": "9/13",
-          "misconception_id": "multiplies_tops_adds_bottoms"
+          "text": "12/35",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
         },
         {
           "id": "C",
-          "text": "9/40",
+          "text": "5/21",
           "misconception_id": null
         },
         {
           "id": "D",
-          "text": "3/20",
-          "misconception_id": "added_tops_multiplied_bottoms"
+          "text": "10/13",
+          "misconception_id": "multiplies_tops_adds_bottoms"
         }
       ],
       "correct_index": 2,
-      "answer": "9/40",
-      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
-      "explanation": "Multiply top × top: 3 × 3 = 9. Multiply bottom × bottom: 8 × 5 = 40. The answer is 9/40.",
+      "answer": "5/21",
+      "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
+      "explanation": "Multiply top × top: 2 × 5 = 10. Multiply bottom × bottom: 7 × 6 = 42. The answer is 5/21.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -786,41 +780,41 @@
       "standard": "5.NR.3.4",
       "difficulty": "hard",
       "verifier_type": "fraction_arithmetic",
-      "template_id": "g5-fractions-multiply-hard-nature",
+      "template_id": "g5-fractions-multiply-hard-food",
       "params": {
-        "a": 2,
-        "b": 7,
+        "a": 5,
+        "b": 8,
         "c": 3,
-        "d": 5
+        "d": 7
       },
-      "stem": "A lake fills 2/7 of a reservoir. Draining 3/5 of the lake leaves what fraction of the reservoir?",
-      "expression": "(2 / 7) * (3 / 5)",
+      "stem": "A farmer's pantry is 5/8 stocked with grain. Wheat accounts for 3/7 of that grain. What fraction of the pantry is wheat?",
+      "expression": "(5 / 8) * (3 / 7)",
       "options": [
         {
           "id": "A",
-          "text": "6/35",
+          "text": "15/56",
           "misconception_id": null
         },
         {
           "id": "B",
-          "text": "1/2",
-          "misconception_id": "multiplies_tops_adds_bottoms"
+          "text": "35/24",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
         },
         {
           "id": "C",
-          "text": "1/7",
-          "misconception_id": "added_tops_multiplied_bottoms"
+          "text": "1",
+          "misconception_id": "multiplies_tops_adds_bottoms"
         },
         {
           "id": "D",
-          "text": "31/35",
-          "misconception_id": "added_fractions_instead"
+          "text": "1/7",
+          "misconception_id": "added_tops_multiplied_bottoms"
         }
       ],
       "correct_index": 0,
-      "answer": "6/35",
-      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
-      "explanation": "Multiply top × top: 2 × 3 = 6. Multiply bottom × bottom: 7 × 5 = 35. The answer is 6/35.",
+      "answer": "15/56",
+      "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
+      "explanation": "Multiply top × top: 5 × 3 = 15. Multiply bottom × bottom: 8 × 7 = 56. The answer is 15/56.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
