@@ -98,7 +98,7 @@ class MisconceptionEntry(BaseModel):
 
 class RegistryMisconception(BaseModel):
     id: str = Field(..., min_length=1)
-    topic_ids: List[str] = Field(..., min_items=1)
+    topic_ids: List[str] = Field(..., min_length=1)
     kid_label: str = Field(..., min_length=1)
     diagnosis: str = Field(..., min_length=1)
     why_it_fails: str = Field(..., min_length=1)
@@ -124,6 +124,11 @@ class TopicEntry(BaseModel):
     island_theme: str = Field(..., min_length=1)
 
 
+class TopicResponse(TopicEntry):
+    playable: bool = Field(default=False)
+    content_source: str = Field(default="coming-soon")
+
+
 class BankFile(BaseModel):
     topic_id: str = Field(..., min_length=1)
     version: str = Field(default="1.0.0")
@@ -139,3 +144,40 @@ class EvalResult(BaseModel):
     distractor_quality: float = Field(..., ge=0.0, le=1.0)
     avg_latency_ms: float = Field(..., ge=0.0)
     rejected_samples: List[Dict[str, Any]] = Field(default_factory=list)
+
+
+class DiagnosisModel(BaseModel):
+    kid_label: str
+    diagnosis: str
+    why_it_fails: str
+    mini_example: str
+
+
+class AnswerRequest(BaseModel):
+    topic_id: str = Field(..., min_length=1)
+    question_id: str = Field(..., min_length=1)
+    chosen_index: int = Field(..., ge=0, le=3)
+    attempt: int = Field(default=1, ge=1)
+    state: Optional[Dict[str, Any]] = None
+
+
+class AnswerResponse(BaseModel):
+    correct: bool
+    correct_index: int
+    explanation: str
+    hint: str
+    diagnosis: Optional[DiagnosisModel] = None
+    xp_awarded: int
+    next_difficulty: str
+    p_known_updated: float
+    combo: int
+
+
+class ErrorDetail(BaseModel):
+    code: str
+    message: str
+
+
+class ErrorEnvelope(BaseModel):
+    error: ErrorDetail
+
