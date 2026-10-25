@@ -42,26 +42,40 @@ Builds the static application to `.output/public/` with `200.html` SPA routing.
 
 ## Deploy to Vercel
 
-1. **Push to GitHub**:
-   Ensure all changes are committed and pushed to your GitHub repository:
+Follow these exact steps to deploy to Vercel:
+
+1. **GitHub Push**:
+   Ensure all local changes are committed and push to your GitHub repository:
    ```bash
    git push origin main
    ```
 
 2. **Import into Vercel**:
-   - Go to [Vercel Dashboard](https://vercel.com/dashboard) and click **Add New Project**.
-   - Select your `math-quest` GitHub repository.
-   - Vercel automatically detects `vercel.json` (`buildCommand: "npx nuxt generate"`, `outputDirectory: ".output/public"`, and Python function at `api/index.py`).
+   - Navigate to the [Vercel Dashboard](https://vercel.com/dashboard) and click **Add New Project**.
+   - Select your imported GitHub repository (`QUEST` or `math-quest`).
+   - Keep framework preset as `Other` (or null, as configured in `vercel.json`).
+   - Build Command is automatically configured as `npx nuxt generate`.
+   - Output Directory is automatically set to `.output/public`.
+   - Python Serverless Function is automatically configured at `api/index.py` via `vercel.json` (`includeFiles: "data/**"`).
 
 3. **Set Environment Variables**:
-   In Vercel **Project Settings > Environment Variables**, add:
-   - `GEMINI_API_KEY`: Your Google AI Studio API key (free tier at [aistudio.google.com](https://aistudio.google.com)).
-   - `GROQ_API_KEY`: (Optional) Your Groq Cloud API key for offline evaluation at [console.groq.com](https://console.groq.com).
+   In Vercel **Project Settings > Environment Variables**, add the following required variables:
+   - `GEMINI_API_KEY`: Your Google AI Studio API key (obtainable at [aistudio.google.com](https://aistudio.google.com)).
+   - `GEMINI_MODEL`: The Gemini model to use for live content (e.g. `gemini-1.5-flash` or `gemini-2.0-flash`).
+   - `GROQ_API_KEY`: (Optional) Groq API key if running comparative evaluation benchmarks.
 
-4. **Verify Deployment**:
-   - Navigate to your deployed Vercel domain: `https://<your-project>.vercel.app/`
-   - Test the health check endpoint: `https://<your-project>.vercel.app/api/health`
-   - The footer indicator in the app will reflect `API: online`.
+4. **Verify Live Deployment**:
+   - Once deployment completes, verify the health endpoint on your live URL:
+     ```bash
+     curl https://<your-project>.vercel.app/api/health
+     ```
+     Expected output:
+     ```json
+     {"status":"online","version":"1.0.0","time":"...","engine":"FastAPI + Python 3.11"}
+     ```
+   - Verify `/api/topics?grade=5` and `/api/questions/g5-fractions-add?difficulty=easy&limit=3`.
+   - In the frontend application HUD, verify that the status indicator displays `API: online`.
+
 
 ---
 
