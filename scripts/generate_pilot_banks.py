@@ -1,4 +1,4 @@
-﻿"""Main runner: generate all 5 pilot banks and write to data/bank/."""
+"""Main runner: generate all pilot + Batch A banks and write to data/bank/."""
 import sys, os, json
 from datetime import datetime, timezone
 
@@ -9,13 +9,23 @@ from scripts.seedgen.gen_volume import generate as gen_volume
 from scripts.seedgen.gen_percents import generate as gen_percents
 from scripts.seedgen.gen_equations import generate as gen_equations
 from scripts.seedgen.gen_divide import generate as gen_divide
+from scripts.seedgen.gen_ratios import generate as gen_ratios
+from scripts.seedgen.gen_unit_rates import generate as gen_unit_rates
+from scripts.seedgen.gen_fractions_multiply import generate as gen_frac_mul
+from scripts.seedgen.gen_mean_median import generate as gen_mean_median
 
 GENERATORS = {
+    # Pilot
     "g5-fractions-add": gen_fractions,
     "g5-volume": gen_volume,
     "g6-percents": gen_percents,
     "g6-equations": gen_equations,
     "g5-divide": gen_divide,
+    # Batch A
+    "g6-ratios": gen_ratios,
+    "g6-unit-rates": gen_unit_rates,
+    "g5-fractions-multiply": gen_frac_mul,
+    "g6-mean-median": gen_mean_median,
 }
 
 BANK_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "bank")
@@ -43,6 +53,6 @@ def run(seed: int = 42):
         print(f"  {topic_id}: {total} questions {counts}")
 
 if __name__ == "__main__":
-    print("Generating pilot banks...")
+    print("Generating pilot + Batch A banks...")
     run()
     print("Done.")

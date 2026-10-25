@@ -203,6 +203,12 @@ def ratio_simplify(a: Any, b: Any) -> str:
     return f"{num_a // g}:{num_b // g}"
 
 
+def ratio_scale(a: Any, b: Any, k: Any) -> str:
+    sa = int(safe_fraction(a)) * int(safe_fraction(k))
+    sb = int(safe_fraction(b)) * int(safe_fraction(k))
+    return f"{sa}:{sb}"
+
+
 def unit_rate(amount: Any, units: Any) -> Fraction:
     return safe_fraction(amount) / safe_fraction(units)
 
@@ -334,6 +340,7 @@ WHITELISTED_FUNCS = {
     "floor": lambda x: Fraction(math.floor(float(safe_fraction(x))), 1),
     "ceil": lambda x: Fraction(math.ceil(float(safe_fraction(x))), 1),
     "ratio_simplify": ratio_simplify,
+    "ratio_scale": ratio_scale,
     "unit_rate": unit_rate,
     "percent_of": percent_of,
     "volume_box": volume_box,
@@ -526,11 +533,17 @@ def verify_question(q: Union[Question, Dict[str, Any]], verifier_type: str = "fr
         if verifier_type == "text_exact" or isinstance(computed_val, str):
             # String comparison
             target_str = str(computed_val).strip().lower()
-            for idx, key in enumerate(normalized_keys):
-                clean_opt = key.replace("frac:", "").replace("ratio:", "").replace("rem:", "").strip().lower()
-                clean_raw = str(q.options[idx].text).strip().lower()
-                if clean_opt == target_str or clean_raw == target_str or key == target_str:
-                    matching_indices.append(idx)
+            if ":" in target_str:
+                for idx in range(len(q.options)):
+                    clean_raw = str(q.options[idx].text).strip().lower()
+                    if clean_raw == target_str:
+                        matching_indices.append(idx)
+            else:
+                for idx, key in enumerate(normalized_keys):
+                    clean_opt = key.replace("frac:", "").replace("ratio:", "").replace("rem:", "").strip().lower()
+                    clean_raw = str(q.options[idx].text).strip().lower()
+                    if clean_opt == target_str or clean_raw == target_str or key == target_str:
+                        matching_indices.append(idx)
         else:
             try:
                 target_frac = safe_fraction(computed_val)

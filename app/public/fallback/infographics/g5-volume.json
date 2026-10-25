@@ -1,0 +1,27 @@
+{
+  "title": "Layering the Cubic Monolith",
+  "steps": [
+    {
+      "label": "Measure Length",
+      "detail": "Count front unit cubes.",
+      "math": "4 = 4"
+    },
+    {
+      "label": "Measure Width",
+      "detail": "Count depth unit cubes.",
+      "math": "3 = 3"
+    },
+    {
+      "label": "Calculate Base Area",
+      "detail": "Multiply length by width.",
+      "math": "4 * 3 = 12"
+    },
+    {
+      "label": "Multiply by Height",
+      "detail": "Multiply base layer by vertical stack (5).",
+      "math": "12 * 5 = 60"
+    }
+  ],
+  "example": "4 cm * 3 cm * 5 cm = 60 cm\u00b3",
+  "image_prompt": "An obsidian temple chamber featuring a translucent floating rectangular prism composed of glowing sapphire unit cubes."
+}

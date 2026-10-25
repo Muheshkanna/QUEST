@@ -24,6 +24,15 @@ PILOT_TOPICS = [
     "g5-divide",
 ]
 
+BATCH_A_TOPICS = [
+    "g6-ratios",
+    "g6-unit-rates",
+    "g5-fractions-multiply",
+    "g6-mean-median",
+]
+
+ALL_SHIPPED_TOPICS = PILOT_TOPICS + BATCH_A_TOPICS
+
 def load_bank(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -31,7 +40,7 @@ def load_bank(path):
 def audit(topics=None):
     bank_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "bank"))
     if not topics:
-        topics = PILOT_TOPICS
+        topics = ALL_SHIPPED_TOPICS
 
     target_files = []
     for t in topics:
@@ -77,7 +86,7 @@ def audit(topics=None):
                 level_counts[topic][level] += 1
 
     print("=================================================================")
-    print("                 BANK AUDIT REPORT: PILOT TOPICS                ")
+    print("                 BANK AUDIT REPORT                              ")
     print("=================================================================\n")
 
     print("--- 1. Per-Level Question Counts ---")
@@ -129,7 +138,8 @@ def audit(topics=None):
         print("=================================================================")
         return 1
     else:
-        print("AUDIT PASSED: All 5 pilot topics fully verified with compliant distributions.")
+        n = len([t for t in total_questions])
+        print(f"AUDIT PASSED: All {n} topics fully verified with compliant distributions.")
         print("=================================================================")
         return 0
 
@@ -142,4 +152,4 @@ if __name__ == "__main__":
     elif args:
         sys.exit(audit(args))
     else:
-        sys.exit(audit(PILOT_TOPICS))
+        sys.exit(audit(ALL_SHIPPED_TOPICS))

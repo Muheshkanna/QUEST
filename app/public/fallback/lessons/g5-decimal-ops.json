@@ -1,0 +1,37 @@
+{
+  "title": "Adding and Subtracting Decimals",
+  "big_idea": "Always align decimal points so you add or subtract digits with the same place value.",
+  "explanation": "Decimals represent parts of a whole. When adding or subtracting, line up tenths with tenths, hundredths with hundredths, and ones with ones. If one decimal has fewer digits, pad it with a zero placeholder.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Write numbers lining up decimal points for 3.40 and 1.25",
+      "math": "3.4 + 1.25"
+    },
+    {
+      "step": 2,
+      "text": "Add tenths and hundredths column by column",
+      "math": "3.40 + 1.25 = 4.65"
+    },
+    {
+      "step": 3,
+      "text": "Verify the sum",
+      "math": "4.65 = 4.65"
+    }
+  ],
+  "key_vocab": [
+    "Decimal Point",
+    "Tenths",
+    "Hundredths",
+    "Placeholder Zero",
+    "Regrouping"
+  ],
+  "real_world_example": "Buying a magic quill for $3.40 and ink for $1.25 costs $4.65 in total.",
+  "common_mistakes": [
+    "Aligning digits to the right margin instead of lining up the decimal points.",
+    "Forgetting to write a zero placeholder when subtracting shorter decimals.",
+    "Treating the decimal point like a wall that stops regrouping."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g5-decimal-ops"
+}

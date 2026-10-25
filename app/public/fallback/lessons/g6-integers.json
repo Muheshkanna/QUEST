@@ -1,0 +1,37 @@
+{
+  "title": "Integers and Number Line Opposites",
+  "big_idea": "Integers include whole numbers, their negative opposites, and zero on a continuous number line.",
+  "explanation": "Positive integers lie to the right of zero on a horizontal number line; negative integers lie to the left. The farther to the left a number lies, the smaller its value: -8 is less than -3.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Compare -5 and 2",
+      "math": "compare(-5, 2)"
+    },
+    {
+      "step": 2,
+      "text": "Compare -8 and -3",
+      "math": "compare(-8, -3)"
+    },
+    {
+      "step": 3,
+      "text": "Identify opposite of -5",
+      "math": "abs(-5) = 5"
+    }
+  ],
+  "key_vocab": [
+    "Integer",
+    "Negative Number",
+    "Positive Number",
+    "Opposite",
+    "Number Line"
+  ],
+  "real_world_example": "A temperature of -8\u00b0F is colder (lower) than -3\u00b0F.",
+  "common_mistakes": [
+    "Believing -8 is greater than -3 because 8 is greater than 3.",
+    "Confusing absolute value with opposite sign.",
+    "Placing negative numbers in reverse order on the number line."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g6-integers"
+}

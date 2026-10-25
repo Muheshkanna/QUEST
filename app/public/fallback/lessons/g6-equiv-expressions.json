@@ -1,0 +1,37 @@
+{
+  "title": "Generating Equivalent Algebraic Expressions",
+  "big_idea": "Applying algebraic properties produces equivalent expressions that equal the same value for any substitution.",
+  "explanation": "Use the Distributive Property: a(b + c) = ab + ac. Combine like terms by adding their numerical coefficients, such as 3x + 5x = 8x.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Distribute 3 across (2x + 4)",
+      "math": "3 * 2 = 6"
+    },
+    {
+      "step": 2,
+      "text": "Distribute 3 to constant term 4",
+      "math": "3 * 4 = 12"
+    },
+    {
+      "step": 3,
+      "text": "Combine terms to form expression",
+      "math": "3 * 4 + 6 = 18"
+    }
+  ],
+  "key_vocab": [
+    "Distributive Property",
+    "Coefficient",
+    "Like Terms",
+    "Equivalent Expression",
+    "Variable"
+  ],
+  "real_world_example": "Buying 3 packs containing x notebooks and 4 pens yields 3x notebooks and 12 pens.",
+  "common_mistakes": [
+    "Multiplying the outside factor by the first term only (e.g. 3(x + 4) = 3x + 4).",
+    "Adding variable terms and constant terms together (e.g. 4x + 5 = 9x).",
+    "Making sign errors when distributing a negative coefficient."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g6-equiv-expressions"
+}

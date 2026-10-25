@@ -1,0 +1,787 @@
+{
+  "topic_id": "g6-percents",
+  "generated_at": "2026-10-25T18:01:26.308676+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v2",
+  "counts": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6
+  },
+  "questions": [
+    {
+      "id": "g6-percents-easy-1",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-easy-games",
+      "params": {
+        "p": 20,
+        "n": 60
+      },
+      "stem": "A player earns 60 coins. Spending 20% on upgrades, how many coins are spent?",
+      "expression": "20% of 60",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.6",
+          "misconception_id": "found_one_percent_only"
+        },
+        {
+          "id": "B",
+          "text": "3",
+          "misconception_id": "divided_instead_of_multiplying"
+        },
+        {
+          "id": "C",
+          "text": "1200",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "D",
+          "text": "12",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "12",
+      "hint": "Percent means parts per 100. Write it as a decimal first, then multiply.",
+      "explanation": "20% means 20 parts out of 100, which is 0.2. Multiply: 0.2 × 60 = 12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-easy-2",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-easy-sports",
+      "params": {
+        "p": 20,
+        "n": 40
+      },
+      "stem": "A team won 20% of their 40 games this season. How many games did they win?",
+      "expression": "20% of 40",
+      "options": [
+        {
+          "id": "A",
+          "text": "8",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "2",
+          "misconception_id": "divided_instead_of_multiplying"
+        },
+        {
+          "id": "C",
+          "text": "800",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "D",
+          "text": "80",
+          "misconception_id": "moved_decimal_wrong_way"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "8",
+      "hint": "Percent means parts per 100. Write it as a decimal first, then multiply.",
+      "explanation": "20% means 20 parts out of 100, which is 0.2. Multiply: 0.2 × 40 = 8.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-easy-3",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-easy-school",
+      "params": {
+        "p": 50,
+        "n": 40
+      },
+      "stem": "There are 40 students in school. 50% brought their own lunch. How many students brought lunch?",
+      "expression": "50% of 40",
+      "options": [
+        {
+          "id": "A",
+          "text": "2000",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "200",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "C",
+          "text": "0.4",
+          "misconception_id": "found_one_percent_only"
+        },
+        {
+          "id": "D",
+          "text": "20",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "20",
+      "hint": "Percent means parts per 100. Write it as a decimal first, then multiply.",
+      "explanation": "50% means 50 parts out of 100, which is 0.5. Multiply: 0.5 × 40 = 20.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-easy-4",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-easy-nature",
+      "params": {
+        "p": 20,
+        "n": 60
+      },
+      "stem": "A forest has 60 trees. 20% are oak trees. How many oak trees are there?",
+      "expression": "20% of 60",
+      "options": [
+        {
+          "id": "A",
+          "text": "12",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "120",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "C",
+          "text": "48",
+          "misconception_id": "found_the_leftover_amount"
+        },
+        {
+          "id": "D",
+          "text": "0.6",
+          "misconception_id": "found_one_percent_only"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "12",
+      "hint": "Percent means parts per 100. Write it as a decimal first, then multiply.",
+      "explanation": "20% means 20 parts out of 100, which is 0.2. Multiply: 0.2 × 60 = 12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-easy-5",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-easy-food",
+      "params": {
+        "p": 20,
+        "n": 120
+      },
+      "stem": "A restaurant bill is $120. You leave a 20% tip. How much is the tip?",
+      "expression": "20% of 120",
+      "options": [
+        {
+          "id": "A",
+          "text": "96",
+          "misconception_id": "found_the_leftover_amount"
+        },
+        {
+          "id": "B",
+          "text": "1.2",
+          "misconception_id": "found_one_percent_only"
+        },
+        {
+          "id": "C",
+          "text": "24",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "6",
+          "misconception_id": "divided_instead_of_multiplying"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "24",
+      "hint": "Percent means parts per 100. Write it as a decimal first, then multiply.",
+      "explanation": "20% means 20 parts out of 100, which is 0.2. Multiply: 0.2 × 120 = 24.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-easy-6",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-easy-games",
+      "params": {
+        "p": 50,
+        "n": 60
+      },
+      "stem": "A player earns 60 coins. Spending 50% on upgrades, how many coins are spent?",
+      "expression": "50% of 60",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.6",
+          "misconception_id": "found_one_percent_only"
+        },
+        {
+          "id": "B",
+          "text": "1.2",
+          "misconception_id": "divided_instead_of_multiplying"
+        },
+        {
+          "id": "C",
+          "text": "30",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "3000",
+          "misconception_id": "multiplied_by_percent_number"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "30",
+      "hint": "Percent means parts per 100. Write it as a decimal first, then multiply.",
+      "explanation": "50% means 50 parts out of 100, which is 0.5. Multiply: 0.5 × 60 = 30.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-medium-1",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-medium-sports",
+      "params": {
+        "p": 40,
+        "n": 120
+      },
+      "stem": "An athlete runs 120 metres in a race. 40% of the route is uphill. How many metres are uphill?",
+      "expression": "40% of 120",
+      "options": [
+        {
+          "id": "A",
+          "text": "3",
+          "misconception_id": "divided_instead_of_multiplying"
+        },
+        {
+          "id": "B",
+          "text": "4800",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "C",
+          "text": "480",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "D",
+          "text": "48",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "48",
+      "hint": "How can you change a percent into a decimal or fraction before multiplying by the total?",
+      "explanation": "40% means 40 parts out of 100, which is 0.4. Multiply: 0.4 × 120 = 48.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-medium-2",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-medium-nature",
+      "params": {
+        "p": 30,
+        "n": 80
+      },
+      "stem": "A lake has 80 species of fish. 30% are endangered. How many species are endangered?",
+      "expression": "30% of 80",
+      "options": [
+        {
+          "id": "A",
+          "text": "24",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "2400",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "C",
+          "text": "240",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "D",
+          "text": "56",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "24",
+      "hint": "How can you change a percent into a decimal or fraction before multiplying by the total?",
+      "explanation": "30% means 30 parts out of 100, which is 0.3. Multiply: 0.3 × 80 = 24.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-medium-3",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-medium-food",
+      "params": {
+        "p": 20,
+        "n": 120
+      },
+      "stem": "A bag of trail mix has 120 grams. 20% of it is nuts. How many grams of nuts are there?",
+      "expression": "20% of 120",
+      "options": [
+        {
+          "id": "A",
+          "text": "240",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "B",
+          "text": "24",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "96",
+          "misconception_id": "found_the_leftover_amount"
+        },
+        {
+          "id": "D",
+          "text": "1.2",
+          "misconception_id": "found_one_percent_only"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "24",
+      "hint": "How can you change a percent into a decimal or fraction before multiplying by the total?",
+      "explanation": "20% means 20 parts out of 100, which is 0.2. Multiply: 0.2 × 120 = 24.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-medium-4",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-medium-school",
+      "params": {
+        "p": 15,
+        "n": 60
+      },
+      "stem": "A school raised $60 for charity. 15% goes to the food bank. How much money goes to the food bank?",
+      "expression": "15% of 60",
+      "options": [
+        {
+          "id": "A",
+          "text": "51",
+          "misconception_id": "found_the_leftover_amount"
+        },
+        {
+          "id": "B",
+          "text": "0.6",
+          "misconception_id": "found_one_percent_only"
+        },
+        {
+          "id": "C",
+          "text": "9",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "4",
+          "misconception_id": "divided_instead_of_multiplying"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "9",
+      "hint": "How can you change a percent into a decimal or fraction before multiplying by the total?",
+      "explanation": "15% means 15 parts out of 100, which is 0.15. Multiply: 0.15 × 60 = 9.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-medium-5",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-medium-games",
+      "params": {
+        "p": 40,
+        "n": 60
+      },
+      "stem": "A dungeon has 60 rooms. 40% have treasure. How many rooms have treasure?",
+      "expression": "40% of 60",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.6",
+          "misconception_id": "found_one_percent_only"
+        },
+        {
+          "id": "B",
+          "text": "24",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "1.5",
+          "misconception_id": "divided_instead_of_multiplying"
+        },
+        {
+          "id": "D",
+          "text": "2400",
+          "misconception_id": "multiplied_by_percent_number"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "24",
+      "hint": "How can you change a percent into a decimal or fraction before multiplying by the total?",
+      "explanation": "40% means 40 parts out of 100, which is 0.4. Multiply: 0.4 × 60 = 24.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-medium-6",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-medium-sports",
+      "params": {
+        "p": 30,
+        "n": 120
+      },
+      "stem": "An athlete runs 120 metres in a race. 30% of the route is uphill. How many metres are uphill?",
+      "expression": "30% of 120",
+      "options": [
+        {
+          "id": "A",
+          "text": "36",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "4",
+          "misconception_id": "divided_instead_of_multiplying"
+        },
+        {
+          "id": "C",
+          "text": "3600",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "D",
+          "text": "360",
+          "misconception_id": "moved_decimal_wrong_way"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "36",
+      "hint": "How can you change a percent into a decimal or fraction before multiplying by the total?",
+      "explanation": "30% means 30 parts out of 100, which is 0.3. Multiply: 0.3 × 120 = 36.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-hard-1",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-hard-games",
+      "params": {
+        "p": 45,
+        "n": 80
+      },
+      "stem": "A castle has 80 guards. During a patrol, 45% are stationed at the gate. How many guards are at the gate?",
+      "expression": "45% of 80",
+      "options": [
+        {
+          "id": "A",
+          "text": "3600",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "360",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "C",
+          "text": "36",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "44",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "36",
+      "hint": "Convert the percent to a decimal by dividing by 100, then find that share of the total.",
+      "explanation": "45% means 45 parts out of 100, which is 0.45. Multiply: 0.45 × 80 = 36.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-hard-2",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-hard-sports",
+      "params": {
+        "p": 40,
+        "n": 80
+      },
+      "stem": "A basketball team scored 80 points in a match. 40% came from three-pointers. How many points was that?",
+      "expression": "40% of 80",
+      "options": [
+        {
+          "id": "A",
+          "text": "320",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "B",
+          "text": "32",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "48",
+          "misconception_id": "found_the_leftover_amount"
+        },
+        {
+          "id": "D",
+          "text": "0.8",
+          "misconception_id": "found_one_percent_only"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "32",
+      "hint": "Convert the percent to a decimal by dividing by 100, then find that share of the total.",
+      "explanation": "40% means 40 parts out of 100, which is 0.4. Multiply: 0.4 × 80 = 32.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-hard-3",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-hard-food",
+      "params": {
+        "p": 45,
+        "n": 120
+      },
+      "stem": "A market has 120 oranges. 45% of them are sold in the morning. How many oranges were sold?",
+      "expression": "45% of 120",
+      "options": [
+        {
+          "id": "A",
+          "text": "66",
+          "misconception_id": "found_the_leftover_amount"
+        },
+        {
+          "id": "B",
+          "text": "1.2",
+          "misconception_id": "found_one_percent_only"
+        },
+        {
+          "id": "C",
+          "text": "54",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "2.6667",
+          "misconception_id": "divided_instead_of_multiplying"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "54",
+      "hint": "Convert the percent to a decimal by dividing by 100, then find that share of the total.",
+      "explanation": "45% means 45 parts out of 100, which is 0.45. Multiply: 0.45 × 120 = 54.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-hard-4",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-hard-school",
+      "params": {
+        "p": 45,
+        "n": 120
+      },
+      "stem": "A test has 120 questions. A student got 45% correct. How many questions did they answer correctly?",
+      "expression": "45% of 120",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.2",
+          "misconception_id": "found_one_percent_only"
+        },
+        {
+          "id": "B",
+          "text": "2.6667",
+          "misconception_id": "divided_instead_of_multiplying"
+        },
+        {
+          "id": "C",
+          "text": "5400",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "D",
+          "text": "54",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "54",
+      "hint": "Convert the percent to a decimal by dividing by 100, then find that share of the total.",
+      "explanation": "45% means 45 parts out of 100, which is 0.45. Multiply: 0.45 × 120 = 54.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-hard-5",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-hard-nature",
+      "params": {
+        "p": 45,
+        "n": 100
+      },
+      "stem": "A wildlife park has 100 birds. 45% migrate south for the winter. How many birds migrate south?",
+      "expression": "45% of 100",
+      "options": [
+        {
+          "id": "A",
+          "text": "45",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "2.2222",
+          "misconception_id": "divided_instead_of_multiplying"
+        },
+        {
+          "id": "C",
+          "text": "4500",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "D",
+          "text": "450",
+          "misconception_id": "moved_decimal_wrong_way"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "45",
+      "hint": "Convert the percent to a decimal by dividing by 100, then find that share of the total.",
+      "explanation": "45% means 45 parts out of 100, which is 0.45. Multiply: 0.45 × 100 = 45.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-hard-6",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-hard-games",
+      "params": {
+        "p": 15,
+        "n": 80
+      },
+      "stem": "A castle has 80 guards. During a patrol, 15% are stationed at the gate. How many guards are at the gate?",
+      "expression": "15% of 80",
+      "options": [
+        {
+          "id": "A",
+          "text": "1200",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "12",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "120",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "D",
+          "text": "68",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "12",
+      "hint": "Convert the percent to a decimal by dividing by 100, then find that share of the total.",
+      "explanation": "15% means 15 parts out of 100, which is 0.15. Multiply: 0.15 × 80 = 12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    }
+  ]
+}

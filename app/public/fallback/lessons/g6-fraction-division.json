@@ -1,0 +1,37 @@
+{
+  "title": "Dividing Fractions by Fractions",
+  "big_idea": "Dividing by a fraction is equivalent to multiplying by its reciprocal.",
+  "explanation": "To divide two fractions, keep the first fraction (the dividend), change the division sign to multiplication, and flip the second fraction (the divisor) to its reciprocal.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Setup division (3/4) / (1/2)",
+      "math": "(3/4) / (1/2)"
+    },
+    {
+      "step": 2,
+      "text": "Multiply by reciprocal of 1/2 which is 2/1",
+      "math": "(3/4) * (2/1) = 6/4"
+    },
+    {
+      "step": 3,
+      "text": "Simplify 6/4 to lowest terms",
+      "math": "6/4 = 3/2"
+    }
+  ],
+  "key_vocab": [
+    "Reciprocal",
+    "Dividend",
+    "Divisor",
+    "Quotient",
+    "Invert"
+  ],
+  "real_world_example": "If a craft recipe uses 1/2 yard of felt, 3/4 yard of felt provides 3/2 (or 1.5) batches.",
+  "common_mistakes": [
+    "Inverting the first fraction instead of the second fraction.",
+    "Dividing numerators and denominators straight across without common denominators.",
+    "Flipping both fractions before multiplying."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g6-fraction-division"
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Understanding Ratios & Equivalent Ratios",
+  "big_idea": "A ratio is a multiplicative comparison between two quantities.",
+  "explanation": "Ratios compare parts to parts or parts to wholes. Equivalent ratios are formed by multiplying or dividing both terms by the exact same non-zero number, just like equivalent fractions.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Start with ratio of 2 blue to 3 yellow paint drops",
+      "math": "2/3 = 2/3"
+    },
+    {
+      "step": 2,
+      "text": "Scale both terms by 4 to make a larger batch",
+      "math": "2 * 4 = 8"
+    },
+    {
+      "step": 3,
+      "text": "Scale the second term by 4 and simplify",
+      "math": "3 * 4 = 12"
+    }
+  ],
+  "key_vocab": [
+    "Ratio",
+    "Equivalent Ratio",
+    "Part-to-Part",
+    "Part-to-Whole",
+    "Scaling"
+  ],
+  "real_world_example": "Mixing 2 cups of lemon juice with 3 cups of water scales up to 8 cups of lemon juice and 12 cups of water.",
+  "common_mistakes": [
+    "Adding a constant number to both sides instead of multiplying (e.g. 2:3 -> 3:4).",
+    "Confusing part-to-part ratios with part-to-whole ratios.",
+    "Reversing the order of terms requested in the problem."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g6-ratios"
+}

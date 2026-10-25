@@ -1,0 +1,40 @@
+{
+  "slides": [
+    {
+      "title": "The Denominator Riddle",
+      "visual_hint": "Two ancient tablets showing 1/4 and 1/2.",
+      "narration": "Welcome, young scholar. Fractions are parts of a whole, but they can only unite when their slices are the same size.",
+      "highlight": "slices"
+    },
+    {
+      "title": "Different Sizes Cannot Blend",
+      "visual_hint": "A large half-shield next to a small quarter-shield.",
+      "narration": "Notice the denominators: four and two. We cannot simply add one plus one to get two-sixths. That is an ancient trap!",
+      "highlight": "two-sixths"
+    },
+    {
+      "title": "Summon the Common Denominator",
+      "visual_hint": "The half-shield dividing down the center into two quarters.",
+      "narration": "We can transform one-half into two-fourths. Now both fractions share the exact same denominator.",
+      "highlight": "two-fourths"
+    },
+    {
+      "title": "Unite the Numerators",
+      "visual_hint": "One quarter-flask and two quarter-flasks pouring into a bowl.",
+      "narration": "Add the numerators: one plus two equals three. The denominator stays four.",
+      "highlight": "three-fourths"
+    },
+    {
+      "title": "The Master Formula",
+      "visual_hint": "A glowing stone formula: 1/4 + 2/4 = 3/4.",
+      "narration": "One-fourth plus one-half equals three-fourths. You have mastered fraction addition!",
+      "highlight": "mastered"
+    },
+    {
+      "title": "Scholar Victory",
+      "visual_hint": "A golden scholar badge shining on the screen.",
+      "narration": "Remember: always equalize denominators before adding the numerators. Onward to your next quest!",
+      "highlight": "equalize"
+    }
+  ]
+}

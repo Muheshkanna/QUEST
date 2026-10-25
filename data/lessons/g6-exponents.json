@@ -1,0 +1,37 @@
+{
+  "title": "Numerical Expressions with Exponents",
+  "big_idea": "Exponents represent repeated multiplication of the same base number.",
+  "explanation": "In the exponential expression 2^3, 2 is the base and 3 is the exponent. The exponent tells how many times to multiply the base by itself: 2 * 2 * 2 = 8, not 2 * 3 = 6.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Evaluate 2 squared (2^2)",
+      "math": "2 * 2 = 4"
+    },
+    {
+      "step": 2,
+      "text": "Evaluate 2 cubed (2^3)",
+      "math": "4 * 2 = 8"
+    },
+    {
+      "step": 3,
+      "text": "Verify power 2^4",
+      "math": "2 ** 4 = 16"
+    }
+  ],
+  "key_vocab": [
+    "Base",
+    "Exponent",
+    "Power",
+    "Squared",
+    "Cubed"
+  ],
+  "real_world_example": "A magical crystal that doubles every hour starts at 1, then reaches 2^3 = 8 crystals in 3 hours.",
+  "common_mistakes": [
+    "Multiplying the base by the exponent (e.g. thinking 2^3 = 6 instead of 8).",
+    "Believing any base to the power of 0 equals 0 instead of 1.",
+    "Switching the base and exponent."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g6-exponents"
+}

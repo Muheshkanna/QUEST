@@ -1,0 +1,37 @@
+{
+  "title": "Dividing with Unit Fractions",
+  "big_idea": "Dividing by a unit fraction determines how many equal unit-sized pieces fit into a quantity.",
+  "explanation": "When dividing a whole number by 1/4, you are finding how many fourths fit inside. Since each whole has 4 fourths, 3 divided by 1/4 equals 3 * 4 = 12. When dividing a unit fraction by a whole number, the piece gets partitioned into even smaller pieces.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Divide 3 whole loaves into 1/4 loaf portions",
+      "math": "3 // (1/4) = 12"
+    },
+    {
+      "step": 2,
+      "text": "Verify by multiplication",
+      "math": "12 * 1/4 = 3"
+    },
+    {
+      "step": 3,
+      "text": "Check division of 1/4 into 2 parts",
+      "math": "(1/4) / 2 = 1/8"
+    }
+  ],
+  "key_vocab": [
+    "Unit Fraction",
+    "Dividend",
+    "Divisor",
+    "Quotient",
+    "Partition"
+  ],
+  "real_world_example": "Cutting 3 foot-long submarine sandwiches into 1/4 foot servings yields 12 servings.",
+  "common_mistakes": [
+    "Confusing the order of division (calculating whole / fraction instead of fraction / whole).",
+    "Multiplying straight without flipping or reasoning about piece sizes.",
+    "Treating the fractional answer as a remainder."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g5-fractions-divide-unit"
+}

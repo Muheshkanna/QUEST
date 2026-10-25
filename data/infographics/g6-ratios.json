@@ -1,0 +1,27 @@
+{
+  "title": "The Harmonic Scale of Equivalent Ratios",
+  "steps": [
+    {
+      "label": "Identify Terms",
+      "detail": "Write the initial relationship.",
+      "math": "2:3"
+    },
+    {
+      "label": "Choose Multiplier",
+      "detail": "Select constant scaling factor (3).",
+      "math": "3 = 3"
+    },
+    {
+      "label": "Scale First Term",
+      "detail": "Multiply the first term.",
+      "math": "2 * 3 = 6"
+    },
+    {
+      "label": "Scale Second Term",
+      "detail": "Multiply second term by same factor.",
+      "math": "3 * 3 = 9"
+    }
+  ],
+  "example": "2:3 scales up to 6:9",
+  "image_prompt": "A fantasy botanical greenhouse with glowing runic vines branching into balanced crystal pedestals holding emerald berries."
+}

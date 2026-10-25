@@ -1,0 +1,37 @@
+{
+  "title": "Comparing and Rounding Decimals",
+  "big_idea": "Compare decimals from left to right starting at the highest place value, and round using the next digit to the right.",
+  "explanation": "To compare two decimals, check the whole numbers first, then tenths, then hundredths. A longer decimal is not automatically larger: 0.5 is greater than 0.125 because 5 tenths is greater than 1 tenth. When rounding, look at the digit to the right: 5 or more rounds up, 4 or less stays the same.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Compare tenths for 0.5 and 0.45",
+      "math": "0.5 > 0.45"
+    },
+    {
+      "step": 2,
+      "text": "Round 3.47 to the nearest tenth by looking at 7",
+      "math": "3.5 = 3.5"
+    },
+    {
+      "step": 3,
+      "text": "Check rounding difference",
+      "math": "3.5 - 3.47 = 0.03"
+    }
+  ],
+  "key_vocab": [
+    "Compare",
+    "Round",
+    "Tenths",
+    "Hundredths",
+    "Thousandths"
+  ],
+  "real_world_example": "A running timer showing 12.4 seconds is faster than 12.45 seconds.",
+  "common_mistakes": [
+    "Assuming a decimal with more digits is always larger (e.g., thinking 0.125 > 0.5).",
+    "Dropping digits instead of using rounding rules.",
+    "Comparing hundredths digits before comparing tenths."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g5-decimal-compare-round"
+}

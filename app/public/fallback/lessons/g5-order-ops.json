@@ -1,0 +1,37 @@
+{
+  "title": "Order of Operations & Expressions",
+  "big_idea": "Mathematical expressions follow a standard agreed-upon hierarchy to guarantee one unique value.",
+  "explanation": "Follow PEMDAS / Order of Operations: evaluate inside Parentheses first, then Exponents, then Multiplication and Division from left to right, and finally Addition and Subtraction from left to right.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Evaluate parentheses in 3 + 4 * (5 - 2)",
+      "math": "5 - 2 = 3"
+    },
+    {
+      "step": 2,
+      "text": "Perform multiplication before addition",
+      "math": "4 * 3 = 12"
+    },
+    {
+      "step": 3,
+      "text": "Add the remaining values",
+      "math": "3 + 12 = 15"
+    }
+  ],
+  "key_vocab": [
+    "Order of Operations",
+    "Parentheses",
+    "Precedence",
+    "Expression",
+    "Evaluate"
+  ],
+  "real_world_example": "Buying 3 passes and 4 combo meals with a $2 coupon per meal follows 3 + 4 * (5 - 2) = $15.",
+  "common_mistakes": [
+    "Calculating strictly from left to right regardless of multiplication.",
+    "Always adding before subtracting rather than working left to right.",
+    "Ignoring grouping symbols like parentheses."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g5-order-ops"
+}

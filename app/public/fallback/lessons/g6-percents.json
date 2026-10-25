@@ -1,0 +1,37 @@
+{
+  "title": "Percents as Rates per 100",
+  "big_idea": "A percent represents a ratio comparison of a number out of 100 equal parts.",
+  "explanation": "Percent literally means 'per hundred'. To calculate a percent of a number, convert the percent into a fraction with denominator 100 or a decimal, then multiply by the total quantity.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Write 25% as fraction 25/100 or 1/4",
+      "math": "25/100 = 1/4"
+    },
+    {
+      "step": 2,
+      "text": "Multiply 1/4 by 80",
+      "math": "80 / 4 = 20"
+    },
+    {
+      "step": 3,
+      "text": "Confirm percent_of formula",
+      "math": "percent_of(25, 80) = 20"
+    }
+  ],
+  "key_vocab": [
+    "Percent",
+    "Rate per 100",
+    "Decimal Equivalent",
+    "Base",
+    "Portion"
+  ],
+  "real_world_example": "A 25% discount on an $80 shield saves you $20.",
+  "common_mistakes": [
+    "Shifting the decimal point the wrong way (e.g. writing 5% as 0.5 instead of 0.05).",
+    "Multiplying directly by the percent number without dividing by 100.",
+    "Confusing the discount amount with the final sale price."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g6-percents"
+}

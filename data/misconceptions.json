@@ -135,7 +135,8 @@
     {
       "id": "multiplies_instead_of_dividing",
       "topic_ids": [
-        "g5-fractions-divide-unit"
+        "g5-fractions-divide-unit",
+        "g6-unit-rates"
       ],
       "kid_label": "You multiplied instead of dividing",
       "diagnosis": "You used multiplication where division was required.",
@@ -817,7 +818,8 @@
     {
       "id": "multiplied_instead_of_dividing",
       "topic_ids": [
-        "g6-equations"
+        "g6-equations",
+        "g6-unit-rates"
       ],
       "kid_label": "You multiplied both numbers together",
       "diagnosis": "You multiplied the coefficient by the other side instead of dividing.",
@@ -1011,6 +1013,105 @@
       "why_it_fails": "The remainder cannot be greater than or equal to the divisor.",
       "mini_example": "125/6 -> 19 R 5",
       "applies_when": "operation_is_divide"
+    },
+    {
+      "id": "multiplied_only_first_term",
+      "topic_ids": [
+        "g6-ratios"
+      ],
+      "kid_label": "You only multiplied the first number in the ratio.",
+      "diagnosis": "Student multiplied only the antecedent by the scaling factor while leaving the consequent unchanged.",
+      "why_it_fails": "To maintain equivalence, every term in a ratio must be multiplied by the same scaling factor.",
+      "mini_example": "Ratio 2:3 scaled by 4 is 8:12, not 8:3.",
+      "applies_when": "k > 1"
+    },
+    {
+      "id": "squared_terms",
+      "topic_ids": [
+        "g6-ratios"
+      ],
+      "kid_label": "You multiplied each number by itself instead of the scaling factor.",
+      "diagnosis": "Student squared the ratio terms instead of multiplying them by the given scale factor.",
+      "why_it_fails": "Multiplying each number by itself changes the proportional relationship between the terms.",
+      "mini_example": "Ratio 2:3 scaled by 4 is 8:12, not 4:9.",
+      "applies_when": "k != a and k != b"
+    },
+    {
+      "id": "subtracts_quantities",
+      "topic_ids": [
+        "g6-unit-rates"
+      ],
+      "kid_label": "You subtracted the numbers instead of dividing to find the rate.",
+      "diagnosis": "Student subtracted the two quantities instead of dividing to find the unit rate.",
+      "why_it_fails": "A unit rate measures amount per 1 unit, which requires division.",
+      "mini_example": "180 miles in 3 hours is 180 / 3 = 60, not 180 - 3 = 177.",
+      "applies_when": "True"
+    },
+    {
+      "id": "adds_quantities",
+      "topic_ids": [
+        "g6-unit-rates"
+      ],
+      "kid_label": "You added the numbers together instead of dividing.",
+      "diagnosis": "Student added the two given quantities instead of finding their ratio through division.",
+      "why_it_fails": "A rate describes a multiplicative relationship per single unit, not a combined sum.",
+      "mini_example": "180 miles in 3 hours is 180 / 3 = 60, not 180 + 3 = 183.",
+      "applies_when": "True"
+    },
+    {
+      "id": "added_fractions_instead",
+      "topic_ids": [
+        "g5-fractions-multiply"
+      ],
+      "kid_label": "You added the fractions instead of multiplying them.",
+      "diagnosis": "Student computed the sum of the two fractions instead of their product.",
+      "why_it_fails": "Fraction multiplication finds a part of a part, not a combined total.",
+      "mini_example": "2/3 * 1/4 = 2/12 = 1/6, not 2/3 + 1/4 = 11/12.",
+      "applies_when": "True"
+    },
+    {
+      "id": "multiplies_tops_adds_bottoms",
+      "topic_ids": [
+        "g5-fractions-multiply"
+      ],
+      "kid_label": "You multiplied the top numbers but added the bottom numbers.",
+      "diagnosis": "Student multiplied the numerators but added the denominators.",
+      "why_it_fails": "When multiplying fractions, both numerators and denominators must be multiplied across.",
+      "mini_example": "2/3 * 1/4 = 2/12 = 1/6, not 2/(3+4) = 2/7.",
+      "applies_when": "b + d != b * d"
+    },
+    {
+      "id": "added_tops_multiplied_bottoms",
+      "topic_ids": [
+        "g5-fractions-multiply"
+      ],
+      "kid_label": "You added the top numbers instead of multiplying them.",
+      "diagnosis": "Student added the numerators while multiplying the denominators.",
+      "why_it_fails": "Multiplying fractions requires multiplying both numerators and denominators.",
+      "mini_example": "2/3 * 1/4 = 2/12 = 1/6, not (2+1)/12 = 3/12 = 1/4.",
+      "applies_when": "a + c != a * c"
+    },
+    {
+      "id": "finds_range_instead",
+      "topic_ids": [
+        "g6-mean-median"
+      ],
+      "kid_label": "You found the range (highest minus lowest) instead of the middle value.",
+      "diagnosis": "Student computed the difference between max and min values instead of center.",
+      "why_it_fails": "Range measures data spread, whereas mean and median measure center.",
+      "mini_example": "For [2, 5, 9], range is 9 - 2 = 7, not the median 5.",
+      "applies_when": "range_val != correct"
+    },
+    {
+      "id": "ignores_middle_average_for_even_count",
+      "topic_ids": [
+        "g6-mean-median"
+      ],
+      "kid_label": "For an even number of values, you must find the halfway point between the two middle numbers.",
+      "diagnosis": "Student picked one of the two middle values without taking their average.",
+      "why_it_fails": "When a dataset has an even number of points, the median is the mean of the two central numbers.",
+      "mini_example": "For [2, 4, 6, 8], the median is (4+6)/2 = 5, not 4.",
+      "applies_when": "len(data) % 2 == 0 and middle1 != middle2"
     }
   ]
 }

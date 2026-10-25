@@ -1,0 +1,37 @@
+{
+  "title": "Volume of Rectangular Prisms",
+  "big_idea": "Volume measures 3D space by counting unit cubes packed without gaps or overlaps.",
+  "explanation": "The volume of a right rectangular prism is calculated by multiplying its three dimensions: length * width * height. The base area (length * width) tells how many cubes sit on the bottom layer, and height tells how many layers are stacked.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Find base area for 4 cm length and 3 cm width",
+      "math": "4 * 3 = 12"
+    },
+    {
+      "step": 2,
+      "text": "Multiply base area by height of 5 cm",
+      "math": "12 * 5 = 60"
+    },
+    {
+      "step": 3,
+      "text": "Confirm formula V = l * w * h",
+      "math": "volume_box(4, 3, 5) = 60"
+    }
+  ],
+  "key_vocab": [
+    "Volume",
+    "Cubic Units",
+    "Length",
+    "Width",
+    "Height"
+  ],
+  "real_world_example": "A treasure chest 4 feet long, 3 feet wide, and 5 feet high holds 60 cubic feet of pirate gold.",
+  "common_mistakes": [
+    "Adding dimensions together (4 + 3 + 5 = 12) instead of multiplying.",
+    "Confusing surface area with volume by counting only outside faces.",
+    "Forgetting to multiply the base layer by the height."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g5-volume"
+}

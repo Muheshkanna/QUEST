@@ -1,4 +1,4 @@
-﻿"""Shared seedgen utilities."""
+"""Shared seedgen utilities."""
 import sys, os, random
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
@@ -66,8 +66,11 @@ def build_options(correct_text: str, distractors: list, correct_pos: int):
 def get_distractors(topic_id: str, params: dict, correct_text: str, rule_order: list):
     """Return up to 3 valid distractor dicts using rule_order preference."""
     from api._lib.misconceptions import RULES, apply_rule, load_registry
+    from api._lib.verifier import normalize_option
     registry = load_registry()
     seen_texts = {correct_text}
+    norm_c, _ = normalize_option(correct_text)
+    seen_norms = {norm_c}
     result = []
     used_rules = set()
     for rule_id in rule_order:
@@ -79,9 +82,13 @@ def get_distractors(topic_id: str, params: dict, correct_text: str, rule_order: 
         if not applies_fn(params):
             continue
         text = apply_rule(rule_id, params)
-        if text is None or text in seen_texts or rule_id in used_rules:
+        if text is None:
+            continue
+        norm_t, _ = normalize_option(text)
+        if text in seen_texts or norm_t in seen_norms or rule_id in used_rules:
             continue
         seen_texts.add(text)
+        seen_norms.add(norm_t)
         used_rules.add(rule_id)
         entry = registry.get(rule_id, {})
         result.append({"rule_id": rule_id, "text": text, "kid_label": entry.get("kid_label", "")})

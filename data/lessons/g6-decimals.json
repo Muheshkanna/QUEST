@@ -1,0 +1,37 @@
+{
+  "title": "Multi-Digit Decimal Operations",
+  "big_idea": "Decimal operations extend whole-number algorithms while preserving place-value relationships.",
+  "explanation": "In multi-digit decimal multiplication, count the total number of decimal digits in both factors to place the decimal in the product. In decimal division, shift the decimal in both divisor and dividend until the divisor is a whole number.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Multiply 2.5 by 0.4 ignoring decimals first (25 * 4 = 100)",
+      "math": "25 * 4 = 100"
+    },
+    {
+      "step": 2,
+      "text": "Place decimal 2 places from right",
+      "math": "2.5 * 0.4 = 1"
+    },
+    {
+      "step": 3,
+      "text": "Check with division",
+      "math": "1 / 0.4 = 2.5"
+    }
+  ],
+  "key_vocab": [
+    "Factor",
+    "Product",
+    "Divisor",
+    "Dividend",
+    "Place Value"
+  ],
+  "real_world_example": "Buying 2.5 pounds of enchanted seeds at $0.40 per pound costs $1.00.",
+  "common_mistakes": [
+    "Miscounting total decimal places in the product.",
+    "Failing to shift the dividend's decimal when shifting the divisor.",
+    "Dropping leading zeros after the decimal point (e.g. writing 0.6 instead of 0.06)."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g6-decimals"
+}

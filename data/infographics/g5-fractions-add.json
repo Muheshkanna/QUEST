@@ -1,0 +1,27 @@
+{
+  "title": "The Four Alchemical Steps of Fraction Addition",
+  "steps": [
+    {
+      "label": "Inspect Denominators",
+      "detail": "Check if denominators are the same.",
+      "math": "1/4 + 1/2"
+    },
+    {
+      "label": "Find Common Multiple",
+      "detail": "Choose least common denominator (4).",
+      "math": "2 * 2 = 4"
+    },
+    {
+      "label": "Rename Fractions",
+      "detail": "Multiply numerator and denominator equally.",
+      "math": "1/2 = 2/4"
+    },
+    {
+      "label": "Combine Numerators",
+      "detail": "Add top numbers while keeping bottom.",
+      "math": "1/4 + 2/4 = 3/4"
+    }
+  ],
+  "example": "1/4 + 1/2 = 1/4 + 2/4 = 3/4",
+  "image_prompt": "An illuminated medieval alchemy bench with glowing crystalline fraction flasks combining blue and gold elixirs into a luminous chalice."
+}

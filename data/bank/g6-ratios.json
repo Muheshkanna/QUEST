@@ -1,0 +1,805 @@
+{
+  "topic_id": "g6-ratios",
+  "generated_at": "2026-10-25T18:01:26.317351+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v2",
+  "counts": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6
+  },
+  "questions": [
+    {
+      "id": "g6-ratios-easy-1",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "easy",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-easy-games",
+      "params": {
+        "a": 3,
+        "b": 4,
+        "k": 2
+      },
+      "stem": "A bag has 3 red gems for every 4 blue gems. Scaling up by 2, the equivalent ratio is:",
+      "expression": "ratio_scale(3, 4, 2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "6:8",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "5:6",
+          "misconception_id": "additive_ratio_scaling"
+        },
+        {
+          "id": "C",
+          "text": "8:6",
+          "misconception_id": "inverts_ratio_terms_order"
+        },
+        {
+          "id": "D",
+          "text": "6:4",
+          "misconception_id": "multiplied_only_first_term"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "6:8",
+      "hint": "Multiply both numbers in the ratio by the same factor.",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 3 × 2 = 6 and 4 × 2 = 8. The equivalent ratio is 6:8.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-easy-2",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "easy",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-easy-sports",
+      "params": {
+        "a": 2,
+        "b": 3,
+        "k": 4
+      },
+      "stem": "A team has 2 defenders for every 3 forwards. With 4 times as many players, the equivalent ratio is:",
+      "expression": "ratio_scale(2, 3, 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "12:8",
+          "misconception_id": "inverts_ratio_terms_order"
+        },
+        {
+          "id": "B",
+          "text": "8:3",
+          "misconception_id": "multiplied_only_first_term"
+        },
+        {
+          "id": "C",
+          "text": "8:12",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "8:20",
+          "misconception_id": "part_to_part_vs_part_to_whole"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "8:12",
+      "hint": "Multiply both numbers in the ratio by the same factor.",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 2 × 4 = 8 and 3 × 4 = 12. The equivalent ratio is 8:12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-easy-3",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "easy",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-easy-school",
+      "params": {
+        "a": 1,
+        "b": 3,
+        "k": 4
+      },
+      "stem": "For every 1 fiction books, there are 3 nonfiction books. Using a factor of 4, the equivalent ratio is:",
+      "expression": "ratio_scale(1, 3, 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "4:3",
+          "misconception_id": "multiplied_only_first_term"
+        },
+        {
+          "id": "B",
+          "text": "4:12",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "4:16",
+          "misconception_id": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "id": "D",
+          "text": "1:9",
+          "misconception_id": "squared_terms"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "4:12",
+      "hint": "Multiply both numbers in the ratio by the same factor.",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 1 × 4 = 4 and 3 × 4 = 12. The equivalent ratio is 4:12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-easy-4",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "easy",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-easy-nature",
+      "params": {
+        "a": 2,
+        "b": 3,
+        "k": 4
+      },
+      "stem": "In a garden, the ratio of roses to daisies is 2:3. Multiplied by 4, the equivalent ratio is:",
+      "expression": "ratio_scale(2, 3, 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:20",
+          "misconception_id": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "id": "B",
+          "text": "4:9",
+          "misconception_id": "squared_terms"
+        },
+        {
+          "id": "C",
+          "text": "8:12",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "6:7",
+          "misconception_id": "additive_ratio_scaling"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "8:12",
+      "hint": "Multiply both numbers in the ratio by the same factor.",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 2 × 4 = 8 and 3 × 4 = 12. The equivalent ratio is 8:12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-easy-5",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "easy",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-easy-food",
+      "params": {
+        "a": 3,
+        "b": 5,
+        "k": 2
+      },
+      "stem": "In a recipe, the ratio of cups of flour to cups of sugar is 3 to 5. An equivalent ratio scaled by 2 is:",
+      "expression": "ratio_scale(3, 5, 2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "6:10",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "9:25",
+          "misconception_id": "squared_terms"
+        },
+        {
+          "id": "C",
+          "text": "5:7",
+          "misconception_id": "additive_ratio_scaling"
+        },
+        {
+          "id": "D",
+          "text": "10:6",
+          "misconception_id": "inverts_ratio_terms_order"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "6:10",
+      "hint": "Multiply both numbers in the ratio by the same factor.",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 3 × 2 = 6 and 5 × 2 = 10. The equivalent ratio is 6:10.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-easy-6",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "easy",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-easy-games",
+      "params": {
+        "a": 3,
+        "b": 4,
+        "k": 2
+      },
+      "stem": "A bag has 3 red gems for every 4 blue gems. Scaling up by 2, the equivalent ratio is:",
+      "expression": "ratio_scale(3, 4, 2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "5:6",
+          "misconception_id": "additive_ratio_scaling"
+        },
+        {
+          "id": "B",
+          "text": "8:6",
+          "misconception_id": "inverts_ratio_terms_order"
+        },
+        {
+          "id": "C",
+          "text": "6:8",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "6:4",
+          "misconception_id": "multiplied_only_first_term"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "6:8",
+      "hint": "Multiply both numbers in the ratio by the same factor.",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 3 × 2 = 6 and 4 × 2 = 8. The equivalent ratio is 6:8.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-medium-1",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "medium",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-medium-sports",
+      "params": {
+        "a": 3,
+        "b": 8,
+        "k": 5
+      },
+      "stem": "For every 3 laps run, a swimmer rests for 8 minutes. Using a scale factor of 5, the equivalent ratio is:",
+      "expression": "ratio_scale(3, 8, 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "40:15",
+          "misconception_id": "inverts_ratio_terms_order"
+        },
+        {
+          "id": "B",
+          "text": "15:8",
+          "misconception_id": "multiplied_only_first_term"
+        },
+        {
+          "id": "C",
+          "text": "15:55",
+          "misconception_id": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "id": "D",
+          "text": "15:40",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "15:40",
+      "hint": "What happens to each number in the ratio when you scale it up?",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 3 × 5 = 15 and 8 × 5 = 40. The equivalent ratio is 15:40.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-medium-2",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "medium",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-medium-games",
+      "params": {
+        "a": 5,
+        "b": 6,
+        "k": 3
+      },
+      "stem": "A game spawns 5 monsters for every 6 heroes. Scaled by 3, the equivalent ratio is:",
+      "expression": "ratio_scale(5, 6, 3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "15:6",
+          "misconception_id": "multiplied_only_first_term"
+        },
+        {
+          "id": "B",
+          "text": "15:18",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "15:33",
+          "misconception_id": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "id": "D",
+          "text": "25:36",
+          "misconception_id": "squared_terms"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "15:18",
+      "hint": "What happens to each number in the ratio when you scale it up?",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 5 × 3 = 15 and 6 × 3 = 18. The equivalent ratio is 15:18.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-medium-3",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "medium",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-medium-school",
+      "params": {
+        "a": 5,
+        "b": 8,
+        "k": 4
+      },
+      "stem": "A class has 5 boys for every 8 girls. With 4 times the students, the equivalent ratio is:",
+      "expression": "ratio_scale(5, 8, 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "20:52",
+          "misconception_id": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "id": "B",
+          "text": "25:64",
+          "misconception_id": "squared_terms"
+        },
+        {
+          "id": "C",
+          "text": "20:32",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "9:12",
+          "misconception_id": "additive_ratio_scaling"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "20:32",
+      "hint": "What happens to each number in the ratio when you scale it up?",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 5 × 4 = 20 and 8 × 4 = 32. The equivalent ratio is 20:32.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-medium-4",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "medium",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-medium-food",
+      "params": {
+        "a": 5,
+        "b": 6,
+        "k": 4
+      },
+      "stem": "A smoothie uses 5 scoops of protein for every 6 cups of fruit. Scaling by 4, the equivalent ratio is:",
+      "expression": "ratio_scale(5, 6, 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "20:24",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "25:36",
+          "misconception_id": "squared_terms"
+        },
+        {
+          "id": "C",
+          "text": "9:10",
+          "misconception_id": "additive_ratio_scaling"
+        },
+        {
+          "id": "D",
+          "text": "24:20",
+          "misconception_id": "inverts_ratio_terms_order"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "20:24",
+      "hint": "What happens to each number in the ratio when you scale it up?",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 5 × 4 = 20 and 6 × 4 = 24. The equivalent ratio is 20:24.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-medium-5",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "medium",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-medium-nature",
+      "params": {
+        "a": 2,
+        "b": 7,
+        "k": 3
+      },
+      "stem": "A birdwatcher spots 2 hawks for every 7 sparrows. Multiplied by 3, the equivalent ratio is:",
+      "expression": "ratio_scale(2, 7, 3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "5:10",
+          "misconception_id": "additive_ratio_scaling"
+        },
+        {
+          "id": "B",
+          "text": "21:6",
+          "misconception_id": "inverts_ratio_terms_order"
+        },
+        {
+          "id": "C",
+          "text": "6:7",
+          "misconception_id": "multiplied_only_first_term"
+        },
+        {
+          "id": "D",
+          "text": "6:21",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "6:21",
+      "hint": "What happens to each number in the ratio when you scale it up?",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 2 × 3 = 6 and 7 × 3 = 21. The equivalent ratio is 6:21.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-medium-6",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "medium",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-medium-sports",
+      "params": {
+        "a": 3,
+        "b": 7,
+        "k": 4
+      },
+      "stem": "For every 3 laps run, a swimmer rests for 7 minutes. Using a scale factor of 4, the equivalent ratio is:",
+      "expression": "ratio_scale(3, 7, 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "28:12",
+          "misconception_id": "inverts_ratio_terms_order"
+        },
+        {
+          "id": "B",
+          "text": "12:7",
+          "misconception_id": "multiplied_only_first_term"
+        },
+        {
+          "id": "C",
+          "text": "12:28",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "12:40",
+          "misconception_id": "part_to_part_vs_part_to_whole"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "12:28",
+      "hint": "What happens to each number in the ratio when you scale it up?",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 3 × 4 = 12 and 7 × 4 = 28. The equivalent ratio is 12:28.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-hard-1",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "hard",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-hard-school",
+      "params": {
+        "a": 4,
+        "b": 9,
+        "k": 5
+      },
+      "stem": "A library has 4 hardcovers for every 9 paperbacks. Scaled by 5, the equivalent ratio is:",
+      "expression": "ratio_scale(4, 9, 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "20:9",
+          "misconception_id": "multiplied_only_first_term"
+        },
+        {
+          "id": "B",
+          "text": "20:45",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "20:65",
+          "misconception_id": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "id": "D",
+          "text": "16:81",
+          "misconception_id": "squared_terms"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "20:45",
+      "hint": "Think about what operation keeps the relationship between two numbers the same.",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 4 × 5 = 20 and 9 × 5 = 45. The equivalent ratio is 20:45.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-hard-2",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "hard",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-hard-games",
+      "params": {
+        "a": 6,
+        "b": 11,
+        "k": 5
+      },
+      "stem": "A dungeon has 6 locked doors for every 11 open doors. Scaling by 5, the equivalent ratio is:",
+      "expression": "ratio_scale(6, 11, 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "30:85",
+          "misconception_id": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "id": "B",
+          "text": "36:121",
+          "misconception_id": "squared_terms"
+        },
+        {
+          "id": "C",
+          "text": "11:16",
+          "misconception_id": "additive_ratio_scaling"
+        },
+        {
+          "id": "D",
+          "text": "30:55",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "30:55",
+      "hint": "Think about what operation keeps the relationship between two numbers the same.",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 6 × 5 = 30 and 11 × 5 = 55. The equivalent ratio is 30:55.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-hard-3",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "hard",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-hard-sports",
+      "params": {
+        "a": 7,
+        "b": 10,
+        "k": 4
+      },
+      "stem": "A coach assigns 7 drills for every 10 minutes of game play. With a factor of 4, the equivalent ratio is:",
+      "expression": "ratio_scale(7, 10, 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "28:40",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "49:100",
+          "misconception_id": "squared_terms"
+        },
+        {
+          "id": "C",
+          "text": "11:14",
+          "misconception_id": "additive_ratio_scaling"
+        },
+        {
+          "id": "D",
+          "text": "40:28",
+          "misconception_id": "inverts_ratio_terms_order"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "28:40",
+      "hint": "Think about what operation keeps the relationship between two numbers the same.",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 7 × 4 = 28 and 10 × 4 = 40. The equivalent ratio is 28:40.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-hard-4",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "hard",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-hard-nature",
+      "params": {
+        "a": 6,
+        "b": 11,
+        "k": 4
+      },
+      "stem": "An aquarium has 6 saltwater tanks for every 11 freshwater tanks. Multiplied by 4, the equivalent ratio is:",
+      "expression": "ratio_scale(6, 11, 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "24:44",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "10:15",
+          "misconception_id": "additive_ratio_scaling"
+        },
+        {
+          "id": "C",
+          "text": "44:24",
+          "misconception_id": "inverts_ratio_terms_order"
+        },
+        {
+          "id": "D",
+          "text": "24:11",
+          "misconception_id": "multiplied_only_first_term"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "24:44",
+      "hint": "Think about what operation keeps the relationship between two numbers the same.",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 6 × 4 = 24 and 11 × 4 = 44. The equivalent ratio is 24:44.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-hard-5",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "hard",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-hard-food",
+      "params": {
+        "a": 7,
+        "b": 8,
+        "k": 4
+      },
+      "stem": "A baker uses 7 eggs for every 8 cups of milk. Scaling the batch by 4, the equivalent ratio is:",
+      "expression": "ratio_scale(7, 8, 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "32:28",
+          "misconception_id": "inverts_ratio_terms_order"
+        },
+        {
+          "id": "B",
+          "text": "28:32",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "28:8",
+          "misconception_id": "multiplied_only_first_term"
+        },
+        {
+          "id": "D",
+          "text": "28:60",
+          "misconception_id": "part_to_part_vs_part_to_whole"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "28:32",
+      "hint": "Think about what operation keeps the relationship between two numbers the same.",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 7 × 4 = 28 and 8 × 4 = 32. The equivalent ratio is 28:32.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-ratios-hard-6",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "hard",
+      "verifier_type": "ratio_comparison",
+      "template_id": "g6-ratios-hard-school",
+      "params": {
+        "a": 6,
+        "b": 11,
+        "k": 5
+      },
+      "stem": "A library has 6 hardcovers for every 11 paperbacks. Scaled by 5, the equivalent ratio is:",
+      "expression": "ratio_scale(6, 11, 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "30:11",
+          "misconception_id": "multiplied_only_first_term"
+        },
+        {
+          "id": "B",
+          "text": "30:85",
+          "misconception_id": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "id": "C",
+          "text": "36:121",
+          "misconception_id": "squared_terms"
+        },
+        {
+          "id": "D",
+          "text": "30:55",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "30:55",
+      "hint": "Think about what operation keeps the relationship between two numbers the same.",
+      "explanation": "To find an equivalent ratio, multiply both numbers by the same factor. 6 × 5 = 30 and 11 × 5 = 55. The equivalent ratio is 30:55.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    }
+  ]
+}
