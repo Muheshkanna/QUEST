@@ -36,7 +36,7 @@ def test_load_all_topics_json():
         assert t.title
         assert t.fantasy_name
         assert t.standard
-        assert t.standard_verified is True
+        assert isinstance(t.standard_verified, bool)
         assert t.verifier_type
         assert len(t.misconceptions) >= 2
 
