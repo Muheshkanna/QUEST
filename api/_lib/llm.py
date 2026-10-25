@@ -24,6 +24,9 @@ import time
 from typing import Any, Dict, List, Optional, Union
 
 import httpx
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logger = logging.getLogger("quest.llm")
 
@@ -87,8 +90,8 @@ class GeminiClient(BaseLLMClient):
         # Key read strictly from parameter or GEMINI_API_KEY env var
         raw_key = api_key or os.getenv("GEMINI_API_KEY") or ""
         self._api_key = raw_key.strip()
-        # Free-tier model names: gemini-1.5-flash, gemini-2.0-flash, gemini-2.5-flash
-        self.model_name = (model_name or os.getenv("GEMINI_MODEL") or "gemini-1.5-flash").strip()
+        # Free-tier model names: gemini-flash-lite-latest, gemini-3.5-flash-lite, gemini-3.8-flash
+        self.model_name = (model_name or os.getenv("GEMINI_MODEL") or "gemini-flash-lite-latest").strip()
         self.default_timeout = timeout
         self.max_retries = max_retries
         self._endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{self.model_name}:generateContent"
