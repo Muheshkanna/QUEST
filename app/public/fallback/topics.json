@@ -1,0 +1,642 @@
+[
+  {
+    "id": "g5-place-value",
+    "grade": 5,
+    "realm": "Enchanted Forest",
+    "title": "Place Value & Powers of 10",
+    "fantasy_name": "Leyline Numerology",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.1",
+    "standard_text": "Use place value understanding to solve real-life, mathematical problems (including relationships between places and powers of 10).",
+    "standard_verified": false,
+    "verifier_type": "integer_arithmetic",
+    "misconceptions": [
+      {
+        "tag": "additive_power_of_ten",
+        "description": "Student adds zeros as a separate number instead of shifting place value by factor of 10."
+      },
+      {
+        "tag": "decimal_point_shift_reversed",
+        "description": "Student shifts decimal point in the wrong direction when multiplying or dividing by powers of 10."
+      },
+      {
+        "tag": "confuses_ten_times_with_add_ten",
+        "description": "Student adds 10 rather than multiplying by 10 when determining value of neighboring digits."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 1,
+    "icon": "\ud83c\udf32",
+    "island_theme": "Whispering Canopy of Digits",
+    "playable": false,
+    "content_source": "coming-soon"
+  },
+  {
+    "id": "g5-decimal-ops",
+    "grade": 5,
+    "realm": "Enchanted Forest",
+    "title": "Decimal Addition and Subtraction",
+    "fantasy_name": "Dewdrop Sums",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.4",
+    "standard_text": "Read, write, and compare decimal numbers to the thousandths place, and round and perform operations with decimal numbers to the hundredths place.",
+    "standard_verified": false,
+    "verifier_type": "decimal_arithmetic",
+    "misconceptions": [
+      {
+        "tag": "unaligned_decimals",
+        "description": "Student aligns decimal numbers to the right like whole numbers instead of lining up the decimal points."
+      },
+      {
+        "tag": "ignores_empty_place_value",
+        "description": "Student fails to place a placeholder zero when subtracting from a shorter decimal."
+      },
+      {
+        "tag": "carries_over_decimal_point_incorrectly",
+        "description": "Student treats the decimal point as a wall that resets regrouping."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 2,
+    "icon": "\ud83d\udca7",
+    "island_theme": "Spring of Floating Decimals",
+    "playable": true,
+    "content_source": "verified-bank"
+  },
+  {
+    "id": "g5-decimal-compare-round",
+    "grade": 5,
+    "realm": "Enchanted Forest",
+    "title": "Comparing & Rounding Decimals",
+    "fantasy_name": "Mossy Scales of Accuracy",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.4",
+    "standard_text": "Read, write, and compare decimal numbers to the thousandths place, and round and perform operations with decimal numbers to the hundredths place.",
+    "standard_verified": false,
+    "verifier_type": "decimal_comparison",
+    "misconceptions": [
+      {
+        "tag": "longer_decimal_is_larger",
+        "description": "Student assumes 0.125 is greater than 0.5 because 125 is greater than 5."
+      },
+      {
+        "tag": "round_down_without_truncation_rule",
+        "description": "Student truncates digits instead of examining the deciding digit to round."
+      },
+      {
+        "tag": "confuses_tenths_and_hundredths",
+        "description": "Student compares hundredths place directly to tenths place."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 3,
+    "icon": "\u2696\ufe0f",
+    "island_theme": "Grove of Harmonic Measures",
+    "playable": false,
+    "content_source": "coming-soon"
+  },
+  {
+    "id": "g5-fractions-add",
+    "grade": 5,
+    "realm": "Temple of Wisdom",
+    "title": "Adding & Subtracting Fractions",
+    "fantasy_name": "Fractional Alchemy",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.3.3",
+    "standard_text": "Model and solve problems involving addition and subtraction of fractions and mixed numbers with unlike denominators.",
+    "standard_verified": true,
+    "verifier_type": "fraction_arithmetic",
+    "misconceptions": [
+      {
+        "tag": "add_denominators",
+        "description": "Student adds numerators together and denominators together directly (e.g. 1/2 + 1/3 = 2/5)."
+      },
+      {
+        "tag": "find_common_denom_without_renaming_numerators",
+        "description": "Student changes denominators to common denominator but leaves original numerators unchanged."
+      },
+      {
+        "tag": "subtracts_smaller_from_larger_regardless_of_order",
+        "description": "In mixed number subtraction, student subtracts smaller fractional part from larger without borrowing."
+      }
+    ],
+    "tier": "flagship",
+    "unlock_order": 4,
+    "icon": "\u2697\ufe0f",
+    "island_theme": "Sunken Crucible of Denominators",
+    "playable": true,
+    "content_source": "verified-bank"
+  },
+  {
+    "id": "g5-fractions-multiply",
+    "grade": 5,
+    "realm": "Temple of Wisdom",
+    "title": "Multiplying Fractions & Whole Numbers",
+    "fantasy_name": "Gilded Fraction Multipliers",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.3.4",
+    "standard_text": "Model and solve problems involving multiplication of a fraction and a whole number.",
+    "standard_verified": true,
+    "verifier_type": "fraction_arithmetic",
+    "misconceptions": [
+      {
+        "tag": "multiplies_both_by_whole_number",
+        "description": "Student multiplies both numerator and denominator by the whole number factor."
+      },
+      {
+        "tag": "believes_multiplication_always_increases",
+        "description": "Student cannot conceptualize that multiplying by a fraction less than one scales down the product."
+      },
+      {
+        "tag": "cross_multiplies_instead_of_multiplying_straight",
+        "description": "Student applies proportional cross-multiplication instead of multiplying numerators."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 5,
+    "icon": "\ud83d\udcdc",
+    "island_theme": "Hall of Scaled Sigils",
+    "playable": true,
+    "content_source": "verified-bank"
+  },
+  {
+    "id": "g5-fractions-divide-unit",
+    "grade": 5,
+    "realm": "Temple of Wisdom",
+    "title": "Division of Unit Fractions & Whole Numbers",
+    "fantasy_name": "Prism of Unit Fission",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.3.6",
+    "standard_text": "Model and solve problems involving division of a unit fraction by a whole number and a whole number by a unit fraction.",
+    "standard_verified": true,
+    "verifier_type": "fraction_arithmetic",
+    "misconceptions": [
+      {
+        "tag": "confuses_division_order",
+        "description": "Student calculates whole / unit instead of unit / whole (e.g. 4 / (1/2) vs (1/2) / 4)."
+      },
+      {
+        "tag": "multiplies_instead_of_dividing",
+        "description": "Student does not invert or realize how many unit parts partition the whole."
+      },
+      {
+        "tag": "fractional_quotient_confused_with_remainder",
+        "description": "Student treats the resulting unit fraction as a remainder quantity."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 6,
+    "icon": "\ud83d\udc8e",
+    "island_theme": "Axiom of Equal Partitions",
+    "playable": false,
+    "content_source": "coming-soon"
+  },
+  {
+    "id": "g5-volume",
+    "grade": 5,
+    "realm": "Temple of Wisdom",
+    "title": "Volume of Rectangular Prisms",
+    "fantasy_name": "Sanctuary of Cubic Volumetrics",
+    "domain": "Geometric & Spatial Reasoning",
+    "standard": "5.GSR.8.3",
+    "standard_text": "Investigate volume of right rectangular prisms by packing them with unit cubes without gaps or overlaps. Then, determine the total volume to solve problems.",
+    "standard_verified": true,
+    "verifier_type": "volume_geometry",
+    "misconceptions": [
+      {
+        "tag": "confuses_surface_area_with_volume",
+        "description": "Student counts visible outer faces instead of internal packed unit cubes."
+      },
+      {
+        "tag": "adds_dimensions_instead_of_multiplying",
+        "description": "Student calculates l + w + h instead of multiplying length \u00d7 width \u00d7 height."
+      },
+      {
+        "tag": "forgets_height_layering",
+        "description": "Student calculates area of base (l \u00d7 w) but neglects multiplying by number of layers."
+      }
+    ],
+    "tier": "flagship",
+    "unlock_order": 7,
+    "icon": "\ud83c\udfdb\ufe0f",
+    "island_theme": "The Obsidian Cubic Monolith",
+    "playable": true,
+    "content_source": "verified-bank"
+  },
+  {
+    "id": "g5-multiply",
+    "grade": 5,
+    "realm": "Celestial Frontier",
+    "title": "Multi-Digit Multiplication",
+    "fantasy_name": "Astral Matrix Products",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.2",
+    "standard_text": "Multiply and divide multi-digit whole numbers to solve relevant, mathematical problems.",
+    "standard_verified": false,
+    "verifier_type": "integer_arithmetic",
+    "misconceptions": [
+      {
+        "tag": "forgets_tens_place_zero",
+        "description": "Student neglects placing zero placeholder when multiplying by tens or hundreds digit."
+      },
+      {
+        "tag": "miscalculates_regrouping_additions",
+        "description": "Student multiplies carried numbers instead of adding them after multiplying digits."
+      },
+      {
+        "tag": "aligns_partial_products_incorrectly",
+        "description": "Student shifts partial products unevenly across column places."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 8,
+    "icon": "\u2728",
+    "island_theme": "Starlight Grid Observatory",
+    "playable": true,
+    "content_source": "verified-bank"
+  },
+  {
+    "id": "g5-divide",
+    "grade": 5,
+    "realm": "Celestial Frontier",
+    "title": "Multi-Digit Division with Remainders",
+    "fantasy_name": "Orbit of Quotients",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.2.2",
+    "standard_text": "Multiply and divide multi-digit whole numbers to solve relevant, mathematical problems.",
+    "standard_verified": true,
+    "verifier_type": "division_with_remainder",
+    "misconceptions": [
+      {
+        "tag": "ignores_remainder_context",
+        "description": "Student treats remainder as simple decimal or forgets to interpret rounding up in contextual word problems."
+      },
+      {
+        "tag": "subtraction_substep_error",
+        "description": "Student miscalculates intermediate subtraction during standard long division algorithm."
+      },
+      {
+        "tag": "misplaces_quotient_digit_column",
+        "description": "Student writes first quotient digit over wrong place value."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 9,
+    "icon": "\ud83e\ude90",
+    "island_theme": "Vortex of Equal Portions",
+    "playable": true,
+    "content_source": "verified-bank"
+  },
+  {
+    "id": "g5-order-ops",
+    "grade": 5,
+    "realm": "Celestial Frontier",
+    "title": "Order of Operations & Expressions",
+    "fantasy_name": "Chrono-Order of Axioms",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.5",
+    "standard_text": "Write, interpret, and evaluate numerical expressions within authentic problems.",
+    "standard_verified": false,
+    "verifier_type": "expression_evaluation",
+    "misconceptions": [
+      {
+        "tag": "left_to_right_disregards_precedence",
+        "description": "Student evaluates operations strictly left-to-right without prioritizing multiplication/division before addition."
+      },
+      {
+        "tag": "addition_before_subtraction_dogma",
+        "description": "Student always performs addition before subtraction instead of evaluating left-to-right."
+      },
+      {
+        "tag": "ignores_parentheses_grouping",
+        "description": "Student skips inner grouped terms inside parentheses."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 10,
+    "icon": "\u231b",
+    "island_theme": "Celestial Time-Wheel Spire",
+    "playable": false,
+    "content_source": "coming-soon"
+  },
+  {
+    "id": "g6-ratios",
+    "grade": 6,
+    "realm": "Enchanted Forest",
+    "title": "Ratios & Equivalent Ratios",
+    "fantasy_name": "Botanical Proportions",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.4.1",
+    "standard_text": "Explain the concept of a ratio, represent ratios, and use ratio language to describe a relationship between two quantities.",
+    "standard_verified": true,
+    "verifier_type": "ratio_comparison",
+    "misconceptions": [
+      {
+        "tag": "additive_ratio_scaling",
+        "description": "Student adds a constant number to both parts of ratio instead of scaling by multiplication (e.g. 2:3 becomes 3:4 instead of 4:6)."
+      },
+      {
+        "tag": "part_to_part_vs_part_to_whole",
+        "description": "Student confuses part-to-part ratio (cats to dogs) with part-to-whole ratio (cats to total pets)."
+      },
+      {
+        "tag": "inverts_ratio_terms_order",
+        "description": "Student writes ratio terms in reversed order from the question context."
+      }
+    ],
+    "tier": "flagship",
+    "unlock_order": 11,
+    "icon": "\ud83c\udf3f",
+    "island_theme": "Verdant Spire of Harmonic Vines",
+    "playable": true,
+    "content_source": "verified-bank"
+  },
+  {
+    "id": "g6-unit-rates",
+    "grade": 6,
+    "realm": "Enchanted Forest",
+    "title": "Unit Rates & Unit Pricing",
+    "fantasy_name": "The Merchant's Equivalence",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.4.4",
+    "standard_text": "Describe the concept of rates and unit rate in the context of a ratio relationship.",
+    "standard_verified": true,
+    "verifier_type": "rate_division",
+    "misconceptions": [
+      {
+        "tag": "divides_in_reversed_order",
+        "description": "Student calculates quantity / cost instead of cost / quantity to find unit price."
+      },
+      {
+        "tag": "forgets_unit_rate_denominator_is_one",
+        "description": "Student leaves rate unsimplified with non-unit denominator."
+      },
+      {
+        "tag": "misinterprets_speed_units",
+        "description": "Student confuses distance-per-hour with hours-per-distance."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 12,
+    "icon": "\ud83e\ude99",
+    "island_theme": "Canopy Trading Bazaar",
+    "playable": true,
+    "content_source": "verified-bank"
+  },
+  {
+    "id": "g6-percents",
+    "grade": 6,
+    "realm": "Enchanted Forest",
+    "title": "Percents as Rates per 100",
+    "fantasy_name": "Century Runes of Portion",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.4.6",
+    "standard_text": "Calculate a percent of a quantity as a rate per 100 and solve everyday problems given a percent.",
+    "standard_verified": true,
+    "verifier_type": "percent_calculation",
+    "misconceptions": [
+      {
+        "tag": "decimal_place_percent_shift",
+        "description": "Student converts 5% to 0.5 instead of 0.05."
+      },
+      {
+        "tag": "multiplies_percent_directly_without_hundredth_conversion",
+        "description": "Student multiplies value directly by 25 instead of 0.25 when finding 25% of a number."
+      },
+      {
+        "tag": "confuses_percent_of_vs_percent_change",
+        "description": "Student finds the discounted amount instead of final remaining cost."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 13,
+    "icon": "\ud83c\udfaf",
+    "island_theme": "Arch of the Hundredth Rune",
+    "playable": true,
+    "content_source": "verified-bank"
+  },
+  {
+    "id": "g6-fraction-division",
+    "grade": 6,
+    "realm": "Temple of Wisdom",
+    "title": "Dividing Fractions by Fractions",
+    "fantasy_name": "The Reciprocal Crucible",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.1.2",
+    "standard_text": "Multiply and divide any combination of whole numbers, fractions, and mixed numbers using a student-selected strategy, and interpret products/quotients.",
+    "standard_verified": true,
+    "verifier_type": "fraction_arithmetic",
+    "misconceptions": [
+      {
+        "tag": "inverts_dividend_instead_of_divisor",
+        "description": "Student inverts first fraction instead of second fraction (the divisor)."
+      },
+      {
+        "tag": "divides_numerators_and_denominators_directly",
+        "description": "Student divides numerator by numerator and denominator by denominator without common denominators."
+      },
+      {
+        "tag": "inverts_both_fractions",
+        "description": "Student inverts both fractions prior to multiplication."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 14,
+    "icon": "\ud83c\udffa",
+    "island_theme": "Chamber of Inverted Mirrors",
+    "playable": true,
+    "content_source": "verified-bank"
+  },
+  {
+    "id": "g6-decimals",
+    "grade": 6,
+    "realm": "Temple of Wisdom",
+    "title": "Multi-Digit Decimal Operations",
+    "fantasy_name": "Precision Stone Scribing",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.1.3",
+    "standard_text": "Perform operations with multi-digit decimal numbers fluently using models and strategies.",
+    "standard_verified": true,
+    "verifier_type": "decimal_arithmetic",
+    "misconceptions": [
+      {
+        "tag": "miscounts_decimal_places_in_product",
+        "description": "Student places decimal point in multiplication product based on whole number digits."
+      },
+      {
+        "tag": "fails_to_shift_divisor_decimal",
+        "description": "In division, student forgets to shift dividend decimal point when shifting divisor."
+      },
+      {
+        "tag": "drops_zeros_before_decimal_place",
+        "description": "Student writes 0.6 instead of 0.06 when product has two decimal digits."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 15,
+    "icon": "\ud83d\udcd0",
+    "island_theme": "Sanctuary of Thousandth Shards",
+    "playable": false,
+    "content_source": "coming-soon"
+  },
+  {
+    "id": "g6-integers",
+    "grade": 6,
+    "realm": "Temple of Wisdom",
+    "title": "Integers & Opposites on Number Lines",
+    "fantasy_name": "Subterranean Abyss of Negatives",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.3.1",
+    "standard_text": "Identify and compare integers and explain the meaning of zero based on multiple authentic situations.",
+    "standard_verified": true,
+    "verifier_type": "integer_comparison",
+    "misconceptions": [
+      {
+        "tag": "larger_magnitude_negative_is_greater",
+        "description": "Student believes -8 is greater than -3 because 8 is greater than 3."
+      },
+      {
+        "tag": "confuses_absolute_value_with_opposite",
+        "description": "Student thinks absolute value of -5 is -5 or changes sign regardless of context."
+      },
+      {
+        "tag": "misplaces_negative_numbers_on_numberline",
+        "description": "Student orders negatives left-to-right as -1, -2, -3 starting from negative infinity."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 16,
+    "icon": "\u2693",
+    "island_theme": "The Deep Axis of Symmetries",
+    "playable": false,
+    "content_source": "coming-soon"
+  },
+  {
+    "id": "g6-equiv-expressions",
+    "grade": 6,
+    "realm": "Celestial Frontier",
+    "title": "Generating Equivalent Expressions",
+    "fantasy_name": "Astral Algebraic Polyforms",
+    "domain": "Patterning & Algebraic Reasoning",
+    "standard": "6.PAR.6.5",
+    "standard_text": "Apply the properties of operations to identify and generate equivalent expressions.",
+    "standard_verified": true,
+    "verifier_type": "expression_equivalence",
+    "misconceptions": [
+      {
+        "tag": "incomplete_distribution",
+        "description": "Student multiplies outer coefficient by first term only (e.g. 3(x + 4) = 3x + 4)."
+      },
+      {
+        "tag": "combines_unlike_terms",
+        "description": "Student adds variable and constant terms together (e.g. 4x + 5 = 9x)."
+      },
+      {
+        "tag": "sign_error_distributing_negative",
+        "description": "Student forgets that distributing a negative changes the signs of all inside terms."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 17,
+    "icon": "\ud83c\udf0c",
+    "island_theme": "Forge of Variable Glyphs",
+    "playable": false,
+    "content_source": "coming-soon"
+  },
+  {
+    "id": "g6-equations",
+    "grade": 6,
+    "realm": "Celestial Frontier",
+    "title": "Solving One-Step Equations",
+    "fantasy_name": "The Celestial Equilibrium",
+    "domain": "Patterning & Algebraic Reasoning",
+    "standard": "6.PAR.7.2",
+    "standard_text": "Write and solve one-step equations and inequalities as mathematical models to explain authentic, realistic situations.",
+    "standard_verified": true,
+    "verifier_type": "equation_solving",
+    "misconceptions": [
+      {
+        "tag": "performs_same_operation_instead_of_inverse",
+        "description": "Student adds when the equation has addition instead of subtracting (e.g. x + 5 = 12 -> x = 17)."
+      },
+      {
+        "tag": "operates_on_one_side_only",
+        "description": "Student performs the inverse operation on one side without balancing the equal sign."
+      },
+      {
+        "tag": "multiplies_instead_of_dividing_coefficients",
+        "description": "In 3x = 15, student multiplies 15 by 3 instead of dividing by 3."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 18,
+    "icon": "\u2696\ufe0f",
+    "island_theme": "Orrery of Dynamic Balance",
+    "playable": true,
+    "content_source": "verified-bank"
+  },
+  {
+    "id": "g6-mean-median",
+    "grade": 6,
+    "realm": "Celestial Frontier",
+    "title": "Measures of Center: Mean & Median",
+    "fantasy_name": "Constellation Equal Shares",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.2.1",
+    "standard_text": "Describe and interpret the center of the distribution by the equal share value (mean).",
+    "standard_verified": false,
+    "verifier_type": "statistical_center",
+    "misconceptions": [
+      {
+        "tag": "finds_median_without_ordering_data",
+        "description": "Student selects middle number from an unsorted data list."
+      },
+      {
+        "tag": "divides_sum_by_arbitrary_number",
+        "description": "Student divides total sum by 2 instead of total count of data values."
+      },
+      {
+        "tag": "confuses_mean_with_median",
+        "description": "Student averages middle numbers when asked for sum / count."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 19,
+    "icon": "\ud83d\udcca",
+    "island_theme": "Pillars of Balanced Starlight",
+    "playable": true,
+    "content_source": "verified-bank"
+  },
+  {
+    "id": "g6-exponents",
+    "grade": 6,
+    "realm": "Celestial Frontier",
+    "title": "Numerical Expressions with Exponents",
+    "fantasy_name": "Stellar Powers of the Void",
+    "domain": "Patterning & Algebraic Reasoning",
+    "standard": "6.PAR.6.1",
+    "standard_text": "Write and evaluate numerical expressions involving rational bases and whole-number exponents.",
+    "standard_verified": true,
+    "verifier_type": "exponent_evaluation",
+    "misconceptions": [
+      {
+        "tag": "multiplies_base_by_exponent",
+        "description": "Student calculates base \u00d7 exponent instead of repeated multiplication (e.g. 2^3 = 6 instead of 8)."
+      },
+      {
+        "tag": "evaluates_exponent_zero_as_zero",
+        "description": "Student believes any non-zero base to power 0 equals 0 instead of 1."
+      },
+      {
+        "tag": "confuses_exponent_order",
+        "description": "Student evaluates 3^2 as 2^3."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 20,
+    "icon": "\u26a1",
+    "island_theme": "Apex of Exponential Novae",
+    "playable": false,
+    "content_source": "coming-soon"
+  }
+]
