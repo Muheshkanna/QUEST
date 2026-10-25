@@ -29,6 +29,14 @@ def compute_topic_playability():
     bank_dir = DATA_DIR / "bank"
     bundled_topics = []
 
+    misc_file = DATA_DIR / "misconceptions.json"
+    misc_map = {}
+    if misc_file.is_file():
+        with open(misc_file, "r", encoding="utf-8") as mf:
+            for m in json.load(mf).get("misconceptions", []):
+                if m.get("id"):
+                    misc_map[m["id"]] = m
+
     for topic in topics:
         topic_id = topic["id"]
         bank_file = bank_dir / f"{topic_id}.json"
@@ -41,24 +49,11 @@ def compute_topic_playability():
                 with open(bank_file, "r", encoding="utf-8") as bf:
                     bank_data = json.load(bf)
                 questions = bank_data.get("questions", [])
-                
-                # Check: >= 9 verified questions, >= 3 per level, provenance verified
-                easy_count = 0
-                med_count = 0
-                hard_count = 0
-                verified_count = 0
 
-                for q in questions:
-                    prov = q.get("provenance")
-                    diff = q.get("difficulty")
-                    if prov == "verified":
-                        verified_count += 1
-                        if diff == "easy":
-                            easy_count += 1
-                        elif diff == "medium":
-                            med_count += 1
-                        elif diff == "hard":
-                            hard_count += 1
+                easy_count = sum(1 for q in questions if q.get("difficulty") == "easy" and q.get("provenance") == "verified")
+                med_count = sum(1 for q in questions if q.get("difficulty") == "medium" and q.get("provenance") == "verified")
+                hard_count = sum(1 for q in questions if q.get("difficulty") == "hard" and q.get("provenance") == "verified")
+                verified_count = sum(1 for q in questions if q.get("provenance") == "verified")
 
                 if (
                     len(questions) >= 9
@@ -74,15 +69,37 @@ def compute_topic_playability():
             except Exception as e:
                 print(f"Error reading bank for {topic_id}: {e}")
 
+        derived_misc = []
+        for mid in topic.get("misconceptions", []):
+            if isinstance(mid, dict):
+                derived_misc.append({"id": mid.get("id", mid.get("tag", "")), "kid_label": mid.get("kid_label", "")})
+            else:
+                entry = misc_map.get(mid, {})
+                derived_misc.append({"id": mid, "kid_label": entry.get("kid_label", mid)})
+
         topic_entry = dict(topic)
+        topic_entry["misconceptions"] = derived_misc
         topic_entry["playable"] = is_playable
         topic_entry["content_source"] = content_source
         bundled_topics.append(topic_entry)
+
+    # Compute play_order per grade among playable topics
+    for g in (5, 6):
+        grade_topics = [t for t in bundled_topics if t["grade"] == g]
+        grade_topics.sort(key=lambda x: x.get("unlock_order", 0))
+        counter = 1
+        for gt in grade_topics:
+            if gt["playable"]:
+                gt["play_order"] = counter
+                counter += 1
+            else:
+                gt["play_order"] = None
 
     out_topics_file = TARGET_ROOT / "topics.json"
     with open(out_topics_file, "w", encoding="utf-8") as f:
         json.dump(bundled_topics, f, indent=2)
     print(f"Bundled {len(bundled_topics)} topics (playable: {sum(1 for t in bundled_topics if t['playable'])}) -> {out_topics_file}")
+
 
 
 def copy_file(src: Path, dest_name: str | None = None):

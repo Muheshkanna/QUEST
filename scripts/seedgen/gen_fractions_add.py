@@ -1,11 +1,11 @@
-﻿"""Generator for g5-fractions-add.
+"""Generator for g5-fractions-add.
 easy   = same denominator
 medium = one denominator a multiple of the other (b != d, d = k*b or b = k*d)
 hard   = unlike denominators + two-step word problem
 """
 import random
 from fractions import Fraction
-from math import lcm
+from math import lcm, gcd
 from . import get_topic_positions, build_options, get_distractors, fmt_frac
 
 TOPIC = "g5-fractions-add"
@@ -79,18 +79,25 @@ def _explanation(p, correct_frac):
     simplified = fmt_frac(correct_frac)
     if b == d:
         sum_top = a + c
-        if Fraction(sum_top, b) != correct_frac:
-            return f"Both fractions have {b} on the bottom. Add the top numbers: {a} + {c} = {sum_top}, giving {sum_top}/{b} which simplifies to {simplified}."
+        if sum_top != correct_frac.numerator or b != correct_frac.denominator:
+            gcd_val = gcd(sum_top, b)
+            return (f"Both fractions have {b} on the bottom. Add the top numbers: {a} + {c} = {sum_top}, giving {sum_top}/{b}. "
+                    f"Simplify by dividing the top and bottom by {gcd_val}: {sum_top}/{b} simplifies to {simplified}.")
         return f"Both fractions have {b} on the bottom. Add the top numbers: {a} + {c} = {sum_top}, giving {sum_top}/{b}."
     else:
         L = lcm(b, d)
         na = a * (L // b)
         nc = c * (L // d)
         raw_top = na + nc
-        tail = f" which simplifies to {simplified}." if Fraction(raw_top, L) != correct_frac else "."
+        if raw_top != correct_frac.numerator or L != correct_frac.denominator:
+            gcd_val = gcd(raw_top, L)
+            return (f"The smallest number both {b} and {d} go into is {L}. "
+                    f"Rename {a}/{b} as {na}/{L} and {c}/{d} as {nc}/{L} so the bottoms match. "
+                    f"Add the top numbers: {na} + {nc} = {raw_top}, giving {raw_top}/{L}. "
+                    f"Simplify by dividing the top and bottom by {gcd_val}: {raw_top}/{L} simplifies to {simplified}.")
         return (f"The smallest number both {b} and {d} go into is {L}. "
                 f"Rename {a}/{b} as {na}/{L} and {c}/{d} as {nc}/{L} so the bottoms match. "
-                f"Add the top numbers: {na} + {nc} = {raw_top}, giving {raw_top}/{L}{tail}")
+                f"Add the top numbers: {na} + {nc} = {raw_top}, giving {raw_top}/{L}.")
 
 def _hint(p, diff):
     b, d = p["b"], p["d"]

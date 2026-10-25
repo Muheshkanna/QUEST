@@ -1,13 +1,6 @@
 {
   "topic_id": "g5-fractions-multiply",
-  "generated_at": "2026-10-25T18:25:29.335800+00:00",
-  "model": "template-seed",
-  "prompt_version": "seed-v2",
-  "counts": {
-    "easy": 6,
-    "medium": 6,
-    "hard": 6
-  },
+  "version": "1.0.0",
   "questions": [
     {
       "id": "g5-fractions-multiply-easy-1",
@@ -49,7 +42,7 @@
       "correct_index": 1,
       "answer": "1/4",
       "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
-      "explanation": "Multiply top × top: 1 × 3 = 3. Multiply bottom × bottom: 3 × 4 = 12. The answer is 1/4.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 3 = 3. Multiply bottom \u00d7 bottom: 3 \u00d7 4 = 12, giving 3/12. Simplify by dividing the top and bottom by 3: 3/12 simplifies to 1/4.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -94,7 +87,7 @@
       "correct_index": 1,
       "answer": "1/2",
       "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
-      "explanation": "Multiply top × top: 3 × 2 = 6. Multiply bottom × bottom: 4 × 3 = 12. The answer is 1/2.",
+      "explanation": "Multiply top \u00d7 top: 3 \u00d7 2 = 6. Multiply bottom \u00d7 bottom: 4 \u00d7 3 = 12, giving 6/12. Simplify by dividing the top and bottom by 6: 6/12 simplifies to 1/2.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -139,7 +132,7 @@
       "correct_index": 0,
       "answer": "1/3",
       "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
-      "explanation": "Multiply top × top: 1 × 2 = 2. Multiply bottom × bottom: 2 × 3 = 6. The answer is 1/3.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 2 = 2. Multiply bottom \u00d7 bottom: 2 \u00d7 3 = 6, giving 2/6. Simplify by dividing the top and bottom by 2: 2/6 simplifies to 1/3.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -184,7 +177,7 @@
       "correct_index": 2,
       "answer": "1/10",
       "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
-      "explanation": "Multiply top × top: 1 × 1 = 1. Multiply bottom × bottom: 5 × 2 = 10. The answer is 1/10.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 1 = 1. Multiply bottom \u00d7 bottom: 5 \u00d7 2 = 10, giving 1/10.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -229,7 +222,7 @@
       "correct_index": 0,
       "answer": "1/3",
       "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
-      "explanation": "Multiply top × top: 1 × 2 = 2. Multiply bottom × bottom: 2 × 3 = 6. The answer is 1/3.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 2 = 2. Multiply bottom \u00d7 bottom: 2 \u00d7 3 = 6, giving 2/6. Simplify by dividing the top and bottom by 2: 2/6 simplifies to 1/3.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -274,7 +267,7 @@
       "correct_index": 3,
       "answer": "1/4",
       "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
-      "explanation": "Multiply top × top: 1 × 3 = 3. Multiply bottom × bottom: 3 × 4 = 12. The answer is 1/4.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 3 = 3. Multiply bottom \u00d7 bottom: 3 \u00d7 4 = 12, giving 3/12. Simplify by dividing the top and bottom by 3: 3/12 simplifies to 1/4.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -319,7 +312,7 @@
       "correct_index": 1,
       "answer": "1/10",
       "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
-      "explanation": "Multiply top × top: 1 × 2 = 2. Multiply bottom × bottom: 4 × 5 = 20. The answer is 1/10.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 2 = 2. Multiply bottom \u00d7 bottom: 4 \u00d7 5 = 20, giving 2/20. Simplify by dividing the top and bottom by 2: 2/20 simplifies to 1/10.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -364,7 +357,7 @@
       "correct_index": 1,
       "answer": "8/15",
       "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
-      "explanation": "Multiply top × top: 2 × 4 = 8. Multiply bottom × bottom: 3 × 5 = 15. The answer is 8/15.",
+      "explanation": "Multiply top \u00d7 top: 2 \u00d7 4 = 8. Multiply bottom \u00d7 bottom: 3 \u00d7 5 = 15, giving 8/15.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -409,7 +402,7 @@
       "correct_index": 2,
       "answer": "3/5",
       "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
-      "explanation": "Multiply top × top: 4 × 3 = 12. Multiply bottom × bottom: 5 × 4 = 20. The answer is 3/5.",
+      "explanation": "Multiply top \u00d7 top: 4 \u00d7 3 = 12. Multiply bottom \u00d7 bottom: 5 \u00d7 4 = 20, giving 12/20. Simplify by dividing the top and bottom by 4: 12/20 simplifies to 3/5.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -454,7 +447,7 @@
       "correct_index": 0,
       "answer": "1/5",
       "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
-      "explanation": "Multiply top × top: 1 × 3 = 3. Multiply bottom × bottom: 3 × 5 = 15. The answer is 1/5.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 3 = 3. Multiply bottom \u00d7 bottom: 3 \u00d7 5 = 15, giving 3/15. Simplify by dividing the top and bottom by 3: 3/15 simplifies to 1/5.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -499,7 +492,7 @@
       "correct_index": 3,
       "answer": "8/25",
       "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
-      "explanation": "Multiply top × top: 4 × 2 = 8. Multiply bottom × bottom: 5 × 5 = 25. The answer is 8/25.",
+      "explanation": "Multiply top \u00d7 top: 4 \u00d7 2 = 8. Multiply bottom \u00d7 bottom: 5 \u00d7 5 = 25, giving 8/25.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -544,7 +537,7 @@
       "correct_index": 2,
       "answer": "2/5",
       "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
-      "explanation": "Multiply top × top: 3 × 2 = 6. Multiply bottom × bottom: 5 × 3 = 15. The answer is 2/5.",
+      "explanation": "Multiply top \u00d7 top: 3 \u00d7 2 = 6. Multiply bottom \u00d7 bottom: 5 \u00d7 3 = 15, giving 6/15. Simplify by dividing the top and bottom by 3: 6/15 simplifies to 2/5.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -589,7 +582,7 @@
       "correct_index": 3,
       "answer": "3/8",
       "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
-      "explanation": "Multiply top × top: 5 × 3 = 15. Multiply bottom × bottom: 8 × 5 = 40. The answer is 3/8.",
+      "explanation": "Multiply top \u00d7 top: 5 \u00d7 3 = 15. Multiply bottom \u00d7 bottom: 8 \u00d7 5 = 40, giving 15/40. Simplify by dividing the top and bottom by 5: 15/40 simplifies to 3/8.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -634,7 +627,7 @@
       "correct_index": 0,
       "answer": "9/56",
       "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
-      "explanation": "Multiply top × top: 3 × 3 = 9. Multiply bottom × bottom: 7 × 8 = 56. The answer is 9/56.",
+      "explanation": "Multiply top \u00d7 top: 3 \u00d7 3 = 9. Multiply bottom \u00d7 bottom: 7 \u00d7 8 = 56, giving 9/56.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -679,7 +672,7 @@
       "correct_index": 3,
       "answer": "6/35",
       "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
-      "explanation": "Multiply top × top: 2 × 3 = 6. Multiply bottom × bottom: 7 × 5 = 35. The answer is 6/35.",
+      "explanation": "Multiply top \u00d7 top: 2 \u00d7 3 = 6. Multiply bottom \u00d7 bottom: 7 \u00d7 5 = 35, giving 6/35.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -724,7 +717,7 @@
       "correct_index": 2,
       "answer": "9/40",
       "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
-      "explanation": "Multiply top × top: 3 × 3 = 9. Multiply bottom × bottom: 8 × 5 = 40. The answer is 9/40.",
+      "explanation": "Multiply top \u00d7 top: 3 \u00d7 3 = 9. Multiply bottom \u00d7 bottom: 8 \u00d7 5 = 40, giving 9/40.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -769,7 +762,7 @@
       "correct_index": 2,
       "answer": "5/21",
       "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
-      "explanation": "Multiply top × top: 2 × 5 = 10. Multiply bottom × bottom: 7 × 6 = 42. The answer is 5/21.",
+      "explanation": "Multiply top \u00d7 top: 2 \u00d7 5 = 10. Multiply bottom \u00d7 bottom: 7 \u00d7 6 = 42, giving 10/42. Simplify by dividing the top and bottom by 2: 10/42 simplifies to 5/21.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -814,7 +807,7 @@
       "correct_index": 0,
       "answer": "15/56",
       "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
-      "explanation": "Multiply top × top: 5 × 3 = 15. Multiply bottom × bottom: 8 × 7 = 56. The answer is 15/56.",
+      "explanation": "Multiply top \u00d7 top: 5 \u00d7 3 = 15. Multiply bottom \u00d7 bottom: 8 \u00d7 7 = 56, giving 15/56.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"

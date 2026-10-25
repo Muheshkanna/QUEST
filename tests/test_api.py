@@ -45,6 +45,19 @@ def test_api_topics_happy_path(client):
     for t in topics:
         assert "playable" in t
         assert "content_source" in t
+        assert "play_order" in t
+        if t["playable"]:
+            assert isinstance(t["play_order"], int) and t["play_order"] >= 1
+        else:
+            assert t["play_order"] is None
+        assert isinstance(t["misconceptions"], list) and len(t["misconceptions"]) >= 1
+        for m in t["misconceptions"]:
+            assert "id" in m
+            assert "kid_label" in m
+        # Icon is a clean name string (no emojis)
+        assert isinstance(t["icon"], str)
+        assert t["icon"].isascii() and t["icon"].isalpha()
+
 
 
 def test_api_topics_filtered_by_grade(client):

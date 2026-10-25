@@ -252,16 +252,23 @@ def get_topics(grade: Optional[int] = Query(None, description="Filter topics by 
     with open(topics_file, "r", encoding="utf-8") as f:
         topics_data = json.load(f)
 
-    bank_dir = data_dir / "bank"
-    results: List[TopicResponse] = []
+    # Load misconceptions registry to derive id + kid_label
+    misc_file = data_dir / "misconceptions.json"
+    misc_map: Dict[str, Dict[str, Any]] = {}
+    if misc_file.is_file():
+        with open(misc_file, "r", encoding="utf-8") as mf:
+            misc_list = json.load(mf).get("misconceptions", [])
+            for m in misc_list:
+                m_id = m.get("id")
+                if m_id:
+                    misc_map[m_id] = m
 
+    bank_dir = data_dir / "bank"
+    all_computed = []
+
+    # 1. Compute playability and derive misconceptions for every topic
     for t in topics_data:
         topic_id = t["id"]
-        topic_grade = t["grade"]
-
-        if grade is not None and topic_grade != grade:
-            continue
-
         bank_file = bank_dir / f"{topic_id}.json"
         is_playable = False
         content_source = "coming-soon"
@@ -272,21 +279,10 @@ def get_topics(grade: Optional[int] = Query(None, description="Filter topics by 
                     bank_data = json.load(bf)
                 questions = bank_data.get("questions", [])
 
-                easy_count = 0
-                med_count = 0
-                hard_count = 0
-                verified_count = 0
-
-                for q in questions:
-                    if q.get("provenance") == "verified":
-                        verified_count += 1
-                        diff = q.get("difficulty")
-                        if diff == "easy":
-                            easy_count += 1
-                        elif diff == "medium":
-                            med_count += 1
-                        elif diff == "hard":
-                            hard_count += 1
+                easy_count = sum(1 for q in questions if q.get("difficulty") == "easy" and q.get("provenance") == "verified")
+                med_count = sum(1 for q in questions if q.get("difficulty") == "medium" and q.get("provenance") == "verified")
+                hard_count = sum(1 for q in questions if q.get("difficulty") == "hard" and q.get("provenance") == "verified")
+                verified_count = sum(1 for q in questions if q.get("provenance") == "verified")
 
                 if (
                     len(questions) >= 9
@@ -302,14 +298,42 @@ def get_topics(grade: Optional[int] = Query(None, description="Filter topics by 
             except Exception as e:
                 logger.warning(f"Error reading bank for topic {topic_id}: {e}")
 
-        topic_resp = TopicResponse(
-            **t,
-            playable=is_playable,
-            content_source=content_source,
-        )
-        results.append(topic_resp)
+        # Derive misconceptions (id + kid_label) from registry
+        derived_misc = []
+        for mid in t.get("misconceptions", []):
+            if isinstance(mid, dict):
+                derived_misc.append({"id": mid.get("id", mid.get("tag", "")), "kid_label": mid.get("kid_label", "")})
+            else:
+                entry = misc_map.get(mid, {})
+                derived_misc.append({"id": mid, "kid_label": entry.get("kid_label", mid)})
+
+        entry = dict(t)
+        entry["misconceptions"] = derived_misc
+        entry["playable"] = is_playable
+        entry["content_source"] = content_source
+        all_computed.append(entry)
+
+    # 2. Compute play_order per grade among PLAYABLE topics
+    for g in (5, 6):
+        grade_topics = [t for t in all_computed if t["grade"] == g]
+        grade_topics.sort(key=lambda x: x.get("unlock_order", 0))
+        counter = 1
+        for gt in grade_topics:
+            if gt["playable"]:
+                gt["play_order"] = counter
+                counter += 1
+            else:
+                gt["play_order"] = None
+
+    # 3. Filter by grade if requested
+    results: List[TopicResponse] = []
+    for item in all_computed:
+        if grade is not None and item["grade"] != grade:
+            continue
+        results.append(TopicResponse(**item))
 
     return results
+
 
 
 @app.get(

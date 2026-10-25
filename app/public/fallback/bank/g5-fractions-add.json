@@ -1,13 +1,6 @@
 {
   "topic_id": "g5-fractions-add",
-  "generated_at": "2026-10-25T18:25:29.305890+00:00",
-  "model": "template-seed",
-  "prompt_version": "seed-v2",
-  "counts": {
-    "easy": 6,
-    "medium": 6,
-    "hard": 6
-  },
+  "version": "1.0.0",
   "questions": [
     {
       "id": "g5-fractions-add-easy-1",
@@ -49,7 +42,7 @@
       "correct_index": 3,
       "answer": "1/2",
       "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
-      "explanation": "Both fractions have 6 on the bottom. Add the top numbers: 2 + 1 = 3, giving 3/6.",
+      "explanation": "Both fractions have 6 on the bottom. Add the top numbers: 2 + 1 = 3, giving 3/6. Simplify by dividing the top and bottom by 3: 3/6 simplifies to 1/2.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -139,7 +132,7 @@
       "correct_index": 0,
       "answer": "5/6",
       "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
-      "explanation": "Both fractions have 12 on the bottom. Add the top numbers: 1 + 9 = 10, giving 10/12.",
+      "explanation": "Both fractions have 12 on the bottom. Add the top numbers: 1 + 9 = 10, giving 10/12. Simplify by dividing the top and bottom by 2: 10/12 simplifies to 5/6.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -229,7 +222,7 @@
       "correct_index": 1,
       "answer": "3/5",
       "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
-      "explanation": "Both fractions have 10 on the bottom. Add the top numbers: 5 + 1 = 6, giving 6/10.",
+      "explanation": "Both fractions have 10 on the bottom. Add the top numbers: 5 + 1 = 6, giving 6/10. Simplify by dividing the top and bottom by 2: 6/10 simplifies to 3/5.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -409,7 +402,7 @@
       "correct_index": 2,
       "answer": "4/5",
       "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
-      "explanation": "The smallest number both 5 and 15 go into is 15. Rename 3/5 as 9/15 and 3/15 as 3/15 so the bottoms match. Add the top numbers: 9 + 3 = 12, giving 12/15.",
+      "explanation": "The smallest number both 5 and 15 go into is 15. Rename 3/5 as 9/15 and 3/15 as 3/15 so the bottoms match. Add the top numbers: 9 + 3 = 12, giving 12/15. Simplify by dividing the top and bottom by 3: 12/15 simplifies to 4/5.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -499,7 +492,7 @@
       "correct_index": 3,
       "answer": "3/4",
       "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
-      "explanation": "The smallest number both 6 and 12 go into is 12. Rename 3/6 as 6/12 and 3/12 as 3/12 so the bottoms match. Add the top numbers: 6 + 3 = 9, giving 9/12.",
+      "explanation": "The smallest number both 6 and 12 go into is 12. Rename 3/6 as 6/12 and 3/12 as 3/12 so the bottoms match. Add the top numbers: 6 + 3 = 9, giving 9/12. Simplify by dividing the top and bottom by 3: 9/12 simplifies to 3/4.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -589,7 +582,7 @@
       "correct_index": 0,
       "answer": "9/20",
       "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
-      "explanation": "The smallest number both 5 and 8 go into is 40. Rename 1/5 as 8/40 and 2/8 as 10/40 so the bottoms match. Add the top numbers: 8 + 10 = 18, giving 18/40.",
+      "explanation": "The smallest number both 5 and 8 go into is 40. Rename 1/5 as 8/40 and 2/8 as 10/40 so the bottoms match. Add the top numbers: 8 + 10 = 18, giving 18/40. Simplify by dividing the top and bottom by 2: 18/40 simplifies to 9/20.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -769,7 +762,7 @@
       "correct_index": 0,
       "answer": "5/6",
       "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
-      "explanation": "The smallest number both 4 and 6 go into is 12. Rename 2/4 as 6/12 and 2/6 as 4/12 so the bottoms match. Add the top numbers: 6 + 4 = 10, giving 10/12.",
+      "explanation": "The smallest number both 4 and 6 go into is 12. Rename 2/4 as 6/12 and 2/6 as 4/12 so the bottoms match. Add the top numbers: 6 + 4 = 10, giving 10/12. Simplify by dividing the top and bottom by 2: 10/12 simplifies to 5/6.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -814,7 +807,7 @@
       "correct_index": 2,
       "answer": "7/10",
       "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
-      "explanation": "The smallest number both 5 and 6 go into is 30. Rename 1/5 as 6/30 and 3/6 as 15/30 so the bottoms match. Add the top numbers: 6 + 15 = 21, giving 21/30.",
+      "explanation": "The smallest number both 5 and 6 go into is 30. Rename 1/5 as 6/30 and 3/6 as 15/30 so the bottoms match. Add the top numbers: 6 + 15 = 21, giving 21/30. Simplify by dividing the top and bottom by 3: 21/30 simplifies to 7/10.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"

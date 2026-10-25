@@ -4,9 +4,11 @@ Requires a/b != c/d.
 """
 import random
 from fractions import Fraction
+from math import gcd
 from . import get_topic_positions, build_options, get_distractors, fmt_frac
 
 TOPIC = "g5-fractions-multiply"
+
 
 STEMS = {
     "easy": [
@@ -65,9 +67,17 @@ def _params(rng, diff):
 
 def _explanation(p, correct):
     a, b, c, d = p["a"], p["b"], p["c"], p["d"]
-    return (f"Multiply top × top: {a} × {c} = {a*c}. "
-            f"Multiply bottom × bottom: {b} × {d} = {b*d}. "
-            f"The answer is {correct}.")
+    raw_top = a * c
+    raw_bot = b * d
+    correct_text = fmt_frac(correct)
+    if raw_top != correct.numerator or raw_bot != correct.denominator:
+        gcd_val = gcd(raw_top, raw_bot)
+        return (f"Multiply top × top: {a} × {c} = {raw_top}. "
+                f"Multiply bottom × bottom: {b} × {d} = {raw_bot}, giving {raw_top}/{raw_bot}. "
+                f"Simplify by dividing the top and bottom by {gcd_val}: {raw_top}/{raw_bot} simplifies to {correct_text}.")
+    return (f"Multiply top × top: {a} × {c} = {raw_top}. "
+            f"Multiply bottom × bottom: {b} × {d} = {raw_bot}, giving {correct_text}.")
+
 
 def _hint(diff):
     if diff == "easy":
@@ -122,7 +132,7 @@ def generate(seed: int = 42):
                 "correct_index": correct_pos,
                 "answer": correct_text,
                 "hint": _hint(diff),
-                "explanation": _explanation(p, correct_text),
+                "explanation": _explanation(p, correct),
                 "provenance": "verified",
                 "model": "template-seed",
                 "prompt_version": "seed-v2",

@@ -11,22 +11,13 @@
     "standard_verified": false,
     "verifier_type": "integer_arithmetic",
     "misconceptions": [
-      {
-        "tag": "additive_power_of_ten",
-        "description": "Student adds zeros as a separate number instead of shifting place value by factor of 10."
-      },
-      {
-        "tag": "decimal_point_shift_reversed",
-        "description": "Student shifts decimal point in the wrong direction when multiplying or dividing by powers of 10."
-      },
-      {
-        "tag": "confuses_ten_times_with_add_ten",
-        "description": "Student adds 10 rather than multiplying by 10 when determining value of neighboring digits."
-      }
+      "additive_power_of_ten",
+      "confuses_ten_times_with_add_ten",
+      "decimal_point_shift_reversed"
     ],
     "tier": "standard",
     "unlock_order": 1,
-    "icon": "🌲",
+    "icon": "tree",
     "island_theme": "Whispering Canopy of Digits"
   },
   {
@@ -41,22 +32,18 @@
     "standard_verified": false,
     "verifier_type": "decimal_arithmetic",
     "misconceptions": [
-      {
-        "tag": "unaligned_decimals",
-        "description": "Student aligns decimal numbers to the right like whole numbers instead of lining up the decimal points."
-      },
-      {
-        "tag": "ignores_empty_place_value",
-        "description": "Student fails to place a placeholder zero when subtracting from a shorter decimal."
-      },
-      {
-        "tag": "carries_over_decimal_point_incorrectly",
-        "description": "Student treats the decimal point as a wall that resets regrouping."
-      }
+      "carries_over_decimal_point_incorrectly",
+      "ignores_empty_place_value",
+      "unaligned_decimals",
+      "ignored_the_decimal_point",
+      "subtracted_smaller_digit_from_larger",
+      "dropped_the_carry",
+      "used_the_wrong_operation",
+      "forgot_the_decimal_point"
     ],
     "tier": "standard",
     "unlock_order": 2,
-    "icon": "💧",
+    "icon": "droplet",
     "island_theme": "Spring of Floating Decimals"
   },
   {
@@ -71,22 +58,13 @@
     "standard_verified": false,
     "verifier_type": "decimal_comparison",
     "misconceptions": [
-      {
-        "tag": "longer_decimal_is_larger",
-        "description": "Student assumes 0.125 is greater than 0.5 because 125 is greater than 5."
-      },
-      {
-        "tag": "round_down_without_truncation_rule",
-        "description": "Student truncates digits instead of examining the deciding digit to round."
-      },
-      {
-        "tag": "confuses_tenths_and_hundredths",
-        "description": "Student compares hundredths place directly to tenths place."
-      }
+      "confuses_tenths_and_hundredths",
+      "longer_decimal_is_larger",
+      "round_down_without_truncation_rule"
     ],
     "tier": "standard",
     "unlock_order": 3,
-    "icon": "⚖️",
+    "icon": "scale",
     "island_theme": "Grove of Harmonic Measures"
   },
   {
@@ -101,22 +79,16 @@
     "standard_verified": true,
     "verifier_type": "fraction_arithmetic",
     "misconceptions": [
-      {
-        "tag": "add_denominators",
-        "description": "Student adds numerators together and denominators together directly (e.g. 1/2 + 1/3 = 2/5)."
-      },
-      {
-        "tag": "find_common_denom_without_renaming_numerators",
-        "description": "Student changes denominators to common denominator but leaves original numerators unchanged."
-      },
-      {
-        "tag": "subtracts_smaller_from_larger_regardless_of_order",
-        "description": "In mixed number subtraction, student subtracts smaller fractional part from larger without borrowing."
-      }
+      "add_denominators",
+      "added_tops_and_bottoms",
+      "renamed_bottom_kept_tops",
+      "multiplied_instead_of_adding",
+      "subtracted_instead_of_adding",
+      "added_tops_kept_first_bottom"
     ],
     "tier": "flagship",
     "unlock_order": 4,
-    "icon": "⚗️",
+    "icon": "flask",
     "island_theme": "Sunken Crucible of Denominators"
   },
   {
@@ -131,22 +103,15 @@
     "standard_verified": true,
     "verifier_type": "fraction_arithmetic",
     "misconceptions": [
-      {
-        "tag": "multiplies_both_by_whole_number",
-        "description": "Student multiplies both numerator and denominator by the whole number factor."
-      },
-      {
-        "tag": "believes_multiplication_always_increases",
-        "description": "Student cannot conceptualize that multiplying by a fraction less than one scales down the product."
-      },
-      {
-        "tag": "cross_multiplies_instead_of_multiplying_straight",
-        "description": "Student applies proportional cross-multiplication instead of multiplying numerators."
-      }
+      "believes_multiplication_always_increases",
+      "cross_multiplies_instead_of_multiplying_straight",
+      "added_fractions_instead",
+      "multiplies_tops_adds_bottoms",
+      "added_tops_multiplied_bottoms"
     ],
     "tier": "standard",
     "unlock_order": 5,
-    "icon": "📜",
+    "icon": "scroll",
     "island_theme": "Hall of Scaled Sigils"
   },
   {
@@ -161,22 +126,13 @@
     "standard_verified": true,
     "verifier_type": "fraction_arithmetic",
     "misconceptions": [
-      {
-        "tag": "confuses_division_order",
-        "description": "Student calculates whole / unit instead of unit / whole (e.g. 4 / (1/2) vs (1/2) / 4)."
-      },
-      {
-        "tag": "multiplies_instead_of_dividing",
-        "description": "Student does not invert or realize how many unit parts partition the whole."
-      },
-      {
-        "tag": "fractional_quotient_confused_with_remainder",
-        "description": "Student treats the resulting unit fraction as a remainder quantity."
-      }
+      "confuses_division_order",
+      "fractional_quotient_confused_with_remainder",
+      "multiplies_instead_of_dividing"
     ],
     "tier": "standard",
     "unlock_order": 6,
-    "icon": "💎",
+    "icon": "gem",
     "island_theme": "Axiom of Equal Partitions"
   },
   {
@@ -191,22 +147,18 @@
     "standard_verified": true,
     "verifier_type": "volume_geometry",
     "misconceptions": [
-      {
-        "tag": "confuses_surface_area_with_volume",
-        "description": "Student counts visible outer faces instead of internal packed unit cubes."
-      },
-      {
-        "tag": "adds_dimensions_instead_of_multiplying",
-        "description": "Student calculates l + w + h instead of multiplying length × width × height."
-      },
-      {
-        "tag": "forgets_height_layering",
-        "description": "Student calculates area of base (l × w) but neglects multiplying by number of layers."
-      }
+      "adds_dimensions_instead_of_multiplying",
+      "confuses_surface_area_with_volume",
+      "forgets_height_layering",
+      "added_the_sides",
+      "found_base_area_only",
+      "used_surface_area_formula",
+      "multiplied_two_sides_then_added_height",
+      "cubed_one_side"
     ],
     "tier": "flagship",
     "unlock_order": 7,
-    "icon": "🏛️",
+    "icon": "cube",
     "island_theme": "The Obsidian Cubic Monolith"
   },
   {
@@ -221,22 +173,18 @@
     "standard_verified": false,
     "verifier_type": "integer_arithmetic",
     "misconceptions": [
-      {
-        "tag": "forgets_tens_place_zero",
-        "description": "Student neglects placing zero placeholder when multiplying by tens or hundreds digit."
-      },
-      {
-        "tag": "miscalculates_regrouping_additions",
-        "description": "Student multiplies carried numbers instead of adding them after multiplying digits."
-      },
-      {
-        "tag": "aligns_partial_products_incorrectly",
-        "description": "Student shifts partial products unevenly across column places."
-      }
+      "aligns_partial_products_incorrectly",
+      "forgets_tens_place_zero",
+      "miscalculates_regrouping_additions",
+      "forgot_the_placeholder_zero",
+      "multiplied_only_the_ones_digit",
+      "skipped_the_cross_products",
+      "added_instead_of_multiplying",
+      "put_the_zero_on_the_wrong_row"
     ],
     "tier": "standard",
     "unlock_order": 8,
-    "icon": "✨",
+    "icon": "sparkles",
     "island_theme": "Starlight Grid Observatory"
   },
   {
@@ -251,22 +199,21 @@
     "standard_verified": true,
     "verifier_type": "division_with_remainder",
     "misconceptions": [
-      {
-        "tag": "ignores_remainder_context",
-        "description": "Student treats remainder as simple decimal or forgets to interpret rounding up in contextual word problems."
-      },
-      {
-        "tag": "subtraction_substep_error",
-        "description": "Student miscalculates intermediate subtraction during standard long division algorithm."
-      },
-      {
-        "tag": "misplaces_quotient_digit_column",
-        "description": "Student writes first quotient digit over wrong place value."
-      }
+      "ignores_remainder_context",
+      "misplaces_quotient_digit_column",
+      "subtraction_substep_error",
+      "dropped_the_remainder",
+      "swapped_quotient_and_remainder",
+      "stopped_subtracting_too_early",
+      "misplaced_quotient_digit",
+      "rounded_quotient_up_kept_remainder",
+      "calculation_error",
+      "rounded_wrong",
+      "underestimated_quotient"
     ],
     "tier": "standard",
     "unlock_order": 9,
-    "icon": "🪐",
+    "icon": "compass",
     "island_theme": "Vortex of Equal Portions"
   },
   {
@@ -281,22 +228,13 @@
     "standard_verified": false,
     "verifier_type": "expression_evaluation",
     "misconceptions": [
-      {
-        "tag": "left_to_right_disregards_precedence",
-        "description": "Student evaluates operations strictly left-to-right without prioritizing multiplication/division before addition."
-      },
-      {
-        "tag": "addition_before_subtraction_dogma",
-        "description": "Student always performs addition before subtraction instead of evaluating left-to-right."
-      },
-      {
-        "tag": "ignores_parentheses_grouping",
-        "description": "Student skips inner grouped terms inside parentheses."
-      }
+      "addition_before_subtraction_dogma",
+      "ignores_parentheses_grouping",
+      "left_to_right_disregards_precedence"
     ],
     "tier": "standard",
     "unlock_order": 10,
-    "icon": "⌛",
+    "icon": "hourglass",
     "island_theme": "Celestial Time-Wheel Spire"
   },
   {
@@ -311,22 +249,15 @@
     "standard_verified": true,
     "verifier_type": "ratio_comparison",
     "misconceptions": [
-      {
-        "tag": "additive_ratio_scaling",
-        "description": "Student adds a constant number to both parts of ratio instead of scaling by multiplication (e.g. 2:3 becomes 3:4 instead of 4:6)."
-      },
-      {
-        "tag": "part_to_part_vs_part_to_whole",
-        "description": "Student confuses part-to-part ratio (cats to dogs) with part-to-whole ratio (cats to total pets)."
-      },
-      {
-        "tag": "inverts_ratio_terms_order",
-        "description": "Student writes ratio terms in reversed order from the question context."
-      }
+      "additive_ratio_scaling",
+      "inverts_ratio_terms_order",
+      "part_to_part_vs_part_to_whole",
+      "multiplied_only_first_term",
+      "squared_terms"
     ],
     "tier": "flagship",
     "unlock_order": 11,
-    "icon": "🌿",
+    "icon": "balance",
     "island_theme": "Verdant Spire of Harmonic Vines"
   },
   {
@@ -341,22 +272,17 @@
     "standard_verified": true,
     "verifier_type": "rate_division",
     "misconceptions": [
-      {
-        "tag": "divides_in_reversed_order",
-        "description": "Student calculates quantity / cost instead of cost / quantity to find unit price."
-      },
-      {
-        "tag": "forgets_unit_rate_denominator_is_one",
-        "description": "Student leaves rate unsimplified with non-unit denominator."
-      },
-      {
-        "tag": "misinterprets_speed_units",
-        "description": "Student confuses distance-per-hour with hours-per-distance."
-      }
+      "multiplies_instead_of_dividing",
+      "divides_in_reversed_order",
+      "forgets_unit_rate_denominator_is_one",
+      "misinterprets_speed_units",
+      "multiplied_instead_of_dividing",
+      "subtracts_quantities",
+      "adds_quantities"
     ],
     "tier": "standard",
     "unlock_order": 12,
-    "icon": "🪙",
+    "icon": "tag",
     "island_theme": "Canopy Trading Bazaar"
   },
   {
@@ -371,22 +297,18 @@
     "standard_verified": true,
     "verifier_type": "percent_calculation",
     "misconceptions": [
-      {
-        "tag": "decimal_place_percent_shift",
-        "description": "Student converts 5% to 0.5 instead of 0.05."
-      },
-      {
-        "tag": "multiplies_percent_directly_without_hundredth_conversion",
-        "description": "Student multiplies value directly by 25 instead of 0.25 when finding 25% of a number."
-      },
-      {
-        "tag": "confuses_percent_of_vs_percent_change",
-        "description": "Student finds the discounted amount instead of final remaining cost."
-      }
+      "confuses_percent_of_vs_percent_change",
+      "decimal_place_percent_shift",
+      "multiplies_percent_directly_without_hundredth_conversion",
+      "multiplied_by_percent_number",
+      "moved_decimal_wrong_way",
+      "found_the_leftover_amount",
+      "divided_instead_of_multiplying",
+      "found_one_percent_only"
     ],
     "tier": "standard",
     "unlock_order": 13,
-    "icon": "🎯",
+    "icon": "target",
     "island_theme": "Arch of the Hundredth Rune"
   },
   {
@@ -401,22 +323,17 @@
     "standard_verified": true,
     "verifier_type": "fraction_arithmetic",
     "misconceptions": [
-      {
-        "tag": "inverts_dividend_instead_of_divisor",
-        "description": "Student inverts first fraction instead of second fraction (the divisor)."
-      },
-      {
-        "tag": "divides_numerators_and_denominators_directly",
-        "description": "Student divides numerator by numerator and denominator by denominator without common denominators."
-      },
-      {
-        "tag": "inverts_both_fractions",
-        "description": "Student inverts both fractions prior to multiplication."
-      }
+      "divides_numerators_and_denominators_directly",
+      "inverts_both_fractions",
+      "inverts_dividend_instead_of_divisor",
+      "multiplied_without_flipping",
+      "flipped_the_first_fraction",
+      "flipped_both_fractions",
+      "added_instead_of_dividing"
     ],
     "tier": "standard",
     "unlock_order": 14,
-    "icon": "🏺",
+    "icon": "pie",
     "island_theme": "Chamber of Inverted Mirrors"
   },
   {
@@ -431,22 +348,13 @@
     "standard_verified": true,
     "verifier_type": "decimal_arithmetic",
     "misconceptions": [
-      {
-        "tag": "miscounts_decimal_places_in_product",
-        "description": "Student places decimal point in multiplication product based on whole number digits."
-      },
-      {
-        "tag": "fails_to_shift_divisor_decimal",
-        "description": "In division, student forgets to shift dividend decimal point when shifting divisor."
-      },
-      {
-        "tag": "drops_zeros_before_decimal_place",
-        "description": "Student writes 0.6 instead of 0.06 when product has two decimal digits."
-      }
+      "drops_zeros_before_decimal_place",
+      "fails_to_shift_divisor_decimal",
+      "miscounts_decimal_places_in_product"
     ],
     "tier": "standard",
     "unlock_order": 15,
-    "icon": "📐",
+    "icon": "diamond",
     "island_theme": "Sanctuary of Thousandth Shards"
   },
   {
@@ -461,22 +369,13 @@
     "standard_verified": true,
     "verifier_type": "integer_comparison",
     "misconceptions": [
-      {
-        "tag": "larger_magnitude_negative_is_greater",
-        "description": "Student believes -8 is greater than -3 because 8 is greater than 3."
-      },
-      {
-        "tag": "confuses_absolute_value_with_opposite",
-        "description": "Student thinks absolute value of -5 is -5 or changes sign regardless of context."
-      },
-      {
-        "tag": "misplaces_negative_numbers_on_numberline",
-        "description": "Student orders negatives left-to-right as -1, -2, -3 starting from negative infinity."
-      }
+      "confuses_absolute_value_with_opposite",
+      "larger_magnitude_negative_is_greater",
+      "misplaces_negative_numbers_on_numberline"
     ],
     "tier": "standard",
     "unlock_order": 16,
-    "icon": "⚓",
+    "icon": "thermometer",
     "island_theme": "The Deep Axis of Symmetries"
   },
   {
@@ -491,22 +390,13 @@
     "standard_verified": true,
     "verifier_type": "expression_equivalence",
     "misconceptions": [
-      {
-        "tag": "incomplete_distribution",
-        "description": "Student multiplies outer coefficient by first term only (e.g. 3(x + 4) = 3x + 4)."
-      },
-      {
-        "tag": "combines_unlike_terms",
-        "description": "Student adds variable and constant terms together (e.g. 4x + 5 = 9x)."
-      },
-      {
-        "tag": "sign_error_distributing_negative",
-        "description": "Student forgets that distributing a negative changes the signs of all inside terms."
-      }
+      "combines_unlike_terms",
+      "incomplete_distribution",
+      "sign_error_distributing_negative"
     ],
     "tier": "standard",
     "unlock_order": 17,
-    "icon": "🌌",
+    "icon": "crystal",
     "island_theme": "Forge of Variable Glyphs"
   },
   {
@@ -521,22 +411,24 @@
     "standard_verified": true,
     "verifier_type": "equation_solving",
     "misconceptions": [
-      {
-        "tag": "performs_same_operation_instead_of_inverse",
-        "description": "Student adds when the equation has addition instead of subtracting (e.g. x + 5 = 12 -> x = 17)."
-      },
-      {
-        "tag": "operates_on_one_side_only",
-        "description": "Student performs the inverse operation on one side without balancing the equal sign."
-      },
-      {
-        "tag": "multiplies_instead_of_dividing_coefficients",
-        "description": "In 3x = 15, student multiplies 15 by 3 instead of dividing by 3."
-      }
+      "multiplies_instead_of_dividing_coefficients",
+      "operates_on_one_side_only",
+      "performs_same_operation_instead_of_inverse",
+      "subtracted_instead_of_dividing",
+      "multiplied_instead_of_dividing",
+      "divided_the_wrong_way",
+      "ignored_the_coefficient",
+      "added_instead_of_subtracting",
+      "subtracted_the_wrong_way",
+      "undid_multiplication_first",
+      "added_the_constant",
+      "ignored_the_constant_term",
+      "ignored_the_added_value",
+      "used_added_value_as_answer"
     ],
     "tier": "standard",
     "unlock_order": 18,
-    "icon": "⚖️",
+    "icon": "scales",
     "island_theme": "Orrery of Dynamic Balance"
   },
   {
@@ -551,22 +443,15 @@
     "standard_verified": false,
     "verifier_type": "statistical_center",
     "misconceptions": [
-      {
-        "tag": "finds_median_without_ordering_data",
-        "description": "Student selects middle number from an unsorted data list."
-      },
-      {
-        "tag": "divides_sum_by_arbitrary_number",
-        "description": "Student divides total sum by 2 instead of total count of data values."
-      },
-      {
-        "tag": "confuses_mean_with_median",
-        "description": "Student averages middle numbers when asked for sum / count."
-      }
+      "confuses_mean_with_median",
+      "gave_the_total_instead_of_the_mean",
+      "finds_median_without_ordering_data",
+      "finds_range_instead",
+      "ignores_middle_average_for_even_count"
     ],
     "tier": "standard",
     "unlock_order": 19,
-    "icon": "📊",
+    "icon": "chart",
     "island_theme": "Pillars of Balanced Starlight"
   },
   {
@@ -581,22 +466,13 @@
     "standard_verified": true,
     "verifier_type": "exponent_evaluation",
     "misconceptions": [
-      {
-        "tag": "multiplies_base_by_exponent",
-        "description": "Student calculates base × exponent instead of repeated multiplication (e.g. 2^3 = 6 instead of 8)."
-      },
-      {
-        "tag": "evaluates_exponent_zero_as_zero",
-        "description": "Student believes any non-zero base to power 0 equals 0 instead of 1."
-      },
-      {
-        "tag": "confuses_exponent_order",
-        "description": "Student evaluates 3^2 as 2^3."
-      }
+      "confuses_exponent_order",
+      "evaluates_exponent_zero_as_zero",
+      "multiplies_base_by_exponent"
     ],
     "tier": "standard",
     "unlock_order": 20,
-    "icon": "⚡",
+    "icon": "zap",
     "island_theme": "Apex of Exponential Novae"
   }
 ]

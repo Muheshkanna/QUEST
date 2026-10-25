@@ -1,4 +1,4 @@
-﻿"""Unit tests for STEP 3: Distractor provenance in verify_question."""
+"""Unit tests for STEP 3: Distractor provenance in verify_question."""
 import pytest
 from api._lib.schemas import Question, Option, Difficulty
 from api._lib.verifier import verify_question
@@ -101,3 +101,30 @@ def test_provenance_unknown_id_fails():
     res = verify_question(q)
     assert res.passed is False
     assert any("unknown misconception id" in r for r in res.reasons)
+
+
+def test_fraction_topics_explanation_contains_correct_option():
+    """For fraction topics, the explanation must contain the correct option's text."""
+    import json
+    from pathlib import Path
+
+    fraction_topics = ["g5-fractions-add", "g5-fractions-multiply", "g6-fraction-division"]
+    bank_dir = Path("data/bank")
+
+    for topic_id in fraction_topics:
+        bank_file = bank_dir / f"{topic_id}.json"
+        assert bank_file.is_file(), f"Missing bank file for {topic_id}"
+        with open(bank_file, "r", encoding="utf-8") as f:
+            bank = json.load(f)
+
+        questions = bank.get("questions", [])
+        assert len(questions) >= 18, f"Topic {topic_id} has fewer than 18 questions"
+        for q in questions:
+            correct_idx = q["correct_index"]
+            correct_text = q["options"][correct_idx]["text"]
+            explanation = q["explanation"]
+            assert correct_text in explanation, (
+                f"Topic {topic_id} question {q['id']}: "
+                f"correct option '{correct_text}' not in explanation: '{explanation}'"
+            )
+

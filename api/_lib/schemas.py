@@ -117,16 +117,38 @@ class TopicEntry(BaseModel):
     standard_text: str = Field(..., min_length=1)
     standard_verified: bool
     verifier_type: str = Field(..., min_length=1)
-    misconceptions: List[MisconceptionEntry] = Field(default_factory=list)
+    misconceptions: List[str] = Field(default_factory=list)
     tier: str = Field(..., min_length=1)
     unlock_order: int = Field(..., ge=1)
     icon: str = Field(..., min_length=1)
     island_theme: str = Field(..., min_length=1)
 
 
-class TopicResponse(TopicEntry):
+class TopicDerivedMisconception(BaseModel):
+    id: str
+    kid_label: str
+
+
+class TopicResponse(BaseModel):
+    id: str = Field(..., min_length=1)
+    grade: int = Field(..., ge=5, le=6)
+    realm: str = Field(..., min_length=1)
+    title: str = Field(..., min_length=1)
+    fantasy_name: str = Field(..., min_length=1)
+    domain: str = Field(..., min_length=1)
+    standard: str = Field(..., min_length=1)
+    standard_text: str = Field(..., min_length=1)
+    standard_verified: bool
+    verifier_type: str = Field(..., min_length=1)
+    misconceptions: List[TopicDerivedMisconception] = Field(default_factory=list)
+    tier: str = Field(..., min_length=1)
+    unlock_order: int = Field(..., ge=1)
+    play_order: Optional[int] = Field(default=None)
+    icon: str = Field(..., min_length=1)
+    island_theme: str = Field(..., min_length=1)
     playable: bool = Field(default=False)
     content_source: str = Field(default="coming-soon")
+
 
 
 class BankFile(BaseModel):

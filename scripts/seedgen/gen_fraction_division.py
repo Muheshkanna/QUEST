@@ -6,7 +6,9 @@ hard = word problems with larger fractions
 """
 import random
 from fractions import Fraction
+from math import gcd
 from . import get_topic_positions, build_options, get_distractors, fmt_frac
+
 
 TOPIC = "g6-fraction-division"
 
@@ -97,8 +99,17 @@ def _params(rng, diff):
 def _explanation(p, correct):
     a, b, c, d = p["a"], p["b"], p["c"], p["d"]
     recip = f"{d}/{c}" if c != 1 else str(d)
+    raw_top = a * d
+    raw_bot = b * c
+    correct_text = fmt_frac(correct)
+    if raw_top != correct.numerator or raw_bot != correct.denominator:
+        gcd_val = gcd(raw_top, raw_bot)
+        return (f"To divide by a fraction, multiply by its reciprocal: flip the second fraction. "
+                f"{a}/{b} ÷ {c}/{d} = {a}/{b} × {recip} = {raw_top}/{raw_bot}. "
+                f"Simplify by dividing the top and bottom by {gcd_val}: {raw_top}/{raw_bot} simplifies to {correct_text}.")
     return (f"To divide by a fraction, multiply by its reciprocal: flip the second fraction. "
-            f"{a}/{b} ÷ {c}/{d} = {a}/{b} × {recip} = {correct}.")
+            f"{a}/{b} ÷ {c}/{d} = {a}/{b} × {recip} = {correct_text}.")
+
 
 def _hint(diff):
     if diff == "easy":
@@ -153,7 +164,7 @@ def generate(seed: int = 42):
                 "correct_index": correct_pos,
                 "answer": correct_text,
                 "hint": _hint(diff),
-                "explanation": _explanation(p, correct_text),
+                "explanation": _explanation(p, correct),
                 "provenance": "verified",
                 "model": "template-seed",
                 "prompt_version": "seed-v2",
