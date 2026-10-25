@@ -1,6 +1,6 @@
 {
   "topic_id": "g5-fractions-add",
-  "generated_at": "2026-10-25T17:17:01.823417+00:00",
+  "generated_at": "2026-10-25T17:34:19.536816+00:00",
   "model": "template-seed",
   "prompt_version": "seed-v2",
   "counts": {
@@ -14,6 +14,7 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-easy-games",
       "params": {
         "a": 2,
@@ -26,33 +27,29 @@
       "options": [
         {
           "id": "A",
-          "text": "1/2",
-          "misconception": null,
-          "misconception_id": null
-        },
-        {
-          "id": "B",
           "text": "1/4",
-          "misconception": "added_tops_and_bottoms",
           "misconception_id": "added_tops_and_bottoms"
         },
         {
-          "id": "C",
+          "id": "B",
           "text": "1/18",
-          "misconception": "multiplied_instead_of_adding",
           "misconception_id": "multiplied_instead_of_adding"
         },
         {
-          "id": "D",
+          "id": "C",
           "text": "1/6",
-          "misconception": "subtracted_instead_of_adding",
           "misconception_id": "subtracted_instead_of_adding"
+        },
+        {
+          "id": "D",
+          "text": "1/2",
+          "misconception_id": null
         }
       ],
-      "correct_index": 0,
+      "correct_index": 3,
       "answer": "1/2",
-      "hint": "When the bottom numbers match, you can add just the top numbers and keep the bottom.",
-      "explanation": "Both fractions already share the denominator 6. Add just the tops: 2 + 1 = 3. The answer is 3/6.",
+      "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
+      "explanation": "Both fractions have 6 on the bottom. Add the top numbers: 2 + 1 = 3, giving 3/6.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -62,6 +59,7 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-easy-sports",
       "params": {
         "a": 1,
@@ -74,33 +72,29 @@
       "options": [
         {
           "id": "A",
-          "text": "3/8",
-          "misconception": "added_tops_and_bottoms",
-          "misconception_id": "added_tops_and_bottoms"
+          "text": "1/8",
+          "misconception_id": "multiplied_instead_of_adding"
         },
         {
           "id": "B",
           "text": "3/4",
-          "misconception": null,
           "misconception_id": null
         },
         {
           "id": "C",
-          "text": "1/8",
-          "misconception": "multiplied_instead_of_adding",
-          "misconception_id": "multiplied_instead_of_adding"
+          "text": "1/4",
+          "misconception_id": "subtracted_instead_of_adding"
         },
         {
           "id": "D",
-          "text": "1/4",
-          "misconception": "subtracted_instead_of_adding",
-          "misconception_id": "subtracted_instead_of_adding"
+          "text": "3/8",
+          "misconception_id": "added_tops_and_bottoms"
         }
       ],
       "correct_index": 1,
       "answer": "3/4",
-      "hint": "When the bottom numbers match, you can add just the top numbers and keep the bottom.",
-      "explanation": "Both fractions already share the denominator 4. Add just the tops: 1 + 2 = 3. The answer is 3/4.",
+      "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
+      "explanation": "Both fractions have 4 on the bottom. Add the top numbers: 1 + 2 = 3, giving 3/4.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -110,6 +104,7 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-easy-school",
       "params": {
         "a": 1,
@@ -122,33 +117,29 @@
       "options": [
         {
           "id": "A",
-          "text": "5/12",
-          "misconception": "added_tops_and_bottoms",
-          "misconception_id": "added_tops_and_bottoms"
+          "text": "5/6",
+          "misconception_id": null
         },
         {
           "id": "B",
           "text": "1/16",
-          "misconception": "multiplied_instead_of_adding",
           "misconception_id": "multiplied_instead_of_adding"
         },
         {
           "id": "C",
-          "text": "5/6",
-          "misconception": null,
-          "misconception_id": null
+          "text": "2/3",
+          "misconception_id": "subtracted_instead_of_adding"
         },
         {
           "id": "D",
-          "text": "2/3",
-          "misconception": "subtracted_instead_of_adding",
-          "misconception_id": "subtracted_instead_of_adding"
+          "text": "5/12",
+          "misconception_id": "added_tops_and_bottoms"
         }
       ],
-      "correct_index": 2,
+      "correct_index": 0,
       "answer": "5/6",
-      "hint": "When the bottom numbers match, you can add just the top numbers and keep the bottom.",
-      "explanation": "Both fractions already share the denominator 12. Add just the tops: 1 + 9 = 10. The answer is 10/12.",
+      "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
+      "explanation": "Both fractions have 12 on the bottom. Add the top numbers: 1 + 9 = 10, giving 10/12.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -158,6 +149,7 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-easy-nature",
       "params": {
         "a": 4,
@@ -170,33 +162,29 @@
       "options": [
         {
           "id": "A",
-          "text": "5/12",
-          "misconception": "added_tops_and_bottoms",
-          "misconception_id": "added_tops_and_bottoms"
+          "text": "1/2",
+          "misconception_id": "subtracted_instead_of_adding"
         },
         {
           "id": "B",
-          "text": "1/9",
-          "misconception": "multiplied_instead_of_adding",
-          "misconception_id": "multiplied_instead_of_adding"
+          "text": "5/12",
+          "misconception_id": "added_tops_and_bottoms"
         },
         {
           "id": "C",
-          "text": "1/2",
-          "misconception": "subtracted_instead_of_adding",
-          "misconception_id": "subtracted_instead_of_adding"
+          "text": "1/9",
+          "misconception_id": "multiplied_instead_of_adding"
         },
         {
           "id": "D",
           "text": "5/6",
-          "misconception": null,
           "misconception_id": null
         }
       ],
       "correct_index": 3,
       "answer": "5/6",
-      "hint": "When the bottom numbers match, you can add just the top numbers and keep the bottom.",
-      "explanation": "Both fractions already share the denominator 6. Add just the tops: 4 + 1 = 5. The answer is 5/6.",
+      "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
+      "explanation": "Both fractions have 6 on the bottom. Add the top numbers: 4 + 1 = 5, giving 5/6.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -206,6 +194,7 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-easy-food",
       "params": {
         "a": 5,
@@ -219,32 +208,28 @@
         {
           "id": "A",
           "text": "3/10",
-          "misconception": "added_tops_and_bottoms",
           "misconception_id": "added_tops_and_bottoms"
         },
         {
           "id": "B",
           "text": "3/5",
-          "misconception": null,
           "misconception_id": null
         },
         {
           "id": "C",
           "text": "1/20",
-          "misconception": "multiplied_instead_of_adding",
           "misconception_id": "multiplied_instead_of_adding"
         },
         {
           "id": "D",
           "text": "2/5",
-          "misconception": "subtracted_instead_of_adding",
           "misconception_id": "subtracted_instead_of_adding"
         }
       ],
       "correct_index": 1,
       "answer": "3/5",
-      "hint": "When the bottom numbers match, you can add just the top numbers and keep the bottom.",
-      "explanation": "Both fractions already share the denominator 10. Add just the tops: 5 + 1 = 6. The answer is 6/10.",
+      "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
+      "explanation": "Both fractions have 10 on the bottom. Add the top numbers: 5 + 1 = 6, giving 6/10.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -254,6 +239,7 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-easy-games",
       "params": {
         "a": 4,
@@ -266,33 +252,29 @@
       "options": [
         {
           "id": "A",
-          "text": "5/6",
-          "misconception": null,
-          "misconception_id": null
-        },
-        {
-          "id": "B",
           "text": "5/12",
-          "misconception": "added_tops_and_bottoms",
           "misconception_id": "added_tops_and_bottoms"
         },
         {
-          "id": "C",
+          "id": "B",
           "text": "1/9",
-          "misconception": "multiplied_instead_of_adding",
           "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "C",
+          "text": "5/6",
+          "misconception_id": null
         },
         {
           "id": "D",
           "text": "1/2",
-          "misconception": "subtracted_instead_of_adding",
           "misconception_id": "subtracted_instead_of_adding"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "answer": "5/6",
-      "hint": "When the bottom numbers match, you can add just the top numbers and keep the bottom.",
-      "explanation": "Both fractions already share the denominator 6. Add just the tops: 4 + 1 = 5. The answer is 5/6.",
+      "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
+      "explanation": "Both fractions have 6 on the bottom. Add the top numbers: 4 + 1 = 5, giving 5/6.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -302,6 +284,7 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-medium-nature",
       "params": {
         "a": 2,
@@ -314,33 +297,29 @@
       "options": [
         {
           "id": "A",
-          "text": "1/3",
-          "misconception": "added_tops_and_bottoms",
-          "misconception_id": "added_tops_and_bottoms"
+          "text": "1/2",
+          "misconception_id": "renamed_bottom_kept_tops"
         },
         {
           "id": "B",
-          "text": "1/2",
-          "misconception": "renamed_bottom_kept_tops",
-          "misconception_id": "renamed_bottom_kept_tops"
+          "text": "5/6",
+          "misconception_id": null
         },
         {
           "id": "C",
           "text": "1/9",
-          "misconception": "multiplied_instead_of_adding",
           "misconception_id": "multiplied_instead_of_adding"
         },
         {
           "id": "D",
-          "text": "5/6",
-          "misconception": null,
-          "misconception_id": null
+          "text": "1",
+          "misconception_id": "added_tops_kept_first_bottom"
         }
       ],
-      "correct_index": 3,
+      "correct_index": 1,
       "answer": "5/6",
-      "hint": "The bottoms are different. Find a number that both 3 and 6 go into evenly before adding.",
-      "explanation": "Find the common denominator: lcm(3,6) = 6. Convert: 2/3 = 4/6 and 1/6 = 1/6. Now add the tops: 4 + 1 = 5, giving 5/6.",
+      "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
+      "explanation": "The smallest number both 3 and 6 go into is 6. Rename 2/3 as 4/6 and 1/6 as 1/6 so the bottoms match. Add the top numbers: 4 + 1 = 5, giving 5/6.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -350,6 +329,7 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-medium-games",
       "params": {
         "a": 1,
@@ -362,33 +342,29 @@
       "options": [
         {
           "id": "A",
-          "text": "4/9",
-          "misconception": "added_tops_and_bottoms",
-          "misconception_id": "added_tops_and_bottoms"
+          "text": "1/6",
+          "misconception_id": "multiplied_instead_of_adding"
         },
         {
           "id": "B",
-          "text": "2/3",
-          "misconception": "renamed_bottom_kept_tops",
-          "misconception_id": "renamed_bottom_kept_tops"
+          "text": "4/3",
+          "misconception_id": "added_tops_kept_first_bottom"
         },
         {
           "id": "C",
-          "text": "5/6",
-          "misconception": null,
-          "misconception_id": null
+          "text": "4/9",
+          "misconception_id": "added_tops_and_bottoms"
         },
         {
           "id": "D",
-          "text": "1/6",
-          "misconception": "subtracted_instead_of_adding",
-          "misconception_id": "subtracted_instead_of_adding"
+          "text": "5/6",
+          "misconception_id": null
         }
       ],
-      "correct_index": 2,
+      "correct_index": 3,
       "answer": "5/6",
-      "hint": "The bottoms are different. Find a number that both 3 and 6 go into evenly before adding.",
-      "explanation": "Find the common denominator: lcm(3,6) = 6. Convert: 1/3 = 2/6 and 3/6 = 3/6. Now add the tops: 2 + 3 = 5, giving 5/6.",
+      "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
+      "explanation": "The smallest number both 3 and 6 go into is 6. Rename 1/3 as 2/6 and 3/6 as 3/6 so the bottoms match. Add the top numbers: 2 + 3 = 5, giving 5/6.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -398,6 +374,7 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-medium-food",
       "params": {
         "a": 3,
@@ -410,33 +387,29 @@
       "options": [
         {
           "id": "A",
-          "text": "3/10",
-          "misconception": "added_tops_and_bottoms",
-          "misconception_id": "added_tops_and_bottoms"
+          "text": "2/5",
+          "misconception_id": "subtracted_instead_of_adding"
         },
         {
           "id": "B",
-          "text": "2/5",
-          "misconception": "renamed_bottom_kept_tops",
-          "misconception_id": "renamed_bottom_kept_tops"
+          "text": "6/5",
+          "misconception_id": "added_tops_kept_first_bottom"
         },
         {
           "id": "C",
           "text": "4/5",
-          "misconception": null,
           "misconception_id": null
         },
         {
           "id": "D",
-          "text": "3/25",
-          "misconception": "multiplied_instead_of_adding",
-          "misconception_id": "multiplied_instead_of_adding"
+          "text": "3/10",
+          "misconception_id": "added_tops_and_bottoms"
         }
       ],
       "correct_index": 2,
       "answer": "4/5",
-      "hint": "The bottoms are different. Find a number that both 5 and 15 go into evenly before adding.",
-      "explanation": "Find the common denominator: lcm(5,15) = 15. Convert: 3/5 = 9/15 and 3/15 = 3/15. Now add the tops: 9 + 3 = 12, giving 12/15.",
+      "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
+      "explanation": "The smallest number both 5 and 15 go into is 15. Rename 3/5 as 9/15 and 3/15 as 3/15 so the bottoms match. Add the top numbers: 9 + 3 = 12, giving 12/15.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -446,6 +419,7 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-medium-sports",
       "params": {
         "a": 3,
@@ -458,33 +432,29 @@
       "options": [
         {
           "id": "A",
-          "text": "4/15",
-          "misconception": "added_tops_and_bottoms",
-          "misconception_id": "added_tops_and_bottoms"
+          "text": "7/10",
+          "misconception_id": null
         },
         {
           "id": "B",
-          "text": "2/5",
-          "misconception": "renamed_bottom_kept_tops",
-          "misconception_id": "renamed_bottom_kept_tops"
+          "text": "4/5",
+          "misconception_id": "added_tops_kept_first_bottom"
         },
         {
           "id": "C",
-          "text": "1/2",
-          "misconception": "subtracted_instead_of_adding",
-          "misconception_id": "subtracted_instead_of_adding"
+          "text": "4/15",
+          "misconception_id": "added_tops_and_bottoms"
         },
         {
           "id": "D",
-          "text": "7/10",
-          "misconception": null,
-          "misconception_id": null
+          "text": "2/5",
+          "misconception_id": "renamed_bottom_kept_tops"
         }
       ],
-      "correct_index": 3,
+      "correct_index": 0,
       "answer": "7/10",
-      "hint": "The bottoms are different. Find a number that both 5 and 10 go into evenly before adding.",
-      "explanation": "Find the common denominator: lcm(5,10) = 10. Convert: 3/5 = 6/10 and 1/10 = 1/10. Now add the tops: 6 + 1 = 7, giving 7/10.",
+      "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
+      "explanation": "The smallest number both 5 and 10 go into is 10. Rename 3/5 as 6/10 and 1/10 as 1/10 so the bottoms match. Add the top numbers: 6 + 1 = 7, giving 7/10.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -494,6 +464,7 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-medium-school",
       "params": {
         "a": 3,
@@ -506,33 +477,29 @@
       "options": [
         {
           "id": "A",
-          "text": "3/4",
-          "misconception": null,
-          "misconception_id": null
-        },
-        {
-          "id": "B",
           "text": "1/3",
-          "misconception": "added_tops_and_bottoms",
           "misconception_id": "added_tops_and_bottoms"
         },
         {
-          "id": "C",
+          "id": "B",
           "text": "1/2",
-          "misconception": "renamed_bottom_kept_tops",
           "misconception_id": "renamed_bottom_kept_tops"
         },
         {
+          "id": "C",
+          "text": "1/8",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
           "id": "D",
-          "text": "1/4",
-          "misconception": "subtracted_instead_of_adding",
-          "misconception_id": "subtracted_instead_of_adding"
+          "text": "3/4",
+          "misconception_id": null
         }
       ],
-      "correct_index": 0,
+      "correct_index": 3,
       "answer": "3/4",
-      "hint": "The bottoms are different. Find a number that both 6 and 12 go into evenly before adding.",
-      "explanation": "Find the common denominator: lcm(6,12) = 12. Convert: 3/6 = 6/12 and 3/12 = 3/12. Now add the tops: 6 + 3 = 9, giving 9/12.",
+      "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
+      "explanation": "The smallest number both 6 and 12 go into is 12. Rename 3/6 as 6/12 and 3/12 as 3/12 so the bottoms match. Add the top numbers: 6 + 3 = 9, giving 9/12.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -542,6 +509,7 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-medium-nature",
       "params": {
         "a": 3,
@@ -554,33 +522,29 @@
       "options": [
         {
           "id": "A",
-          "text": "11/24",
-          "misconception": "added_tops_and_bottoms",
-          "misconception_id": "added_tops_and_bottoms"
+          "text": "11/18",
+          "misconception_id": "renamed_bottom_kept_tops"
         },
         {
           "id": "B",
-          "text": "17/18",
-          "misconception": null,
-          "misconception_id": null
+          "text": "2/9",
+          "misconception_id": "multiplied_instead_of_adding"
         },
         {
           "id": "C",
-          "text": "11/18",
-          "misconception": "renamed_bottom_kept_tops",
-          "misconception_id": "renamed_bottom_kept_tops"
+          "text": "17/18",
+          "misconception_id": null
         },
         {
           "id": "D",
           "text": "1/18",
-          "misconception": "subtracted_instead_of_adding",
           "misconception_id": "subtracted_instead_of_adding"
         }
       ],
-      "correct_index": 1,
+      "correct_index": 2,
       "answer": "17/18",
-      "hint": "The bottoms are different. Find a number that both 6 and 18 go into evenly before adding.",
-      "explanation": "Find the common denominator: lcm(6,18) = 18. Convert: 3/6 = 9/18 and 8/18 = 8/18. Now add the tops: 9 + 8 = 17, giving 17/18.",
+      "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
+      "explanation": "The smallest number both 6 and 18 go into is 18. Rename 3/6 as 9/18 and 8/18 as 8/18 so the bottoms match. Add the top numbers: 9 + 8 = 17, giving 17/18.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -590,45 +554,42 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-hard-nature",
       "params": {
-        "a": 2,
-        "b": 3,
-        "c": 1,
-        "d": 5
+        "a": 1,
+        "b": 5,
+        "c": 2,
+        "d": 8
       },
-      "stem": "A river flooded 2/3 of a valley in January and 1/5 more in February. What fraction of the valley flooded over those two months?",
-      "expression": "2/3 + 1/5",
+      "stem": "A river flooded 1/5 of a valley in January and 2/8 more in February. What fraction of the valley flooded over those two months?",
+      "expression": "1/5 + 2/8",
       "options": [
         {
           "id": "A",
-          "text": "1/5",
-          "misconception": "renamed_bottom_kept_tops",
-          "misconception_id": "renamed_bottom_kept_tops"
+          "text": "9/20",
+          "misconception_id": null
         },
         {
           "id": "B",
-          "text": "3/8",
-          "misconception": "added_tops_and_bottoms",
-          "misconception_id": "added_tops_and_bottoms"
+          "text": "1/20",
+          "misconception_id": "multiplied_instead_of_adding"
         },
         {
           "id": "C",
-          "text": "1",
-          "misconception": "added_tops_kept_first_bottom",
+          "text": "3/5",
           "misconception_id": "added_tops_kept_first_bottom"
         },
         {
           "id": "D",
-          "text": "13/15",
-          "misconception": null,
-          "misconception_id": null
+          "text": "3/13",
+          "misconception_id": "added_tops_and_bottoms"
         }
       ],
-      "correct_index": 3,
-      "answer": "13/15",
-      "hint": "The bottoms are different. Find a number that both 3 and 5 go into evenly before adding.",
-      "explanation": "Find the common denominator: lcm(3,5) = 15. Convert: 2/3 = 10/15 and 1/5 = 3/15. Now add the tops: 10 + 3 = 13, giving 13/15.",
+      "correct_index": 0,
+      "answer": "9/20",
+      "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
+      "explanation": "The smallest number both 5 and 8 go into is 40. Rename 1/5 as 8/40 and 2/8 as 10/40 so the bottoms match. Add the top numbers: 8 + 10 = 18, giving 18/40.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -638,45 +599,42 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-hard-school",
       "params": {
-        "a": 1,
-        "b": 6,
-        "c": 6,
-        "d": 8
+        "a": 3,
+        "b": 4,
+        "c": 1,
+        "d": 6
       },
-      "stem": "One project takes 1/6 of a week and a second project takes 6/8 of a week. How much of the week do both projects take in total?",
-      "expression": "1/6 + 6/8",
+      "stem": "One project takes 3/4 of a week and a second project takes 1/6 of a week. How much of the week do both projects take in total?",
+      "expression": "3/4 + 1/6",
       "options": [
         {
           "id": "A",
           "text": "11/12",
-          "misconception": null,
           "misconception_id": null
         },
         {
           "id": "B",
-          "text": "7/24",
-          "misconception": "renamed_bottom_kept_tops",
-          "misconception_id": "renamed_bottom_kept_tops"
+          "text": "7/12",
+          "misconception_id": "subtracted_instead_of_adding"
         },
         {
           "id": "C",
-          "text": "1/2",
-          "misconception": "added_tops_and_bottoms",
-          "misconception_id": "added_tops_and_bottoms"
+          "text": "1",
+          "misconception_id": "added_tops_kept_first_bottom"
         },
         {
           "id": "D",
-          "text": "7/6",
-          "misconception": "added_tops_kept_first_bottom",
-          "misconception_id": "added_tops_kept_first_bottom"
+          "text": "2/5",
+          "misconception_id": "added_tops_and_bottoms"
         }
       ],
       "correct_index": 0,
       "answer": "11/12",
-      "hint": "The bottoms are different. Find a number that both 6 and 8 go into evenly before adding.",
-      "explanation": "Find the common denominator: lcm(6,8) = 24. Convert: 1/6 = 4/24 and 6/8 = 18/24. Now add the tops: 4 + 18 = 22, giving 22/24.",
+      "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
+      "explanation": "The smallest number both 4 and 6 go into is 12. Rename 3/4 as 9/12 and 1/6 as 2/12 so the bottoms match. Add the top numbers: 9 + 2 = 11, giving 11/12.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -686,45 +644,42 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-hard-food",
       "params": {
-        "a": 1,
-        "b": 3,
+        "a": 3,
+        "b": 4,
         "c": 1,
         "d": 5
       },
-      "stem": "A recipe needs 1/3 litre of milk for the batter and 1/5 litre for the sauce. A chef already has 1/3 litre. How much MORE milk must they buy to have enough for both?",
-      "expression": "1/3 + 1/5",
+      "stem": "A recipe needs 3/4 litre of milk for the batter and 1/5 litre for the sauce. A chef already has 1/4 litre. How much MORE milk must they buy to have enough for both?",
+      "expression": "3/4 + 1/5",
       "options": [
         {
           "id": "A",
-          "text": "2/15",
-          "misconception": "renamed_bottom_kept_tops",
-          "misconception_id": "renamed_bottom_kept_tops"
+          "text": "1",
+          "misconception_id": "added_tops_kept_first_bottom"
         },
         {
           "id": "B",
-          "text": "8/15",
-          "misconception": null,
-          "misconception_id": null
-        },
-        {
-          "id": "C",
-          "text": "1/4",
-          "misconception": "added_tops_and_bottoms",
+          "text": "4/9",
           "misconception_id": "added_tops_and_bottoms"
         },
         {
+          "id": "C",
+          "text": "19/20",
+          "misconception_id": null
+        },
+        {
           "id": "D",
-          "text": "2/3",
-          "misconception": "added_tops_kept_first_bottom",
-          "misconception_id": "added_tops_kept_first_bottom"
+          "text": "1/5",
+          "misconception_id": "renamed_bottom_kept_tops"
         }
       ],
-      "correct_index": 1,
-      "answer": "8/15",
-      "hint": "The bottoms are different. Find a number that both 3 and 5 go into evenly before adding.",
-      "explanation": "Find the common denominator: lcm(3,5) = 15. Convert: 1/3 = 5/15 and 1/5 = 3/15. Now add the tops: 5 + 3 = 8, giving 8/15.",
+      "correct_index": 2,
+      "answer": "19/20",
+      "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
+      "explanation": "The smallest number both 4 and 5 go into is 20. Rename 3/4 as 15/20 and 1/5 as 4/20 so the bottoms match. Add the top numbers: 15 + 4 = 19, giving 19/20.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -734,45 +689,42 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-hard-games",
       "params": {
-        "a": 1,
-        "b": 3,
-        "c": 2,
-        "d": 5
+        "a": 3,
+        "b": 5,
+        "c": 1,
+        "d": 8
       },
-      "stem": "A wizard has two spell scrolls that restore 1/3 and 2/5 of a health bar. Together, what fraction of the health bar is restored?",
-      "expression": "1/3 + 2/5",
+      "stem": "A wizard has two spell scrolls that restore 3/5 and 1/8 of a health bar. Together, what fraction of the health bar is restored?",
+      "expression": "3/5 + 1/8",
       "options": [
         {
           "id": "A",
-          "text": "1/5",
-          "misconception": "renamed_bottom_kept_tops",
-          "misconception_id": "renamed_bottom_kept_tops"
-        },
-        {
-          "id": "B",
-          "text": "3/8",
-          "misconception": "added_tops_and_bottoms",
+          "text": "4/13",
           "misconception_id": "added_tops_and_bottoms"
         },
         {
-          "id": "C",
-          "text": "11/15",
-          "misconception": null,
+          "id": "B",
+          "text": "29/40",
           "misconception_id": null
         },
         {
+          "id": "C",
+          "text": "1/10",
+          "misconception_id": "renamed_bottom_kept_tops"
+        },
+        {
           "id": "D",
-          "text": "1",
-          "misconception": "added_tops_kept_first_bottom",
-          "misconception_id": "added_tops_kept_first_bottom"
+          "text": "3/40",
+          "misconception_id": "multiplied_instead_of_adding"
         }
       ],
-      "correct_index": 2,
-      "answer": "11/15",
-      "hint": "The bottoms are different. Find a number that both 3 and 5 go into evenly before adding.",
-      "explanation": "Find the common denominator: lcm(3,5) = 15. Convert: 1/3 = 5/15 and 2/5 = 6/15. Now add the tops: 5 + 6 = 11, giving 11/15.",
+      "correct_index": 1,
+      "answer": "29/40",
+      "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
+      "explanation": "The smallest number both 5 and 8 go into is 40. Rename 3/5 as 24/40 and 1/8 as 5/40 so the bottoms match. Add the top numbers: 24 + 5 = 29, giving 29/40.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -782,45 +734,42 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-hard-sports",
       "params": {
-        "a": 1,
+        "a": 2,
         "b": 4,
-        "c": 1,
-        "d": 5
+        "c": 2,
+        "d": 6
       },
-      "stem": "Two relay runners cover 1/4 and 1/5 of the total course. What fraction of the total course have they completed together?",
-      "expression": "1/4 + 1/5",
+      "stem": "Two relay runners cover 2/4 and 2/6 of the total course. What fraction of the total course have they completed together?",
+      "expression": "2/4 + 2/6",
       "options": [
         {
           "id": "A",
-          "text": "9/20",
-          "misconception": null,
+          "text": "5/6",
           "misconception_id": null
         },
         {
           "id": "B",
-          "text": "1/10",
-          "misconception": "renamed_bottom_kept_tops",
+          "text": "1/3",
           "misconception_id": "renamed_bottom_kept_tops"
         },
         {
           "id": "C",
-          "text": "2/9",
-          "misconception": "added_tops_and_bottoms",
-          "misconception_id": "added_tops_and_bottoms"
+          "text": "1/6",
+          "misconception_id": "multiplied_instead_of_adding"
         },
         {
           "id": "D",
-          "text": "1/2",
-          "misconception": "added_tops_kept_first_bottom",
+          "text": "1",
           "misconception_id": "added_tops_kept_first_bottom"
         }
       ],
       "correct_index": 0,
-      "answer": "9/20",
-      "hint": "The bottoms are different. Find a number that both 4 and 5 go into evenly before adding.",
-      "explanation": "Find the common denominator: lcm(4,5) = 20. Convert: 1/4 = 5/20 and 1/5 = 4/20. Now add the tops: 5 + 4 = 9, giving 9/20.",
+      "answer": "5/6",
+      "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
+      "explanation": "The smallest number both 4 and 6 go into is 12. Rename 2/4 as 6/12 and 2/6 as 4/12 so the bottoms match. Add the top numbers: 6 + 4 = 10, giving 10/12.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"
@@ -830,45 +779,42 @@
       "topic_id": "g5-fractions-add",
       "standard": "5.NR.3.3",
       "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
       "template_id": "g5-fractions-add-hard-nature",
       "params": {
-        "a": 2,
-        "b": 4,
-        "c": 1,
-        "d": 5
+        "a": 1,
+        "b": 5,
+        "c": 3,
+        "d": 6
       },
-      "stem": "A river flooded 2/4 of a valley in January and 1/5 more in February. What fraction of the valley flooded over those two months?",
-      "expression": "2/4 + 1/5",
+      "stem": "A river flooded 1/5 of a valley in January and 3/6 more in February. What fraction of the valley flooded over those two months?",
+      "expression": "1/5 + 3/6",
       "options": [
         {
           "id": "A",
-          "text": "3/20",
-          "misconception": "renamed_bottom_kept_tops",
-          "misconception_id": "renamed_bottom_kept_tops"
+          "text": "1/10",
+          "misconception_id": "multiplied_instead_of_adding"
         },
         {
           "id": "B",
-          "text": "1/3",
-          "misconception": "added_tops_and_bottoms",
-          "misconception_id": "added_tops_and_bottoms"
+          "text": "3/10",
+          "misconception_id": "subtracted_instead_of_adding"
         },
         {
           "id": "C",
           "text": "7/10",
-          "misconception": null,
           "misconception_id": null
         },
         {
           "id": "D",
-          "text": "3/4",
-          "misconception": "added_tops_kept_first_bottom",
+          "text": "4/5",
           "misconception_id": "added_tops_kept_first_bottom"
         }
       ],
       "correct_index": 2,
       "answer": "7/10",
-      "hint": "The bottoms are different. Find a number that both 4 and 5 go into evenly before adding.",
-      "explanation": "Find the common denominator: lcm(4,5) = 20. Convert: 2/4 = 10/20 and 1/5 = 4/20. Now add the tops: 10 + 4 = 14, giving 14/20.",
+      "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
+      "explanation": "The smallest number both 5 and 6 go into is 30. Rename 1/5 as 6/30 and 3/6 as 15/30 so the bottoms match. Add the top numbers: 6 + 15 = 21, giving 21/30.",
       "provenance": "verified",
       "model": "template-seed",
       "prompt_version": "seed-v2"

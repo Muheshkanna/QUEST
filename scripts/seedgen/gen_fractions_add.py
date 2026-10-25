@@ -6,7 +6,7 @@ hard   = unlike denominators + two-step word problem
 import random
 from fractions import Fraction
 from math import lcm
-from . import get_correct_position, build_options, get_distractors, fmt_frac
+from . import get_topic_positions, build_options, get_distractors, fmt_frac
 
 TOPIC = "g5-fractions-add"
 
@@ -32,13 +32,16 @@ HARD_STEMS = [
     ("nature", "A river flooded {a}/{b} of a valley in January and {c}/{d} more in February. What fraction of the valley flooded over those two months?"),
 ]
 
-RULE_ORDER_EASY   = ["added_tops_and_bottoms","multiplied_instead_of_adding","subtracted_instead_of_adding","renamed_bottom_kept_tops","added_tops_kept_first_bottom"]
-RULE_ORDER_MEDIUM = ["added_tops_and_bottoms","renamed_bottom_kept_tops","subtracted_instead_of_adding","multiplied_instead_of_adding","added_tops_kept_first_bottom"]
-RULE_ORDER_HARD   = ["renamed_bottom_kept_tops","added_tops_and_bottoms","added_tops_kept_first_bottom","subtracted_instead_of_adding","multiplied_instead_of_adding"]
+ALL_RULES = [
+    "added_tops_and_bottoms",
+    "renamed_bottom_kept_tops",
+    "multiplied_instead_of_adding",
+    "subtracted_instead_of_adding",
+    "added_tops_kept_first_bottom",
+]
 
 def _easy_params(rng):
-    """Same denominator."""
-    b = rng.choice([4,6,8,10,12])
+    b = rng.choice([4, 6, 8, 10, 12])
     max_top = b - 1
     for _ in range(100):
         a = rng.randint(1, max_top - 1)
@@ -48,11 +51,10 @@ def _easy_params(rng):
     return {"a": 1, "b": 4, "c": 1, "d": 4}
 
 def _medium_params(rng):
-    """b and d different, one a multiple of the other."""
-    bases = [3,4,5,6,8]
+    bases = [3, 4, 5, 6, 8]
     for _ in range(100):
         b = rng.choice(bases)
-        k = rng.choice([2,3])
+        k = rng.choice([2, 3])
         d = b * k
         a = rng.randint(1, b - 1)
         c = rng.randint(1, d - 1)
@@ -62,8 +64,7 @@ def _medium_params(rng):
     return {"a": 1, "b": 4, "c": 1, "d": 8}
 
 def _hard_params(rng):
-    """Unlike denominators, not multiples."""
-    pairs = [(3,4),(3,8),(4,6),(5,6),(3,5),(4,5),(5,8),(6,8)]
+    pairs = [(3, 4), (3, 8), (4, 6), (5, 6), (3, 5), (4, 5), (5, 8)]
     for _ in range(100):
         b, d = rng.choice(pairs)
         a = rng.randint(1, b - 1)
@@ -75,58 +76,73 @@ def _hard_params(rng):
 
 def _explanation(p, correct_frac):
     a, b, c, d = p["a"], p["b"], p["c"], p["d"]
-    L = lcm(b, d)
-    na = a * (L // b)
-    nc = c * (L // d)
     simplified = fmt_frac(correct_frac)
-    if L == b and L == d:
-        return (f"Both fractions already share the denominator {b}. "
-                f"Add just the tops: {a} + {c} = {a+c}. "
-                f"The answer is {a+c}/{b}" + (f" = {simplified}." if Fraction(a+c,b) != correct_frac else "."))
-    else:
-        return (f"Find the common denominator: lcm({b},{d}) = {L}. "
-                f"Convert: {a}/{b} = {na}/{L} and {c}/{d} = {nc}/{L}. "
-                f"Now add the tops: {na} + {nc} = {na+nc}, giving {na+nc}/{L}" +
-                (f" = {simplified}." if Fraction(na+nc, L) != correct_frac else "."))
-
-def _hint(p):
-    b, d = p["b"], p["d"]
     if b == d:
-        return f"When the bottom numbers match, you can add just the top numbers and keep the bottom."
-    return f"The bottoms are different. Find a number that both {b} and {d} go into evenly before adding."
+        sum_top = a + c
+        if Fraction(sum_top, b) != correct_frac:
+            return f"Both fractions have {b} on the bottom. Add the top numbers: {a} + {c} = {sum_top}, giving {sum_top}/{b} which simplifies to {simplified}."
+        return f"Both fractions have {b} on the bottom. Add the top numbers: {a} + {c} = {sum_top}, giving {sum_top}/{b}."
+    else:
+        L = lcm(b, d)
+        na = a * (L // b)
+        nc = c * (L // d)
+        raw_top = na + nc
+        tail = f" which simplifies to {simplified}." if Fraction(raw_top, L) != correct_frac else "."
+        return (f"The smallest number both {b} and {d} go into is {L}. "
+                f"Rename {a}/{b} as {na}/{L} and {c}/{d} as {nc}/{L} so the bottoms match. "
+                f"Add the top numbers: {na} + {nc} = {raw_top}, giving {raw_top}/{L}{tail}")
+
+def _hint(p, diff):
+    b, d = p["b"], p["d"]
+    if diff == "easy":
+        return f"The bottom numbers match, so you can add just the top numbers and keep the bottom."
+    elif diff == "medium":
+        return f"Look at the bottom numbers. What needs to match before you can combine these two parts?"
+    else:
+        return f"Take this step by step. First find how much is needed in all before checking what is left to get."
 
 def generate(seed: int = 42):
     rng = random.Random(seed)
+    pos_map = get_topic_positions(TOPIC, seed)
     questions = []
-    configs = [("easy", _easy_params, EASY_STEMS, RULE_ORDER_EASY, 6),
-               ("medium", _medium_params, MEDIUM_STEMS, RULE_ORDER_MEDIUM, 6),
-               ("hard", _hard_params, HARD_STEMS, RULE_ORDER_HARD, 6)]
-    q_index = 0
-    for diff, param_fn, stems, rule_order, count in configs:
+    configs = [
+        ("easy", _easy_params, EASY_STEMS),
+        ("medium", _medium_params, MEDIUM_STEMS),
+        ("hard", _hard_params, HARD_STEMS),
+    ]
+    global_q_idx = 0
+    for diff, param_fn, stems in configs:
         stem_cycle = list(stems)
         rng.shuffle(stem_cycle)
         used = []
         attempts = 0
-        while len(used) < count and attempts < 200:
+        while len(used) < 6 and attempts < 300:
             attempts += 1
             p = param_fn(rng)
             correct_frac = Fraction(p["a"], p["b"]) + Fraction(p["c"], p["d"])
             correct_text = fmt_frac(correct_frac)
+
+            # Rotate rule candidates round-robin so every rule is tried
+            offset = global_q_idx % len(ALL_RULES)
+            rule_order = ALL_RULES[offset:] + ALL_RULES[:offset]
+
             distractors = get_distractors(TOPIC, p, correct_text, rule_order)
             if len(distractors) < 3:
                 continue
-            stem_entry = stem_cycle[len(used) % len(stem_cycle)]
-            context, tmpl = stem_entry
+
+            ctx, tmpl = stem_cycle[len(used) % len(stem_cycle)]
             stem_text = tmpl.format(**p)
-            template_id = f"{TOPIC}-{diff}-{context}"
+            template_id = f"{TOPIC}-{diff}-{ctx}"
             expr = f"{p['a']}/{p['b']} + {p['c']}/{p['d']}"
-            correct_pos = get_correct_position(q_index)
+            correct_pos = pos_map[diff][len(used)]
             options = build_options(correct_text, distractors, correct_pos)
+
             q = {
                 "id": f"{TOPIC}-{diff}-{len(used)+1}",
                 "topic_id": TOPIC,
                 "standard": "5.NR.3.3",
                 "difficulty": diff,
+                "verifier_type": "fraction_arithmetic",
                 "template_id": template_id,
                 "params": p,
                 "stem": stem_text,
@@ -134,13 +150,13 @@ def generate(seed: int = 42):
                 "options": options,
                 "correct_index": correct_pos,
                 "answer": correct_text,
-                "hint": _hint(p),
+                "hint": _hint(p, diff),
                 "explanation": _explanation(p, correct_frac),
                 "provenance": "verified",
                 "model": "template-seed",
                 "prompt_version": "seed-v2",
             }
             used.append(q)
-            q_index += 1
+            global_q_idx += 1
         questions.extend(used)
     return questions

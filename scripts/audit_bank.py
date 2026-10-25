@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Audit question banks for provenance and rule compliance.
 Reports:
 - Per-topic misconception tag usage counts
@@ -88,12 +88,21 @@ def audit(topics=None):
         ver = verified_counts[topic]
         print(f"  {topic}: total={total} ({counts_str}) | verified={ver}/{total}")
 
-    print("\n--- 2. Misconception Tag Usage per Topic ---")
+    print("\n--- 2. Misconception Tag Usage & Diversity Check per Topic ---")
+    from api._lib.misconceptions import get_topic_rules
     for topic in sorted(tag_usage.keys()):
         print(f"\n  Topic: {topic}")
         cnts = tag_usage[topic]
+        expected_rules = get_topic_rules(topic)
         for tag, ct in sorted(cnts.items(), key=lambda x: (-x[1], x[0])):
-            print(f"    - {tag}: {ct}")
+            status = " [OK >= 2]" if ct >= 2 else " [WARN < 2]"
+            print(f"    - {tag}: {ct}{status}")
+
+        for r in expected_rules:
+            ct = cnts.get(r, 0)
+            if ct < 2:
+                failures.append((f"Diversity failure in {topic}: registered rule '{r}' appeared only {ct} time(s) (minimum 2 required)", []))
+                print(f"    [FAIL DIVERSITY] Applicable rule '{r}' appeared {ct} time(s) (minimum 2 required)")
 
     print("\n--- 3. Answer Position Distribution per Topic ---")
     pos_failed = False

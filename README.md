@@ -82,8 +82,8 @@ All 20 curriculum topics are mapped to official Georgia K-12 standards:
 | Topic ID | Grade | Georgia Standard Code | Standard Title / Description | Status |
 |---|---|---|---|---|
 | `g5-place-value` | Grade 5 | `5.NR.1` | Place Value & Powers of 10 | Verified |
-| `g5-multiply` | Grade 5 | `5.NR.2` | Multi-Digit Whole Number Multiplication | Verified |
-| `g5-divide` | Grade 5 | `5.NR.2` | Multi-Digit Whole Number Division | Verified |
+| `g5-multiply` | Grade 5 | `5.NR.2.1` | Multi-Digit Whole Number Multiplication | Verified |
+| `g5-divide` | Grade 5 | `5.NR.2.2` | Multi-Digit Whole Number Division | Verified |
 | `g5-decimal-ops` | Grade 5 | `5.NR.4` | Decimal Addition and Subtraction to Hundredths | Verified |
 | `g5-fractions-add` | Grade 5 | `5.NR.3.3` | Addition & Subtraction of Fractions with Unlike Denominators | Verified |
 | `g5-fractions-multiply` | Grade 5 | `5.NR.3.4` | Multiplying Fractions and Whole Numbers | Verified |
@@ -98,8 +98,27 @@ All 20 curriculum topics are mapped to official Georgia K-12 standards:
 | `g6-decimals` | Grade 6 | `6.NR.1.3` | Multi-Digit Decimal Operations | Verified |
 | `g6-integers` | Grade 6 | `6.NR.3.1` | Integers, Opposites, and Zero Reference Points | Verified |
 | `g6-equiv-expressions` | Grade 6 | `6.PAR.6.5` | Applying Properties of Operations to Generate Equivalent Expressions | Verified |
-| `g6-equations` | Grade 6 | `6.PAR.7.1` | Writing and Solving One-Step Linear Equations | Verified |
+| `g6-equations` | Grade 6 | `6.PAR.7.2` | Writing and Solving One-Step Linear Equations | Verified |
 | `g6-mean-median` | Grade 6 | `6.NR.2.1` | Measures of Center: Mean as Equal Share and Median | Verified |
 | `g6-exponents` | Grade 6 | `6.PAR.6.1` | Numerical Expressions Involving Whole-Number Exponents | Verified |
 
-*(Currently, all 20 standards have been verified against the official Georgia K-12 Mathematics Standards hosted on `georgiastandards.org`).*
+*(All 20 standards have been confirmed against the official Georgia K-12 Mathematics Standards hosted on `georgiastandards.org`).*
+
+---
+
+## Rollout Status & Content Safety Valve
+
+In accordance with the content safety valve policy, only curriculum topics that pass full audit verification (deterministic distractor provenance, rule diversity, position distributions <= 35%, and complete per-level counts) are shipped to the active question bank. Topics awaiting rollout have empty banks and display as **"Coming Soon"** on the world map.
+
+| Topic ID | Status | Bank Size | Provenance |
+|---|---|---|---|
+| `g5-fractions-add` | Shipped (Pilot) | 18 questions | Verified (18/18) |
+| `g5-volume` | Shipped (Pilot) | 18 questions | Verified (18/18) |
+| `g6-percents` | Shipped (Pilot) | 18 questions | Verified (18/18) |
+| `g6-equations` | Shipped (Pilot) | 18 questions | Verified (18/18) |
+| `g5-divide` | Shipped (Pilot) | 18 questions | Verified (18/18) |
+| `g6-ratios` | Coming Soon (Batch A) | — | Awaiting Review (`data/BATCH_RULES.md`) |
+| `g6-unit-rates` | Coming Soon (Batch A) | — | Awaiting Review (`data/BATCH_RULES.md`) |
+| `g5-fractions-multiply` | Coming Soon (Batch A) | — | Awaiting Review (`data/BATCH_RULES.md`) |
+| `g6-mean-median` | Coming Soon (Batch A) | — | Awaiting Review (`data/BATCH_RULES.md`) |
+| *Other 11 Topics* | Coming Soon (Batches B–D) | — | Proposed in `data/BATCH_RULES.md` |

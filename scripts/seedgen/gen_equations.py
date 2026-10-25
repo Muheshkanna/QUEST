@@ -1,11 +1,11 @@
-"""Generator for g6-equations.
+﻿"""Generator for g6-equations.
 easy   = a*x = b  (form ax_b)
 medium = x + a = b  (form xpa_b)
 hard   = a*x + b = c  (form axpb_c)
 """
 import random
 from fractions import Fraction
-from . import get_correct_position, build_options, get_distractors, fmt_frac, fmt_num
+from . import get_topic_positions, build_options, get_distractors, fmt_frac, fmt_num
 
 TOPIC = "g6-equations"
 
@@ -18,11 +18,11 @@ STEMS = {
         ("nature", "{a} identical pots hold {b} litres of water total. Write {a}x = {b}. How much water is in each pot?"),
     ],
     "medium": [
-        ("food",   "After eating {a} grapes, a bowl still has {b} grapes left. Write x + {a} = {b}. How many grapes were in the bowl at the start?"),
-        ("sports", "A batter has {b} career hits. {a} of those were last season. Write x + {a} = {b}. How many hits did they have before last season?"),
-        ("school", "A student had some stickers. After receiving {a} more, they have {b}. Write x + {a} = {b}. How many stickers did they start with?"),
+        ("food",   "After baking {a} muffins, a bakery now has {b} muffins in total. Write x + {a} = {b}. How many muffins were there at first?"),
+        ("sports", "A runner has logged {b} miles this season, including {a} miles this week. Write x + {a} = {b}. How many miles did they run before this week?"),
+        ("school", "A classroom library has {b} books after adding {a} new books. Write x + {a} = {b}. How many books were in the library originally?"),
         ("games",  "A player earned {a} extra coins from a bonus and now has {b} total. Write x + {a} = {b}. How many coins did they have before the bonus?"),
-        ("nature", "A bird adds {a} new feathers and now has {b} total. Write x + {a} = {b}. How many feathers did it have before?"),
+        ("nature", "A wildlife rescue cared for {a} new birds and now has {b} birds. Write x + {a} = {b}. How many birds were there before?"),
     ],
     "hard": [
         ("food",   "A recipe uses {a} cups of sugar per batch, plus {b} extra cups for frosting, totaling {c} cups. Write {a}x + {b} = {c}. How many batches were made?"),
@@ -33,19 +33,30 @@ STEMS = {
     ],
 }
 
-RULE_ORDERS = {
-    "easy": ["subtracted_instead_of_dividing","multiplied_instead_of_dividing","divided_the_wrong_way","ignored_the_coefficient"],
-    "medium": ["added_instead_of_subtracting","subtracted_the_wrong_way","ignored_the_added_value","used_added_value_as_answer"],
-    "hard": ["undid_multiplication_first","added_the_constant","ignored_the_constant_term"],
-}
+EASY_RULES = [
+    "ignored_the_coefficient",
+    "divided_the_wrong_way",
+    "subtracted_instead_of_dividing",
+    "multiplied_instead_of_dividing",
+]
+MEDIUM_RULES = [
+    "ignored_the_added_value",
+    "used_added_value_as_answer",
+    "added_instead_of_subtracting",
+    "subtracted_the_wrong_way",
+]
+HARD_RULES = [
+    "undid_multiplication_first",
+    "added_the_constant",
+    "ignored_the_constant_term",
+]
 
 def _easy_params(rng):
     for _ in range(100):
         a = rng.randint(2, 12)
         b = a * rng.randint(2, 12)
         ans = b // a
-        # ensure divided_the_wrong_way != correct
-        if Fraction(a, b) != Fraction(b, a) and ans > 1:
+        if Fraction(a, b) != Fraction(b, a) and ans > 1 and b != ans:
             return {"form": "ax_b", "a": a, "b": b}
     return {"form": "ax_b", "a": 6, "b": 54}
 
@@ -54,8 +65,7 @@ def _medium_params(rng):
         a = rng.randint(10, 40)
         b = rng.randint(a + 5, 80)
         ans = b - a
-        # subtracted_the_wrong_way must differ from correct (a-b != b-a always when a!=b)
-        if ans > 0 and a != b:
+        if ans > 0 and a != b and a != ans:
             return {"form": "xpa_b", "a": a, "b": b}
     return {"form": "xpa_b", "a": 15, "b": 47}
 
@@ -65,7 +75,6 @@ def _hard_params(rng):
         x_ans = rng.randint(2, 10)
         b = rng.randint(1, 15)
         c = a * x_ans + b
-        # ensure all three hard distractors differ from correct
         correct = Fraction(c - b, a)
         d1 = Fraction(c, a) - b
         d2 = Fraction(c + b, a)
@@ -107,42 +116,51 @@ def _explanation(p):
         return (f"Subtract {p['b']} from both sides first: {p['c']} − {p['b']} = {mid}. "
                 f"Then divide by {p['a']}: {mid} ÷ {p['a']} = {ans}. ✓")
 
-def _hint(p):
+def _hint(p, diff):
     f = p["form"]
-    if f == "ax_b":
-        return f"What is the opposite of multiplying by {p['a']}? Do that to both sides."
-    elif f == "xpa_b":
-        return f"What is the opposite of adding {p['a']}? Use it on both sides."
+    if diff == "easy":
+        return f"What is the opposite operation of multiplying by {p['a']}? Do that to both sides."
+    elif diff == "medium":
+        return f"How can you isolate x by undoing the addition of {p['a']}?"
     else:
-        return f"First remove the number that is not attached to x, then deal with the multiplier."
+        return "Work in reverse order: remove the number added on the outside first, then divide by the multiplier."
 
 def generate(seed: int = 42):
     rng = random.Random(seed)
+    pos_map = get_topic_positions(TOPIC, seed)
     questions = []
-    q_index = 0
     param_fns = {"easy": _easy_params, "medium": _medium_params, "hard": _hard_params}
+    rule_sets = {"easy": EASY_RULES, "medium": MEDIUM_RULES, "hard": HARD_RULES}
+
     for diff in ("easy", "medium", "hard"):
         stem_list = list(STEMS[diff])
         rng.shuffle(stem_list)
-        rule_order = RULE_ORDERS[diff]
+        pool_rules = rule_sets[diff]
         used = []
         attempts = 0
         while len(used) < 6 and attempts < 300:
             attempts += 1
             p = param_fns[diff](rng)
             correct_text = _correct_text(p)
+
+            # Rotate rule order per question
+            rot_idx = len(used) % len(pool_rules)
+            rule_order = pool_rules[rot_idx:] + pool_rules[:rot_idx]
+
             distractors = get_distractors(TOPIC, p, correct_text, rule_order)
             if len(distractors) < 3:
                 continue
+
             ctx, tmpl = stem_list[len(used) % len(stem_list)]
             template_id = f"{TOPIC}-{diff}-{ctx}"
             stem_text = tmpl.format(**p)
-            correct_pos = get_correct_position(q_index)
+            correct_pos = pos_map[diff][len(used)]
             options = build_options(correct_text, distractors, correct_pos)
+
             q = {
                 "id": f"{TOPIC}-{diff}-{len(used)+1}",
                 "topic_id": TOPIC,
-                "standard": "6.PAR.7.1",
+                "standard": "6.PAR.7.2",
                 "difficulty": diff,
                 "verifier_type": "equation_solving",
                 "template_id": template_id,
@@ -152,13 +170,12 @@ def generate(seed: int = 42):
                 "options": options,
                 "correct_index": correct_pos,
                 "answer": correct_text,
-                "hint": _hint(p),
+                "hint": _hint(p, diff),
                 "explanation": _explanation(p),
                 "provenance": "verified",
                 "model": "template-seed",
                 "prompt_version": "seed-v2",
             }
             used.append(q)
-            q_index += 1
         questions.extend(used)
     return questions

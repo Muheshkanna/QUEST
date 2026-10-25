@@ -1,6 +1,6 @@
-"""Generator for g6-percents."""
+﻿"""Generator for g6-percents."""
 import random
-from . import get_correct_position, build_options, get_distractors, fmt_num
+from . import get_topic_positions, build_options, get_distractors, fmt_num
 
 TOPIC = "g6-percents"
 
@@ -20,15 +20,21 @@ STEMS = {
         ("nature", "A lake has {n} species of fish. {p}% are endangered. How many species are endangered?"),
     ],
     "hard": [
-        ("food",   "A store has {n} apples. {p}% are bruised and removed. How many apples are NOT bruised?"),
-        ("sports", "A team scores {n} points total. {p}% come from three-pointers. How many points come from three-pointers?"),
-        ("school", "A test has {n} questions. A student got {p}% correct. How many questions did they get right?"),
-        ("games",  "A village has {n} villagers. During a storm, {p}% took shelter indoors. How many took shelter?"),
-        ("nature", "A reef has {n} coral formations. Scientists say {p}% are healthy. How many are healthy?"),
+        ("food",   "A market has {n} oranges. {p}% of them are sold in the morning. How many oranges were sold?"),
+        ("sports", "A basketball team scored {n} points in a match. {p}% came from three-pointers. How many points was that?"),
+        ("school", "A test has {n} questions. A student got {p}% correct. How many questions did they answer correctly?"),
+        ("games",  "A castle has {n} guards. During a patrol, {p}% are stationed at the gate. How many guards are at the gate?"),
+        ("nature", "A wildlife park has {n} birds. {p}% migrate south for the winter. How many birds migrate south?"),
     ],
 }
 
-RULE_ORDER = ["multiplied_by_percent_number","moved_decimal_wrong_way","found_the_leftover_amount","divided_instead_of_multiplying","found_one_percent_only"]
+ALL_RULES = [
+    "found_one_percent_only",
+    "divided_instead_of_multiplying",
+    "multiplied_by_percent_number",
+    "moved_decimal_wrong_way",
+    "found_the_leftover_amount",
+]
 
 def _params(rng, diff):
     if diff == "easy":
@@ -44,40 +50,54 @@ def _params(rng, diff):
         p = rng.choice(percents)
         n = rng.choice(ns)
         correct = (p / 100) * n
-        if correct == int(correct):  # keep whole-number answers for clarity
+        # keep whole number answers for clarity and ensure n/p != correct for divided_instead_of_multiplying
+        if correct == int(correct) and abs(n / p - correct) > 1e-6:
             return {"p": p, "n": n}
     return {"p": 15, "n": 60}
 
 def _explanation(p_val, n, correct):
-    return (f"{p_val}% means {p_val} per 100, so convert to a decimal: {p_val} ÷ 100 = {p_val/100}. "
-            f"Multiply: {p_val/100} × {n} = {correct}.")
+    dec = p_val / 100
+    return (f"{p_val}% means {p_val} parts out of 100, which is {dec}. "
+            f"Multiply: {dec} × {n} = {correct}.")
 
-def _hint(p_val, n):
-    return f"Convert the percent to a decimal by dividing by 100 first, then multiply."
+def _hint(diff):
+    if diff == "easy":
+        return "Percent means parts per 100. Write it as a decimal first, then multiply."
+    elif diff == "medium":
+        return "How can you change a percent into a decimal or fraction before multiplying by the total?"
+    else:
+        return "Convert the percent to a decimal by dividing by 100, then find that share of the total."
 
 def generate(seed: int = 42):
     rng = random.Random(seed)
+    pos_map = get_topic_positions(TOPIC, seed)
     questions = []
-    q_index = 0
+    global_q_idx = 0
     for diff in ("easy", "medium", "hard"):
         stem_list = list(STEMS[diff])
         rng.shuffle(stem_list)
         used = []
         attempts = 0
-        while len(used) < 6 and attempts < 200:
+        while len(used) < 6 and attempts < 300:
             attempts += 1
             p = _params(rng, diff)
             pv, n = p["p"], p["n"]
             correct_val = (pv / 100) * n
             correct_text = fmt_num(correct_val)
-            distractors = get_distractors(TOPIC, p, correct_text, RULE_ORDER)
+
+            offset = global_q_idx % len(ALL_RULES)
+            rule_order = ALL_RULES[offset:] + ALL_RULES[:offset]
+
+            distractors = get_distractors(TOPIC, p, correct_text, rule_order)
             if len(distractors) < 3:
                 continue
+
             ctx, tmpl = stem_list[len(used) % len(stem_list)]
             template_id = f"{TOPIC}-{diff}-{ctx}"
             stem_text = tmpl.format(p=pv, n=n)
-            correct_pos = get_correct_position(q_index)
+            correct_pos = pos_map[diff][len(used)]
             options = build_options(correct_text, distractors, correct_pos)
+
             q = {
                 "id": f"{TOPIC}-{diff}-{len(used)+1}",
                 "topic_id": TOPIC,
@@ -91,13 +111,13 @@ def generate(seed: int = 42):
                 "options": options,
                 "correct_index": correct_pos,
                 "answer": correct_text,
-                "hint": _hint(pv, n),
+                "hint": _hint(diff),
                 "explanation": _explanation(pv, n, correct_text),
                 "provenance": "verified",
                 "model": "template-seed",
                 "prompt_version": "seed-v2",
             }
             used.append(q)
-            q_index += 1
+            global_q_idx += 1
         questions.extend(used)
     return questions

@@ -166,28 +166,37 @@ The initial version of `DESIGN.md` described the realms using high-concept theme
 
 ## 6. Question Schema & Verifier Rules
 
-### Question Data Model
+### Question Data Model & UI Contract
 ```json
 {
+  "id": "g5-fractions-add-medium-1",
   "topic_id": "g5-fractions-add",
   "standard": "5.NR.3.3",
   "difficulty": "medium",
-  "stem": "A potion requires 2/3 cup of starlight nectar and 1/6 cup of moon water. How much liquid is in the flask in total?",
+  "verifier_type": "fraction_arithmetic",
+  "template_id": "g5-fractions-add-medium-nature",
+  "params": { "a": 2, "b": 3, "c": 1, "d": 6 },
+  "stem": "A plant grew 2/3 metre in spring and 1/6 metre in summer. How much did it grow altogether?",
   "expression": "2/3 + 1/6",
   "options": [
-    { "text": "5/6", "misconception": null },
-    { "text": "3/9", "misconception": "add_denominators" },
-    { "text": "3/6", "misconception": "add_numerators_keep_denominator" },
-    { "text": "1/2", "misconception": "subtracted_instead_of_added" }
+    { "id": "A", "text": "1/3", "misconception_id": "added_tops_and_bottoms" },
+    { "id": "B", "text": "1/2", "misconception_id": "renamed_bottom_kept_tops" },
+    { "id": "C", "text": "1/9", "misconception_id": "multiplied_instead_of_adding" },
+    { "id": "D", "text": "5/6", "misconception_id": null }
   ],
-  "correct_index": 0,
-  "explanation": "Find the common denominator of 6: 2/3 = 4/6. Then add: 4/6 + 1/6 = 5/6 cup.",
-  "hint": "Convert 2/3 so both fractions share a denominator of 6 before adding the tops.",
-  "model": "gemini-1.5-flash",
-  "prompt_version": "v2",
-  "verified": true
+  "correct_index": 3,
+  "answer": "5/6",
+  "hint": "The bottoms are different. Find a number that both 3 and 6 go into evenly before adding.",
+  "explanation": "Find the smallest number both 3 and 6 go into: 6. Rename 2/3 as 4/6. Now add: 4/6 + 1/6 = 5/6.",
+  "provenance": "verified",
+  "model": "template-seed",
+  "prompt_version": "seed-v2"
 }
 ```
+
+*UI Contract Note (Option & MisconceptionCard)*:
+- The legacy duplicate option property `misconception` is superseded by `misconception_id` (null for correct answer, string rule ID for wrong options).
+- When a student selects a wrong option, the client `MisconceptionCard` renders diagnostic feedback looked up from the registry by `misconception_id`, displaying `kid_label`, `diagnosis`, `why_it_fails`, and `mini_example`.
 
 ### Deterministic Verifier Protocol
 1. **Schema Integrity**: Validated against Pydantic model (`schemas.QuestionModel`). Exactly 4 options, valid difficulty string, matching standard code.
