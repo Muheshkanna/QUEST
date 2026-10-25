@@ -1,122 +1,247 @@
 #!/usr/bin/env python3
-"""LLM client abstractions for the QUEST project.
+"""LLM client implementations for QUEST.
 
-The production code expects three client classes:
-- :class:`GeminiClient` – wraps the real Gemini API (placeholder implementation).
-- :class:`GroqClient`   – wraps the Groq API (placeholder implementation).
-- :class:`MockClient`   – returns deterministic responses for offline runs.
-
-Only the methods used by the application are defined.  The mock client reads
-pre‑generated JSON files from ``data/bank`` so that the front‑end can function
-without network access.
+Provides:
+- GeminiClient: Real Google Gemini REST API client via httpx with:
+    - Free-tier model configuration via GEMINI_MODEL (defaults to gemini-1.5-flash / gemini-2.0-flash)
+    - Key strictly from GEMINI_API_KEY (never logged)
+    - JSON mode enforcement (responseMimeType: application/json)
+    - 20s default timeout
+    - Exponential backoff with jitter on HTTP 429 / 5xx
+    - Markdown-fence stripping (```json ... ```)
+    - Single automatic repair retry on invalid JSON
+    - Latency capture (in milliseconds)
+- MockClient: Deterministic or programmable mock client for unit testing and offline fallbacks.
 """
+from __future__ import annotations
 
 import json
+import logging
 import os
-from pathlib import Path
-from typing import Any, Dict, List
+import random
+import re
+import time
+from typing import Any, Dict, List, Optional, Union
 
-# ---------------------------------------------------------------------------
-# Base class (common interface)
-# ---------------------------------------------------------------------------
+import httpx
+
+logger = logging.getLogger("quest.llm")
+
+
+def strip_markdown_fence(text: str) -> str:
+    """Strip markdown code fence wrappers such as ```json ... ``` or ``` ... ```."""
+    text = text.strip()
+    if text.startswith("```"):
+        # Match opening ``` or ```json or ```JSON
+        pattern = r"^```(?:json|JSON)?\s*\n?(.*?)\n?```$"
+        match = re.search(pattern, text, flags=re.DOTALL)
+        if match:
+            return match.group(1).strip()
+    return text
+
+
+class LLMError(Exception):
+    """Base class for LLM client exceptions."""
+    pass
+
+
+class LLMTimeoutError(LLMError):
+    """Raised when an LLM call exceeds the allowed timeout."""
+    pass
+
+
+class LLMRateLimitError(LLMError):
+    """Raised when the LLM service returns a 429 rate limit that persists after retries."""
+    pass
+
+
+class LLMInvalidJSONError(LLMError):
+    """Raised when LLM output cannot be parsed as valid JSON even after repair."""
+    pass
+
 
 class BaseLLMClient:
-    """Abstract base with a minimal interface.
+    """Base interface for QUEST LLM clients."""
 
-    Sub‑classes implement :meth:`generate` which receives a *prompt* string and
-    returns a list of strings (the model's responses).  The real clients would
-    perform HTTP calls; the mock client reads from static files.
-    """
+    def __init__(self) -> None:
+        self.last_latency_ms: float = 0.0
 
-    def generate(self, prompt: str) -> List[str]:  # pragma: no cover – overridden
+    def generate(self, prompt: str, timeout: Optional[float] = None) -> str:
         raise NotImplementedError
 
-# ---------------------------------------------------------------------------
-# Gemini client (stub – raises if run without API key)
-# ---------------------------------------------------------------------------
+    def generate_json(self, prompt: str, timeout: Optional[float] = None) -> Dict[str, Any]:
+        raise NotImplementedError
+
 
 class GeminiClient(BaseLLMClient):
-    def __init__(self, api_key: str | None = None):
-        self.api_key = api_key or os.getenv("GEMINI_API_KEY")
-        if not self.api_key:
-            raise RuntimeError("Gemini API key not configured")
+    """Real Gemini client using Google's Generative Language REST API."""
 
-    def generate(self, prompt: str) -> List[str]:
-        # In a real implementation we would call the Gemini endpoint.
-        # For the offline demo we simply raise to alert the developer.
-        raise RuntimeError(
-            "GeminiClient.generate called in offline mode – no API key configured"
-        )
+    def __init__(
+        self,
+        api_key: Optional[str] = None,
+        model_name: Optional[str] = None,
+        timeout: float = 20.0,
+        max_retries: int = 3,
+    ) -> None:
+        super().__init__()
+        # Key read strictly from parameter or GEMINI_API_KEY env var
+        raw_key = api_key or os.getenv("GEMINI_API_KEY") or ""
+        self._api_key = raw_key.strip()
+        # Free-tier model names: gemini-1.5-flash, gemini-2.0-flash, gemini-2.5-flash
+        self.model_name = (model_name or os.getenv("GEMINI_MODEL") or "gemini-1.5-flash").strip()
+        self.default_timeout = timeout
+        self.max_retries = max_retries
+        self._endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{self.model_name}:generateContent"
 
-# ---------------------------------------------------------------------------
-# Groq client (stub – similar to Gemini)
-# ---------------------------------------------------------------------------
+    @property
+    def is_configured(self) -> bool:
+        return bool(self._api_key)
 
-class GroqClient(BaseLLMClient):
-    def __init__(self, api_key: str | None = None):
-        self.api_key = api_key or os.getenv("GROQ_API_KEY")
-        if not self.api_key:
-            raise RuntimeError("Groq API key not configured")
+    def _call_gemini_api(self, prompt: str, timeout: float) -> str:
+        """Call Gemini REST endpoint with exponential backoff and jitter on 429/5xx."""
+        if not self._api_key:
+            raise LLMError("GEMINI_API_KEY is not configured")
 
-    def generate(self, prompt: str) -> List[str]:
-        raise RuntimeError(
-            "GroqClient.generate called in offline mode – no API key configured"
-        )
+        url = f"{self._endpoint}?key={self._api_key}"
+        headers = {"Content-Type": "application/json"}
+        payload = {
+            "contents": [
+                {
+                    "parts": [{"text": prompt}]
+                }
+            ],
+            "generationConfig": {
+                "responseMimeType": "application/json",
+                "temperature": 0.2,
+            },
+        }
 
-# ---------------------------------------------------------------------------
-# Mock client – deterministic offline responses
-# ---------------------------------------------------------------------------
+        client_timeout = httpx.Timeout(timeout, connect=5.0)
+        retries = 0
+        backoff_base = 1.0
+
+        while True:
+            try:
+                with httpx.Client(timeout=client_timeout) as client:
+                    response = client.post(url, headers=headers, json=payload)
+
+                if response.status_code == 200:
+                    data = response.json()
+                    candidates = data.get("candidates", [])
+                    if not candidates:
+                        raise LLMError("Gemini returned no candidates")
+                    content_parts = candidates[0].get("content", {}).get("parts", [])
+                    if not content_parts or "text" not in content_parts[0]:
+                        raise LLMError("Gemini candidate contains no text parts")
+                    return content_parts[0]["text"]
+
+                # Handle transient 429 or 5xx server errors
+                if response.status_code in (429, 500, 502, 503, 504):
+                    retries += 1
+                    if retries > self.max_retries:
+                        if response.status_code == 429:
+                            raise LLMRateLimitError(f"Gemini 429 rate limit exceeded after {retries} retries")
+                        raise LLMError(f"Gemini server error {response.status_code} after {retries} retries")
+
+                    delay = (backoff_base * (2 ** (retries - 1))) + random.uniform(0.1, 0.5)
+                    time.sleep(delay)
+                    continue
+
+                # Non-retryable error (e.g. 400, 403, 404)
+                # Note: NEVER log API key or URL containing the key!
+                raise LLMError(f"Gemini API returned error status {response.status_code}: {response.text[:200]}")
+
+            except httpx.TimeoutException as exc:
+                raise LLMTimeoutError(f"Gemini call timed out after {timeout}s") from exc
+            except (httpx.ConnectError, httpx.NetworkError) as exc:
+                retries += 1
+                if retries > self.max_retries:
+                    raise LLMError(f"Gemini network error after {retries} retries: {exc}") from exc
+                delay = (backoff_base * (2 ** (retries - 1))) + random.uniform(0.1, 0.5)
+                time.sleep(delay)
+
+    def generate(self, prompt: str, timeout: Optional[float] = None) -> str:
+        """Generate text from Gemini, measuring latency and stripping markdown fences."""
+        t_req = timeout if timeout is not None else self.default_timeout
+        start_time = time.perf_counter()
+        try:
+            raw_text = self._call_gemini_api(prompt, timeout=t_req)
+            return strip_markdown_fence(raw_text)
+        finally:
+            self.last_latency_ms = (time.perf_counter() - start_time) * 1000.0
+
+    def generate_json(self, prompt: str, timeout: Optional[float] = None) -> Dict[str, Any]:
+        """Generate valid JSON from Gemini, performing one repair retry on invalid JSON."""
+        t_req = timeout if timeout is not None else self.default_timeout
+        start_time = time.perf_counter()
+        try:
+            raw_text = self._call_gemini_api(prompt, timeout=t_req)
+            clean_text = strip_markdown_fence(raw_text)
+
+            try:
+                return json.loads(clean_text)
+            except json.JSONDecodeError as decode_err:
+                logger.warning(f"Gemini output not valid JSON ({decode_err}), attempting 1 repair retry...")
+                # Attempt single repair retry
+                repair_prompt = (
+                    "The following output was supposed to be strictly valid JSON, but had a syntax error:\n\n"
+                    f"{clean_text}\n\n"
+                    "Please repair and return ONLY strictly valid RFC 8259 JSON. No markdown fences, no comments, no prose."
+                )
+                repair_text = self._call_gemini_api(repair_prompt, timeout=t_req)
+                repaired_clean = strip_markdown_fence(repair_text)
+                try:
+                    return json.loads(repaired_clean)
+                except json.JSONDecodeError as second_err:
+                    raise LLMInvalidJSONError(f"Failed to parse repaired JSON: {second_err}") from second_err
+        finally:
+            self.last_latency_ms = (time.perf_counter() - start_time) * 1000.0
+
 
 class MockClient(BaseLLMClient):
-    """Return a deterministic answer based on the prompt.
+    """Programmable MockClient for testing API endpoints and offline scenarios."""
 
-    The mock looks for a JSON file whose name matches the *template_id* embedded
-    in the prompt (e.g. ``"template-id": "g5-fractions-add-easy-1"``).  If the
-    file exists it returns the ``explanation`` field; otherwise it returns a
-    generic placeholder.
-    """
+    def __init__(
+        self,
+        default_response: Optional[Union[Dict[str, Any], str]] = None,
+        should_timeout: bool = False,
+        invalid_json: bool = False,
+        error_to_raise: Optional[Exception] = None,
+        latency_ms: float = 12.0,
+    ) -> None:
+        super().__init__()
+        self.default_response = default_response
+        self.should_timeout = should_timeout
+        self.invalid_json = invalid_json
+        self.error_to_raise = error_to_raise
+        self.fixed_latency_ms = latency_ms
+        self.call_count: int = 0
+        self.last_prompt: Optional[str] = None
 
-    def __init__(self, bank_root: str | os.PathLike = None):
-        # By default use the project's generated bank directory.
-        self.bank_root = Path(bank_root) if bank_root else Path(__file__).resolve().parents[2] / "data" / "bank"
+    def generate(self, prompt: str, timeout: Optional[float] = None) -> str:
+        self.call_count += 1
+        self.last_prompt = prompt
+        self.last_latency_ms = self.fixed_latency_ms
 
-    def _extract_template_id(self, prompt: str) -> str | None:
-        # Very simple extraction – the real system embeds the id as JSON.
-        import re
+        if self.should_timeout:
+            raise LLMTimeoutError("MockClient forced timeout")
+        if self.error_to_raise:
+            raise self.error_to_raise
+        if self.invalid_json:
+            return "```json\n{ broken json: [unclosed\n```"
 
-        m = re.search(r'"template_id"\s*:\s*"(?P<tid>[^"]+)"', prompt)
-        return m.group("tid") if m else None
+        if isinstance(self.default_response, dict):
+            return json.dumps(self.default_response)
+        if isinstance(self.default_response, str):
+            return self.default_response
 
-    def generate(self, prompt: str) -> List[str]:
-        tid = self._extract_template_id(prompt)
-        if not tid:
-            return ["Mock response – no template_id found"]
-        # Search each topic file for a matching question.
-        for topic_file in self.bank_root.glob("*.json"):
-            try:
-                data = json.loads(topic_file.read_text(encoding="utf-8"))
-                for q in data.get("questions", []):
-                    if q.get("template_id") == tid:
-                        # Return the explanation as the mock "model" output.
-                        return [q.get("explanation", "No explanation available")]
-            except Exception:
-                continue
-        return [f"Mock response – template_id '{tid}' not found in bank"]
+        # Fallback default response
+        return json.dumps({"title": "Mock Title", "big_idea": "Mock Idea"})
 
-# ---------------------------------------------------------------------------
-# Helper factory – chooses client based on environment variable ``LLM_BACKEND``
-# ---------------------------------------------------------------------------
-
-def get_client() -> BaseLLMClient:
-    """Return the appropriate LLM client.
-
-    ``LLM_BACKEND`` can be ``gemini``, ``groq`` or ``mock`` (default).
-    """
-    backend = os.getenv("LLM_BACKEND", "mock").lower()
-    if backend == "gemini":
-        return GeminiClient()
-    if backend == "groq":
-        return GroqClient()
-    return MockClient()
-
-# End of file
+    def generate_json(self, prompt: str, timeout: Optional[float] = None) -> Dict[str, Any]:
+        raw = self.generate(prompt, timeout=timeout)
+        cleaned = strip_markdown_fence(raw)
+        try:
+            return json.loads(cleaned)
+        except json.JSONDecodeError as err:
+            raise LLMInvalidJSONError(f"MockClient returned invalid JSON: {err}") from err
