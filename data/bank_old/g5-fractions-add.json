@@ -1,0 +1,663 @@
+{
+  "topic_id": "g5-fractions-add",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.348532+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g5-fractions-add-easy-1",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A recipe calls for 1/9 cup of honey and 4/9 cup of warm milk. How much liquid is added in total?",
+      "expression": "1/9 + 4/9",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3/9",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "5/9",
+          "misconception": null
+        },
+        {
+          "text": "5/18",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "1/9",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "1/9 + 4/9 = 5/9 = 5/9.",
+      "hint": "When fractions share the same denominator, keep the denominator and add the numerators.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-easy-2",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A recipe calls for 6/10 cup of honey and 2/10 cup of warm milk. How much liquid is added in total?",
+      "expression": "6/10 + 2/10",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4/5",
+          "misconception": null
+        },
+        {
+          "text": "6/10",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "5/5",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "8/20",
+          "misconception": "add_denominators"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "6/10 + 2/10 = 8/10 = 4/5.",
+      "hint": "When fractions share the same denominator, keep the denominator and add the numerators.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-easy-3",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A recipe calls for 3/6 cup of honey and 2/6 cup of warm milk. How much liquid is added in total?",
+      "expression": "3/6 + 2/6",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3/6",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "5/6",
+          "misconception": null
+        },
+        {
+          "text": "5/12",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "1/6",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "3/6 + 2/6 = 5/6 = 5/6.",
+      "hint": "When fractions share the same denominator, keep the denominator and add the numerators.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-easy-4",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A recipe calls for 2/5 cup of honey and 1/5 cup of warm milk. How much liquid is added in total?",
+      "expression": "2/5 + 1/5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3/10",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "1/5",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "2/5",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "3/5",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "2/5 + 1/5 = 3/5 = 3/5.",
+      "hint": "When fractions share the same denominator, keep the denominator and add the numerators.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-easy-5",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A recipe calls for 3/9 cup of honey and 2/9 cup of warm milk. How much liquid is added in total?",
+      "expression": "3/9 + 2/9",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "5/18",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "1/9",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "5/9",
+          "misconception": null
+        },
+        {
+          "text": "3/9",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "3/9 + 2/9 = 5/9 = 5/9.",
+      "hint": "When fractions share the same denominator, keep the denominator and add the numerators.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-easy-6",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A recipe calls for 3/7 cup of honey and 1/7 cup of warm milk. How much liquid is added in total?",
+      "expression": "3/7 + 1/7",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4/7",
+          "misconception": null
+        },
+        {
+          "text": "4/14",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "3/7",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "5/7",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "3/7 + 1/7 = 4/7 = 4/7.",
+      "hint": "When fractions share the same denominator, keep the denominator and add the numerators.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-medium-1",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "During garden work, Maya raked 1/2 of the lawn in the morning and 1/6 of the lawn after lunch. What fraction of the lawn did she rake altogether?",
+      "expression": "1/2 + 1/6",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "2/6",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "2/8",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "1/8",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "2/3",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "1/2 = 3/6. Adding 1/6 gives 2/3.",
+      "hint": "Convert 1/2 to an equivalent fraction with a denominator of 6.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-medium-2",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "During garden work, Maya raked 1/2 of the lawn in the morning and 1/4 of the lawn after lunch. What fraction of the lawn did she rake altogether?",
+      "expression": "1/2 + 1/4",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3/4",
+          "misconception": null
+        },
+        {
+          "text": "2/4",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "1/6",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "2/6",
+          "misconception": "add_denominators"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "1/2 = 2/4. Adding 1/4 gives 3/4.",
+      "hint": "Convert 1/2 to an equivalent fraction with a denominator of 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-medium-3",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "During garden work, Maya raked 1/3 of the lawn in the morning and 1/9 of the lawn after lunch. What fraction of the lawn did she rake altogether?",
+      "expression": "1/3 + 1/9",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4/9",
+          "misconception": null
+        },
+        {
+          "text": "1/12",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "2/9",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "2/12",
+          "misconception": "add_denominators"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "1/3 = 3/9. Adding 1/9 gives 4/9.",
+      "hint": "Convert 1/3 to an equivalent fraction with a denominator of 9.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-medium-4",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "During garden work, Maya raked 1/5 of the lawn in the morning and 1/15 of the lawn after lunch. What fraction of the lawn did she rake altogether?",
+      "expression": "1/5 + 1/15",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "2/15",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "2/20",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "1/20",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "4/15",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "1/5 = 3/15. Adding 1/15 gives 4/15.",
+      "hint": "Convert 1/5 to an equivalent fraction with a denominator of 15.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-medium-5",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "During garden work, Maya raked 1/4 of the lawn in the morning and 1/8 of the lawn after lunch. What fraction of the lawn did she rake altogether?",
+      "expression": "1/4 + 1/8",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "2/8",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "1/12",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "2/12",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "3/8",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "1/4 = 2/8. Adding 1/8 gives 3/8.",
+      "hint": "Convert 1/4 to an equivalent fraction with a denominator of 8.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-medium-6",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "During garden work, Maya raked 1/4 of the lawn in the morning and 1/8 of the lawn after lunch. What fraction of the lawn did she rake altogether?",
+      "expression": "1/4 + 1/8",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3/8",
+          "misconception": null
+        },
+        {
+          "text": "2/12",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "2/8",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "1/12",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "1/4 = 2/8. Adding 1/8 gives 3/8.",
+      "hint": "Convert 1/4 to an equivalent fraction with a denominator of 8.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-hard-1",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "An artisan mixed 1/2 quart of indigo dye with 1/3 quart of violet dye. What is the total volume of dye in quarts?",
+      "expression": "1/2 + 1/3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "2/5",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "2/6",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "0/6",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "5/6",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "The common denominator is 6. Finding equivalent fractions gives 5/6.",
+      "hint": "Find a common denominator for 2 and 3 by multiplying them together.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-hard-2",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "An artisan mixed 1/2 quart of indigo dye with 1/3 quart of violet dye. What is the total volume of dye in quarts?",
+      "expression": "1/2 + 1/3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "2/5",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "5/6",
+          "misconception": null
+        },
+        {
+          "text": "0/6",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "2/6",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "The common denominator is 6. Finding equivalent fractions gives 5/6.",
+      "hint": "Find a common denominator for 2 and 3 by multiplying them together.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-hard-3",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "An artisan mixed 1/4 quart of indigo dye with 1/5 quart of violet dye. What is the total volume of dye in quarts?",
+      "expression": "1/4 + 1/5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "2/20",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "0/20",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "9/20",
+          "misconception": null
+        },
+        {
+          "text": "2/9",
+          "misconception": "add_denominators"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "The common denominator is 20. Finding equivalent fractions gives 9/20.",
+      "hint": "Find a common denominator for 4 and 5 by multiplying them together.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-hard-4",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "An artisan mixed 1/3 quart of indigo dye with 1/5 quart of violet dye. What is the total volume of dye in quarts?",
+      "expression": "1/3 + 1/5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "2/15",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "0/15",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "2/8",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "8/15",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "The common denominator is 15. Finding equivalent fractions gives 8/15.",
+      "hint": "Find a common denominator for 3 and 5 by multiplying them together.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-hard-5",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "An artisan mixed 1/3 quart of indigo dye with 1/4 quart of violet dye. What is the total volume of dye in quarts?",
+      "expression": "1/3 + 1/4",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "0/12",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "2/12",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "2/7",
+          "misconception": "add_denominators"
+        },
+        {
+          "text": "7/12",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "The common denominator is 12. Finding equivalent fractions gives 7/12.",
+      "hint": "Find a common denominator for 3 and 4 by multiplying them together.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-add-hard-6",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "An artisan mixed 1/3 quart of indigo dye with 1/4 quart of violet dye. What is the total volume of dye in quarts?",
+      "expression": "1/3 + 1/4",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "0/12",
+          "misconception": "subtracts_smaller_from_larger_regardless_of_order"
+        },
+        {
+          "text": "2/12",
+          "misconception": "find_common_denom_without_renaming_numerators"
+        },
+        {
+          "text": "7/12",
+          "misconception": null
+        },
+        {
+          "text": "2/7",
+          "misconception": "add_denominators"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "The common denominator is 12. Finding equivalent fractions gives 7/12.",
+      "hint": "Find a common denominator for 3 and 4 by multiplying them together.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

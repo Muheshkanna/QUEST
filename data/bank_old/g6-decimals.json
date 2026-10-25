@@ -1,0 +1,663 @@
+{
+  "topic_id": "g6-decimals",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.392551+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g6-decimals-easy-1",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "easy",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A fabric ribbon costs $2.2 per yard. How much does 0.6 yards of ribbon cost?",
+      "expression": "2.2 * 0.6",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1.32",
+          "misconception": null
+        },
+        {
+          "text": "2.8",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "13.2",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "0.132",
+          "misconception": "drops_zeros_before_decimal_place"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "2.2 * 0.6 = $1.32.",
+      "hint": "Multiply as whole numbers (22 * 6), then place the decimal point 2 places from the right.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-easy-2",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "easy",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A fabric ribbon costs $2.8 per yard. How much does 0.6 yards of ribbon cost?",
+      "expression": "2.8 * 0.6",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "16.8",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "3.4",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "0.168",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "1.68",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "2.8 * 0.6 = $1.68.",
+      "hint": "Multiply as whole numbers (28 * 6), then place the decimal point 2 places from the right.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-easy-3",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "easy",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A fabric ribbon costs $4.3 per yard. How much does 0.7 yards of ribbon cost?",
+      "expression": "4.3 * 0.7",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3.01",
+          "misconception": null
+        },
+        {
+          "text": "0.301",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "5.0",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "30.1",
+          "misconception": "miscounts_decimal_places_in_product"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "4.3 * 0.7 = $3.01.",
+      "hint": "Multiply as whole numbers (43 * 7), then place the decimal point 2 places from the right.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-easy-4",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "easy",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A fabric ribbon costs $4.4 per yard. How much does 0.5 yards of ribbon cost?",
+      "expression": "4.4 * 0.5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "2.2",
+          "misconception": null
+        },
+        {
+          "text": "0.22",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "22.0",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "4.9",
+          "misconception": "fails_to_shift_divisor_decimal"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "4.4 * 0.5 = $2.20.",
+      "hint": "Multiply as whole numbers (44 * 5), then place the decimal point 2 places from the right.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-easy-5",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "easy",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A fabric ribbon costs $3.8 per yard. How much does 0.4 yards of ribbon cost?",
+      "expression": "3.8 * 0.4",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1.52",
+          "misconception": null
+        },
+        {
+          "text": "15.2",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "4.2",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "0.152",
+          "misconception": "drops_zeros_before_decimal_place"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "3.8 * 0.4 = $1.52.",
+      "hint": "Multiply as whole numbers (38 * 4), then place the decimal point 2 places from the right.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-easy-6",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "easy",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A fabric ribbon costs $2.5 per yard. How much does 0.3 yards of ribbon cost?",
+      "expression": "2.5 * 0.3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "7.5",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "0.075",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "0.75",
+          "misconception": null
+        },
+        {
+          "text": "2.8",
+          "misconception": "fails_to_shift_divisor_decimal"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "2.5 * 0.3 = $0.75.",
+      "hint": "Multiply as whole numbers (25 * 3), then place the decimal point 2 places from the right.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-medium-1",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "medium",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A board of timber 31.6 feet long is sawed into equal planks that are each 0.5 feet long. How many planks are obtained?",
+      "expression": "31.6 / 0.5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "15.8",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "6.32",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "63.2",
+          "misconception": null
+        },
+        {
+          "text": "68.2",
+          "misconception": "drops_zeros_before_decimal_place"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "31.6 divided by 0.5 = 63 planks.",
+      "hint": "Shift the decimal point in both 0.5 and 31.6 to make the divisor a whole number.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-medium-2",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "medium",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A board of timber 31.2 feet long is sawed into equal planks that are each 0.2 feet long. How many planks are obtained?",
+      "expression": "31.2 / 0.2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "161.0",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "15.6",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "6.24",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "156.0",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "31.2 divided by 0.2 = 156 planks.",
+      "hint": "Shift the decimal point in both 0.2 and 31.2 to make the divisor a whole number.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-medium-3",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "medium",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A board of timber 27.9 feet long is sawed into equal planks that are each 0.25 feet long. How many planks are obtained?",
+      "expression": "27.9 / 0.25",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "111.6",
+          "misconception": null
+        },
+        {
+          "text": "11.16",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "116.6",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "6.97",
+          "misconception": "miscounts_decimal_places_in_product"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "27.9 divided by 0.25 = 112 planks.",
+      "hint": "Shift the decimal point in both 0.25 and 27.9 to make the divisor a whole number.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-medium-4",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "medium",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A board of timber 32.5 feet long is sawed into equal planks that are each 0.2 feet long. How many planks are obtained?",
+      "expression": "32.5 / 0.2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "167.5",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "6.5",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "16.25",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "162.5",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "32.5 divided by 0.2 = 162 planks.",
+      "hint": "Shift the decimal point in both 0.2 and 32.5 to make the divisor a whole number.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-medium-5",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "medium",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A board of timber 20.6 feet long is sawed into equal planks that are each 0.2 feet long. How many planks are obtained?",
+      "expression": "20.6 / 0.2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4.12",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "108.0",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "103.0",
+          "misconception": null
+        },
+        {
+          "text": "10.3",
+          "misconception": "fails_to_shift_divisor_decimal"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "20.6 divided by 0.2 = 103 planks.",
+      "hint": "Shift the decimal point in both 0.2 and 20.6 to make the divisor a whole number.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-medium-6",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "medium",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A board of timber 17.7 feet long is sawed into equal planks that are each 0.5 feet long. How many planks are obtained?",
+      "expression": "17.7 / 0.5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "35.4",
+          "misconception": null
+        },
+        {
+          "text": "3.54",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "40.4",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "8.85",
+          "misconception": "miscounts_decimal_places_in_product"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "17.7 divided by 0.5 = 35 planks.",
+      "hint": "Shift the decimal point in both 0.5 and 17.7 to make the divisor a whole number.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-hard-1",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "hard",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A chemist weighs 1.8 vials of reagent, each containing 3.77 grams. What is the combined mass in grams?",
+      "expression": "3.77 * 1.8",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "0.6786",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "6.786",
+          "misconception": null
+        },
+        {
+          "text": "5.57",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "67.86",
+          "misconception": "miscounts_decimal_places_in_product"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "3.77 * 1.8 = 6.786 grams.",
+      "hint": "Count total decimal places: 2 in the first number + 1 in the second = 3 decimal places in the product.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-hard-2",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "hard",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A chemist weighs 2.6 vials of reagent, each containing 5.99 grams. What is the combined mass in grams?",
+      "expression": "5.99 * 2.6",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "155.74",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "8.59",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "15.574",
+          "misconception": null
+        },
+        {
+          "text": "1.5574",
+          "misconception": "drops_zeros_before_decimal_place"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "5.99 * 2.6 = 15.574 grams.",
+      "hint": "Count total decimal places: 2 in the first number + 1 in the second = 3 decimal places in the product.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-hard-3",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "hard",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A chemist weighs 2.9 vials of reagent, each containing 4.48 grams. What is the combined mass in grams?",
+      "expression": "4.48 * 2.9",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "7.38",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "12.992",
+          "misconception": null
+        },
+        {
+          "text": "129.92",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "1.2992",
+          "misconception": "drops_zeros_before_decimal_place"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "4.48 * 2.9 = 12.992 grams.",
+      "hint": "Count total decimal places: 2 in the first number + 1 in the second = 3 decimal places in the product.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-hard-4",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "hard",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A chemist weighs 1.5 vials of reagent, each containing 4.07 grams. What is the combined mass in grams?",
+      "expression": "4.07 * 1.5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "61.05",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "0.6105",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "6.105",
+          "misconception": null
+        },
+        {
+          "text": "5.57",
+          "misconception": "fails_to_shift_divisor_decimal"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "4.07 * 1.5 = 6.105 grams.",
+      "hint": "Count total decimal places: 2 in the first number + 1 in the second = 3 decimal places in the product.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-hard-5",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "hard",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A chemist weighs 3.3 vials of reagent, each containing 6.58 grams. What is the combined mass in grams?",
+      "expression": "6.58 * 3.3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "217.14",
+          "misconception": "miscounts_decimal_places_in_product"
+        },
+        {
+          "text": "9.88",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "2.1714",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "21.714",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "6.58 * 3.3 = 21.714 grams.",
+      "hint": "Count total decimal places: 2 in the first number + 1 in the second = 3 decimal places in the product.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-decimals-hard-6",
+      "topic_id": "g6-decimals",
+      "standard": "6.NR.1.3",
+      "difficulty": "hard",
+      "verifier_type": "decimal_arithmetic",
+      "stem": "A chemist weighs 2.2 vials of reagent, each containing 4.94 grams. What is the combined mass in grams?",
+      "expression": "4.94 * 2.2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "10.868",
+          "misconception": null
+        },
+        {
+          "text": "1.0868",
+          "misconception": "drops_zeros_before_decimal_place"
+        },
+        {
+          "text": "7.14",
+          "misconception": "fails_to_shift_divisor_decimal"
+        },
+        {
+          "text": "108.68",
+          "misconception": "miscounts_decimal_places_in_product"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "4.94 * 2.2 = 10.868 grams.",
+      "hint": "Count total decimal places: 2 in the first number + 1 in the second = 3 decimal places in the product.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

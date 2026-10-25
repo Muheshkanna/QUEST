@@ -1,0 +1,663 @@
+{
+  "topic_id": "g5-place-value",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.333708+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g5-place-value-easy-1",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "stem": "The woodland scholars discovered 87 chests of ancient magic crystals. Each chest contains 10 crystals. How many crystals are there in total?",
+      "expression": "87 * 10",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "87",
+          "misconception": "decimal_point_shift_reversed"
+        },
+        {
+          "text": "97",
+          "misconception": "confuses_ten_times_with_add_ten"
+        },
+        {
+          "text": "8710",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "870",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "87 groups of 10 equals 87 * 10 = 870.",
+      "hint": "Multiplying by 10 shifts each digit 1 place values to the left.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-easy-2",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "stem": "The woodland scholars discovered 24 chests of enchanted tree seeds. Each chest contains 10 seeds. How many seeds are there in total?",
+      "expression": "24 * 10",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "24",
+          "misconception": "decimal_point_shift_reversed"
+        },
+        {
+          "text": "240",
+          "misconception": null
+        },
+        {
+          "text": "2410",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "34",
+          "misconception": "confuses_ten_times_with_add_ten"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "24 groups of 10 equals 24 * 10 = 240.",
+      "hint": "Multiplying by 10 shifts each digit 1 place values to the left.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-easy-3",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "stem": "The woodland scholars discovered 87 chests of glowing starlight embers. Each chest contains 10 embers. How many embers are there in total?",
+      "expression": "87 * 10",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "97",
+          "misconception": "confuses_ten_times_with_add_ten"
+        },
+        {
+          "text": "8710",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "870",
+          "misconception": null
+        },
+        {
+          "text": "87",
+          "misconception": "decimal_point_shift_reversed"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "87 groups of 10 equals 87 * 10 = 870.",
+      "hint": "Multiplying by 10 shifts each digit 1 place values to the left.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-easy-4",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "stem": "The woodland scholars discovered 15 chests of royal vault gold coins. Each chest contains 10 coins. How many coins are there in total?",
+      "expression": "15 * 10",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "15",
+          "misconception": "decimal_point_shift_reversed"
+        },
+        {
+          "text": "150",
+          "misconception": null
+        },
+        {
+          "text": "1510",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "25",
+          "misconception": "confuses_ten_times_with_add_ten"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "15 groups of 10 equals 15 * 10 = 150.",
+      "hint": "Multiplying by 10 shifts each digit 1 place values to the left.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-easy-5",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "stem": "The woodland scholars discovered 65 chests of forest spirit dew drops. Each chest contains 10 dew drops. How many dew drops are there in total?",
+      "expression": "65 * 10",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "6510",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "75",
+          "misconception": "confuses_ten_times_with_add_ten"
+        },
+        {
+          "text": "650",
+          "misconception": null
+        },
+        {
+          "text": "65",
+          "misconception": "decimal_point_shift_reversed"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "65 groups of 10 equals 65 * 10 = 650.",
+      "hint": "Multiplying by 10 shifts each digit 1 place values to the left.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-easy-6",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "stem": "The woodland scholars discovered 65 chests of celestial library scrolls. Each chest contains 100 scrolls. How many scrolls are there in total?",
+      "expression": "65 * 100",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "65100",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "165",
+          "misconception": "confuses_ten_times_with_add_ten"
+        },
+        {
+          "text": "650",
+          "misconception": "decimal_point_shift_reversed"
+        },
+        {
+          "text": "6500",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "65 groups of 100 equals 65 * 100 = 6500.",
+      "hint": "Multiplying by 100 shifts each digit 2 place values to the left.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-medium-1",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A caravan transports 480 pouches of ancient magic crystals, each holding 1000 crystals. What is the total count of crystals?",
+      "expression": "480 * 1000",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4801000",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "48000",
+          "misconception": "decimal_point_shift_reversed"
+        },
+        {
+          "text": "480000",
+          "misconception": null
+        },
+        {
+          "text": "1480",
+          "misconception": "confuses_ten_times_with_add_ten"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Multiplying 480 by 1000 shifts the place values, giving 480000.",
+      "hint": "Count how many zeros are added when multiplying whole numbers by a power of 10.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-medium-2",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A caravan transports 120 pouches of enchanted tree seeds, each holding 100 seeds. What is the total count of seeds?",
+      "expression": "120 * 100",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "120100",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "220",
+          "misconception": "confuses_ten_times_with_add_ten"
+        },
+        {
+          "text": "12000",
+          "misconception": null
+        },
+        {
+          "text": "1200",
+          "misconception": "decimal_point_shift_reversed"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Multiplying 120 by 100 shifts the place values, giving 12000.",
+      "hint": "Count how many zeros are added when multiplying whole numbers by a power of 10.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-medium-3",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A caravan transports 480 pouches of glowing starlight embers, each holding 1000 embers. What is the total count of embers?",
+      "expression": "480 * 1000",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "48000",
+          "misconception": "decimal_point_shift_reversed"
+        },
+        {
+          "text": "1480",
+          "misconception": "confuses_ten_times_with_add_ten"
+        },
+        {
+          "text": "4801000",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "480000",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Multiplying 480 by 1000 shifts the place values, giving 480000.",
+      "hint": "Count how many zeros are added when multiplying whole numbers by a power of 10.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-medium-4",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A caravan transports 720 pouches of royal vault gold coins, each holding 100 coins. What is the total count of coins?",
+      "expression": "720 * 100",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "720100",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "820",
+          "misconception": "confuses_ten_times_with_add_ten"
+        },
+        {
+          "text": "72000",
+          "misconception": null
+        },
+        {
+          "text": "7200",
+          "misconception": "decimal_point_shift_reversed"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Multiplying 720 by 100 shifts the place values, giving 72000.",
+      "hint": "Count how many zeros are added when multiplying whole numbers by a power of 10.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-medium-5",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A caravan transports 720 pouches of forest spirit dew drops, each holding 1000 dew drops. What is the total count of dew drops?",
+      "expression": "720 * 1000",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "72000",
+          "misconception": "decimal_point_shift_reversed"
+        },
+        {
+          "text": "720000",
+          "misconception": null
+        },
+        {
+          "text": "7201000",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "1720",
+          "misconception": "confuses_ten_times_with_add_ten"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Multiplying 720 by 1000 shifts the place values, giving 720000.",
+      "hint": "Count how many zeros are added when multiplying whole numbers by a power of 10.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-medium-6",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A caravan transports 120 pouches of celestial library scrolls, each holding 100 scrolls. What is the total count of scrolls?",
+      "expression": "120 * 100",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "220",
+          "misconception": "confuses_ten_times_with_add_ten"
+        },
+        {
+          "text": "1200",
+          "misconception": "decimal_point_shift_reversed"
+        },
+        {
+          "text": "12000",
+          "misconception": null
+        },
+        {
+          "text": "120100",
+          "misconception": "additive_power_of_ten"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Multiplying 120 by 100 shifts the place values, giving 12000.",
+      "hint": "Count how many zeros are added when multiplying whole numbers by a power of 10.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-hard-1",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "stem": "An observatory gathers 3500 crystals and divides them equally across 100 star-chambers. How many crystals are in each chamber?",
+      "expression": "3500 // 100",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "35",
+          "misconception": null
+        },
+        {
+          "text": "3",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "350000",
+          "misconception": "decimal_point_shift_reversed"
+        },
+        {
+          "text": "3400",
+          "misconception": "confuses_ten_times_with_add_ten"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "3500 divided equally by 100 is 35.",
+      "hint": "Dividing by 100 shifts the place value of each digit 2 spots to the right.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-hard-2",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "stem": "An observatory gathers 4200 seeds and divides them equally across 100 star-chambers. How many seeds are in each chamber?",
+      "expression": "4200 // 100",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "420000",
+          "misconception": "decimal_point_shift_reversed"
+        },
+        {
+          "text": "42",
+          "misconception": null
+        },
+        {
+          "text": "4100",
+          "misconception": "confuses_ten_times_with_add_ten"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "4200 divided equally by 100 is 42.",
+      "hint": "Dividing by 100 shifts the place value of each digit 2 spots to the right.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-hard-3",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "stem": "An observatory gathers 3500 embers and divides them equally across 10 star-chambers. How many embers are in each chamber?",
+      "expression": "3500 // 10",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3490",
+          "misconception": "confuses_ten_times_with_add_ten"
+        },
+        {
+          "text": "35",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "350",
+          "misconception": null
+        },
+        {
+          "text": "35000",
+          "misconception": "decimal_point_shift_reversed"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "3500 divided equally by 10 is 350.",
+      "hint": "Dividing by 10 shifts the place value of each digit 1 spots to the right.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-hard-4",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "stem": "An observatory gathers 8400 coins and divides them equally across 100 star-chambers. How many coins are in each chamber?",
+      "expression": "8400 // 100",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "84",
+          "misconception": null
+        },
+        {
+          "text": "8",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "8300",
+          "misconception": "confuses_ten_times_with_add_ten"
+        },
+        {
+          "text": "840000",
+          "misconception": "decimal_point_shift_reversed"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "8400 divided equally by 100 is 84.",
+      "hint": "Dividing by 100 shifts the place value of each digit 2 spots to the right.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-hard-5",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "stem": "An observatory gathers 3500 dew drops and divides them equally across 10 star-chambers. How many dew drops are in each chamber?",
+      "expression": "3500 // 10",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "35",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "3490",
+          "misconception": "confuses_ten_times_with_add_ten"
+        },
+        {
+          "text": "35000",
+          "misconception": "decimal_point_shift_reversed"
+        },
+        {
+          "text": "350",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "3500 divided equally by 10 is 350.",
+      "hint": "Dividing by 10 shifts the place value of each digit 1 spots to the right.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-place-value-hard-6",
+      "topic_id": "g5-place-value",
+      "standard": "5.NR.1",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "stem": "An observatory gathers 6800 scrolls and divides them equally across 10 star-chambers. How many scrolls are in each chamber?",
+      "expression": "6800 // 10",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "680",
+          "misconception": null
+        },
+        {
+          "text": "68",
+          "misconception": "additive_power_of_ten"
+        },
+        {
+          "text": "6790",
+          "misconception": "confuses_ten_times_with_add_ten"
+        },
+        {
+          "text": "68000",
+          "misconception": "decimal_point_shift_reversed"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "6800 divided equally by 10 is 680.",
+      "hint": "Dividing by 10 shifts the place value of each digit 1 spots to the right.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

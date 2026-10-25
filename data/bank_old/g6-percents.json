@@ -1,0 +1,663 @@
+{
+  "topic_id": "g6-percents",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.384393+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g6-percents-easy-1",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "stem": "In a survey of 60 fifth and sixth graders, 20% said math was their favorite quest. How many students chose math?",
+      "expression": "percent_of(20, 60)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "12",
+          "misconception": null
+        },
+        {
+          "text": "48",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "120",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "1200",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "20% of 60 = (20/100) * 60 = 12 students.",
+      "hint": "Find 20% by writing it as a fraction (20/100) and multiplying by 60.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-easy-2",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "stem": "In a survey of 60 fifth and sixth graders, 25% said math was their favorite quest. How many students chose math?",
+      "expression": "percent_of(25, 60)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "15",
+          "misconception": null
+        },
+        {
+          "text": "45",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "1500",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "150",
+          "misconception": "decimal_place_percent_shift"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "25% of 60 = (25/100) * 60 = 15 students.",
+      "hint": "Find 25% by writing it as a fraction (25/100) and multiplying by 60.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-easy-3",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "stem": "In a survey of 40 fifth and sixth graders, 25% said math was their favorite quest. How many students chose math?",
+      "expression": "percent_of(25, 40)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1000",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "100",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "10",
+          "misconception": null
+        },
+        {
+          "text": "30",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "25% of 40 = (25/100) * 40 = 10 students.",
+      "hint": "Find 25% by writing it as a fraction (25/100) and multiplying by 40.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-easy-4",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "stem": "In a survey of 100 fifth and sixth graders, 20% said math was their favorite quest. How many students chose math?",
+      "expression": "percent_of(20, 100)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "80",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "2000",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "20",
+          "misconception": null
+        },
+        {
+          "text": "200",
+          "misconception": "decimal_place_percent_shift"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "20% of 100 = (20/100) * 100 = 20 students.",
+      "hint": "Find 20% by writing it as a fraction (20/100) and multiplying by 100.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-easy-5",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "stem": "In a survey of 80 fifth and sixth graders, 10% said math was their favorite quest. How many students chose math?",
+      "expression": "percent_of(10, 80)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "72",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "80",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "800",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "8",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "10% of 80 = (10/100) * 80 = 8 students.",
+      "hint": "Find 10% by writing it as a fraction (10/100) and multiplying by 80.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-easy-6",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "stem": "In a survey of 120 fifth and sixth graders, 25% said math was their favorite quest. How many students chose math?",
+      "expression": "percent_of(25, 120)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "30",
+          "misconception": null
+        },
+        {
+          "text": "3000",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "300",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "90",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "25% of 120 = (25/100) * 120 = 30 students.",
+      "hint": "Find 25% by writing it as a fraction (25/100) and multiplying by 120.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-medium-1",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "stem": "A scout troop hiked 15% of a 60-mile mountain loop trail. How many miles have they completed so far?",
+      "expression": "percent_of(15, 60)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "900",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "9",
+          "misconception": null
+        },
+        {
+          "text": "51",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "90",
+          "misconception": "decimal_place_percent_shift"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "0.15 * 60 = 9 miles.",
+      "hint": "Multiply 60 by the decimal equivalent of 15% (which is 0.15).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-medium-2",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "stem": "A scout troop hiked 25% of a 80-mile mountain loop trail. How many miles have they completed so far?",
+      "expression": "percent_of(25, 80)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "200",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "20",
+          "misconception": null
+        },
+        {
+          "text": "60",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "2000",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "0.25 * 80 = 20 miles.",
+      "hint": "Multiply 80 by the decimal equivalent of 25% (which is 0.25).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-medium-3",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "stem": "A scout troop hiked 35% of a 60-mile mountain loop trail. How many miles have they completed so far?",
+      "expression": "percent_of(35, 60)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "39",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "210",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "2100",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "21",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "0.35 * 60 = 21 miles.",
+      "hint": "Multiply 60 by the decimal equivalent of 35% (which is 0.35).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-medium-4",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "stem": "A scout troop hiked 35% of a 60-mile mountain loop trail. How many miles have they completed so far?",
+      "expression": "percent_of(35, 60)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "21",
+          "misconception": null
+        },
+        {
+          "text": "210",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "39",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "2100",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "0.35 * 60 = 21 miles.",
+      "hint": "Multiply 60 by the decimal equivalent of 35% (which is 0.35).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-medium-5",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "stem": "A scout troop hiked 15% of a 60-mile mountain loop trail. How many miles have they completed so far?",
+      "expression": "percent_of(15, 60)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "51",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "900",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "9",
+          "misconception": null
+        },
+        {
+          "text": "90",
+          "misconception": "decimal_place_percent_shift"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "0.15 * 60 = 9 miles.",
+      "hint": "Multiply 60 by the decimal equivalent of 15% (which is 0.15).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-medium-6",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "stem": "A scout troop hiked 40% of a 120-mile mountain loop trail. How many miles have they completed so far?",
+      "expression": "percent_of(40, 120)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "480",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "4800",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "48",
+          "misconception": null
+        },
+        {
+          "text": "72",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "0.40 * 120 = 48 miles.",
+      "hint": "Multiply 120 by the decimal equivalent of 40% (which is 0.40).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-hard-1",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "stem": "A wildlife sanctuary houses 160 rescued birds. If 45% of them are birds of prey, how many birds of prey are in the sanctuary?",
+      "expression": "percent_of(45, 160)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "72",
+          "misconception": null
+        },
+        {
+          "text": "88",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "205",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "720",
+          "misconception": "decimal_place_percent_shift"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "(45/100) * 160 = 72 birds of prey.",
+      "hint": "Convert 45% to 45/100 and multiply by 160.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-hard-2",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "stem": "A wildlife sanctuary houses 180 rescued birds. If 65% of them are birds of prey, how many birds of prey are in the sanctuary?",
+      "expression": "percent_of(65, 180)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1170",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "117",
+          "misconception": null
+        },
+        {
+          "text": "63",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "245",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "(65/100) * 180 = 117 birds of prey.",
+      "hint": "Convert 65% to 65/100 and multiply by 180.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-hard-3",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "stem": "A wildlife sanctuary houses 240 rescued birds. If 85% of them are birds of prey, how many birds of prey are in the sanctuary?",
+      "expression": "percent_of(85, 240)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "325",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "36",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "2040",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "204",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "(85/100) * 240 = 204 birds of prey.",
+      "hint": "Convert 85% to 85/100 and multiply by 240.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-hard-4",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "stem": "A wildlife sanctuary houses 180 rescued birds. If 65% of them are birds of prey, how many birds of prey are in the sanctuary?",
+      "expression": "percent_of(65, 180)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "245",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "1170",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "63",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "117",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "(65/100) * 180 = 117 birds of prey.",
+      "hint": "Convert 65% to 65/100 and multiply by 180.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-hard-5",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "stem": "A wildlife sanctuary houses 160 rescued birds. If 45% of them are birds of prey, how many birds of prey are in the sanctuary?",
+      "expression": "percent_of(45, 160)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "88",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "72",
+          "misconception": null
+        },
+        {
+          "text": "720",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "205",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "(45/100) * 160 = 72 birds of prey.",
+      "hint": "Convert 45% to 45/100 and multiply by 160.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-percents-hard-6",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "stem": "A wildlife sanctuary houses 180 rescued birds. If 65% of them are birds of prey, how many birds of prey are in the sanctuary?",
+      "expression": "percent_of(65, 180)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "245",
+          "misconception": "multiplies_percent_directly_without_hundredth_conversion"
+        },
+        {
+          "text": "1170",
+          "misconception": "decimal_place_percent_shift"
+        },
+        {
+          "text": "63",
+          "misconception": "confuses_percent_of_vs_percent_change"
+        },
+        {
+          "text": "117",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "(65/100) * 180 = 117 birds of prey.",
+      "hint": "Convert 65% to 65/100 and multiply by 180.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

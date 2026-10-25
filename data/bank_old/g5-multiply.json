@@ -1,0 +1,663 @@
+{
+  "topic_id": "g5-multiply",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.363741+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g5-multiply-easy-1",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A bookstore received 21 boxes of adventure novels. Each box holds 34 books. How many novels were received in total?",
+      "expression": "34 * 21",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "614",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "764",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "55",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "714",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "34 * 21 = 714 books.",
+      "hint": "Multiply 34 by the ones digit of 21, then by the tens digit, and add the partial products.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-easy-2",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A bookstore received 24 boxes of adventure novels. Each box holds 45 books. How many novels were received in total?",
+      "expression": "45 * 24",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "980",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "1080",
+          "misconception": null
+        },
+        {
+          "text": "69",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "1130",
+          "misconception": "aligns_partial_products_incorrectly"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "45 * 24 = 1080 books.",
+      "hint": "Multiply 45 by the ones digit of 24, then by the tens digit, and add the partial products.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-easy-3",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A bookstore received 15 boxes of adventure novels. Each box holds 23 books. How many novels were received in total?",
+      "expression": "23 * 15",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "395",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "245",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "38",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "345",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "23 * 15 = 345 books.",
+      "hint": "Multiply 23 by the ones digit of 15, then by the tens digit, and add the partial products.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-easy-4",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A bookstore received 12 boxes of adventure novels. Each box holds 61 books. How many novels were received in total?",
+      "expression": "61 * 12",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "782",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "73",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "632",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "732",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "61 * 12 = 732 books.",
+      "hint": "Multiply 61 by the ones digit of 12, then by the tens digit, and add the partial products.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-easy-5",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A bookstore received 12 boxes of adventure novels. Each box holds 45 books. How many novels were received in total?",
+      "expression": "45 * 12",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "590",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "440",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "540",
+          "misconception": null
+        },
+        {
+          "text": "57",
+          "misconception": "miscalculates_regrouping_additions"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "45 * 12 = 540 books.",
+      "hint": "Multiply 45 by the ones digit of 12, then by the tens digit, and add the partial products.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-easy-6",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A bookstore received 12 boxes of adventure novels. Each box holds 52 books. How many novels were received in total?",
+      "expression": "52 * 12",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "624",
+          "misconception": null
+        },
+        {
+          "text": "64",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "524",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "674",
+          "misconception": "aligns_partial_products_incorrectly"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "52 * 12 = 624 books.",
+      "hint": "Multiply 52 by the ones digit of 12, then by the tens digit, and add the partial products.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-medium-1",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A community theater sold 18 tickets for each of its 215 weekend performances this season. What was the total number of tickets sold?",
+      "expression": "215 * 18",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3870",
+          "misconception": null
+        },
+        {
+          "text": "3990",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "1720",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "3670",
+          "misconception": "forgets_tens_place_zero"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "215 * 18 = 3870 tickets.",
+      "hint": "Be sure to put a 0 in the ones place when multiplying by the tens digit.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-medium-2",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A community theater sold 18 tickets for each of its 412 weekend performances this season. What was the total number of tickets sold?",
+      "expression": "412 * 18",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "7416",
+          "misconception": null
+        },
+        {
+          "text": "7216",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "3296",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "7536",
+          "misconception": "miscalculates_regrouping_additions"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "412 * 18 = 7416 tickets.",
+      "hint": "Be sure to put a 0 in the ones place when multiplying by the tens digit.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-medium-3",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A community theater sold 32 tickets for each of its 324 weekend performances this season. What was the total number of tickets sold?",
+      "expression": "324 * 32",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "10488",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "648",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "10168",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "10368",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "324 * 32 = 10368 tickets.",
+      "hint": "Be sure to put a 0 in the ones place when multiplying by the tens digit.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-medium-4",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A community theater sold 18 tickets for each of its 215 weekend performances this season. What was the total number of tickets sold?",
+      "expression": "215 * 18",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1720",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "3870",
+          "misconception": null
+        },
+        {
+          "text": "3670",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "3990",
+          "misconception": "miscalculates_regrouping_additions"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "215 * 18 = 3870 tickets.",
+      "hint": "Be sure to put a 0 in the ones place when multiplying by the tens digit.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-medium-5",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A community theater sold 41 tickets for each of its 412 weekend performances this season. What was the total number of tickets sold?",
+      "expression": "412 * 41",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "412",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "16892",
+          "misconception": null
+        },
+        {
+          "text": "17012",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "16692",
+          "misconception": "forgets_tens_place_zero"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "412 * 41 = 16892 tickets.",
+      "hint": "Be sure to put a 0 in the ones place when multiplying by the tens digit.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-medium-6",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "integer_arithmetic",
+      "stem": "A community theater sold 41 tickets for each of its 324 weekend performances this season. What was the total number of tickets sold?",
+      "expression": "324 * 41",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "13284",
+          "misconception": null
+        },
+        {
+          "text": "13404",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "13084",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "324",
+          "misconception": "aligns_partial_products_incorrectly"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "324 * 41 = 13284 tickets.",
+      "hint": "Be sure to put a 0 in the ones place when multiplying by the tens digit.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-hard-1",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "stem": "An apple orchard packs 528 crates of apples each harvest week for 48 weeks. What is the total count of crates packed?",
+      "expression": "528 * 48",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "25594",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "24844",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "24344",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "25344",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "528 crates * 48 weeks = 25344 total crates.",
+      "hint": "Carefully add partial products after multiplying by both digits.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-hard-2",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "stem": "An apple orchard packs 814 crates of apples each harvest week for 48 weeks. What is the total count of crates packed?",
+      "expression": "814 * 48",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "39072",
+          "misconception": null
+        },
+        {
+          "text": "38572",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "39322",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "38072",
+          "misconception": "miscalculates_regrouping_additions"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "814 crates * 48 weeks = 39072 total crates.",
+      "hint": "Carefully add partial products after multiplying by both digits.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-hard-3",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "stem": "An apple orchard packs 814 crates of apples each harvest week for 35 weeks. What is the total count of crates packed?",
+      "expression": "814 * 35",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "28740",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "27490",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "27990",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "28490",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "814 crates * 35 weeks = 28490 total crates.",
+      "hint": "Carefully add partial products after multiplying by both digits.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-hard-4",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "stem": "An apple orchard packs 814 crates of apples each harvest week for 48 weeks. What is the total count of crates packed?",
+      "expression": "814 * 48",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "39072",
+          "misconception": null
+        },
+        {
+          "text": "38572",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "38072",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "39322",
+          "misconception": "aligns_partial_products_incorrectly"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "814 crates * 48 weeks = 39072 total crates.",
+      "hint": "Carefully add partial products after multiplying by both digits.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-hard-5",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "stem": "An apple orchard packs 814 crates of apples each harvest week for 62 weeks. What is the total count of crates packed?",
+      "expression": "814 * 62",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "50468",
+          "misconception": null
+        },
+        {
+          "text": "49968",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "50718",
+          "misconception": "aligns_partial_products_incorrectly"
+        },
+        {
+          "text": "49468",
+          "misconception": "miscalculates_regrouping_additions"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "814 crates * 62 weeks = 50468 total crates.",
+      "hint": "Carefully add partial products after multiplying by both digits.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-multiply-hard-6",
+      "topic_id": "g5-multiply",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "integer_arithmetic",
+      "stem": "An apple orchard packs 735 crates of apples each harvest week for 74 weeks. What is the total count of crates packed?",
+      "expression": "735 * 74",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "54390",
+          "misconception": null
+        },
+        {
+          "text": "53390",
+          "misconception": "miscalculates_regrouping_additions"
+        },
+        {
+          "text": "53890",
+          "misconception": "forgets_tens_place_zero"
+        },
+        {
+          "text": "54640",
+          "misconception": "aligns_partial_products_incorrectly"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "735 crates * 74 weeks = 54390 total crates.",
+      "hint": "Carefully add partial products after multiplying by both digits.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

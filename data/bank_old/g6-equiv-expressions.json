@@ -1,0 +1,663 @@
+{
+  "topic_id": "g6-equiv-expressions",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.408220+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g6-equiv-expressions-easy-1",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "easy",
+      "verifier_type": "expression_equivalence",
+      "stem": "Are the expressions 3(x + 3) and 3x + 9 equivalent for all values of x?",
+      "expression": "check_equiv('3 * (x + 3)', '3 * x + 9')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "equal only when x=0",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "incomplete_distribution"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Distributing 3 across (x + 3) gives 3x + 9, so they are equivalent.",
+      "hint": "Use the distributive property: multiply 3 by both terms inside parentheses.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-easy-2",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "easy",
+      "verifier_type": "expression_equivalence",
+      "stem": "Are the expressions 3(x + 6) and 3x + 18 equivalent for all values of x?",
+      "expression": "check_equiv('3 * (x + 6)', '3 * x + 18')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "equal only when x=0",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Distributing 3 across (x + 6) gives 3x + 18, so they are equivalent.",
+      "hint": "Use the distributive property: multiply 3 by both terms inside parentheses.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-easy-3",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "easy",
+      "verifier_type": "expression_equivalence",
+      "stem": "Are the expressions 4(x + 6) and 4x + 24 equivalent for all values of x?",
+      "expression": "check_equiv('4 * (x + 6)', '4 * x + 24')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "equal only when x=0",
+          "misconception": "combines_unlike_terms"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Distributing 4 across (x + 6) gives 4x + 24, so they are equivalent.",
+      "hint": "Use the distributive property: multiply 4 by both terms inside parentheses.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-easy-4",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "easy",
+      "verifier_type": "expression_equivalence",
+      "stem": "Are the expressions 2(x + 4) and 2x + 8 equivalent for all values of x?",
+      "expression": "check_equiv('2 * (x + 4)', '2 * x + 8')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "equal only when x=0",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Distributing 2 across (x + 4) gives 2x + 8, so they are equivalent.",
+      "hint": "Use the distributive property: multiply 2 by both terms inside parentheses.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-easy-5",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "easy",
+      "verifier_type": "expression_equivalence",
+      "stem": "Are the expressions 4(x + 6) and 4x + 24 equivalent for all values of x?",
+      "expression": "check_equiv('4 * (x + 6)', '4 * x + 24')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "equal only when x=0",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Distributing 4 across (x + 6) gives 4x + 24, so they are equivalent.",
+      "hint": "Use the distributive property: multiply 4 by both terms inside parentheses.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-easy-6",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "easy",
+      "verifier_type": "expression_equivalence",
+      "stem": "Are the expressions 4(x + 4) and 4x + 16 equivalent for all values of x?",
+      "expression": "check_equiv('4 * (x + 4)', '4 * x + 16')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "not equivalent",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "equal only when x=0",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Distributing 4 across (x + 4) gives 4x + 16, so they are equivalent.",
+      "hint": "Use the distributive property: multiply 4 by both terms inside parentheses.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-medium-1",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "medium",
+      "verifier_type": "expression_equivalence",
+      "stem": "Are the expressions (4x + 3x + 6) and (7x + 6) equivalent?",
+      "expression": "check_equiv('4 * x + 3 * x + 6', '7 * x + 6')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "equal only when x=1",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "4x + 3x combines to 7x, so the expressions are equivalent.",
+      "hint": "Combine the like terms 4x and 3x.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-medium-2",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "medium",
+      "verifier_type": "expression_equivalence",
+      "stem": "Are the expressions (4x + 4x + 10) and (8x + 10) equivalent?",
+      "expression": "check_equiv('4 * x + 4 * x + 10', '8 * x + 10')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "equal only when x=1",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "4x + 4x combines to 8x, so the expressions are equivalent.",
+      "hint": "Combine the like terms 4x and 4x.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-medium-3",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "medium",
+      "verifier_type": "expression_equivalence",
+      "stem": "Are the expressions (4x + 4x + 8) and (8x + 8) equivalent?",
+      "expression": "check_equiv('4 * x + 4 * x + 8', '8 * x + 8')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "equal only when x=1",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "combines_unlike_terms"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "4x + 4x combines to 8x, so the expressions are equivalent.",
+      "hint": "Combine the like terms 4x and 4x.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-medium-4",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "medium",
+      "verifier_type": "expression_equivalence",
+      "stem": "Are the expressions (3x + 3x + 10) and (6x + 10) equivalent?",
+      "expression": "check_equiv('3 * x + 3 * x + 10', '6 * x + 10')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "not equivalent",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "equal only when x=1",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "3x + 3x combines to 6x, so the expressions are equivalent.",
+      "hint": "Combine the like terms 3x and 3x.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-medium-5",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "medium",
+      "verifier_type": "expression_equivalence",
+      "stem": "Are the expressions (3x + 2x + 10) and (5x + 10) equivalent?",
+      "expression": "check_equiv('3 * x + 2 * x + 10', '5 * x + 10')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "equal only when x=1",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "3x + 2x combines to 5x, so the expressions are equivalent.",
+      "hint": "Combine the like terms 3x and 2x.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-medium-6",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "medium",
+      "verifier_type": "expression_equivalence",
+      "stem": "Are the expressions (4x + 3x + 8) and (7x + 8) equivalent?",
+      "expression": "check_equiv('4 * x + 3 * x + 8', '7 * x + 8')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "equal only when x=1",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "4x + 3x combines to 7x, so the expressions are equivalent.",
+      "hint": "Combine the like terms 4x and 3x.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-hard-1",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "hard",
+      "verifier_type": "expression_equivalence",
+      "stem": "Apply the distributive property: Are 2(5x + 2) and 10x + 4 equivalent?",
+      "expression": "check_equiv('2 * (5 * x + 2)', '10 * x + 4')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "equal only when x=0",
+          "misconception": "combines_unlike_terms"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "2 * 5x = 10x and 2 * 2 = 4, making them equivalent.",
+      "hint": "Multiply the outside factor 2 by both 5x and 2.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-hard-2",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "hard",
+      "verifier_type": "expression_equivalence",
+      "stem": "Apply the distributive property: Are 3(5x + 2) and 15x + 6 equivalent?",
+      "expression": "check_equiv('3 * (5 * x + 2)', '15 * x + 6')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "not equivalent",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "equal only when x=0",
+          "misconception": "combines_unlike_terms"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "3 * 5x = 15x and 3 * 2 = 6, making them equivalent.",
+      "hint": "Multiply the outside factor 3 by both 5x and 2.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-hard-3",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "hard",
+      "verifier_type": "expression_equivalence",
+      "stem": "Apply the distributive property: Are 3(5x + 3) and 15x + 9 equivalent?",
+      "expression": "check_equiv('3 * (5 * x + 3)', '15 * x + 9')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "equal only when x=0",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "incomplete_distribution"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "3 * 5x = 15x and 3 * 3 = 9, making them equivalent.",
+      "hint": "Multiply the outside factor 3 by both 5x and 3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-hard-4",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "hard",
+      "verifier_type": "expression_equivalence",
+      "stem": "Apply the distributive property: Are 3(5x + 3) and 15x + 9 equivalent?",
+      "expression": "check_equiv('3 * (5 * x + 3)', '15 * x + 9')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "equal only when x=0",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "incomplete_distribution"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "3 * 5x = 15x and 3 * 3 = 9, making them equivalent.",
+      "hint": "Multiply the outside factor 3 by both 5x and 3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-hard-5",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "hard",
+      "verifier_type": "expression_equivalence",
+      "stem": "Apply the distributive property: Are 3(5x + 2) and 15x + 6 equivalent?",
+      "expression": "check_equiv('3 * (5 * x + 2)', '15 * x + 6')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "incomplete_distribution"
+        },
+        {
+          "text": "equal only when x=0",
+          "misconception": "combines_unlike_terms"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "3 * 5x = 15x and 3 * 2 = 6, making them equivalent.",
+      "hint": "Multiply the outside factor 3 by both 5x and 2.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equiv-expressions-hard-6",
+      "topic_id": "g6-equiv-expressions",
+      "standard": "6.PAR.6.5",
+      "difficulty": "hard",
+      "verifier_type": "expression_equivalence",
+      "stem": "Apply the distributive property: Are 2(5x + 3) and 10x + 6 equivalent?",
+      "expression": "check_equiv('2 * (5 * x + 3)', '10 * x + 6')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "cannot be determined",
+          "misconception": "sign_error_distributing_negative"
+        },
+        {
+          "text": "equal only when x=0",
+          "misconception": "combines_unlike_terms"
+        },
+        {
+          "text": "equivalent",
+          "misconception": null
+        },
+        {
+          "text": "not equivalent",
+          "misconception": "incomplete_distribution"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "2 * 5x = 10x and 2 * 3 = 6, making them equivalent.",
+      "hint": "Multiply the outside factor 2 by both 5x and 3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

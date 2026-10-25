@@ -1,0 +1,663 @@
+{
+  "topic_id": "g5-decimal-compare-round",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.343584+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g5-decimal-compare-round-easy-1",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "easy",
+      "verifier_type": "decimal_comparison",
+      "stem": "Which comparison symbol makes the statement true: 0.8 ___ 0.2?",
+      "expression": "compare(0.8, 0.2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": ">",
+          "misconception": null
+        },
+        {
+          "text": "<",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "none",
+          "misconception": "round_down_without_truncation_rule"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_tenths_and_hundredths"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Since 0.8 is greater than 0.2, the correct symbol is '>'.",
+      "hint": "Look at the tenths place to compare the two values.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-easy-2",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "easy",
+      "verifier_type": "decimal_comparison",
+      "stem": "Which comparison symbol makes the statement true: 0.3 ___ 0.2?",
+      "expression": "compare(0.3, 0.2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "<",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": ">",
+          "misconception": null
+        },
+        {
+          "text": "none",
+          "misconception": "round_down_without_truncation_rule"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Since 0.3 is greater than 0.2, the correct symbol is '>'.",
+      "hint": "Look at the tenths place to compare the two values.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-easy-3",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "easy",
+      "verifier_type": "decimal_comparison",
+      "stem": "Which comparison symbol makes the statement true: 0.7 ___ 0.3?",
+      "expression": "compare(0.7, 0.3)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "none",
+          "misconception": "round_down_without_truncation_rule"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": "<",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": ">",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Since 0.7 is greater than 0.3, the correct symbol is '>'.",
+      "hint": "Look at the tenths place to compare the two values.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-easy-4",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "easy",
+      "verifier_type": "decimal_comparison",
+      "stem": "Which comparison symbol makes the statement true: 0.4 ___ 0.8?",
+      "expression": "compare(0.4, 0.8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "=",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": "none",
+          "misconception": "round_down_without_truncation_rule"
+        },
+        {
+          "text": ">",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "<",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Since 0.4 is less than 0.8, the correct symbol is '<'.",
+      "hint": "Look at the tenths place to compare the two values.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-easy-5",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "easy",
+      "verifier_type": "decimal_comparison",
+      "stem": "Which comparison symbol makes the statement true: 0.1 ___ 0.7?",
+      "expression": "compare(0.1, 0.7)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "=",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": ">",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "none",
+          "misconception": "round_down_without_truncation_rule"
+        },
+        {
+          "text": "<",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Since 0.1 is less than 0.7, the correct symbol is '<'.",
+      "hint": "Look at the tenths place to compare the two values.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-easy-6",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "easy",
+      "verifier_type": "decimal_comparison",
+      "stem": "Which comparison symbol makes the statement true: 0.3 ___ 0.5?",
+      "expression": "compare(0.3, 0.5)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": ">",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": "<",
+          "misconception": null
+        },
+        {
+          "text": "none",
+          "misconception": "round_down_without_truncation_rule"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Since 0.3 is less than 0.5, the correct symbol is '<'.",
+      "hint": "Look at the tenths place to compare the two values.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-medium-1",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "medium",
+      "verifier_type": "decimal_comparison",
+      "stem": "Which symbol correctly completes the comparison: 0.6 ___ 0.58?",
+      "expression": "compare(0.6, 0.58)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "=",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": "none",
+          "misconception": "round_down_without_truncation_rule"
+        },
+        {
+          "text": "<",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": ">",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "0.60 is greater than 0.58, so the correct symbol is '>'.",
+      "hint": "Remember that 0.6 can be written as 0.60. Compare tenths first.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-medium-2",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "medium",
+      "verifier_type": "decimal_comparison",
+      "stem": "Which symbol correctly completes the comparison: 0.3 ___ 0.22?",
+      "expression": "compare(0.3, 0.22)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "<",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": "none",
+          "misconception": "round_down_without_truncation_rule"
+        },
+        {
+          "text": ">",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "0.30 is greater than 0.22, so the correct symbol is '>'.",
+      "hint": "Remember that 0.3 can be written as 0.30. Compare tenths first.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-medium-3",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "medium",
+      "verifier_type": "decimal_comparison",
+      "stem": "Which symbol correctly completes the comparison: 0.4 ___ 0.35?",
+      "expression": "compare(0.4, 0.35)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "=",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": ">",
+          "misconception": null
+        },
+        {
+          "text": "<",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "none",
+          "misconception": "round_down_without_truncation_rule"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "0.40 is greater than 0.35, so the correct symbol is '>'.",
+      "hint": "Remember that 0.4 can be written as 0.40. Compare tenths first.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-medium-4",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "medium",
+      "verifier_type": "decimal_comparison",
+      "stem": "Which symbol correctly completes the comparison: 0.6 ___ 0.58?",
+      "expression": "compare(0.6, 0.58)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "=",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": ">",
+          "misconception": null
+        },
+        {
+          "text": "none",
+          "misconception": "round_down_without_truncation_rule"
+        },
+        {
+          "text": "<",
+          "misconception": "longer_decimal_is_larger"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "0.60 is greater than 0.58, so the correct symbol is '>'.",
+      "hint": "Remember that 0.6 can be written as 0.60. Compare tenths first.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-medium-5",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "medium",
+      "verifier_type": "decimal_comparison",
+      "stem": "Which symbol correctly completes the comparison: 0.6 ___ 0.55?",
+      "expression": "compare(0.6, 0.55)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": ">",
+          "misconception": null
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": "<",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "none",
+          "misconception": "round_down_without_truncation_rule"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "0.60 is greater than 0.55, so the correct symbol is '>'.",
+      "hint": "Remember that 0.6 can be written as 0.60. Compare tenths first.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-medium-6",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "medium",
+      "verifier_type": "decimal_comparison",
+      "stem": "Which symbol correctly completes the comparison: 0.7 ___ 0.62?",
+      "expression": "compare(0.7, 0.62)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "<",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": ">",
+          "misconception": null
+        },
+        {
+          "text": "none",
+          "misconception": "round_down_without_truncation_rule"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "0.70 is greater than 0.62, so the correct symbol is '>'.",
+      "hint": "Remember that 0.7 can be written as 0.70. Compare tenths first.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-hard-1",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "hard",
+      "verifier_type": "decimal_comparison",
+      "stem": "What is 4.127 rounded to the nearest hundredth?",
+      "expression": "round_to(4.127, 2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4.12",
+          "misconception": "round_down_without_truncation_rule"
+        },
+        {
+          "text": "4.23",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "4.14",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": "4.13",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "The thousandths digit tells us whether to round up. 4.127 rounded to hundredths is 4.13.",
+      "hint": "Look at the thousandths place (the third digit after the decimal point). If it is 5 or more, round up.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-hard-2",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "hard",
+      "verifier_type": "decimal_comparison",
+      "stem": "What is 7.186 rounded to the nearest hundredth?",
+      "expression": "round_to(7.186, 2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "7.20",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": "7.18",
+          "misconception": "round_down_without_truncation_rule"
+        },
+        {
+          "text": "7.29",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "7.19",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "The thousandths digit tells us whether to round up. 7.186 rounded to hundredths is 7.19.",
+      "hint": "Look at the thousandths place (the third digit after the decimal point). If it is 5 or more, round up.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-hard-3",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "hard",
+      "verifier_type": "decimal_comparison",
+      "stem": "What is 5.524 rounded to the nearest hundredth?",
+      "expression": "round_to(5.524, 2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "5.62",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "5.53",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": "5.52",
+          "misconception": null
+        },
+        {
+          "text": "5.51",
+          "misconception": "round_down_without_truncation_rule"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "The thousandths digit tells us whether to round up. 5.524 rounded to hundredths is 5.52.",
+      "hint": "Look at the thousandths place (the third digit after the decimal point). If it is 5 or more, round up.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-hard-4",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "hard",
+      "verifier_type": "decimal_comparison",
+      "stem": "What is 7.887 rounded to the nearest hundredth?",
+      "expression": "round_to(7.887, 2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "7.88",
+          "misconception": "round_down_without_truncation_rule"
+        },
+        {
+          "text": "7.99",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "7.90",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": "7.89",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "The thousandths digit tells us whether to round up. 7.887 rounded to hundredths is 7.89.",
+      "hint": "Look at the thousandths place (the third digit after the decimal point). If it is 5 or more, round up.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-hard-5",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "hard",
+      "verifier_type": "decimal_comparison",
+      "stem": "What is 6.693 rounded to the nearest hundredth?",
+      "expression": "round_to(6.693, 2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "6.70",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": "6.69",
+          "misconception": null
+        },
+        {
+          "text": "6.79",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "6.68",
+          "misconception": "round_down_without_truncation_rule"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "The thousandths digit tells us whether to round up. 6.693 rounded to hundredths is 6.69.",
+      "hint": "Look at the thousandths place (the third digit after the decimal point). If it is 5 or more, round up.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-decimal-compare-round-hard-6",
+      "topic_id": "g5-decimal-compare-round",
+      "standard": "5.NR.4",
+      "difficulty": "hard",
+      "verifier_type": "decimal_comparison",
+      "stem": "What is 8.499 rounded to the nearest hundredth?",
+      "expression": "round_to(8.499, 2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "8.60",
+          "misconception": "longer_decimal_is_larger"
+        },
+        {
+          "text": "8.50",
+          "misconception": null
+        },
+        {
+          "text": "8.51",
+          "misconception": "confuses_tenths_and_hundredths"
+        },
+        {
+          "text": "8.49",
+          "misconception": "round_down_without_truncation_rule"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "The thousandths digit tells us whether to round up. 8.499 rounded to hundredths is 8.50.",
+      "hint": "Look at the thousandths place (the third digit after the decimal point). If it is 5 or more, round up.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

@@ -1,0 +1,663 @@
+{
+  "topic_id": "g6-ratios",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.374903+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g6-ratios-easy-1",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "easy",
+      "verifier_type": "ratio_comparison",
+      "stem": "In an art class, the ratio of blue brushes to red brushes is 4 to 6. What is this ratio in simplest form?",
+      "expression": "ratio_simplify(4, 6)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "2:5",
+          "misconception": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "text": "2:3",
+          "misconception": null
+        },
+        {
+          "text": "3:2",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "3:4",
+          "misconception": "additive_ratio_scaling"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Dividing both terms by 2 gives 2:3.",
+      "hint": "Find the greatest common factor of 4 and 6 to simplify the ratio.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-easy-2",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "easy",
+      "verifier_type": "ratio_comparison",
+      "stem": "In an art class, the ratio of blue brushes to red brushes is 8 to 12. What is this ratio in simplest form?",
+      "expression": "ratio_simplify(8, 12)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3:4",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "3:2",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "2:3",
+          "misconception": null
+        },
+        {
+          "text": "2:5",
+          "misconception": "part_to_part_vs_part_to_whole"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Dividing both terms by 4 gives 2:3.",
+      "hint": "Find the greatest common factor of 8 and 12 to simplify the ratio.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-easy-3",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "easy",
+      "verifier_type": "ratio_comparison",
+      "stem": "In an art class, the ratio of blue brushes to red brushes is 4 to 10. What is this ratio in simplest form?",
+      "expression": "ratio_simplify(4, 10)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3:6",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "2:7",
+          "misconception": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "text": "5:2",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "2:5",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Dividing both terms by 2 gives 2:5.",
+      "hint": "Find the greatest common factor of 4 and 10 to simplify the ratio.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-easy-4",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "easy",
+      "verifier_type": "ratio_comparison",
+      "stem": "In an art class, the ratio of blue brushes to red brushes is 5 to 15. What is this ratio in simplest form?",
+      "expression": "ratio_simplify(5, 15)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1:3",
+          "misconception": null
+        },
+        {
+          "text": "1:4",
+          "misconception": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "text": "2:4",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "3:1",
+          "misconception": "inverts_ratio_terms_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Dividing both terms by 5 gives 1:3.",
+      "hint": "Find the greatest common factor of 5 and 15 to simplify the ratio.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-easy-5",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "easy",
+      "verifier_type": "ratio_comparison",
+      "stem": "In an art class, the ratio of blue brushes to red brushes is 15 to 20. What is this ratio in simplest form?",
+      "expression": "ratio_simplify(15, 20)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4:5",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "3:4",
+          "misconception": null
+        },
+        {
+          "text": "4:3",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "3:7",
+          "misconception": "part_to_part_vs_part_to_whole"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Dividing both terms by 5 gives 3:4.",
+      "hint": "Find the greatest common factor of 15 and 20 to simplify the ratio.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-easy-6",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "easy",
+      "verifier_type": "ratio_comparison",
+      "stem": "In an art class, the ratio of blue brushes to red brushes is 15 to 20. What is this ratio in simplest form?",
+      "expression": "ratio_simplify(15, 20)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4:3",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "3:7",
+          "misconception": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "text": "3:4",
+          "misconception": null
+        },
+        {
+          "text": "4:5",
+          "misconception": "additive_ratio_scaling"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Dividing both terms by 5 gives 3:4.",
+      "hint": "Find the greatest common factor of 15 and 20 to simplify the ratio.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-medium-1",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "medium",
+      "verifier_type": "ratio_comparison",
+      "stem": "A school choir has 20 sopranos and 24 altos. Which ratio shows the simplified relationship of sopranos to altos?",
+      "expression": "ratio_simplify(20, 24)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "5:11",
+          "misconception": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "text": "22:26",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "5:6",
+          "misconception": null
+        },
+        {
+          "text": "6:5",
+          "misconception": "inverts_ratio_terms_order"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Both 20 and 24 divide by 4, resulting in the ratio 5:6.",
+      "hint": "Divide both numbers by their common divisor 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-medium-2",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "medium",
+      "verifier_type": "ratio_comparison",
+      "stem": "A school choir has 12 sopranos and 18 altos. Which ratio shows the simplified relationship of sopranos to altos?",
+      "expression": "ratio_simplify(12, 18)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3:2",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "14:20",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "2:3",
+          "misconception": null
+        },
+        {
+          "text": "2:5",
+          "misconception": "part_to_part_vs_part_to_whole"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Both 12 and 18 divide by 6, resulting in the ratio 2:3.",
+      "hint": "Divide both numbers by their common divisor 6.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-medium-3",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "medium",
+      "verifier_type": "ratio_comparison",
+      "stem": "A school choir has 20 sopranos and 24 altos. Which ratio shows the simplified relationship of sopranos to altos?",
+      "expression": "ratio_simplify(20, 24)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "5:6",
+          "misconception": null
+        },
+        {
+          "text": "22:26",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "5:11",
+          "misconception": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "text": "6:5",
+          "misconception": "inverts_ratio_terms_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Both 20 and 24 divide by 4, resulting in the ratio 5:6.",
+      "hint": "Divide both numbers by their common divisor 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-medium-4",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "medium",
+      "verifier_type": "ratio_comparison",
+      "stem": "A school choir has 20 sopranos and 24 altos. Which ratio shows the simplified relationship of sopranos to altos?",
+      "expression": "ratio_simplify(20, 24)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "5:11",
+          "misconception": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "text": "5:6",
+          "misconception": null
+        },
+        {
+          "text": "6:5",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "22:26",
+          "misconception": "additive_ratio_scaling"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Both 20 and 24 divide by 4, resulting in the ratio 5:6.",
+      "hint": "Divide both numbers by their common divisor 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-medium-5",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "medium",
+      "verifier_type": "ratio_comparison",
+      "stem": "A school choir has 15 sopranos and 18 altos. Which ratio shows the simplified relationship of sopranos to altos?",
+      "expression": "ratio_simplify(15, 18)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "6:5",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "17:20",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "5:6",
+          "misconception": null
+        },
+        {
+          "text": "5:11",
+          "misconception": "part_to_part_vs_part_to_whole"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Both 15 and 18 divide by 3, resulting in the ratio 5:6.",
+      "hint": "Divide both numbers by their common divisor 3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-medium-6",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "medium",
+      "verifier_type": "ratio_comparison",
+      "stem": "A school choir has 30 sopranos and 36 altos. Which ratio shows the simplified relationship of sopranos to altos?",
+      "expression": "ratio_simplify(30, 36)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "6:5",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "5:6",
+          "misconception": null
+        },
+        {
+          "text": "32:38",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "5:11",
+          "misconception": "part_to_part_vs_part_to_whole"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Both 30 and 36 divide by 6, resulting in the ratio 5:6.",
+      "hint": "Divide both numbers by their common divisor 6.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-hard-1",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "hard",
+      "verifier_type": "ratio_comparison",
+      "stem": "A wildlife sanctuary tracks 20 eagles and 45 hawks. What is the simplified ratio of eagles to hawks?",
+      "expression": "ratio_simplify(20, 45)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4:9",
+          "misconception": null
+        },
+        {
+          "text": "4:13",
+          "misconception": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "text": "9:4",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "6:11",
+          "misconception": "additive_ratio_scaling"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Simplifying 20:45 gives 4:9.",
+      "hint": "Find the greatest common factor of 20 and 45.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-hard-2",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "hard",
+      "verifier_type": "ratio_comparison",
+      "stem": "A wildlife sanctuary tracks 35 eagles and 56 hawks. What is the simplified ratio of eagles to hawks?",
+      "expression": "ratio_simplify(35, 56)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "5:13",
+          "misconception": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "text": "7:10",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "8:5",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "5:8",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Simplifying 35:56 gives 5:8.",
+      "hint": "Find the greatest common factor of 35 and 56.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-hard-3",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "hard",
+      "verifier_type": "ratio_comparison",
+      "stem": "A wildlife sanctuary tracks 40 eagles and 64 hawks. What is the simplified ratio of eagles to hawks?",
+      "expression": "ratio_simplify(40, 64)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "8:5",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "5:8",
+          "misconception": null
+        },
+        {
+          "text": "5:13",
+          "misconception": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "text": "7:10",
+          "misconception": "additive_ratio_scaling"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Simplifying 40:64 gives 5:8.",
+      "hint": "Find the greatest common factor of 40 and 64.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-hard-4",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "hard",
+      "verifier_type": "ratio_comparison",
+      "stem": "A wildlife sanctuary tracks 35 eagles and 56 hawks. What is the simplified ratio of eagles to hawks?",
+      "expression": "ratio_simplify(35, 56)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "5:8",
+          "misconception": null
+        },
+        {
+          "text": "5:13",
+          "misconception": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "text": "7:10",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "8:5",
+          "misconception": "inverts_ratio_terms_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Simplifying 35:56 gives 5:8.",
+      "hint": "Find the greatest common factor of 35 and 56.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-hard-5",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "hard",
+      "verifier_type": "ratio_comparison",
+      "stem": "A wildlife sanctuary tracks 35 eagles and 56 hawks. What is the simplified ratio of eagles to hawks?",
+      "expression": "ratio_simplify(35, 56)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "5:8",
+          "misconception": null
+        },
+        {
+          "text": "8:5",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "7:10",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "5:13",
+          "misconception": "part_to_part_vs_part_to_whole"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Simplifying 35:56 gives 5:8.",
+      "hint": "Find the greatest common factor of 35 and 56.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-ratios-hard-6",
+      "topic_id": "g6-ratios",
+      "standard": "6.NR.4.1",
+      "difficulty": "hard",
+      "verifier_type": "ratio_comparison",
+      "stem": "A wildlife sanctuary tracks 40 eagles and 64 hawks. What is the simplified ratio of eagles to hawks?",
+      "expression": "ratio_simplify(40, 64)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "8:5",
+          "misconception": "inverts_ratio_terms_order"
+        },
+        {
+          "text": "7:10",
+          "misconception": "additive_ratio_scaling"
+        },
+        {
+          "text": "5:13",
+          "misconception": "part_to_part_vs_part_to_whole"
+        },
+        {
+          "text": "5:8",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Simplifying 40:64 gives 5:8.",
+      "hint": "Find the greatest common factor of 40 and 64.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

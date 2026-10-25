@@ -1,0 +1,663 @@
+{
+  "topic_id": "g6-exponents",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.428447+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g6-exponents-easy-1",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "easy",
+      "verifier_type": "exponent_evaluation",
+      "stem": "Evaluate the exponential expression: 7\u00b2",
+      "expression": "7 ** 2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "53",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "9",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "49",
+          "misconception": null
+        },
+        {
+          "text": "14",
+          "misconception": "multiplies_base_by_exponent"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "7\u00b2 = 7 * 7 = 49.",
+      "hint": "7\u00b2 means 7 multiplied by itself (7 * 7).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-easy-2",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "easy",
+      "verifier_type": "exponent_evaluation",
+      "stem": "Evaluate the exponential expression: 4\u00b2",
+      "expression": "4 ** 2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "6",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "16",
+          "misconception": null
+        },
+        {
+          "text": "17",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "8",
+          "misconception": "multiplies_base_by_exponent"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "4\u00b2 = 4 * 4 = 16.",
+      "hint": "4\u00b2 means 4 multiplied by itself (4 * 4).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-easy-3",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "easy",
+      "verifier_type": "exponent_evaluation",
+      "stem": "Evaluate the exponential expression: 7\u00b2",
+      "expression": "7 ** 2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "53",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "49",
+          "misconception": null
+        },
+        {
+          "text": "14",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "9",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "7\u00b2 = 7 * 7 = 49.",
+      "hint": "7\u00b2 means 7 multiplied by itself (7 * 7).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-easy-4",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "easy",
+      "verifier_type": "exponent_evaluation",
+      "stem": "Evaluate the exponential expression: 3\u00b2",
+      "expression": "3 ** 2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "8",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "5",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "6",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "9",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "3\u00b2 = 3 * 3 = 9.",
+      "hint": "3\u00b2 means 3 multiplied by itself (3 * 3).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-easy-5",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "easy",
+      "verifier_type": "exponent_evaluation",
+      "stem": "Evaluate the exponential expression: 9\u00b2",
+      "expression": "9 ** 2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "11",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "81",
+          "misconception": null
+        },
+        {
+          "text": "18",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "85",
+          "misconception": "confuses_exponent_order"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "9\u00b2 = 9 * 9 = 81.",
+      "hint": "9\u00b2 means 9 multiplied by itself (9 * 9).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-easy-6",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "easy",
+      "verifier_type": "exponent_evaluation",
+      "stem": "Evaluate the exponential expression: 4\u00b2",
+      "expression": "4 ** 2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "8",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "16",
+          "misconception": null
+        },
+        {
+          "text": "17",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "6",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "4\u00b2 = 4 * 4 = 16.",
+      "hint": "4\u00b2 means 4 multiplied by itself (4 * 4).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-medium-1",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "medium",
+      "verifier_type": "exponent_evaluation",
+      "stem": "What is the value of 5\u00b3?",
+      "expression": "5 ** 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "125",
+          "misconception": null
+        },
+        {
+          "text": "15",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "243",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "10",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "5\u00b3 = 5 * 5 * 5 = 125.",
+      "hint": "Multiply the base 5 by itself 3 times (5 * 5 * 5).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-medium-2",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "medium",
+      "verifier_type": "exponent_evaluation",
+      "stem": "What is the value of 3\u00b3?",
+      "expression": "3 ** 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "33",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "6",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "27",
+          "misconception": null
+        },
+        {
+          "text": "9",
+          "misconception": "multiplies_base_by_exponent"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "3\u00b3 = 3 * 3 * 3 = 27.",
+      "hint": "Multiply the base 3 by itself 3 times (3 * 3 * 3).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-medium-3",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "medium",
+      "verifier_type": "exponent_evaluation",
+      "stem": "What is the value of 2\u00b3?",
+      "expression": "2 ** 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "6",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "4",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "9",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "8",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "2\u00b3 = 2 * 2 * 2 = 8.",
+      "hint": "Multiply the base 2 by itself 3 times (2 * 2 * 2).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-medium-4",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "medium",
+      "verifier_type": "exponent_evaluation",
+      "stem": "What is the value of 4\u00b3?",
+      "expression": "4 ** 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "81",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "8",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "64",
+          "misconception": null
+        },
+        {
+          "text": "12",
+          "misconception": "multiplies_base_by_exponent"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "4\u00b3 = 4 * 4 * 4 = 64.",
+      "hint": "Multiply the base 4 by itself 3 times (4 * 4 * 4).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-medium-5",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "medium",
+      "verifier_type": "exponent_evaluation",
+      "stem": "What is the value of 3\u00b3?",
+      "expression": "3 ** 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "27",
+          "misconception": null
+        },
+        {
+          "text": "9",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "6",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "33",
+          "misconception": "confuses_exponent_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "3\u00b3 = 3 * 3 * 3 = 27.",
+      "hint": "Multiply the base 3 by itself 3 times (3 * 3 * 3).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-medium-6",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "medium",
+      "verifier_type": "exponent_evaluation",
+      "stem": "What is the value of 2\u00b3?",
+      "expression": "2 ** 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "6",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "8",
+          "misconception": null
+        },
+        {
+          "text": "9",
+          "misconception": "confuses_exponent_order"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "2\u00b3 = 2 * 2 * 2 = 8.",
+      "hint": "Multiply the base 2 by itself 3 times (2 * 2 * 2).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-hard-1",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "hard",
+      "verifier_type": "exponent_evaluation",
+      "stem": "Evaluate the power: 2^5",
+      "expression": "2 ** 5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "10",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "16",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "25",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "32",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "2^5 = 32.",
+      "hint": "Compute 2 multiplied by itself 5 times.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-hard-2",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "hard",
+      "verifier_type": "exponent_evaluation",
+      "stem": "Evaluate the power: 2^4",
+      "expression": "2 ** 4",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "8",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "16",
+          "misconception": null
+        },
+        {
+          "text": "17",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "24",
+          "misconception": "confuses_exponent_order"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "2^4 = 16.",
+      "hint": "Compute 2 multiplied by itself 4 times.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-hard-3",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "hard",
+      "verifier_type": "exponent_evaluation",
+      "stem": "Evaluate the power: 2^4",
+      "expression": "2 ** 4",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "17",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "8",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "24",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "16",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "2^4 = 16.",
+      "hint": "Compute 2 multiplied by itself 4 times.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-hard-4",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "hard",
+      "verifier_type": "exponent_evaluation",
+      "stem": "Evaluate the power: 2^5",
+      "expression": "2 ** 5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "16",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "25",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "10",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "32",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "2^5 = 32.",
+      "hint": "Compute 2 multiplied by itself 5 times.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-hard-5",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "hard",
+      "verifier_type": "exponent_evaluation",
+      "stem": "Evaluate the power: 3^5",
+      "expression": "3 ** 5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "243",
+          "misconception": null
+        },
+        {
+          "text": "81",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "125",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "15",
+          "misconception": "multiplies_base_by_exponent"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "3^5 = 243.",
+      "hint": "Compute 3 multiplied by itself 5 times.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-exponents-hard-6",
+      "topic_id": "g6-exponents",
+      "standard": "6.PAR.6.1",
+      "difficulty": "hard",
+      "verifier_type": "exponent_evaluation",
+      "stem": "Evaluate the power: 3^5",
+      "expression": "3 ** 5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "15",
+          "misconception": "multiplies_base_by_exponent"
+        },
+        {
+          "text": "81",
+          "misconception": "evaluates_exponent_zero_as_zero"
+        },
+        {
+          "text": "125",
+          "misconception": "confuses_exponent_order"
+        },
+        {
+          "text": "243",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "3^5 = 243.",
+      "hint": "Compute 3 multiplied by itself 5 times.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

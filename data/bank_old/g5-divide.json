@@ -1,0 +1,663 @@
+{
+  "topic_id": "g5-divide",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.367055+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g5-divide-easy-1",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "stem": "A camp counselor has 62 stickers to give out equally among 5 campers. How many stickers does each camper get and how many are left over?",
+      "expression": "divmod_rem(62, 5)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "12 R 3",
+          "misconception": "subtraction_substep_error"
+        },
+        {
+          "text": "11 R 7",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "12 R 2",
+          "misconception": null
+        },
+        {
+          "text": "13 R 0",
+          "misconception": "ignores_remainder_context"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "62 / 5 = 12 with 2 leftover (12 R 2).",
+      "hint": "Find how many times 5 goes into 62. The leftover amount is the remainder.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-easy-2",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "stem": "A camp counselor has 74 stickers to give out equally among 5 campers. How many stickers does each camper get and how many are left over?",
+      "expression": "divmod_rem(74, 5)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "14 R 4",
+          "misconception": null
+        },
+        {
+          "text": "14 R 5",
+          "misconception": "subtraction_substep_error"
+        },
+        {
+          "text": "13 R 9",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "15 R 0",
+          "misconception": "ignores_remainder_context"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "74 / 5 = 14 with 4 leftover (14 R 4).",
+      "hint": "Find how many times 5 goes into 74. The leftover amount is the remainder.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-easy-3",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "stem": "A camp counselor has 58 stickers to give out equally among 4 campers. How many stickers does each camper get and how many are left over?",
+      "expression": "divmod_rem(58, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "15 R 0",
+          "misconception": "ignores_remainder_context"
+        },
+        {
+          "text": "14 R 2",
+          "misconception": null
+        },
+        {
+          "text": "13 R 6",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "14 R 3",
+          "misconception": "subtraction_substep_error"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "58 / 4 = 14 with 2 leftover (14 R 2).",
+      "hint": "Find how many times 4 goes into 58. The leftover amount is the remainder.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-easy-4",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "stem": "A camp counselor has 77 stickers to give out equally among 6 campers. How many stickers does each camper get and how many are left over?",
+      "expression": "divmod_rem(77, 6)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "13 R 0",
+          "misconception": "ignores_remainder_context"
+        },
+        {
+          "text": "12 R 5",
+          "misconception": null
+        },
+        {
+          "text": "11 R 11",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "12 R 6",
+          "misconception": "subtraction_substep_error"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "77 / 6 = 12 with 5 leftover (12 R 5).",
+      "hint": "Find how many times 6 goes into 77. The leftover amount is the remainder.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-easy-5",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "stem": "A camp counselor has 63 stickers to give out equally among 4 campers. How many stickers does each camper get and how many are left over?",
+      "expression": "divmod_rem(63, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "15 R 3",
+          "misconception": null
+        },
+        {
+          "text": "14 R 7",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "16 R 0",
+          "misconception": "ignores_remainder_context"
+        },
+        {
+          "text": "15 R 4",
+          "misconception": "subtraction_substep_error"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "63 / 4 = 15 with 3 leftover (15 R 3).",
+      "hint": "Find how many times 4 goes into 63. The leftover amount is the remainder.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-easy-6",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "stem": "A camp counselor has 51 stickers to give out equally among 4 campers. How many stickers does each camper get and how many are left over?",
+      "expression": "divmod_rem(51, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "12 R 3",
+          "misconception": null
+        },
+        {
+          "text": "11 R 7",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "12 R 4",
+          "misconception": "subtraction_substep_error"
+        },
+        {
+          "text": "13 R 0",
+          "misconception": "ignores_remainder_context"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "51 / 4 = 12 with 3 leftover (12 R 3).",
+      "hint": "Find how many times 4 goes into 51. The leftover amount is the remainder.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-medium-1",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "stem": "A packaging machine sorts 451 pencils into packs of 16. How many full packs are filled, and what is the remainder?",
+      "expression": "divmod_rem(451, 16)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "29 R 0",
+          "misconception": "ignores_remainder_context"
+        },
+        {
+          "text": "27 R 3",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "28 R 5",
+          "misconception": "subtraction_substep_error"
+        },
+        {
+          "text": "28 R 3",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "451 = (16 * 28) + 3, so the answer is 28 R 3.",
+      "hint": "Use long division to divide 451 by 16.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-medium-2",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "stem": "A packaging machine sorts 259 pencils into packs of 12. How many full packs are filled, and what is the remainder?",
+      "expression": "divmod_rem(259, 12)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "21 R 9",
+          "misconception": "subtraction_substep_error"
+        },
+        {
+          "text": "20 R 7",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "21 R 7",
+          "misconception": null
+        },
+        {
+          "text": "22 R 0",
+          "misconception": "ignores_remainder_context"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "259 = (12 * 21) + 7, so the answer is 21 R 7.",
+      "hint": "Use long division to divide 259 by 12.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-medium-3",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "stem": "A packaging machine sorts 349 pencils into packs of 14. How many full packs are filled, and what is the remainder?",
+      "expression": "divmod_rem(349, 14)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "24 R 15",
+          "misconception": "subtraction_substep_error"
+        },
+        {
+          "text": "25 R 0",
+          "misconception": "ignores_remainder_context"
+        },
+        {
+          "text": "24 R 13",
+          "misconception": null
+        },
+        {
+          "text": "23 R 13",
+          "misconception": "misplaces_quotient_digit_column"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "349 = (14 * 24) + 13, so the answer is 24 R 13.",
+      "hint": "Use long division to divide 349 by 14.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-medium-4",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "stem": "A packaging machine sorts 394 pencils into packs of 12. How many full packs are filled, and what is the remainder?",
+      "expression": "divmod_rem(394, 12)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "32 R 10",
+          "misconception": null
+        },
+        {
+          "text": "33 R 0",
+          "misconception": "ignores_remainder_context"
+        },
+        {
+          "text": "31 R 10",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "32 R 12",
+          "misconception": "subtraction_substep_error"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "394 = (12 * 32) + 10, so the answer is 32 R 10.",
+      "hint": "Use long division to divide 394 by 12.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-medium-5",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "stem": "A packaging machine sorts 517 pencils into packs of 16. How many full packs are filled, and what is the remainder?",
+      "expression": "divmod_rem(517, 16)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "31 R 5",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "32 R 5",
+          "misconception": null
+        },
+        {
+          "text": "32 R 7",
+          "misconception": "subtraction_substep_error"
+        },
+        {
+          "text": "33 R 0",
+          "misconception": "ignores_remainder_context"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "517 = (16 * 32) + 5, so the answer is 32 R 5.",
+      "hint": "Use long division to divide 517 by 16.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-medium-6",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "stem": "A packaging machine sorts 299 pencils into packs of 12. How many full packs are filled, and what is the remainder?",
+      "expression": "divmod_rem(299, 12)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "23 R 11",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "24 R 11",
+          "misconception": null
+        },
+        {
+          "text": "25 R 0",
+          "misconception": "ignores_remainder_context"
+        },
+        {
+          "text": "24 R 13",
+          "misconception": "subtraction_substep_error"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "299 = (12 * 24) + 11, so the answer is 24 R 11.",
+      "hint": "Use long division to divide 299 by 12.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-hard-1",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "stem": "A charity event collects 1056 cans of soup to pack into relief crates of 25 cans each. What is the quotient and remainder?",
+      "expression": "divmod_rem(1056, 25)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "42 R 9",
+          "misconception": "subtraction_substep_error"
+        },
+        {
+          "text": "43 R 6",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "42 R 0",
+          "misconception": "ignores_remainder_context"
+        },
+        {
+          "text": "42 R 6",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "1056 divided by 25 gives a quotient of 42 and remainder 6 (42 R 6).",
+      "hint": "Divide step by step: estimate how many times 25 fits into each place value.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-hard-2",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "stem": "A charity event collects 2919 cans of soup to pack into relief crates of 45 cans each. What is the quotient and remainder?",
+      "expression": "divmod_rem(2919, 45)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "65 R 39",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "64 R 39",
+          "misconception": null
+        },
+        {
+          "text": "64 R 42",
+          "misconception": "subtraction_substep_error"
+        },
+        {
+          "text": "64 R 0",
+          "misconception": "ignores_remainder_context"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "2919 divided by 45 gives a quotient of 64 and remainder 39 (64 R 39).",
+      "hint": "Divide step by step: estimate how many times 45 fits into each place value.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-hard-3",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "stem": "A charity event collects 1423 cans of soup to pack into relief crates of 25 cans each. What is the quotient and remainder?",
+      "expression": "divmod_rem(1423, 25)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "56 R 23",
+          "misconception": null
+        },
+        {
+          "text": "56 R 26",
+          "misconception": "subtraction_substep_error"
+        },
+        {
+          "text": "56 R 0",
+          "misconception": "ignores_remainder_context"
+        },
+        {
+          "text": "57 R 23",
+          "misconception": "misplaces_quotient_digit_column"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "1423 divided by 25 gives a quotient of 56 and remainder 23 (56 R 23).",
+      "hint": "Divide step by step: estimate how many times 25 fits into each place value.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-hard-4",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "stem": "A charity event collects 933 cans of soup to pack into relief crates of 22 cans each. What is the quotient and remainder?",
+      "expression": "divmod_rem(933, 22)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "43 R 9",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "42 R 9",
+          "misconception": null
+        },
+        {
+          "text": "42 R 0",
+          "misconception": "ignores_remainder_context"
+        },
+        {
+          "text": "42 R 12",
+          "misconception": "subtraction_substep_error"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "933 divided by 22 gives a quotient of 42 and remainder 9 (42 R 9).",
+      "hint": "Divide step by step: estimate how many times 22 fits into each place value.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-hard-5",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "stem": "A charity event collects 1059 cans of soup to pack into relief crates of 25 cans each. What is the quotient and remainder?",
+      "expression": "divmod_rem(1059, 25)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "42 R 0",
+          "misconception": "ignores_remainder_context"
+        },
+        {
+          "text": "43 R 9",
+          "misconception": "misplaces_quotient_digit_column"
+        },
+        {
+          "text": "42 R 9",
+          "misconception": null
+        },
+        {
+          "text": "42 R 12",
+          "misconception": "subtraction_substep_error"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "1059 divided by 25 gives a quotient of 42 and remainder 9 (42 R 9).",
+      "hint": "Divide step by step: estimate how many times 25 fits into each place value.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-divide-hard-6",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "stem": "A charity event collects 1420 cans of soup to pack into relief crates of 25 cans each. What is the quotient and remainder?",
+      "expression": "divmod_rem(1420, 25)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "56 R 0",
+          "misconception": "ignores_remainder_context"
+        },
+        {
+          "text": "56 R 20",
+          "misconception": null
+        },
+        {
+          "text": "56 R 23",
+          "misconception": "subtraction_substep_error"
+        },
+        {
+          "text": "57 R 20",
+          "misconception": "misplaces_quotient_digit_column"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "1420 divided by 25 gives a quotient of 56 and remainder 20 (56 R 20).",
+      "hint": "Divide step by step: estimate how many times 25 fits into each place value.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

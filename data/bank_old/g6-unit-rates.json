@@ -1,0 +1,663 @@
+{
+  "topic_id": "g6-unit-rates",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.380791+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g6-unit-rates-easy-1",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "easy",
+      "verifier_type": "rate_division",
+      "stem": "Elena earned $60 for babysitting for 4 hours. What is her hourly pay rate in dollars per hour?",
+      "expression": "unit_rate(60, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "30",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "11",
+          "misconception": "misinterprets_speed_units"
+        },
+        {
+          "text": "64",
+          "misconception": "divides_in_reversed_order"
+        },
+        {
+          "text": "15",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "$60 / 4 hours = $15 per hour.",
+      "hint": "Divide the total earnings ($60) by the number of hours (4).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-easy-2",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "easy",
+      "verifier_type": "rate_division",
+      "stem": "Elena earned $36 for babysitting for 3 hours. What is her hourly pay rate in dollars per hour?",
+      "expression": "unit_rate(36, 3)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "12",
+          "misconception": null
+        },
+        {
+          "text": "8",
+          "misconception": "misinterprets_speed_units"
+        },
+        {
+          "text": "24",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "39",
+          "misconception": "divides_in_reversed_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "$36 / 3 hours = $12 per hour.",
+      "hint": "Divide the total earnings ($36) by the number of hours (3).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-easy-3",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "easy",
+      "verifier_type": "rate_division",
+      "stem": "Elena earned $24 for babysitting for 2 hours. What is her hourly pay rate in dollars per hour?",
+      "expression": "unit_rate(24, 2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "8",
+          "misconception": "misinterprets_speed_units"
+        },
+        {
+          "text": "26",
+          "misconception": "divides_in_reversed_order"
+        },
+        {
+          "text": "12",
+          "misconception": null
+        },
+        {
+          "text": "24",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "$24 / 2 hours = $12 per hour.",
+      "hint": "Divide the total earnings ($24) by the number of hours (2).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-easy-4",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "easy",
+      "verifier_type": "rate_division",
+      "stem": "Elena earned $60 for babysitting for 3 hours. What is her hourly pay rate in dollars per hour?",
+      "expression": "unit_rate(60, 3)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "63",
+          "misconception": "divides_in_reversed_order"
+        },
+        {
+          "text": "40",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "20",
+          "misconception": null
+        },
+        {
+          "text": "16",
+          "misconception": "misinterprets_speed_units"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "$60 / 3 hours = $20 per hour.",
+      "hint": "Divide the total earnings ($60) by the number of hours (3).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-easy-5",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "easy",
+      "verifier_type": "rate_division",
+      "stem": "Elena earned $100 for babysitting for 4 hours. What is her hourly pay rate in dollars per hour?",
+      "expression": "unit_rate(100, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "21",
+          "misconception": "misinterprets_speed_units"
+        },
+        {
+          "text": "50",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "25",
+          "misconception": null
+        },
+        {
+          "text": "104",
+          "misconception": "divides_in_reversed_order"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "$100 / 4 hours = $25 per hour.",
+      "hint": "Divide the total earnings ($100) by the number of hours (4).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-easy-6",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "easy",
+      "verifier_type": "rate_division",
+      "stem": "Elena earned $48 for babysitting for 4 hours. What is her hourly pay rate in dollars per hour?",
+      "expression": "unit_rate(48, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "52",
+          "misconception": "divides_in_reversed_order"
+        },
+        {
+          "text": "12",
+          "misconception": null
+        },
+        {
+          "text": "24",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "8",
+          "misconception": "misinterprets_speed_units"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "$48 / 4 hours = $12 per hour.",
+      "hint": "Divide the total earnings ($48) by the number of hours (4).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-medium-1",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "medium",
+      "verifier_type": "rate_division",
+      "stem": "A train travels 300 miles in 5 hours at a constant speed. What is the train's speed in miles per hour?",
+      "expression": "unit_rate(300, 5)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "50",
+          "misconception": "misinterprets_speed_units"
+        },
+        {
+          "text": "75",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "60",
+          "misconception": null
+        },
+        {
+          "text": "0.02",
+          "misconception": "divides_in_reversed_order"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "300 miles / 5 hours = 60 miles per hour.",
+      "hint": "Unit rate of speed is total distance divided by total time.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-medium-2",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "medium",
+      "verifier_type": "rate_division",
+      "stem": "A train travels 220 miles in 4 hours at a constant speed. What is the train's speed in miles per hour?",
+      "expression": "unit_rate(220, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "0.02",
+          "misconception": "divides_in_reversed_order"
+        },
+        {
+          "text": "55",
+          "misconception": null
+        },
+        {
+          "text": "70",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "45",
+          "misconception": "misinterprets_speed_units"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "220 miles / 4 hours = 55 miles per hour.",
+      "hint": "Unit rate of speed is total distance divided by total time.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-medium-3",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "medium",
+      "verifier_type": "rate_division",
+      "stem": "A train travels 240 miles in 4 hours at a constant speed. What is the train's speed in miles per hour?",
+      "expression": "unit_rate(240, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "50",
+          "misconception": "misinterprets_speed_units"
+        },
+        {
+          "text": "75",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "60",
+          "misconception": null
+        },
+        {
+          "text": "0.02",
+          "misconception": "divides_in_reversed_order"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "240 miles / 4 hours = 60 miles per hour.",
+      "hint": "Unit rate of speed is total distance divided by total time.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-medium-4",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "medium",
+      "verifier_type": "rate_division",
+      "stem": "A train travels 275 miles in 5 hours at a constant speed. What is the train's speed in miles per hour?",
+      "expression": "unit_rate(275, 5)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "55",
+          "misconception": null
+        },
+        {
+          "text": "0.02",
+          "misconception": "divides_in_reversed_order"
+        },
+        {
+          "text": "70",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "45",
+          "misconception": "misinterprets_speed_units"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "275 miles / 5 hours = 55 miles per hour.",
+      "hint": "Unit rate of speed is total distance divided by total time.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-medium-5",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "medium",
+      "verifier_type": "rate_division",
+      "stem": "A train travels 220 miles in 4 hours at a constant speed. What is the train's speed in miles per hour?",
+      "expression": "unit_rate(220, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "70",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "0.02",
+          "misconception": "divides_in_reversed_order"
+        },
+        {
+          "text": "55",
+          "misconception": null
+        },
+        {
+          "text": "45",
+          "misconception": "misinterprets_speed_units"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "220 miles / 4 hours = 55 miles per hour.",
+      "hint": "Unit rate of speed is total distance divided by total time.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-medium-6",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "medium",
+      "verifier_type": "rate_division",
+      "stem": "A train travels 180 miles in 3 hours at a constant speed. What is the train's speed in miles per hour?",
+      "expression": "unit_rate(180, 3)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "60",
+          "misconception": null
+        },
+        {
+          "text": "50",
+          "misconception": "misinterprets_speed_units"
+        },
+        {
+          "text": "75",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "0.02",
+          "misconception": "divides_in_reversed_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "180 miles / 3 hours = 60 miles per hour.",
+      "hint": "Unit rate of speed is total distance divided by total time.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-hard-1",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "hard",
+      "verifier_type": "rate_division",
+      "stem": "A school supply store packages 256 colored markers across 8 equal containers. How many markers are in each single container?",
+      "expression": "unit_rate(256, 8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "26",
+          "misconception": "misinterprets_speed_units"
+        },
+        {
+          "text": "0.03",
+          "misconception": "divides_in_reversed_order"
+        },
+        {
+          "text": "32",
+          "misconception": null
+        },
+        {
+          "text": "40",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "256 / 8 = 32 markers per container.",
+      "hint": "Divide 256 markers by 8 containers.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-hard-2",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "hard",
+      "verifier_type": "rate_division",
+      "stem": "A school supply store packages 128 colored markers across 4 equal containers. How many markers are in each single container?",
+      "expression": "unit_rate(128, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "26",
+          "misconception": "misinterprets_speed_units"
+        },
+        {
+          "text": "0.03",
+          "misconception": "divides_in_reversed_order"
+        },
+        {
+          "text": "40",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "32",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "128 / 4 = 32 markers per container.",
+      "hint": "Divide 128 markers by 4 containers.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-hard-3",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "hard",
+      "verifier_type": "rate_division",
+      "stem": "A school supply store packages 128 colored markers across 4 equal containers. How many markers are in each single container?",
+      "expression": "unit_rate(128, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "0.03",
+          "misconception": "divides_in_reversed_order"
+        },
+        {
+          "text": "26",
+          "misconception": "misinterprets_speed_units"
+        },
+        {
+          "text": "32",
+          "misconception": null
+        },
+        {
+          "text": "40",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "128 / 4 = 32 markers per container.",
+      "hint": "Divide 128 markers by 4 containers.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-hard-4",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "hard",
+      "verifier_type": "rate_division",
+      "stem": "A school supply store packages 256 colored markers across 8 equal containers. How many markers are in each single container?",
+      "expression": "unit_rate(256, 8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "26",
+          "misconception": "misinterprets_speed_units"
+        },
+        {
+          "text": "32",
+          "misconception": null
+        },
+        {
+          "text": "40",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "0.03",
+          "misconception": "divides_in_reversed_order"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "256 / 8 = 32 markers per container.",
+      "hint": "Divide 256 markers by 8 containers.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-hard-5",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "hard",
+      "verifier_type": "rate_division",
+      "stem": "A school supply store packages 96 colored markers across 6 equal containers. How many markers are in each single container?",
+      "expression": "unit_rate(96, 6)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "24",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "text": "0.06",
+          "misconception": "divides_in_reversed_order"
+        },
+        {
+          "text": "16",
+          "misconception": null
+        },
+        {
+          "text": "10",
+          "misconception": "misinterprets_speed_units"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "96 / 6 = 16 markers per container.",
+      "hint": "Divide 96 markers by 6 containers.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-unit-rates-hard-6",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "hard",
+      "verifier_type": "rate_division",
+      "stem": "A school supply store packages 96 colored markers across 4 equal containers. How many markers are in each single container?",
+      "expression": "unit_rate(96, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "24",
+          "misconception": null
+        },
+        {
+          "text": "18",
+          "misconception": "misinterprets_speed_units"
+        },
+        {
+          "text": "0.04",
+          "misconception": "divides_in_reversed_order"
+        },
+        {
+          "text": "32",
+          "misconception": "forgets_unit_rate_denominator_is_one"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "96 / 4 = 24 markers per container.",
+      "hint": "Divide 96 markers by 4 containers.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

@@ -1,0 +1,663 @@
+{
+  "topic_id": "g5-order-ops",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.370749+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g5-order-ops-easy-1",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "easy",
+      "verifier_type": "expression_evaluation",
+      "stem": "Evaluate the numerical expression: 5 + 3 * 4",
+      "expression": "5 + 3 * 4",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "17",
+          "misconception": null
+        },
+        {
+          "text": "32",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "18",
+          "misconception": "ignores_parentheses_grouping"
+        },
+        {
+          "text": "19",
+          "misconception": "addition_before_subtraction_dogma"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Multiply first: 3 * 4 = 12. Then add: 5 + 12 = 17.",
+      "hint": "In order of operations, perform multiplication before addition.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-easy-2",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "easy",
+      "verifier_type": "expression_evaluation",
+      "stem": "Evaluate the numerical expression: 4 + 5 * 2",
+      "expression": "4 + 5 * 2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "16",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "14",
+          "misconception": null
+        },
+        {
+          "text": "18",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "22",
+          "misconception": "ignores_parentheses_grouping"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Multiply first: 5 * 2 = 10. Then add: 4 + 10 = 14.",
+      "hint": "In order of operations, perform multiplication before addition.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-easy-3",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "easy",
+      "verifier_type": "expression_evaluation",
+      "stem": "Evaluate the numerical expression: 3 + 4 * 5",
+      "expression": "3 + 4 * 5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "23",
+          "misconception": null
+        },
+        {
+          "text": "35",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "25",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "17",
+          "misconception": "ignores_parentheses_grouping"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Multiply first: 4 * 5 = 20. Then add: 3 + 20 = 23.",
+      "hint": "In order of operations, perform multiplication before addition.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-easy-4",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "easy",
+      "verifier_type": "expression_evaluation",
+      "stem": "Evaluate the numerical expression: 4 + 5 * 2",
+      "expression": "4 + 5 * 2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "18",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "16",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "22",
+          "misconception": "ignores_parentheses_grouping"
+        },
+        {
+          "text": "14",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Multiply first: 5 * 2 = 10. Then add: 4 + 10 = 14.",
+      "hint": "In order of operations, perform multiplication before addition.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-easy-5",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "easy",
+      "verifier_type": "expression_evaluation",
+      "stem": "Evaluate the numerical expression: 3 + 4 * 5",
+      "expression": "3 + 4 * 5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "35",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "23",
+          "misconception": null
+        },
+        {
+          "text": "17",
+          "misconception": "ignores_parentheses_grouping"
+        },
+        {
+          "text": "25",
+          "misconception": "addition_before_subtraction_dogma"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Multiply first: 4 * 5 = 20. Then add: 3 + 20 = 23.",
+      "hint": "In order of operations, perform multiplication before addition.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-easy-6",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "easy",
+      "verifier_type": "expression_evaluation",
+      "stem": "Evaluate the numerical expression: 2 + 6 * 3",
+      "expression": "2 + 6 * 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "20",
+          "misconception": null
+        },
+        {
+          "text": "24",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "22",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "15",
+          "misconception": "ignores_parentheses_grouping"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Multiply first: 6 * 3 = 18. Then add: 2 + 18 = 20.",
+      "hint": "In order of operations, perform multiplication before addition.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-medium-1",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "medium",
+      "verifier_type": "expression_evaluation",
+      "stem": "What is the value of the expression: 24 // 4 + 3 * 5?",
+      "expression": "24 // 4 + 3 * 5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "21",
+          "misconception": null
+        },
+        {
+          "text": "26",
+          "misconception": "ignores_parentheses_grouping"
+        },
+        {
+          "text": "18",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "45",
+          "misconception": "left_to_right_disregards_precedence"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "24 // 4 = 6, and 3 * 5 = 15. Then 6 + 15 = 21.",
+      "hint": "Evaluate division and multiplication from left to right before adding.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-medium-2",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "medium",
+      "verifier_type": "expression_evaluation",
+      "stem": "What is the value of the expression: 30 // 5 + 2 * 6?",
+      "expression": "30 // 5 + 2 * 6",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "15",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "48",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "18",
+          "misconception": null
+        },
+        {
+          "text": "23",
+          "misconception": "ignores_parentheses_grouping"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "30 // 5 = 6, and 2 * 6 = 12. Then 6 + 12 = 18.",
+      "hint": "Evaluate division and multiplication from left to right before adding.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-medium-3",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "medium",
+      "verifier_type": "expression_evaluation",
+      "stem": "What is the value of the expression: 24 // 4 + 3 * 5?",
+      "expression": "24 // 4 + 3 * 5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "21",
+          "misconception": null
+        },
+        {
+          "text": "18",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "45",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "26",
+          "misconception": "ignores_parentheses_grouping"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "24 // 4 = 6, and 3 * 5 = 15. Then 6 + 15 = 21.",
+      "hint": "Evaluate division and multiplication from left to right before adding.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-medium-4",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "medium",
+      "verifier_type": "expression_evaluation",
+      "stem": "What is the value of the expression: 30 // 5 + 2 * 6?",
+      "expression": "30 // 5 + 2 * 6",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "15",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "48",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "23",
+          "misconception": "ignores_parentheses_grouping"
+        },
+        {
+          "text": "18",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "30 // 5 = 6, and 2 * 6 = 12. Then 6 + 12 = 18.",
+      "hint": "Evaluate division and multiplication from left to right before adding.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-medium-5",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "medium",
+      "verifier_type": "expression_evaluation",
+      "stem": "What is the value of the expression: 24 // 4 + 3 * 5?",
+      "expression": "24 // 4 + 3 * 5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "21",
+          "misconception": null
+        },
+        {
+          "text": "18",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "45",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "26",
+          "misconception": "ignores_parentheses_grouping"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "24 // 4 = 6, and 3 * 5 = 15. Then 6 + 15 = 21.",
+      "hint": "Evaluate division and multiplication from left to right before adding.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-medium-6",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "medium",
+      "verifier_type": "expression_evaluation",
+      "stem": "What is the value of the expression: 30 // 5 + 2 * 6?",
+      "expression": "30 // 5 + 2 * 6",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "15",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "23",
+          "misconception": "ignores_parentheses_grouping"
+        },
+        {
+          "text": "48",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "18",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "30 // 5 = 6, and 2 * 6 = 12. Then 6 + 12 = 18.",
+      "hint": "Evaluate division and multiplication from left to right before adding.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-hard-1",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "hard",
+      "verifier_type": "expression_evaluation",
+      "stem": "Evaluate the following expression with parentheses: 5 * (2 + 4) - 3",
+      "expression": "5 * (2 + 4) - 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "33",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "27",
+          "misconception": null
+        },
+        {
+          "text": "11",
+          "misconception": "ignores_parentheses_grouping"
+        },
+        {
+          "text": "45",
+          "misconception": "left_to_right_disregards_precedence"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "First parentheses: 2 + 4 = 6. Then multiply: 5 * 6 = 30. Finally subtract 3: 27.",
+      "hint": "Always evaluate grouped expressions inside parentheses first.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-hard-2",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "hard",
+      "verifier_type": "expression_evaluation",
+      "stem": "Evaluate the following expression with parentheses: 5 * (2 + 4) - 3",
+      "expression": "5 * (2 + 4) - 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "33",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "11",
+          "misconception": "ignores_parentheses_grouping"
+        },
+        {
+          "text": "45",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "27",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "First parentheses: 2 + 4 = 6. Then multiply: 5 * 6 = 30. Finally subtract 3: 27.",
+      "hint": "Always evaluate grouped expressions inside parentheses first.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-hard-3",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "hard",
+      "verifier_type": "expression_evaluation",
+      "stem": "Evaluate the following expression with parentheses: 5 * (2 + 4) - 3",
+      "expression": "5 * (2 + 4) - 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "45",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "11",
+          "misconception": "ignores_parentheses_grouping"
+        },
+        {
+          "text": "33",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "27",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "First parentheses: 2 + 4 = 6. Then multiply: 5 * 6 = 30. Finally subtract 3: 27.",
+      "hint": "Always evaluate grouped expressions inside parentheses first.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-hard-4",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "hard",
+      "verifier_type": "expression_evaluation",
+      "stem": "Evaluate the following expression with parentheses: 6 * (4 + 1) - 2",
+      "expression": "6 * (4 + 1) - 2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "28",
+          "misconception": null
+        },
+        {
+          "text": "23",
+          "misconception": "ignores_parentheses_grouping"
+        },
+        {
+          "text": "42",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "32",
+          "misconception": "addition_before_subtraction_dogma"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "First parentheses: 4 + 1 = 5. Then multiply: 6 * 5 = 30. Finally subtract 2: 28.",
+      "hint": "Always evaluate grouped expressions inside parentheses first.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-hard-5",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "hard",
+      "verifier_type": "expression_evaluation",
+      "stem": "Evaluate the following expression with parentheses: 4 * (3 + 2) - 5",
+      "expression": "4 * (3 + 2) - 5",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "40",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "15",
+          "misconception": null
+        },
+        {
+          "text": "25",
+          "misconception": "addition_before_subtraction_dogma"
+        },
+        {
+          "text": "9",
+          "misconception": "ignores_parentheses_grouping"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "First parentheses: 3 + 2 = 5. Then multiply: 4 * 5 = 20. Finally subtract 5: 15.",
+      "hint": "Always evaluate grouped expressions inside parentheses first.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-order-ops-hard-6",
+      "topic_id": "g5-order-ops",
+      "standard": "5.NR.5",
+      "difficulty": "hard",
+      "verifier_type": "expression_evaluation",
+      "stem": "Evaluate the following expression with parentheses: 5 * (2 + 4) - 3",
+      "expression": "5 * (2 + 4) - 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "27",
+          "misconception": null
+        },
+        {
+          "text": "11",
+          "misconception": "ignores_parentheses_grouping"
+        },
+        {
+          "text": "45",
+          "misconception": "left_to_right_disregards_precedence"
+        },
+        {
+          "text": "33",
+          "misconception": "addition_before_subtraction_dogma"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "First parentheses: 2 + 4 = 6. Then multiply: 5 * 6 = 30. Finally subtract 3: 27.",
+      "hint": "Always evaluate grouped expressions inside parentheses first.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

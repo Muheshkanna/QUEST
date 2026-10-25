@@ -1,0 +1,663 @@
+{
+  "topic_id": "g6-equations",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.415430+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g6-equations-easy-1",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "easy",
+      "verifier_type": "equation_solving",
+      "stem": "Solve the one-step addition equation for x: x + 7 = 15",
+      "expression": "solve_linear('x + 7 = 15')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "22",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "1",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        },
+        {
+          "text": "8",
+          "misconception": null
+        },
+        {
+          "text": "15",
+          "misconception": "operates_on_one_side_only"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Subtracting 7 from 15 gives x = 8.",
+      "hint": "Subtract 7 from both sides to isolate the variable x.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-easy-2",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "easy",
+      "verifier_type": "equation_solving",
+      "stem": "Solve the one-step addition equation for x: x + 9 = 20",
+      "expression": "solve_linear('x + 9 = 20')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "29",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "20",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "11",
+          "misconception": null
+        },
+        {
+          "text": "2",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Subtracting 9 from 20 gives x = 11.",
+      "hint": "Subtract 9 from both sides to isolate the variable x.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-easy-3",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "easy",
+      "verifier_type": "equation_solving",
+      "stem": "Solve the one-step addition equation for x: x + 7 = 18",
+      "expression": "solve_linear('x + 7 = 18')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "18",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "25",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "11",
+          "misconception": null
+        },
+        {
+          "text": "4",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Subtracting 7 from 18 gives x = 11.",
+      "hint": "Subtract 7 from both sides to isolate the variable x.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-easy-4",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "easy",
+      "verifier_type": "equation_solving",
+      "stem": "Solve the one-step addition equation for x: x + 9 = 20",
+      "expression": "solve_linear('x + 9 = 20')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "11",
+          "misconception": null
+        },
+        {
+          "text": "29",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "20",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "2",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Subtracting 9 from 20 gives x = 11.",
+      "hint": "Subtract 9 from both sides to isolate the variable x.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-easy-5",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "easy",
+      "verifier_type": "equation_solving",
+      "stem": "Solve the one-step addition equation for x: x + 12 = 23",
+      "expression": "solve_linear('x + 12 = 23')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "11",
+          "misconception": null
+        },
+        {
+          "text": "23",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "1",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        },
+        {
+          "text": "35",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Subtracting 12 from 23 gives x = 11.",
+      "hint": "Subtract 12 from both sides to isolate the variable x.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-easy-6",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "easy",
+      "verifier_type": "equation_solving",
+      "stem": "Solve the one-step addition equation for x: x + 7 = 21",
+      "expression": "solve_linear('x + 7 = 21')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "14",
+          "misconception": null
+        },
+        {
+          "text": "21",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "28",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "7",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Subtracting 7 from 21 gives x = 14.",
+      "hint": "Subtract 7 from both sides to isolate the variable x.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-medium-1",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "medium",
+      "verifier_type": "equation_solving",
+      "stem": "Find the value of x that solves the equation: 6x = 54",
+      "expression": "solve_linear('6x = 54')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "54",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "48",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "9",
+          "misconception": null
+        },
+        {
+          "text": "324",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Dividing 54 by 6 yields x = 9.",
+      "hint": "Divide both sides by the coefficient 6.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-medium-2",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "medium",
+      "verifier_type": "equation_solving",
+      "stem": "Find the value of x that solves the equation: 5x = 30",
+      "expression": "solve_linear('5x = 30')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "25",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "6",
+          "misconception": null
+        },
+        {
+          "text": "150",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        },
+        {
+          "text": "30",
+          "misconception": "operates_on_one_side_only"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Dividing 30 by 5 yields x = 6.",
+      "hint": "Divide both sides by the coefficient 5.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-medium-3",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "medium",
+      "verifier_type": "equation_solving",
+      "stem": "Find the value of x that solves the equation: 3x = 24",
+      "expression": "solve_linear('3x = 24')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "21",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "72",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        },
+        {
+          "text": "24",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "8",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Dividing 24 by 3 yields x = 8.",
+      "hint": "Divide both sides by the coefficient 3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-medium-4",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "medium",
+      "verifier_type": "equation_solving",
+      "stem": "Find the value of x that solves the equation: 6x = 42",
+      "expression": "solve_linear('6x = 42')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "252",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        },
+        {
+          "text": "36",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "7",
+          "misconception": null
+        },
+        {
+          "text": "42",
+          "misconception": "operates_on_one_side_only"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Dividing 42 by 6 yields x = 7.",
+      "hint": "Divide both sides by the coefficient 6.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-medium-5",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "medium",
+      "verifier_type": "equation_solving",
+      "stem": "Find the value of x that solves the equation: 6x = 48",
+      "expression": "solve_linear('6x = 48')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "42",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "48",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "288",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        },
+        {
+          "text": "8",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Dividing 48 by 6 yields x = 8.",
+      "hint": "Divide both sides by the coefficient 6.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-medium-6",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "medium",
+      "verifier_type": "equation_solving",
+      "stem": "Find the value of x that solves the equation: 6x = 48",
+      "expression": "solve_linear('6x = 48')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "42",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "8",
+          "misconception": null
+        },
+        {
+          "text": "48",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "288",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Dividing 48 by 6 yields x = 8.",
+      "hint": "Divide both sides by the coefficient 6.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-hard-1",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "hard",
+      "verifier_type": "equation_solving",
+      "stem": "A storage chest has x coins. After removing 25 coins for supplies, -1 coins remain. Solve x - 25 = -1:",
+      "expression": "solve_linear('x - 25 = -1')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "-1",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "34",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        },
+        {
+          "text": "-26",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "24",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "x = -1 + 25 = 24.",
+      "hint": "Add 25 to both sides to find the original amount.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-hard-2",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "hard",
+      "verifier_type": "equation_solving",
+      "stem": "A storage chest has x coins. After removing 25 coins for supplies, -1 coins remain. Solve x - 25 = -1:",
+      "expression": "solve_linear('x - 25 = -1')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "-1",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "34",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        },
+        {
+          "text": "24",
+          "misconception": null
+        },
+        {
+          "text": "-26",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "x = -1 + 25 = 24.",
+      "hint": "Add 25 to both sides to find the original amount.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-hard-3",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "hard",
+      "verifier_type": "equation_solving",
+      "stem": "A storage chest has x coins. After removing 32 coins for supplies, -8 coins remain. Solve x - 32 = -8:",
+      "expression": "solve_linear('x - 32 = -8')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "-8",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "24",
+          "misconception": null
+        },
+        {
+          "text": "-40",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "34",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "x = -8 + 32 = 24.",
+      "hint": "Add 32 to both sides to find the original amount.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-hard-4",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "hard",
+      "verifier_type": "equation_solving",
+      "stem": "A storage chest has x coins. After removing 14 coins for supplies, 2 coins remain. Solve x - 14 = 2:",
+      "expression": "solve_linear('x - 14 = 2')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "-12",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "26",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        },
+        {
+          "text": "16",
+          "misconception": null
+        },
+        {
+          "text": "2",
+          "misconception": "operates_on_one_side_only"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "x = 2 + 14 = 16.",
+      "hint": "Add 14 to both sides to find the original amount.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-hard-5",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "hard",
+      "verifier_type": "equation_solving",
+      "stem": "A storage chest has x coins. After removing 32 coins for supplies, -16 coins remain. Solve x - 32 = -16:",
+      "expression": "solve_linear('x - 32 = -16')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "26",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        },
+        {
+          "text": "-48",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        },
+        {
+          "text": "16",
+          "misconception": null
+        },
+        {
+          "text": "-16",
+          "misconception": "operates_on_one_side_only"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "x = -16 + 32 = 16.",
+      "hint": "Add 32 to both sides to find the original amount.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-equations-hard-6",
+      "topic_id": "g6-equations",
+      "standard": "6.PAR.7.1",
+      "difficulty": "hard",
+      "verifier_type": "equation_solving",
+      "stem": "A storage chest has x coins. After removing 14 coins for supplies, 2 coins remain. Solve x - 14 = 2:",
+      "expression": "solve_linear('x - 14 = 2')",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "16",
+          "misconception": null
+        },
+        {
+          "text": "2",
+          "misconception": "operates_on_one_side_only"
+        },
+        {
+          "text": "26",
+          "misconception": "multiplies_instead_of_dividing_coefficients"
+        },
+        {
+          "text": "-12",
+          "misconception": "performs_same_operation_instead_of_inverse"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "x = 2 + 14 = 16.",
+      "hint": "Add 14 to both sides to find the original amount.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

@@ -1,0 +1,663 @@
+{
+  "topic_id": "g5-fractions-divide-unit",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.354938+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g5-fractions-divide-unit-easy-1",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "Chef Marcus has 2 large pizzas. If each serving is 1/3 of a pizza, how many servings can he make?",
+      "expression": "2 // (1/3)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "6",
+          "misconception": null
+        },
+        {
+          "text": "5",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "1/6",
+          "misconception": "confuses_division_order"
+        },
+        {
+          "text": "2/3",
+          "misconception": "multiplies_instead_of_dividing"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "2 divided by 1/3 equals 2 * 3 = 6 servings.",
+      "hint": "Ask yourself: How many 1/3 slices fit into 1 whole? Then multiply that by 2.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-easy-2",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "Chef Marcus has 3 large pizzas. If each serving is 1/4 of a pizza, how many servings can he make?",
+      "expression": "3 // (1/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "12",
+          "misconception": null
+        },
+        {
+          "text": "7",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "3/4",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "1/12",
+          "misconception": "confuses_division_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "3 divided by 1/4 equals 3 * 4 = 12 servings.",
+      "hint": "Ask yourself: How many 1/4 slices fit into 1 whole? Then multiply that by 3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-easy-3",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "Chef Marcus has 4 large pizzas. If each serving is 1/2 of a pizza, how many servings can he make?",
+      "expression": "4 // (1/2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "6",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "4/2",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "1/8",
+          "misconception": "confuses_division_order"
+        },
+        {
+          "text": "8",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "4 divided by 1/2 equals 4 * 2 = 8 servings.",
+      "hint": "Ask yourself: How many 1/2 slices fit into 1 whole? Then multiply that by 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-easy-4",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "Chef Marcus has 2 large pizzas. If each serving is 1/2 of a pizza, how many servings can he make?",
+      "expression": "2 // (1/2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1/4",
+          "misconception": "confuses_division_order"
+        },
+        {
+          "text": "5",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "4",
+          "misconception": null
+        },
+        {
+          "text": "2/2",
+          "misconception": "multiplies_instead_of_dividing"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "2 divided by 1/2 equals 2 * 2 = 4 servings.",
+      "hint": "Ask yourself: How many 1/2 slices fit into 1 whole? Then multiply that by 2.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-easy-5",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "Chef Marcus has 2 large pizzas. If each serving is 1/2 of a pizza, how many servings can he make?",
+      "expression": "2 // (1/2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "2/2",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "1/4",
+          "misconception": "confuses_division_order"
+        },
+        {
+          "text": "5",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "4",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "2 divided by 1/2 equals 2 * 2 = 4 servings.",
+      "hint": "Ask yourself: How many 1/2 slices fit into 1 whole? Then multiply that by 2.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-easy-6",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "Chef Marcus has 4 large pizzas. If each serving is 1/2 of a pizza, how many servings can he make?",
+      "expression": "4 // (1/2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4/2",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "8",
+          "misconception": null
+        },
+        {
+          "text": "1/8",
+          "misconception": "confuses_division_order"
+        },
+        {
+          "text": "6",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "4 divided by 1/2 equals 4 * 2 = 8 servings.",
+      "hint": "Ask yourself: How many 1/2 slices fit into 1 whole? Then multiply that by 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-medium-1",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A painter shares 1/5 gallon of primer equally among 3 small model houses. What fraction of a gallon does each house get?",
+      "expression": "(1/5) / 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3/5",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "1/15",
+          "misconception": null
+        },
+        {
+          "text": "15",
+          "misconception": "confuses_division_order"
+        },
+        {
+          "text": "1/8",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "(1/5) / 3 = 1 / (5 * 3) = 1/15 gallon.",
+      "hint": "When dividing 1/5 into 3 equal pieces, each piece gets smaller. Multiply the denominator by 3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-medium-2",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A painter shares 1/3 gallon of primer equally among 2 small model houses. What fraction of a gallon does each house get?",
+      "expression": "(1/3) / 2",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "2/3",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "1/5",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "6",
+          "misconception": "confuses_division_order"
+        },
+        {
+          "text": "1/6",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "(1/3) / 2 = 1 / (3 * 2) = 1/6 gallon.",
+      "hint": "When dividing 1/3 into 2 equal pieces, each piece gets smaller. Multiply the denominator by 2.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-medium-3",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A painter shares 1/3 gallon of primer equally among 3 small model houses. What fraction of a gallon does each house get?",
+      "expression": "(1/3) / 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "9",
+          "misconception": "confuses_division_order"
+        },
+        {
+          "text": "1/6",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "3/3",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "1/9",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "(1/3) / 3 = 1 / (3 * 3) = 1/9 gallon.",
+      "hint": "When dividing 1/3 into 3 equal pieces, each piece gets smaller. Multiply the denominator by 3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-medium-4",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A painter shares 1/3 gallon of primer equally among 3 small model houses. What fraction of a gallon does each house get?",
+      "expression": "(1/3) / 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1/9",
+          "misconception": null
+        },
+        {
+          "text": "3/3",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "1/6",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "9",
+          "misconception": "confuses_division_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "(1/3) / 3 = 1 / (3 * 3) = 1/9 gallon.",
+      "hint": "When dividing 1/3 into 3 equal pieces, each piece gets smaller. Multiply the denominator by 3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-medium-5",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A painter shares 1/4 gallon of primer equally among 3 small model houses. What fraction of a gallon does each house get?",
+      "expression": "(1/4) / 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3/4",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "12",
+          "misconception": "confuses_division_order"
+        },
+        {
+          "text": "1/12",
+          "misconception": null
+        },
+        {
+          "text": "1/7",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "(1/4) / 3 = 1 / (4 * 3) = 1/12 gallon.",
+      "hint": "When dividing 1/4 into 3 equal pieces, each piece gets smaller. Multiply the denominator by 3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-medium-6",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A painter shares 1/4 gallon of primer equally among 3 small model houses. What fraction of a gallon does each house get?",
+      "expression": "(1/4) / 3",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1/12",
+          "misconception": null
+        },
+        {
+          "text": "1/7",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "3/4",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "12",
+          "misconception": "confuses_division_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "(1/4) / 3 = 1 / (4 * 3) = 1/12 gallon.",
+      "hint": "When dividing 1/4 into 3 equal pieces, each piece gets smaller. Multiply the denominator by 3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-hard-1",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A seamstress has a roll with 8 yards of satin ribbon. Each craft rosette requires 1/4 yard of ribbon. How many rosettes can she complete?",
+      "expression": "8 // (1/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "32",
+          "misconception": null
+        },
+        {
+          "text": "8/4",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "16",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "1/32",
+          "misconception": "confuses_division_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "8 divided by 1/4 = 8 * 4 = 32 rosettes.",
+      "hint": "Each whole yard yields 4 pieces. Multiply 8 by 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-hard-2",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A seamstress has a roll with 5 yards of satin ribbon. Each craft rosette requires 1/6 yard of ribbon. How many rosettes can she complete?",
+      "expression": "5 // (1/6)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "10",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "1/30",
+          "misconception": "confuses_division_order"
+        },
+        {
+          "text": "30",
+          "misconception": null
+        },
+        {
+          "text": "5/6",
+          "misconception": "multiplies_instead_of_dividing"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "5 divided by 1/6 = 5 * 6 = 30 rosettes.",
+      "hint": "Each whole yard yields 6 pieces. Multiply 5 by 6.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-hard-3",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A seamstress has a roll with 6 yards of satin ribbon. Each craft rosette requires 1/4 yard of ribbon. How many rosettes can she complete?",
+      "expression": "6 // (1/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1/24",
+          "misconception": "confuses_division_order"
+        },
+        {
+          "text": "6/4",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "12",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "24",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "6 divided by 1/4 = 6 * 4 = 24 rosettes.",
+      "hint": "Each whole yard yields 4 pieces. Multiply 6 by 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-hard-4",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A seamstress has a roll with 5 yards of satin ribbon. Each craft rosette requires 1/4 yard of ribbon. How many rosettes can she complete?",
+      "expression": "5 // (1/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "10",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "20",
+          "misconception": null
+        },
+        {
+          "text": "5/4",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "1/20",
+          "misconception": "confuses_division_order"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "5 divided by 1/4 = 5 * 4 = 20 rosettes.",
+      "hint": "Each whole yard yields 4 pieces. Multiply 5 by 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-hard-5",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A seamstress has a roll with 5 yards of satin ribbon. Each craft rosette requires 1/4 yard of ribbon. How many rosettes can she complete?",
+      "expression": "5 // (1/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "20",
+          "misconception": null
+        },
+        {
+          "text": "5/4",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "1/20",
+          "misconception": "confuses_division_order"
+        },
+        {
+          "text": "10",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "5 divided by 1/4 = 5 * 4 = 20 rosettes.",
+      "hint": "Each whole yard yields 4 pieces. Multiply 5 by 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-fractions-divide-unit-hard-6",
+      "topic_id": "g5-fractions-divide-unit",
+      "standard": "5.NR.3.6",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A seamstress has a roll with 6 yards of satin ribbon. Each craft rosette requires 1/3 yard of ribbon. How many rosettes can she complete?",
+      "expression": "6 // (1/3)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "18",
+          "misconception": null
+        },
+        {
+          "text": "6/3",
+          "misconception": "multiplies_instead_of_dividing"
+        },
+        {
+          "text": "12",
+          "misconception": "fractional_quotient_confused_with_remainder"
+        },
+        {
+          "text": "1/18",
+          "misconception": "confuses_division_order"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "6 divided by 1/3 = 6 * 3 = 18 rosettes.",
+      "hint": "Each whole yard yields 3 pieces. Multiply 6 by 3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

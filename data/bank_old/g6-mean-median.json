@@ -1,0 +1,663 @@
+{
+  "topic_id": "g6-mean-median",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.421935+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g6-mean-median-easy-1",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "easy",
+      "verifier_type": "statistical_center",
+      "stem": "Four students earned scores of 9, 8, 11, 12 points in a ring-toss game. What is the mean score?",
+      "expression": "mean(9, 8, 11, 12)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "12",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "10",
+          "misconception": null
+        },
+        {
+          "text": "9",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "40",
+          "misconception": "divides_sum_by_arbitrary_number"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Sum = 40. Dividing by 4 gives a mean score of 10.",
+      "hint": "Add all 4 scores together, then divide the total sum by 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-easy-2",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "easy",
+      "verifier_type": "statistical_center",
+      "stem": "Four students earned scores of 19, 14, 16, 11 points in a ring-toss game. What is the mean score?",
+      "expression": "mean(19, 14, 16, 11)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "15",
+          "misconception": null
+        },
+        {
+          "text": "17",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "14",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "60",
+          "misconception": "divides_sum_by_arbitrary_number"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Sum = 60. Dividing by 4 gives a mean score of 15.",
+      "hint": "Add all 4 scores together, then divide the total sum by 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-easy-3",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "easy",
+      "verifier_type": "statistical_center",
+      "stem": "Four students earned scores of 11, 14, 10, 13 points in a ring-toss game. What is the mean score?",
+      "expression": "mean(11, 14, 10, 13)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "11",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "12",
+          "misconception": null
+        },
+        {
+          "text": "48",
+          "misconception": "divides_sum_by_arbitrary_number"
+        },
+        {
+          "text": "14",
+          "misconception": "confuses_mean_with_median"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Sum = 48. Dividing by 4 gives a mean score of 12.",
+      "hint": "Add all 4 scores together, then divide the total sum by 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-easy-4",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "easy",
+      "verifier_type": "statistical_center",
+      "stem": "Four students earned scores of 19, 16, 24, 21 points in a ring-toss game. What is the mean score?",
+      "expression": "mean(19, 16, 24, 21)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "22",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "80",
+          "misconception": "divides_sum_by_arbitrary_number"
+        },
+        {
+          "text": "20",
+          "misconception": null
+        },
+        {
+          "text": "19",
+          "misconception": "finds_median_without_ordering_data"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Sum = 80. Dividing by 4 gives a mean score of 20.",
+      "hint": "Add all 4 scores together, then divide the total sum by 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-easy-5",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "easy",
+      "verifier_type": "statistical_center",
+      "stem": "Four students earned scores of 11, 14, 10, 13 points in a ring-toss game. What is the mean score?",
+      "expression": "mean(11, 14, 10, 13)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "12",
+          "misconception": null
+        },
+        {
+          "text": "48",
+          "misconception": "divides_sum_by_arbitrary_number"
+        },
+        {
+          "text": "14",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "11",
+          "misconception": "finds_median_without_ordering_data"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Sum = 48. Dividing by 4 gives a mean score of 12.",
+      "hint": "Add all 4 scores together, then divide the total sum by 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-easy-6",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "easy",
+      "verifier_type": "statistical_center",
+      "stem": "Four students earned scores of 11, 8, 13, 16 points in a ring-toss game. What is the mean score?",
+      "expression": "mean(11, 8, 13, 16)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "11",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "14",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "12",
+          "misconception": null
+        },
+        {
+          "text": "48",
+          "misconception": "divides_sum_by_arbitrary_number"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Sum = 48. Dividing by 4 gives a mean score of 12.",
+      "hint": "Add all 4 scores together, then divide the total sum by 4.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-medium-1",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "medium",
+      "verifier_type": "statistical_center",
+      "stem": "Find the median of the following five recorded trail distances: 14, 11, 30, 6, 6",
+      "expression": "median(14, 11, 30, 6, 6)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "11",
+          "misconception": null
+        },
+        {
+          "text": "30",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "13",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "6",
+          "misconception": "divides_sum_by_arbitrary_number"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Ordered values: 6, 6, 11, 14, 30. The middle value is 11.",
+      "hint": "Arrange the 5 numbers in order from least to greatest and select the middle number.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-medium-2",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "medium",
+      "verifier_type": "statistical_center",
+      "stem": "Find the median of the following five recorded trail distances: 25, 11, 6, 29, 13",
+      "expression": "median(25, 11, 6, 29, 13)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "11",
+          "misconception": "divides_sum_by_arbitrary_number"
+        },
+        {
+          "text": "6",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "13",
+          "misconception": null
+        },
+        {
+          "text": "17",
+          "misconception": "confuses_mean_with_median"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Ordered values: 6, 11, 13, 25, 29. The middle value is 13.",
+      "hint": "Arrange the 5 numbers in order from least to greatest and select the middle number.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-medium-3",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "medium",
+      "verifier_type": "statistical_center",
+      "stem": "Find the median of the following five recorded trail distances: 33, 18, 17, 19, 28",
+      "expression": "median(33, 18, 17, 19, 28)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "19",
+          "misconception": null
+        },
+        {
+          "text": "23",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "17",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "18",
+          "misconception": "divides_sum_by_arbitrary_number"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Ordered values: 17, 18, 19, 28, 33. The middle value is 19.",
+      "hint": "Arrange the 5 numbers in order from least to greatest and select the middle number.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-medium-4",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "medium",
+      "verifier_type": "statistical_center",
+      "stem": "Find the median of the following five recorded trail distances: 7, 30, 18, 7, 28",
+      "expression": "median(7, 30, 18, 7, 28)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "7",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "16",
+          "misconception": "divides_sum_by_arbitrary_number"
+        },
+        {
+          "text": "18",
+          "misconception": null
+        },
+        {
+          "text": "19",
+          "misconception": "confuses_mean_with_median"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Ordered values: 7, 7, 18, 28, 30. The middle value is 18.",
+      "hint": "Arrange the 5 numbers in order from least to greatest and select the middle number.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-medium-5",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "medium",
+      "verifier_type": "statistical_center",
+      "stem": "Find the median of the following five recorded trail distances: 15, 14, 14, 19, 26",
+      "expression": "median(15, 14, 14, 19, 26)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "16",
+          "misconception": "divides_sum_by_arbitrary_number"
+        },
+        {
+          "text": "15",
+          "misconception": null
+        },
+        {
+          "text": "14",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "18",
+          "misconception": "confuses_mean_with_median"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Ordered values: 14, 14, 15, 19, 26. The middle value is 15.",
+      "hint": "Arrange the 5 numbers in order from least to greatest and select the middle number.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-medium-6",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "medium",
+      "verifier_type": "statistical_center",
+      "stem": "Find the median of the following five recorded trail distances: 24, 16, 34, 28, 32",
+      "expression": "median(24, 16, 34, 28, 32)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "24",
+          "misconception": "divides_sum_by_arbitrary_number"
+        },
+        {
+          "text": "34",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "27",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "28",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Ordered values: 16, 24, 28, 32, 34. The middle value is 28.",
+      "hint": "Arrange the 5 numbers in order from least to greatest and select the middle number.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-hard-1",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "hard",
+      "verifier_type": "statistical_center",
+      "stem": "During a science project, seedlings grew 50, 42, 40, 38, 30 millimeters. What is the mean growth in millimeters?",
+      "expression": "mean(50, 42, 40, 38, 30)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "200",
+          "misconception": "divides_sum_by_arbitrary_number"
+        },
+        {
+          "text": "38",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "45",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "40",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Total growth = 200 mm. Dividing by 5 yields a mean of 40 mm.",
+      "hint": "Find the sum of all 5 numbers and divide by 5.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-hard-2",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "hard",
+      "verifier_type": "statistical_center",
+      "stem": "During a science project, seedlings grew 26, 20, 40, 34, 30 millimeters. What is the mean growth in millimeters?",
+      "expression": "mean(26, 20, 40, 34, 30)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "30",
+          "misconception": null
+        },
+        {
+          "text": "35",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "26",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "150",
+          "misconception": "divides_sum_by_arbitrary_number"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Total growth = 150 mm. Dividing by 5 yields a mean of 30 mm.",
+      "hint": "Find the sum of all 5 numbers and divide by 5.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-hard-3",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "hard",
+      "verifier_type": "statistical_center",
+      "stem": "During a science project, seedlings grew 48, 44, 40, 36, 32 millimeters. What is the mean growth in millimeters?",
+      "expression": "mean(48, 44, 40, 36, 32)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "40",
+          "misconception": null
+        },
+        {
+          "text": "36",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "200",
+          "misconception": "divides_sum_by_arbitrary_number"
+        },
+        {
+          "text": "45",
+          "misconception": "confuses_mean_with_median"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Total growth = 200 mm. Dividing by 5 yields a mean of 40 mm.",
+      "hint": "Find the sum of all 5 numbers and divide by 5.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-hard-4",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "hard",
+      "verifier_type": "statistical_center",
+      "stem": "During a science project, seedlings grew 24, 36, 30, 32, 28 millimeters. What is the mean growth in millimeters?",
+      "expression": "mean(24, 36, 30, 32, 28)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "35",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "28",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "150",
+          "misconception": "divides_sum_by_arbitrary_number"
+        },
+        {
+          "text": "30",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Total growth = 150 mm. Dividing by 5 yields a mean of 30 mm.",
+      "hint": "Find the sum of all 5 numbers and divide by 5.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-hard-5",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "hard",
+      "verifier_type": "statistical_center",
+      "stem": "During a science project, seedlings grew 56, 50, 44, 46, 54 millimeters. What is the mean growth in millimeters?",
+      "expression": "mean(56, 50, 44, 46, 54)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "46",
+          "misconception": "finds_median_without_ordering_data"
+        },
+        {
+          "text": "55",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "250",
+          "misconception": "divides_sum_by_arbitrary_number"
+        },
+        {
+          "text": "50",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Total growth = 250 mm. Dividing by 5 yields a mean of 50 mm.",
+      "hint": "Find the sum of all 5 numbers and divide by 5.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-mean-median-hard-6",
+      "topic_id": "g6-mean-median",
+      "standard": "6.NR.2.1",
+      "difficulty": "hard",
+      "verifier_type": "statistical_center",
+      "stem": "During a science project, seedlings grew 54, 46, 56, 44, 50 millimeters. What is the mean growth in millimeters?",
+      "expression": "mean(54, 46, 56, 44, 50)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "250",
+          "misconception": "divides_sum_by_arbitrary_number"
+        },
+        {
+          "text": "55",
+          "misconception": "confuses_mean_with_median"
+        },
+        {
+          "text": "50",
+          "misconception": null
+        },
+        {
+          "text": "46",
+          "misconception": "finds_median_without_ordering_data"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Total growth = 250 mm. Dividing by 5 yields a mean of 50 mm.",
+      "hint": "Find the sum of all 5 numbers and divide by 5.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

@@ -1,0 +1,663 @@
+{
+  "topic_id": "g6-integers",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.396525+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g6-integers-easy-1",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "easy",
+      "verifier_type": "integer_comparison",
+      "stem": "Which symbol makes this integer comparison true: -7 ___ 2?",
+      "expression": "compare(-7, 2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": ">",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": "<",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Any negative integer is less than any positive integer, so -7 < 2.",
+      "hint": "Negative numbers are always to the left of positive numbers on a number line.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-easy-2",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "easy",
+      "verifier_type": "integer_comparison",
+      "stem": "Which symbol makes this integer comparison true: -2 ___ 2?",
+      "expression": "compare(-2, 2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "<",
+          "misconception": null
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": ">",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Any negative integer is less than any positive integer, so -2 < 2.",
+      "hint": "Negative numbers are always to the left of positive numbers on a number line.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-easy-3",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "easy",
+      "verifier_type": "integer_comparison",
+      "stem": "Which symbol makes this integer comparison true: -9 ___ 8?",
+      "expression": "compare(-9, 8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": "<",
+          "misconception": null
+        },
+        {
+          "text": ">",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Any negative integer is less than any positive integer, so -9 < 8.",
+      "hint": "Negative numbers are always to the left of positive numbers on a number line.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-easy-4",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "easy",
+      "verifier_type": "integer_comparison",
+      "stem": "Which symbol makes this integer comparison true: -3 ___ 6?",
+      "expression": "compare(-3, 6)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": ">",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "<",
+          "misconception": null
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Any negative integer is less than any positive integer, so -3 < 6.",
+      "hint": "Negative numbers are always to the left of positive numbers on a number line.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-easy-5",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "easy",
+      "verifier_type": "integer_comparison",
+      "stem": "Which symbol makes this integer comparison true: -9 ___ 5?",
+      "expression": "compare(-9, 5)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": ">",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": "<",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Any negative integer is less than any positive integer, so -9 < 5.",
+      "hint": "Negative numbers are always to the left of positive numbers on a number line.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-easy-6",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "easy",
+      "verifier_type": "integer_comparison",
+      "stem": "Which symbol makes this integer comparison true: -2 ___ 1?",
+      "expression": "compare(-2, 1)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": "<",
+          "misconception": null
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": ">",
+          "misconception": "larger_magnitude_negative_is_greater"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Any negative integer is less than any positive integer, so -2 < 1.",
+      "hint": "Negative numbers are always to the left of positive numbers on a number line.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-medium-1",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "medium",
+      "verifier_type": "integer_comparison",
+      "stem": "Which comparison symbol correctly compares the two temperatures: -7\u00b0F ___ -4\u00b0F?",
+      "expression": "compare(-7, -4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": "<",
+          "misconception": null
+        },
+        {
+          "text": ">",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "-7 is further to the left of zero than -4, so -7 < -4.",
+      "hint": "On a vertical thermometer or number line, numbers further down are colder (lesser).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-medium-2",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "medium",
+      "verifier_type": "integer_comparison",
+      "stem": "Which comparison symbol correctly compares the two temperatures: -6\u00b0F ___ -2\u00b0F?",
+      "expression": "compare(-6, -2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": ">",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": "<",
+          "misconception": null
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "-6 is further to the left of zero than -2, so -6 < -2.",
+      "hint": "On a vertical thermometer or number line, numbers further down are colder (lesser).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-medium-3",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "medium",
+      "verifier_type": "integer_comparison",
+      "stem": "Which comparison symbol correctly compares the two temperatures: -13\u00b0F ___ -8\u00b0F?",
+      "expression": "compare(-13, -8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "<",
+          "misconception": null
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": ">",
+          "misconception": "larger_magnitude_negative_is_greater"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "-13 is further to the left of zero than -8, so -13 < -8.",
+      "hint": "On a vertical thermometer or number line, numbers further down are colder (lesser).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-medium-4",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "medium",
+      "verifier_type": "integer_comparison",
+      "stem": "Which comparison symbol correctly compares the two temperatures: -7\u00b0F ___ -3\u00b0F?",
+      "expression": "compare(-7, -3)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": ">",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "<",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "-7 is further to the left of zero than -3, so -7 < -3.",
+      "hint": "On a vertical thermometer or number line, numbers further down are colder (lesser).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-medium-5",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "medium",
+      "verifier_type": "integer_comparison",
+      "stem": "Which comparison symbol correctly compares the two temperatures: -10\u00b0F ___ -9\u00b0F?",
+      "expression": "compare(-10, -9)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "<",
+          "misconception": null
+        },
+        {
+          "text": ">",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "-10 is further to the left of zero than -9, so -10 < -9.",
+      "hint": "On a vertical thermometer or number line, numbers further down are colder (lesser).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-medium-6",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "medium",
+      "verifier_type": "integer_comparison",
+      "stem": "Which comparison symbol correctly compares the two temperatures: -14\u00b0F ___ -8\u00b0F?",
+      "expression": "compare(-14, -8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": "<",
+          "misconception": null
+        },
+        {
+          "text": ">",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "-14 is further to the left of zero than -8, so -14 < -8.",
+      "hint": "On a vertical thermometer or number line, numbers further down are colder (lesser).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-hard-1",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "hard",
+      "verifier_type": "integer_comparison",
+      "stem": "A submarine dives from depth -1 meters to -9 meters. Which symbol accurately shows -1 ___ -9?",
+      "expression": "compare(-1, -9)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": "<",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": ">",
+          "misconception": null
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "-1 is greater than -9, so the correct symbol is '>'.",
+      "hint": "Because 1 is closer to 0 than 9, -1 is greater than -9.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-hard-2",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "hard",
+      "verifier_type": "integer_comparison",
+      "stem": "A submarine dives from depth -1 meters to -8 meters. Which symbol accurately shows -1 ___ -8?",
+      "expression": "compare(-1, -8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "<",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": ">",
+          "misconception": null
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "-1 is greater than -8, so the correct symbol is '>'.",
+      "hint": "Because 1 is closer to 0 than 8, -1 is greater than -8.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-hard-3",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "hard",
+      "verifier_type": "integer_comparison",
+      "stem": "A submarine dives from depth -7 meters to -9 meters. Which symbol accurately shows -7 ___ -9?",
+      "expression": "compare(-7, -9)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": "<",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": ">",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "-7 is greater than -9, so the correct symbol is '>'.",
+      "hint": "Because 7 is closer to 0 than 9, -7 is greater than -9.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-hard-4",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "hard",
+      "verifier_type": "integer_comparison",
+      "stem": "A submarine dives from depth -2 meters to -8 meters. Which symbol accurately shows -2 ___ -8?",
+      "expression": "compare(-2, -8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "<",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": ">",
+          "misconception": null
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "-2 is greater than -8, so the correct symbol is '>'.",
+      "hint": "Because 2 is closer to 0 than 8, -2 is greater than -8.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-hard-5",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "hard",
+      "verifier_type": "integer_comparison",
+      "stem": "A submarine dives from depth -2 meters to -11 meters. Which symbol accurately shows -2 ___ -11?",
+      "expression": "compare(-2, -11)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": ">",
+          "misconception": null
+        },
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": "<",
+          "misconception": "larger_magnitude_negative_is_greater"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "-2 is greater than -11, so the correct symbol is '>'.",
+      "hint": "Because 2 is closer to 0 than 11, -2 is greater than -11.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-integers-hard-6",
+      "topic_id": "g6-integers",
+      "standard": "6.NR.3.1",
+      "difficulty": "hard",
+      "verifier_type": "integer_comparison",
+      "stem": "A submarine dives from depth -2 meters to -5 meters. Which symbol accurately shows -2 ___ -5?",
+      "expression": "compare(-2, -5)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "=",
+          "misconception": "confuses_absolute_value_with_opposite"
+        },
+        {
+          "text": "<",
+          "misconception": "larger_magnitude_negative_is_greater"
+        },
+        {
+          "text": "none",
+          "misconception": "misplaces_negative_numbers_on_numberline"
+        },
+        {
+          "text": ">",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "-2 is greater than -5, so the correct symbol is '>'.",
+      "hint": "Because 2 is closer to 0 than 5, -2 is greater than -5.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

@@ -1,0 +1,663 @@
+{
+  "topic_id": "g5-volume",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.358482+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g5-volume-easy-1",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "easy",
+      "verifier_type": "volume_geometry",
+      "stem": "A rectangular jewelry box has a length of 2 cm, a width of 3 cm, and a height of 4 cm. What is its volume in cubic centimeters?",
+      "expression": "volume_box(2, 3, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "6",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "24",
+          "misconception": null
+        },
+        {
+          "text": "9",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "52",
+          "misconception": "confuses_surface_area_with_volume"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Volume = 2 * 3 * 4 = 24 cubic centimeters.",
+      "hint": "Volume is calculated by multiplying length * width * height.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-easy-2",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "easy",
+      "verifier_type": "volume_geometry",
+      "stem": "A rectangular jewelry box has a length of 3 cm, a width of 3 cm, and a height of 3 cm. What is its volume in cubic centimeters?",
+      "expression": "volume_box(3, 3, 3)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "27",
+          "misconception": null
+        },
+        {
+          "text": "28",
+          "misconception": "confuses_surface_area_with_volume"
+        },
+        {
+          "text": "9",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "54",
+          "misconception": "confuses_surface_area_with_volume"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Volume = 3 * 3 * 3 = 27 cubic centimeters.",
+      "hint": "Volume is calculated by multiplying length * width * height.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-easy-3",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "easy",
+      "verifier_type": "volume_geometry",
+      "stem": "A rectangular jewelry box has a length of 2 cm, a width of 2 cm, and a height of 5 cm. What is its volume in cubic centimeters?",
+      "expression": "volume_box(2, 2, 5)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "9",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "20",
+          "misconception": null
+        },
+        {
+          "text": "48",
+          "misconception": "confuses_surface_area_with_volume"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Volume = 2 * 2 * 5 = 20 cubic centimeters.",
+      "hint": "Volume is calculated by multiplying length * width * height.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-easy-4",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "easy",
+      "verifier_type": "volume_geometry",
+      "stem": "A rectangular jewelry box has a length of 2 cm, a width of 4 cm, and a height of 5 cm. What is its volume in cubic centimeters?",
+      "expression": "volume_box(2, 4, 5)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "8",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "11",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "40",
+          "misconception": null
+        },
+        {
+          "text": "76",
+          "misconception": "confuses_surface_area_with_volume"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Volume = 2 * 4 * 5 = 40 cubic centimeters.",
+      "hint": "Volume is calculated by multiplying length * width * height.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-easy-5",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "easy",
+      "verifier_type": "volume_geometry",
+      "stem": "A rectangular jewelry box has a length of 3 cm, a width of 3 cm, and a height of 3 cm. What is its volume in cubic centimeters?",
+      "expression": "volume_box(3, 3, 3)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "9",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "27",
+          "misconception": null
+        },
+        {
+          "text": "54",
+          "misconception": "confuses_surface_area_with_volume"
+        },
+        {
+          "text": "28",
+          "misconception": "confuses_surface_area_with_volume"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Volume = 3 * 3 * 3 = 27 cubic centimeters.",
+      "hint": "Volume is calculated by multiplying length * width * height.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-easy-6",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "easy",
+      "verifier_type": "volume_geometry",
+      "stem": "A rectangular jewelry box has a length of 2 cm, a width of 4 cm, and a height of 5 cm. What is its volume in cubic centimeters?",
+      "expression": "volume_box(2, 4, 5)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "76",
+          "misconception": "confuses_surface_area_with_volume"
+        },
+        {
+          "text": "40",
+          "misconception": null
+        },
+        {
+          "text": "8",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "11",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Volume = 2 * 4 * 5 = 40 cubic centimeters.",
+      "hint": "Volume is calculated by multiplying length * width * height.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-medium-1",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "medium",
+      "verifier_type": "volume_geometry",
+      "stem": "An aquarium shaped like a rectangular prism measures 6 feet long, 6 feet wide, and 4 feet high. What is its total volume in cubic feet?",
+      "expression": "volume_box(6, 6, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "36",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "16",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "168",
+          "misconception": "confuses_surface_area_with_volume"
+        },
+        {
+          "text": "144",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Base area = 36. Multiplying by height 4 gives 144 cubic feet.",
+      "hint": "First find the base area (6 * 6), then multiply by the height (4).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-medium-2",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "medium",
+      "verifier_type": "volume_geometry",
+      "stem": "An aquarium shaped like a rectangular prism measures 5 feet long, 6 feet wide, and 8 feet high. What is its total volume in cubic feet?",
+      "expression": "volume_box(5, 6, 8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "19",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "30",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "240",
+          "misconception": null
+        },
+        {
+          "text": "236",
+          "misconception": "confuses_surface_area_with_volume"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "Base area = 30. Multiplying by height 8 gives 240 cubic feet.",
+      "hint": "First find the base area (5 * 6), then multiply by the height (8).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-medium-3",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "medium",
+      "verifier_type": "volume_geometry",
+      "stem": "An aquarium shaped like a rectangular prism measures 3 feet long, 7 feet wide, and 4 feet high. What is its total volume in cubic feet?",
+      "expression": "volume_box(3, 7, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "21",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "84",
+          "misconception": null
+        },
+        {
+          "text": "14",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "122",
+          "misconception": "confuses_surface_area_with_volume"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Base area = 21. Multiplying by height 4 gives 84 cubic feet.",
+      "hint": "First find the base area (3 * 7), then multiply by the height (4).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-medium-4",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "medium",
+      "verifier_type": "volume_geometry",
+      "stem": "An aquarium shaped like a rectangular prism measures 6 feet long, 6 feet wide, and 4 feet high. What is its total volume in cubic feet?",
+      "expression": "volume_box(6, 6, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "144",
+          "misconception": null
+        },
+        {
+          "text": "168",
+          "misconception": "confuses_surface_area_with_volume"
+        },
+        {
+          "text": "16",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "36",
+          "misconception": "forgets_height_layering"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Base area = 36. Multiplying by height 4 gives 144 cubic feet.",
+      "hint": "First find the base area (6 * 6), then multiply by the height (4).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-medium-5",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "medium",
+      "verifier_type": "volume_geometry",
+      "stem": "An aquarium shaped like a rectangular prism measures 3 feet long, 7 feet wide, and 4 feet high. What is its total volume in cubic feet?",
+      "expression": "volume_box(3, 7, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "21",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "84",
+          "misconception": null
+        },
+        {
+          "text": "14",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "122",
+          "misconception": "confuses_surface_area_with_volume"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Base area = 21. Multiplying by height 4 gives 84 cubic feet.",
+      "hint": "First find the base area (3 * 7), then multiply by the height (4).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-medium-6",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "medium",
+      "verifier_type": "volume_geometry",
+      "stem": "An aquarium shaped like a rectangular prism measures 6 feet long, 6 feet wide, and 4 feet high. What is its total volume in cubic feet?",
+      "expression": "volume_box(6, 6, 4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "16",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "168",
+          "misconception": "confuses_surface_area_with_volume"
+        },
+        {
+          "text": "36",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "144",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Base area = 36. Multiplying by height 4 gives 144 cubic feet.",
+      "hint": "First find the base area (6 * 6), then multiply by the height (4).",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-hard-1",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "hard",
+      "verifier_type": "volume_geometry",
+      "stem": "A storage crate is packed solid with 1-meter unit cubes. The crate is 7 meters long, 9 meters wide, and 15 meters tall. How many unit cubes pack the crate with no gaps?",
+      "expression": "volume_box(7, 9, 15)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "606",
+          "misconception": "confuses_surface_area_with_volume"
+        },
+        {
+          "text": "945",
+          "misconception": null
+        },
+        {
+          "text": "63",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "31",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Total cubes = 7 * 9 * 15 = 945 unit cubes.",
+      "hint": "Multiply the three dimensions to find the total number of unit cubes.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-hard-2",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "hard",
+      "verifier_type": "volume_geometry",
+      "stem": "A storage crate is packed solid with 1-meter unit cubes. The crate is 6 meters long, 12 meters wide, and 10 meters tall. How many unit cubes pack the crate with no gaps?",
+      "expression": "volume_box(6, 12, 10)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "28",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "72",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "504",
+          "misconception": "confuses_surface_area_with_volume"
+        },
+        {
+          "text": "720",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Total cubes = 6 * 12 * 10 = 720 unit cubes.",
+      "hint": "Multiply the three dimensions to find the total number of unit cubes.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-hard-3",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "hard",
+      "verifier_type": "volume_geometry",
+      "stem": "A storage crate is packed solid with 1-meter unit cubes. The crate is 8 meters long, 10 meters wide, and 12 meters tall. How many unit cubes pack the crate with no gaps?",
+      "expression": "volume_box(8, 10, 12)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "30",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        },
+        {
+          "text": "592",
+          "misconception": "confuses_surface_area_with_volume"
+        },
+        {
+          "text": "80",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "960",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "Total cubes = 8 * 10 * 12 = 960 unit cubes.",
+      "hint": "Multiply the three dimensions to find the total number of unit cubes.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-hard-4",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "hard",
+      "verifier_type": "volume_geometry",
+      "stem": "A storage crate is packed solid with 1-meter unit cubes. The crate is 8 meters long, 10 meters wide, and 12 meters tall. How many unit cubes pack the crate with no gaps?",
+      "expression": "volume_box(8, 10, 12)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "80",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "960",
+          "misconception": null
+        },
+        {
+          "text": "592",
+          "misconception": "confuses_surface_area_with_volume"
+        },
+        {
+          "text": "30",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Total cubes = 8 * 10 * 12 = 960 unit cubes.",
+      "hint": "Multiply the three dimensions to find the total number of unit cubes.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-hard-5",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "hard",
+      "verifier_type": "volume_geometry",
+      "stem": "A storage crate is packed solid with 1-meter unit cubes. The crate is 6 meters long, 12 meters wide, and 10 meters tall. How many unit cubes pack the crate with no gaps?",
+      "expression": "volume_box(6, 12, 10)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "720",
+          "misconception": null
+        },
+        {
+          "text": "72",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "504",
+          "misconception": "confuses_surface_area_with_volume"
+        },
+        {
+          "text": "28",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        }
+      ],
+      "correct_index": 0,
+      "explanation": "Total cubes = 6 * 12 * 10 = 720 unit cubes.",
+      "hint": "Multiply the three dimensions to find the total number of unit cubes.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g5-volume-hard-6",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "hard",
+      "verifier_type": "volume_geometry",
+      "stem": "A storage crate is packed solid with 1-meter unit cubes. The crate is 7 meters long, 9 meters wide, and 15 meters tall. How many unit cubes pack the crate with no gaps?",
+      "expression": "volume_box(7, 9, 15)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "606",
+          "misconception": "confuses_surface_area_with_volume"
+        },
+        {
+          "text": "945",
+          "misconception": null
+        },
+        {
+          "text": "63",
+          "misconception": "forgets_height_layering"
+        },
+        {
+          "text": "31",
+          "misconception": "adds_dimensions_instead_of_multiplying"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "Total cubes = 7 * 9 * 15 = 945 unit cubes.",
+      "hint": "Multiply the three dimensions to find the total number of unit cubes.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}

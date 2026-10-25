@@ -1,0 +1,663 @@
+{
+  "topic_id": "g6-fraction-division",
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T14:14:23.387881+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v1",
+  "counts_per_level": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6,
+    "total": 18
+  },
+  "questions": [
+    {
+      "id": "g6-fraction-division-easy-1",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "How many 1/4-pound bags of sunflower seeds can be filled from 3/4 pound of seeds?",
+      "expression": "(3/4) / (1/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "16/3",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "1/3",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "3",
+          "misconception": null
+        },
+        {
+          "text": "3/16",
+          "misconception": "divides_numerators_and_denominators_directly"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "(3/4) / (1/4) = (3/4) * (4/1) = 3.",
+      "hint": "Keep the first fraction, flip the second to 4/1, and multiply.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-easy-2",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "How many 1/4-pound bags of sunflower seeds can be filled from 3/4 pound of seeds?",
+      "expression": "(3/4) / (1/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1/3",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "16/3",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "3",
+          "misconception": null
+        },
+        {
+          "text": "3/16",
+          "misconception": "divides_numerators_and_denominators_directly"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "(3/4) / (1/4) = (3/4) * (4/1) = 3.",
+      "hint": "Keep the first fraction, flip the second to 4/1, and multiply.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-easy-3",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "How many 1/4-pound bags of sunflower seeds can be filled from 3/4 pound of seeds?",
+      "expression": "(3/4) / (1/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1/3",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "3/16",
+          "misconception": "divides_numerators_and_denominators_directly"
+        },
+        {
+          "text": "3",
+          "misconception": null
+        },
+        {
+          "text": "16/3",
+          "misconception": "inverts_both_fractions"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "(3/4) / (1/4) = (3/4) * (4/1) = 3.",
+      "hint": "Keep the first fraction, flip the second to 4/1, and multiply.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-easy-4",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "How many 1/4-pound bags of sunflower seeds can be filled from 3/4 pound of seeds?",
+      "expression": "(3/4) / (1/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3/16",
+          "misconception": "divides_numerators_and_denominators_directly"
+        },
+        {
+          "text": "1/3",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "16/3",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "3",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "(3/4) / (1/4) = (3/4) * (4/1) = 3.",
+      "hint": "Keep the first fraction, flip the second to 4/1, and multiply.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-easy-5",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "How many 1/4-pound bags of sunflower seeds can be filled from 3/4 pound of seeds?",
+      "expression": "(3/4) / (1/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "16/3",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "3/16",
+          "misconception": "divides_numerators_and_denominators_directly"
+        },
+        {
+          "text": "3",
+          "misconception": null
+        },
+        {
+          "text": "1/3",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "(3/4) / (1/4) = (3/4) * (4/1) = 3.",
+      "hint": "Keep the first fraction, flip the second to 4/1, and multiply.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-easy-6",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "How many 1/4-pound bags of sunflower seeds can be filled from 3/4 pound of seeds?",
+      "expression": "(3/4) / (1/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "1/3",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "16/3",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "3/16",
+          "misconception": "divides_numerators_and_denominators_directly"
+        },
+        {
+          "text": "3",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "(3/4) / (1/4) = (3/4) * (4/1) = 3.",
+      "hint": "Keep the first fraction, flip the second to 4/1, and multiply.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-medium-1",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "Evaluate the fraction division: (4/5) / (1/2)",
+      "expression": "(4/5) / (1/2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "4/10",
+          "misconception": "divides_numerators_and_denominators_directly"
+        },
+        {
+          "text": "8/5",
+          "misconception": null
+        },
+        {
+          "text": "9/5",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "5/8",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "(4/5) * (2/1) = 8/5.",
+      "hint": "Multiply the first fraction by the reciprocal of the second fraction.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-medium-2",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "Evaluate the fraction division: (4/5) / (1/2)",
+      "expression": "(4/5) / (1/2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "5/8",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "9/5",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "8/5",
+          "misconception": null
+        },
+        {
+          "text": "4/10",
+          "misconception": "divides_numerators_and_denominators_directly"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "(4/5) * (2/1) = 8/5.",
+      "hint": "Multiply the first fraction by the reciprocal of the second fraction.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-medium-3",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "Evaluate the fraction division: (4/5) / (2/3)",
+      "expression": "(4/5) / (2/3)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "7/5",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "8/15",
+          "misconception": "divides_numerators_and_denominators_directly"
+        },
+        {
+          "text": "6/5",
+          "misconception": null
+        },
+        {
+          "text": "5/6",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "(4/5) * (3/2) = 6/5.",
+      "hint": "Multiply the first fraction by the reciprocal of the second fraction.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-medium-4",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "Evaluate the fraction division: (2/3) / (1/2)",
+      "expression": "(2/3) / (1/2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "5/3",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "3/4",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "4/3",
+          "misconception": null
+        },
+        {
+          "text": "2/6",
+          "misconception": "divides_numerators_and_denominators_directly"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "(2/3) * (2/1) = 4/3.",
+      "hint": "Multiply the first fraction by the reciprocal of the second fraction.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-medium-5",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "Evaluate the fraction division: (2/3) / (1/2)",
+      "expression": "(2/3) / (1/2)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "3/4",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "5/3",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "4/3",
+          "misconception": null
+        },
+        {
+          "text": "2/6",
+          "misconception": "divides_numerators_and_denominators_directly"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "(2/3) * (2/1) = 4/3.",
+      "hint": "Multiply the first fraction by the reciprocal of the second fraction.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-medium-6",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "Evaluate the fraction division: (4/5) / (2/3)",
+      "expression": "(4/5) / (2/3)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "5/6",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "7/5",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "8/15",
+          "misconception": "divides_numerators_and_denominators_directly"
+        },
+        {
+          "text": "6/5",
+          "misconception": null
+        }
+      ],
+      "correct_index": 3,
+      "explanation": "(4/5) * (3/2) = 6/5.",
+      "hint": "Multiply the first fraction by the reciprocal of the second fraction.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-hard-1",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A recipe calls for 7/8 cup of cocoa powder. A measuring spoon holds 3/4 cup. How many scoops are required?",
+      "expression": "(7/8) / (3/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "6/7",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "7/6",
+          "misconception": null
+        },
+        {
+          "text": "8/6",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "21/32",
+          "misconception": "divides_numerators_and_denominators_directly"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "(7/8) / (3/4) = 7/6 scoops.",
+      "hint": "Multiply 7/8 by the reciprocal 4/3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-hard-2",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A recipe calls for 7/8 cup of cocoa powder. A measuring spoon holds 5/8 cup. How many scoops are required?",
+      "expression": "(7/8) / (5/8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "8/5",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "7/5",
+          "misconception": null
+        },
+        {
+          "text": "35/64",
+          "misconception": "divides_numerators_and_denominators_directly"
+        },
+        {
+          "text": "5/7",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "(7/8) / (5/8) = 7/5 scoops.",
+      "hint": "Multiply 7/8 by the reciprocal 8/5.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-hard-3",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A recipe calls for 4/9 cup of cocoa powder. A measuring spoon holds 5/8 cup. How many scoops are required?",
+      "expression": "(4/9) / (5/8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "33/45",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "32/45",
+          "misconception": null
+        },
+        {
+          "text": "45/32",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "20/72",
+          "misconception": "divides_numerators_and_denominators_directly"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "(4/9) / (5/8) = 32/45 scoops.",
+      "hint": "Multiply 4/9 by the reciprocal 8/5.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-hard-4",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A recipe calls for 5/6 cup of cocoa powder. A measuring spoon holds 3/4 cup. How many scoops are required?",
+      "expression": "(5/6) / (3/4)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "15/24",
+          "misconception": "divides_numerators_and_denominators_directly"
+        },
+        {
+          "text": "10/9",
+          "misconception": null
+        },
+        {
+          "text": "9/10",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "11/9",
+          "misconception": "inverts_both_fractions"
+        }
+      ],
+      "correct_index": 1,
+      "explanation": "(5/6) / (3/4) = 10/9 scoops.",
+      "hint": "Multiply 5/6 by the reciprocal 4/3.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-hard-5",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A recipe calls for 7/8 cup of cocoa powder. A measuring spoon holds 5/8 cup. How many scoops are required?",
+      "expression": "(7/8) / (5/8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "5/7",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        },
+        {
+          "text": "35/64",
+          "misconception": "divides_numerators_and_denominators_directly"
+        },
+        {
+          "text": "7/5",
+          "misconception": null
+        },
+        {
+          "text": "8/5",
+          "misconception": "inverts_both_fractions"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "(7/8) / (5/8) = 7/5 scoops.",
+      "hint": "Multiply 7/8 by the reciprocal 8/5.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    },
+    {
+      "id": "g6-fraction-division-hard-6",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "stem": "A recipe calls for 7/8 cup of cocoa powder. A measuring spoon holds 5/8 cup. How many scoops are required?",
+      "expression": "(7/8) / (5/8)",
+      "params": null,
+      "template_id": null,
+      "options": [
+        {
+          "text": "8/5",
+          "misconception": "inverts_both_fractions"
+        },
+        {
+          "text": "35/64",
+          "misconception": "divides_numerators_and_denominators_directly"
+        },
+        {
+          "text": "7/5",
+          "misconception": null
+        },
+        {
+          "text": "5/7",
+          "misconception": "inverts_dividend_instead_of_divisor"
+        }
+      ],
+      "correct_index": 2,
+      "explanation": "(7/8) / (5/8) = 7/5 scoops.",
+      "hint": "Multiply 7/8 by the reciprocal 8/5.",
+      "model": "template-seed",
+      "prompt_version": "seed-v1",
+      "verified": true,
+      "provenance": "unchecked"
+    }
+  ]
+}
