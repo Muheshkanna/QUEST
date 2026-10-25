@@ -1,0 +1,961 @@
+{
+  "misconceptions": [
+    {
+      "id": "confuses_tenths_and_hundredths",
+      "topic_ids": [
+        "g5-decimal-compare-round"
+      ],
+      "kid_label": "You mixed up tenths and hundredths",
+      "diagnosis": "You compared the first digit after the decimal point as if it were the hundredths place.",
+      "why_it_fails": "Tenths and hundredths represent different magnitudes; confusing them leads to wrong ordering.",
+      "mini_example": "0.7 vs 0.65 – the correct comparison is 0.70 > 0.65.",
+      "applies_when": "operation_is_decimal_compare"
+    },
+    {
+      "id": "longer_decimal_is_larger",
+      "topic_ids": [
+        "g5-decimal-compare-round"
+      ],
+      "kid_label": "Longer decimal looks bigger",
+      "diagnosis": "You think a number with more decimal places is always larger.",
+      "why_it_fails": "The value depends on the actual digits, not the length of the decimal.",
+      "mini_example": "0.70 vs 0.65 – both have two places, but 0.70 is larger.",
+      "applies_when": "operation_is_decimal_compare"
+    },
+    {
+      "id": "round_down_without_truncation_rule",
+      "topic_ids": [
+        "g5-decimal-compare-round"
+      ],
+      "kid_label": "You rounded down incorrectly",
+      "diagnosis": "You dropped digits instead of rounding properly.",
+      "why_it_fails": "Rounding must consider the next digit to decide up or down.",
+      "mini_example": "0.74 rounded to one decimal is 0.7, not 0.8.",
+      "applies_when": "operation_is_decimal_round"
+    },
+    {
+      "id": "carries_over_decimal_point_incorrectly",
+      "topic_ids": [
+        "g5-decimal-ops"
+      ],
+      "kid_label": "Wrong carry in decimals",
+      "diagnosis": "You added a carry to the wrong column.",
+      "why_it_fails": "Carrying must align with the decimal places.",
+      "mini_example": "0.9 + 0.3 = 1.2 (carry goes to the ones place).",
+      "applies_when": "operation_is_decimal_add"
+    },
+    {
+      "id": "ignores_empty_place_value",
+      "topic_ids": [
+        "g5-decimal-ops"
+      ],
+      "kid_label": "Forgot a zero place",
+      "diagnosis": "You skipped an empty place value when adding.",
+      "why_it_fails": "Each digit column must be considered, even if zero.",
+      "mini_example": "0.05 + 0.5 = 0.55 (the tens place is 0).",
+      "applies_when": "operation_is_decimal_add"
+    },
+    {
+      "id": "unaligned_decimals",
+      "topic_ids": [
+        "g5-decimal-ops"
+      ],
+      "kid_label": "Decimals not lined up",
+      "diagnosis": "You added numbers with decimal points misaligned.",
+      "why_it_fails": "Digits must line up by place value before adding.",
+      "mini_example": "1.2 + 0.34 should be 1.54, not 1.56.",
+      "applies_when": "operation_is_decimal_add"
+    },
+    {
+      "id": "ignores_remainder_context",
+      "topic_ids": [
+        "g5-divide"
+      ],
+      "kid_label": "Forgot the remainder",
+      "diagnosis": "You ignored the remainder when dividing.",
+      "why_it_fails": "The remainder is part of the division result.",
+      "mini_example": "12 ÷ 5 = 2 R 2, not just 2.",
+      "applies_when": "operation_is_divide"
+    },
+    {
+      "id": "misplaces_quotient_digit_column",
+      "topic_ids": [
+        "g5-divide"
+      ],
+      "kid_label": "Quotient in wrong column",
+      "diagnosis": "You wrote the quotient digits in the wrong place.",
+      "why_it_fails": "Each digit of the quotient belongs to a specific place value.",
+      "mini_example": "12 ÷ 5 → 2 should be in the tens column if dividing tens.",
+      "applies_when": "operation_is_divide"
+    },
+    {
+      "id": "subtraction_substep_error",
+      "topic_ids": [
+        "g5-divide"
+      ],
+      "kid_label": "Wrong subtraction step",
+      "diagnosis": "You subtracted incorrectly while finding the remainder.",
+      "why_it_fails": "Each subtraction step must use the correct partial product.",
+      "mini_example": "12 ÷ 5: 10 goes into 12 once, remainder 2.",
+      "applies_when": "operation_is_divide"
+    },
+    {
+      "id": "add_denominators",
+      "topic_ids": [
+        "g5-fractions-add"
+      ],
+      "kid_label": "You added denominators",
+      "diagnosis": "You added the bottom numbers instead of finding a common denominator.",
+      "why_it_fails": "Fractions must share a common denominator before adding numerators.",
+      "mini_example": "1/3 + 1/4 → (1+1)/(3+4) = 2/7 (incorrect).",
+      "applies_when": "operation_is_fraction_add"
+    },
+    {
+      "id": "confuses_division_order",
+      "topic_ids": [
+        "g5-fractions-divide-unit"
+      ],
+      "kid_label": "Wrong division order",
+      "diagnosis": "You divided the denominator by the numerator.",
+      "why_it_fails": "Division order matters: dividend ÷ divisor.",
+      "mini_example": "3 ÷ 1/2 → should be 3 * 2 = 6, not 1/2 ÷ 3.",
+      "applies_when": "operation_is_fraction_divide"
+    },
+    {
+      "id": "fractional_quotient_confused_with_remainder",
+      "topic_ids": [
+        "g5-fractions-divide-unit"
+      ],
+      "kid_label": "Quotient vs remainder mix‑up",
+      "diagnosis": "You treated the remainder as a fraction instead of a whole number.",
+      "why_it_fails": "Remainder is a separate integer, not part of the fractional result.",
+      "mini_example": "7 ÷ 3 → 2 R 1, not 2 1/3.",
+      "applies_when": "operation_is_fraction_divide"
+    },
+    {
+      "id": "multiplies_instead_of_dividing",
+      "topic_ids": [
+        "g5-fractions-divide-unit"
+      ],
+      "kid_label": "You multiplied instead of dividing",
+      "diagnosis": "You used multiplication where division was required.",
+      "why_it_fails": "Multiplication and division are inverse operations.",
+      "mini_example": "6 ÷ 2 → you wrote 6 * 2 = 12.",
+      "applies_when": "operation_is_fraction_divide"
+    },
+    {
+      "id": "believes_multiplication_always_increases",
+      "topic_ids": [
+        "g5-fractions-multiply"
+      ],
+      "kid_label": "Multiplication always makes bigger",
+      "diagnosis": "You assumed multiplying fractions always yields a larger number.",
+      "why_it_fails": "Multiplying by a fraction less than 1 makes the product smaller.",
+      "mini_example": "1/2 * 1/3 = 1/6 (smaller).",
+      "applies_when": "operation_is_fraction_multiply"
+    },
+    {
+      "id": "cross_multiplies_instead_of_multiplying_straight",
+      "topic_ids": [
+        "g5-fractions-multiply"
+      ],
+      "kid_label": "You cross‑multiplied incorrectly",
+      "diagnosis": "You multiplied numerator of one fraction by denominator of the other.",
+      "why_it_fails": "Correct multiplication uses numerators together and denominators together.",
+      "mini_example": "1/2 * 1/3 → 1*3 / 2*1 = 3/2 (incorrect).",
+      "applies_when": "operation_is_fraction_multiply"
+    },
+    {
+      "id": "multiplies_both_by_whole_number",
+      "topic_ids": [
+        "g5-fractions-multiply"
+      ],
+      "kid_label": "You multiplied both parts by a whole number",
+      "diagnosis": "You multiplied numerator and denominator by the same whole number instead of each other.",
+      "why_it_fails": "Multiplication of fractions requires multiplying across, not scaling both.",
+      "mini_example": "1/2 * 1/3 → (1*2)/(2*3) = 2/6 (incorrect).",
+      "applies_when": "operation_is_fraction_multiply"
+    },
+    {
+      "id": "aligns_partial_products_incorrectly",
+      "topic_ids": [
+        "g5-multiply"
+      ],
+      "kid_label": "Partial products misaligned",
+      "diagnosis": "You placed the partial sums in the wrong columns.",
+      "why_it_fails": "Each partial product must be shifted according to its place value.",
+      "mini_example": "23 * 12 → 23*2 goes under ones, 23*1 under tens.",
+      "applies_when": "operation_is_multiply"
+    },
+    {
+      "id": "forgets_tens_place_zero",
+      "topic_ids": [
+        "g5-multiply"
+      ],
+      "kid_label": "Missing tens zero",
+      "diagnosis": "You omitted a zero placeholder for the tens place.",
+      "why_it_fails": "Place value zeros preserve magnitude.",
+      "mini_example": "30 * 4 = 120, not 12.",
+      "applies_when": "operation_is_multiply"
+    },
+    {
+      "id": "miscalculates_regrouping_additions",
+      "topic_ids": [
+        "g5-multiply"
+      ],
+      "kid_label": "Regrouping error in addition",
+      "diagnosis": "You added partial products without carrying correctly.",
+      "why_it_fails": "Carrying ensures each column stays under 10.",
+      "mini_example": "14 * 15 → 210, not 200.",
+      "applies_when": "operation_is_multiply"
+    },
+    {
+      "id": "addition_before_subtraction_dogma",
+      "topic_ids": [
+        "g5-order-ops"
+      ],
+      "kid_label": "Add before subtract always",
+      "diagnosis": "You performed addition before subtraction regardless of order.",
+      "why_it_fails": "Left‑to‑right evaluation respects operation precedence.",
+      "mini_example": "5 - 2 + 3 → you might do 5 + 2 - 3 = 4 (incorrect).",
+      "applies_when": "operation_is_expression"
+    },
+    {
+      "id": "ignores_parentheses_grouping",
+      "topic_ids": [
+        "g5-order-ops"
+      ],
+      "kid_label": "Skipped parentheses",
+      "diagnosis": "You evaluated inside parentheses last.",
+      "why_it_fails": "Parentheses dictate the first operations to perform.",
+      "mini_example": "(2 + 3) * 4 → you might do 2 + (3*4).",
+      "applies_when": "operation_is_expression"
+    },
+    {
+      "id": "left_to_right_disregards_precedence",
+      "topic_ids": [
+        "g5-order-ops"
+      ],
+      "kid_label": "Left‑to‑right only",
+      "diagnosis": "You ignored operator precedence and went strictly left‑to‑right.",
+      "why_it_fails": "Multiplication/division come before addition/subtraction.",
+      "mini_example": "2 + 3 * 4 → you might get 20 instead of 14.",
+      "applies_when": "operation_is_expression"
+    },
+    {
+      "id": "additive_power_of_ten",
+      "topic_ids": [
+        "g5-place-value"
+      ],
+      "kid_label": "Added instead of shifting",
+      "diagnosis": "Place value shifts digits, not adds.",
+      "why_it_fails": "Place value shifts digits, not adds.",
+      "mini_example": "30 + 5 → you might think 35 is 3+5=8 (incorrect).",
+      "applies_when": "operation_is_place_value"
+    },
+    {
+      "id": "confuses_ten_times_with_add_ten",
+      "topic_ids": [
+        "g5-place-value"
+      ],
+      "kid_label": "Ten times vs add ten",
+      "diagnosis": "You multiplied by ten when you should have added ten.",
+      "why_it_fails": "Multiplication changes magnitude, addition only shifts.",
+      "mini_example": "5 + 10 → you might compute 5*10 = 50.",
+      "applies_when": "operation_is_place_value"
+    },
+    {
+      "id": "decimal_point_shift_reversed",
+      "topic_ids": [
+        "g5-place-value"
+      ],
+      "kid_label": "Decimal point moved wrong way",
+      "diagnosis": "You shifted the decimal point in the opposite direction.",
+      "why_it_fails": "Moving left vs right changes magnitude opposite.",
+      "mini_example": "0.5 × 10 → you might write 5.0 instead of 5.",
+      "applies_when": "operation_is_place_value"
+    },
+    {
+      "id": "adds_dimensions_instead_of_multiplying",
+      "topic_ids": [
+        "g5-volume"
+      ],
+      "kid_label": "Added dimensions instead of multiplying",
+      "diagnosis": "You summed length, width, and height rather than multiplying them.",
+      "why_it_fails": "Volume is the product of three dimensions.",
+      "mini_example": "2×3×4 → you might compute 2+3+4=9.",
+      "applies_when": "operation_is_volume"
+    },
+    {
+      "id": "confuses_surface_area_with_volume",
+      "topic_ids": [
+        "g5-volume"
+      ],
+      "kid_label": "Surface area vs volume mix‑up",
+      "diagnosis": "You calculated surface area when asked for volume.",
+      "why_it_fails": "Surface area uses squares of sides, volume uses cubes.",
+      "mini_example": "Box 2×2×2 → surface area 24, volume 8.",
+      "applies_when": "operation_is_volume"
+    },
+    {
+      "id": "forgets_height_layering",
+      "topic_ids": [
+        "g5-volume"
+      ],
+      "kid_label": "Forgot height layer",
+      "diagnosis": "You omitted one dimension when computing volume.",
+      "why_it_fails": "All three dimensions are required.",
+      "mini_example": "2×3×4 → you might compute 2×3=6.",
+      "applies_when": "operation_is_volume"
+    },
+    {
+      "id": "drops_zeros_before_decimal_place",
+      "topic_ids": [
+        "g6-decimals"
+      ],
+      "kid_label": "Dropped leading zeros",
+      "diagnosis": "You omitted zeros that should appear before the decimal point.",
+      "why_it_fails": "Zeros preserve place value.",
+      "mini_example": "0.06 × 5 = 0.30, not .3.",
+      "applies_when": "operation_is_decimal_multiply"
+    },
+    {
+      "id": "fails_to_shift_divisor_decimal",
+      "topic_ids": [
+        "g6-decimals"
+      ],
+      "kid_label": "Did not shift divisor decimal",
+      "diagnosis": "You forgot to move the decimal point in the divisor during division.",
+      "why_it_fails": "Both numbers must be aligned to eliminate the divisor’s decimal.",
+      "mini_example": "0.5 ÷ 0.25 → you must shift to 5 ÷ 2.5.",
+      "applies_when": "operation_is_decimal_divide"
+    },
+    {
+      "id": "miscounts_decimal_places_in_product",
+      "topic_ids": [
+        "g6-decimals"
+      ],
+      "kid_label": "Wrong decimal count in product",
+      "diagnosis": "You placed the decimal based on whole‑number digit count.",
+      "why_it_fails": "Total decimal places equal sum of operand decimal places.",
+      "mini_example": "0.12 * 0.3 = 0.036, not 0.36.",
+      "applies_when": "operation_is_decimal_multiply"
+    },
+    {
+      "id": "multiplies_instead_of_dividing_coefficients",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "Multiplied when should divide",
+      "diagnosis": "You multiplied both sides instead of dividing by the coefficient.",
+      "why_it_fails": "Isolating the variable requires the inverse operation.",
+      "mini_example": "3x = 12 → you might compute 12*3 = 36.",
+      "applies_when": "operation_is_equation"
+    },
+    {
+      "id": "operates_on_one_side_only",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "Changed one side only",
+      "diagnosis": "You performed the operation on one side of the equation without balancing.",
+      "why_it_fails": "Both sides must stay equal.",
+      "mini_example": "x + 5 = 12 → you subtract 5 only from left side.",
+      "applies_when": "operation_is_equation"
+    },
+    {
+      "id": "performs_same_operation_instead_of_inverse",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "Did same operation instead of inverse",
+      "diagnosis": "You added when you should have subtracted (or vice‑versa).",
+      "why_it_fails": "Solving requires inverse operations.",
+      "mini_example": "x - 3 = 7 → you add 3 to both sides (correct) vs adding 3 to left only (incorrect).",
+      "applies_when": "operation_is_equation"
+    },
+    {
+      "id": "combines_unlike_terms",
+      "topic_ids": [
+        "g6-equiv-expressions"
+      ],
+      "kid_label": "Combined unlike terms",
+      "diagnosis": "You added terms that have different variables.",
+      "why_it_fails": "Only like terms can be combined.",
+      "mini_example": "3x + 4 = 7x (incorrect).",
+      "applies_when": "operation_is_expression_equivalence"
+    },
+    {
+      "id": "incomplete_distribution",
+      "topic_ids": [
+        "g6-equiv-expressions"
+      ],
+      "kid_label": "Forgot part of distribution",
+      "diagnosis": "You distributed a multiplier to only one term.",
+      "why_it_fails": "Each term inside parentheses must be multiplied.",
+      "mini_example": "2(x + 3) → 2x + 3 (incorrect).",
+      "applies_when": "operation_is_expression_equivalence"
+    },
+    {
+      "id": "sign_error_distributing_negative",
+      "topic_ids": [
+        "g6-equiv-expressions"
+      ],
+      "kid_label": "Wrong sign when distributing negative",
+      "diagnosis": "You kept the sign positive when it should be negative.",
+      "why_it_fails": "Distributing a negative flips the sign of each term.",
+      "mini_example": "-(x + 2) → -x - 2 (correct), not -x + 2.",
+      "applies_when": "operation_is_expression_equivalence"
+    },
+    {
+      "id": "confuses_exponent_order",
+      "topic_ids": [
+        "g6-exponents"
+      ],
+      "kid_label": "Swapped base and exponent",
+      "diagnosis": "You evaluated 3^2 as 2^3.",
+      "why_it_fails": "Base and exponent are not interchangeable.",
+      "mini_example": "3^2 = 9, not 8.",
+      "applies_when": "operation_is_exponent"
+    },
+    {
+      "id": "evaluates_exponent_zero_as_zero",
+      "topic_ids": [
+        "g6-exponents"
+      ],
+      "kid_label": "Zero exponent gave zero",
+      "diagnosis": "You thought any number to the power of 0 equals 0.",
+      "why_it_fails": "Any non‑zero base to the 0 power equals 1.",
+      "mini_example": "5^0 = 1, not 0.",
+      "applies_when": "operation_is_exponent"
+    },
+    {
+      "id": "multiplies_base_by_exponent",
+      "topic_ids": [
+        "g6-exponents"
+      ],
+      "kid_label": "Multiplied base by exponent",
+      "diagnosis": "You multiplied the base and exponent instead of exponentiating.",
+      "why_it_fails": "Exponentiation is repeated multiplication, not a single product.",
+      "mini_example": "4^3 → you might write 4*3=12 (incorrect).",
+      "applies_when": "operation_is_exponent"
+    },
+    {
+      "id": "divides_numerators_and_denominators_directly",
+      "topic_ids": [
+        "g6-fraction-division"
+      ],
+      "kid_label": "Divided numerators and denominators directly",
+      "diagnosis": "You divided numerator by numerator and denominator by denominator.",
+      "why_it_fails": "Division of fractions requires a common denominator.",
+      "mini_example": "3/4 ÷ 1/2 → you might compute 3/1 = 3 (incorrect).",
+      "applies_when": "operation_is_fraction_divide"
+    },
+    {
+      "id": "inverts_both_fractions",
+      "topic_ids": [
+        "g6-fraction-division"
+      ],
+      "kid_label": "Inverted both fractions",
+      "diagnosis": "You flipped both fractions before multiplying.",
+      "why_it_fails": "Only the divisor should be inverted.",
+      "mini_example": "3/4 ÷ 1/2 → you might write 4/3 * 2/1.",
+      "applies_when": "operation_is_fraction_divide"
+    },
+    {
+      "id": "inverts_dividend_instead_of_divisor",
+      "topic_ids": [
+        "g6-fraction-division"
+      ],
+      "kid_label": "Inverted the wrong fraction",
+      "diagnosis": "You inverted the dividend instead of the divisor.",
+      "why_it_fails": "Correct method: multiply by reciprocal of divisor.",
+      "mini_example": "3/4 ÷ 1/2 → you might write 4/3 * 1/2.",
+      "applies_when": "operation_is_fraction_divide"
+    },
+    {
+      "id": "confuses_absolute_value_with_opposite",
+      "topic_ids": [
+        "g6-integers"
+      ],
+      "kid_label": "Absolute value vs opposite",
+      "diagnosis": "You thought the absolute value changes the sign.",
+      "why_it_fails": "Absolute value makes a number non‑negative.",
+      "mini_example": "|-5| = 5, not -5.",
+      "applies_when": "operation_is_integer_compare"
+    },
+    {
+      "id": "larger_magnitude_negative_is_greater",
+      "topic_ids": [
+        "g6-integers"
+      ],
+      "kid_label": "Bigger negative is greater",
+      "diagnosis": "You believed -8 > -3 because 8 > 3.",
+      "why_it_fails": "More negative means smaller.",
+      "mini_example": "-8 < -3.",
+      "applies_when": "operation_is_integer_compare"
+    },
+    {
+      "id": "misplaces_negative_numbers_on_numberline",
+      "topic_ids": [
+        "g6-integers"
+      ],
+      "kid_label": "Wrong order on number line",
+      "diagnosis": "You ordered negatives as -1, -2, -3.",
+      "why_it_fails": "Numbers increase left to right; -3 is left of -2.",
+      "mini_example": "-3, -2, -1.",
+      "applies_when": "operation_is_integer_compare"
+    },
+    {
+      "id": "confuses_mean_with_median",
+      "topic_ids": [
+        "g6-mean-median"
+      ],
+      "kid_label": "Mean vs median mix‑up",
+      "diagnosis": "You used the median when the mean was required.",
+      "why_it_fails": "Mean is average; median is middle value.",
+      "mini_example": "Data 2,4,6 → mean 4, median 4 (same), but 1,2,100 → mean 34.33, median 2.",
+      "applies_when": "operation_is_statistical_center"
+    },
+    {
+      "id": "divides_sum_by_arbitrary_number",
+      "topic_ids": [
+        "g6-mean-median"
+      ],
+      "kid_label": "Divided by wrong number",
+      "diagnosis": "You divided the total by 2 instead of the count.",
+      "why_it_fails": "Mean uses the number of data points.",
+      "mini_example": "Sum 30, count 5 → 30/5 = 6, not 30/2.",
+      "applies_when": "operation_is_statistical_center"
+    },
+    {
+      "id": "finds_median_without_ordering_data",
+      "topic_ids": [
+        "g6-mean-median"
+      ],
+      "kid_label": "Median without sorting",
+      "diagnosis": "You picked the middle number without ordering the list.",
+      "why_it_fails": "Median requires sorted data.",
+      "mini_example": "Data 5,1,3 → median is 3 after sorting.",
+      "applies_when": "operation_is_statistical_center"
+    },
+    {
+      "id": "confuses_percent_of_vs_percent_change",
+      "topic_ids": [
+        "g6-percents"
+      ],
+      "kid_label": "Percent of vs change mix‑up",
+      "diagnosis": "You calculated the discount amount instead of the final price.",
+      "why_it_fails": "Percent of is part of whole; percent change is difference.",
+      "mini_example": "25% off $100 → you might give $25 (discount) instead of $75 (final).",
+      "applies_when": "operation_is_percent"
+    },
+    {
+      "id": "decimal_place_percent_shift",
+      "topic_ids": [
+        "g6-percents"
+      ],
+      "kid_label": "Shifted decimal wrong",
+      "diagnosis": "You wrote 5% as 0.5 instead of 0.05.",
+      "why_it_fails": "Percent means per hundred.",
+      "mini_example": "5% = 0.05.",
+      "applies_when": "operation_is_percent"
+    },
+    {
+      "id": "multiplies_percent_directly_without_hundredth_conversion",
+      "topic_ids": [
+        "g6-percents"
+      ],
+      "kid_label": "Multiplied without converting to hundredths",
+      "diagnosis": "You multiplied by 25 instead of 0.25 for 25%.",
+      "why_it_fails": "Percent must be turned into a decimal.",
+      "mini_example": "25% of 40 → 40 * 0.25 = 10, not 40 * 25.",
+      "applies_when": "operation_is_percent"
+    },
+    {
+      "id": "additive_ratio_scaling",
+      "topic_ids": [
+        "g6-ratios"
+      ],
+      "kid_label": "Added instead of scaling",
+      "diagnosis": "You added a constant to both parts of a ratio.",
+      "why_it_fails": "Ratios scale multiplicatively.",
+      "mini_example": "2:3 → you might write 3:4 instead of 4:6.",
+      "applies_when": "operation_is_ratio"
+    },
+    {
+      "id": "inverts_ratio_terms_order",
+      "topic_ids": [
+        "g6-ratios"
+      ],
+      "kid_label": "Reversed ratio order",
+      "diagnosis": "You swapped the two numbers in the ratio.",
+      "why_it_fails": "Order matters for meaning.",
+      "mini_example": "2:5 → you wrote 5:2.",
+      "applies_when": "operation_is_ratio"
+    },
+    {
+      "id": "part_to_part_vs_part_to_whole",
+      "topic_ids": [
+        "g6-ratios"
+      ],
+      "kid_label": "Part‑to‑part vs part‑to‑whole",
+      "diagnosis": "You compared a part to the whole when the task asked for part‑to‑part.",
+      "why_it_fails": "Different contexts produce different ratios.",
+      "mini_example": "Cats to total pets vs cats to dogs.",
+      "applies_when": "operation_is_ratio"
+    },
+    {
+      "id": "divides_in_reversed_order",
+      "topic_ids": [
+        "g6-unit-rates"
+      ],
+      "kid_label": "Divided in reverse order",
+      "diagnosis": "You swapped numerator and denominator when computing a rate.",
+      "why_it_fails": "Unit rates require quantity per single unit.",
+      "mini_example": "5 dollars per 2 items → 2/5 instead of 5/2.",
+      "applies_when": "operation_is_rate"
+    },
+    {
+      "id": "forgets_unit_rate_denominator_is_one",
+      "topic_ids": [
+        "g6-unit-rates"
+      ],
+      "kid_label": "Forgot denominator should be 1",
+      "diagnosis": "You left the denominator as something other than 1.",
+      "why_it_fails": "Unit rate expresses per one unit.",
+      "mini_example": "20 miles per 4 hours → 5 miles per hour, not 20/4.",
+      "applies_when": "operation_is_rate"
+    },
+    {
+      "id": "misinterprets_speed_units",
+      "topic_ids": [
+        "g6-unit-rates"
+      ],
+      "kid_label": "Speed units reversed",
+      "diagnosis": "You confused miles per hour with hours per mile.",
+      "why_it_fails": "Direction of division matters.",
+      "mini_example": "60 mph → 1/60 hours per mile is wrong.",
+      "applies_when": "operation_is_rate"
+    },
+    {
+      "id": "added_tops_and_bottoms",
+      "topic_ids": [
+        "g5-fractions-add"
+      ],
+      "kid_label": "You added the tops and the bottoms",
+      "diagnosis": "You added both the numerators and the denominators separately instead of finding a common denominator.",
+      "why_it_fails": "Denominators tell you the size of each piece; you can only add numerators when the pieces are the same size.",
+      "mini_example": "1/4 + 1/8 -> (1+1)/(4+8) = 2/12 (wrong)",
+      "applies_when": "operation_is_fraction_add"
+    },
+    {
+      "id": "renamed_bottom_kept_tops",
+      "topic_ids": [
+        "g5-fractions-add"
+      ],
+      "kid_label": "You found a common bottom but forgot to change the tops",
+      "diagnosis": "You correctly found the common denominator but did not scale the numerators to match.",
+      "why_it_fails": "When you change the denominator, you must multiply the numerator by the same factor to keep the fraction equal.",
+      "mini_example": "1/4 + 1/8 -> 2/8 (forgot to convert 1/4 to 2/8)",
+      "applies_when": "b != d"
+    },
+    {
+      "id": "multiplied_instead_of_adding",
+      "topic_ids": [
+        "g5-fractions-add"
+      ],
+      "kid_label": "You multiplied the fractions instead of adding",
+      "diagnosis": "You multiplied numerator by numerator and denominator by denominator like it was a multiplication problem.",
+      "why_it_fails": "Adding fractions requires a common denominator; multiplication is a completely different operation.",
+      "mini_example": "1/4 + 1/8 -> 1/32 (wrong)",
+      "applies_when": "operation_is_fraction_add"
+    },
+    {
+      "id": "subtracted_instead_of_adding",
+      "topic_ids": [
+        "g5-fractions-add"
+      ],
+      "kid_label": "You subtracted instead of adding",
+      "diagnosis": "You found the difference between the two fractions instead of their sum.",
+      "why_it_fails": "Adding means combining amounts; subtracting means finding the gap between them.",
+      "mini_example": "1/4 + 1/8 -> 1/4 - 1/8 = 1/8 (wrong)",
+      "applies_when": "abs(a/b - c/d) > 0"
+    },
+    {
+      "id": "added_tops_kept_first_bottom",
+      "topic_ids": [
+        "g5-fractions-add"
+      ],
+      "kid_label": "You added the tops but kept just one bottom",
+      "diagnosis": "You added the numerators but used only the first denominator without finding a common denominator.",
+      "why_it_fails": "You need a common denominator before adding numerators; just keeping one denominator does not work.",
+      "mini_example": "1/4 + 1/8 -> 2/4 (wrong)",
+      "applies_when": "b != d"
+    },
+    {
+      "id": "added_the_sides",
+      "topic_ids": [
+        "g5-volume"
+      ],
+      "kid_label": "You added all three sides instead of multiplying",
+      "diagnosis": "You found the total of length, width, and height by adding instead of multiplying.",
+      "why_it_fails": "Volume measures 3D space by multiplying all three dimensions together, not adding them.",
+      "mini_example": "6x6x4 -> 6+6+4 = 16 (wrong); correct is 144",
+      "applies_when": "operation_is_volume"
+    },
+    {
+      "id": "found_base_area_only",
+      "topic_ids": [
+        "g5-volume"
+      ],
+      "kid_label": "You only found the base area",
+      "diagnosis": "You multiplied length times width and stopped, forgetting to multiply by height.",
+      "why_it_fails": "The base area only covers one layer; you need to multiply by height to count all layers.",
+      "mini_example": "6x6x4 -> 6x6 = 36 (wrong); correct is 144",
+      "applies_when": "operation_is_volume"
+    },
+    {
+      "id": "used_surface_area_formula",
+      "topic_ids": [
+        "g5-volume"
+      ],
+      "kid_label": "You calculated surface area instead of volume",
+      "diagnosis": "You found the total area of all six faces instead of the space inside the box.",
+      "why_it_fails": "Surface area measures the outside wrapping; volume measures the space inside the shape.",
+      "mini_example": "6x6x4 -> 2*(36+24+24) = 168 (wrong); correct is 144",
+      "applies_when": "operation_is_volume"
+    },
+    {
+      "id": "multiplied_two_sides_then_added_height",
+      "topic_ids": [
+        "g5-volume"
+      ],
+      "kid_label": "You multiplied two sides then just added the height",
+      "diagnosis": "You multiplied length and width correctly but then added height instead of multiplying by it.",
+      "why_it_fails": "Height must be multiplied because it represents how many base-layers tall the shape is.",
+      "mini_example": "6x6x4 -> 6x6+4 = 40 (wrong); correct is 144",
+      "applies_when": "operation_is_volume"
+    },
+    {
+      "id": "cubed_one_side",
+      "topic_ids": [
+        "g5-volume"
+      ],
+      "kid_label": "You cubed just one side",
+      "diagnosis": "You raised one side length to the power of 3 as if it were a perfect cube.",
+      "why_it_fails": "Only a perfect cube has all equal sides; a rectangular prism needs all three different dimensions.",
+      "mini_example": "6x6x4 -> 6^3 = 216 (wrong); correct is 144",
+      "applies_when": "not all sides equal"
+    },
+    {
+      "id": "multiplied_by_percent_number",
+      "topic_ids": [
+        "g6-percents"
+      ],
+      "kid_label": "You multiplied by the percent number directly",
+      "diagnosis": "You multiplied the total by the percent number instead of converting it to a decimal first.",
+      "why_it_fails": "Percent means per hundred; you must divide the percent by 100 before multiplying.",
+      "mini_example": "15% of 60 -> 15x60 = 900 (wrong); correct is 9",
+      "applies_when": "operation_is_percent"
+    },
+    {
+      "id": "moved_decimal_wrong_way",
+      "topic_ids": [
+        "g6-percents"
+      ],
+      "kid_label": "You shifted the decimal point the wrong way",
+      "diagnosis": "You moved the decimal one place instead of two, treating percent as tenths instead of hundredths.",
+      "why_it_fails": "Percent means per 100, so you must move the decimal two places to the left.",
+      "mini_example": "15% of 60 -> 1.5x60 = 90 (wrong); correct is 9",
+      "applies_when": "operation_is_percent"
+    },
+    {
+      "id": "found_the_leftover_amount",
+      "topic_ids": [
+        "g6-percents"
+      ],
+      "kid_label": "You found what was left over, not the percent",
+      "diagnosis": "You subtracted the percent amount from the total instead of reporting the percent itself.",
+      "why_it_fails": "The question asks for the percent of the total, not the remainder after removing that part.",
+      "mini_example": "15% of 60 -> 60-9 = 51 (wrong); correct is 9",
+      "applies_when": "operation_is_percent"
+    },
+    {
+      "id": "divided_instead_of_multiplying",
+      "topic_ids": [
+        "g6-percents"
+      ],
+      "kid_label": "You divided instead of multiplying",
+      "diagnosis": "You divided the total by the percent number rather than multiplying by the decimal.",
+      "why_it_fails": "Finding a percent of a number requires multiplication, not division.",
+      "mini_example": "15% of 60 -> 60/15 = 4 (wrong); correct is 9",
+      "applies_when": "n/p != (p/100)*n"
+    },
+    {
+      "id": "found_one_percent_only",
+      "topic_ids": [
+        "g6-percents"
+      ],
+      "kid_label": "You found 1% instead of the asked percent",
+      "diagnosis": "You divided by 100 to get 1% but forgot to multiply by the actual percent value.",
+      "why_it_fails": "Dividing by 100 gives just 1%; you then need to multiply by the percent number.",
+      "mini_example": "15% of 60 -> 60/100 = 0.6 (wrong); correct is 9",
+      "applies_when": "operation_is_percent"
+    },
+    {
+      "id": "subtracted_instead_of_dividing",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "You subtracted the coefficient instead of dividing",
+      "diagnosis": "You subtracted the number in front of x from the other side rather than dividing both sides by it.",
+      "why_it_fails": "When a number multiplies x, you must divide both sides by that number to isolate x.",
+      "mini_example": "6x=54 -> 54-6=48 (wrong); correct is 54/6=9",
+      "applies_when": "form == ax_b"
+    },
+    {
+      "id": "multiplied_instead_of_dividing",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "You multiplied both numbers together",
+      "diagnosis": "You multiplied the coefficient by the other side instead of dividing.",
+      "why_it_fails": "Multiplication is not the inverse of multiplication; you need division to undo it.",
+      "mini_example": "6x=54 -> 6x54=324 (wrong); correct is 54/6=9",
+      "applies_when": "form == ax_b"
+    },
+    {
+      "id": "divided_the_wrong_way",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "You divided the wrong way around",
+      "diagnosis": "You divided the coefficient by the total instead of dividing the total by the coefficient.",
+      "why_it_fails": "x = b/a, not a/b; the number alone goes on top.",
+      "mini_example": "6x=54 -> 6/54=1/9 (wrong); correct is 54/6=9",
+      "applies_when": "form == ax_b"
+    },
+    {
+      "id": "ignored_the_coefficient",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "You ignored the number in front of x",
+      "diagnosis": "You wrote the right-hand side as the answer without dividing by the coefficient.",
+      "why_it_fails": "The coefficient multiplies x; to find x you must divide both sides by it.",
+      "mini_example": "6x=54 -> x=54 (wrong); correct is x=9",
+      "applies_when": "form == ax_b"
+    },
+    {
+      "id": "added_instead_of_subtracting",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "You added instead of subtracting",
+      "diagnosis": "You added the constant to both sides when you should have subtracted it.",
+      "why_it_fails": "To undo addition, you must subtract; adding again makes the result even bigger.",
+      "mini_example": "x+5=12 -> x=5+12=17 (wrong); correct is x=7",
+      "applies_when": "form == xpa_b"
+    },
+    {
+      "id": "subtracted_the_wrong_way",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "You subtracted but in the wrong order",
+      "diagnosis": "You subtracted the larger number from the smaller, giving a negative result.",
+      "why_it_fails": "x = b - a, not a - b; the constant is removed from the total.",
+      "mini_example": "x+5=12 -> x=5-12=-7 (wrong); correct is x=7",
+      "applies_when": "form == xpa_b and a-b != b-a"
+    },
+    {
+      "id": "undid_multiplication_first",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "You divided before subtracting the constant",
+      "diagnosis": "You divided by the coefficient before removing the constant term.",
+      "why_it_fails": "Order of operations in reverse: subtract the constant first, then divide by the coefficient.",
+      "mini_example": "2x+3=11 -> 11/2-3=2.5 (wrong); correct is (11-3)/2=4",
+      "applies_when": "form == axpb_c"
+    },
+    {
+      "id": "added_the_constant",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "You added the constant instead of subtracting it",
+      "diagnosis": "You added the constant to the right side before dividing instead of subtracting it.",
+      "why_it_fails": "The constant is added to the x-term; to isolate x you must subtract it first.",
+      "mini_example": "2x+3=11 -> (11+3)/2=7 (wrong); correct is (11-3)/2=4",
+      "applies_when": "form == axpb_c"
+    },
+    {
+      "id": "ignored_the_constant_term",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "You ignored the extra number added to x",
+      "diagnosis": "You divided the right side by the coefficient but forgot about the constant added to x.",
+      "why_it_fails": "You must subtract the constant from both sides before you can divide.",
+      "mini_example": "2x+3=11 -> 11/2=5.5 (wrong); correct is (11-3)/2=4",
+      "applies_when": "form == axpb_c"
+    },
+    {
+      "id": "dropped_the_remainder",
+      "topic_ids": [
+        "g5-divide"
+      ],
+      "kid_label": "You forgot the remainder",
+      "diagnosis": "You found the quotient but wrote 0 as the remainder instead of the real leftover.",
+      "why_it_fails": "The remainder is the amount left over after dividing evenly; it is rarely zero.",
+      "mini_example": "451/16 -> 28 R 0 (wrong); correct is 28 R 3",
+      "applies_when": "operation_is_divide"
+    },
+    {
+      "id": "swapped_quotient_and_remainder",
+      "topic_ids": [
+        "g5-divide"
+      ],
+      "kid_label": "You swapped the quotient and the remainder",
+      "diagnosis": "You wrote the remainder number first and the quotient number second.",
+      "why_it_fails": "The quotient is the whole-number result and always comes first in R notation.",
+      "mini_example": "451/16 -> 3 R 28 (wrong); correct is 28 R 3",
+      "applies_when": "operation_is_divide"
+    },
+    {
+      "id": "stopped_subtracting_too_early",
+      "topic_ids": [
+        "g5-divide"
+      ],
+      "kid_label": "You stopped dividing one step too early",
+      "diagnosis": "Your quotient is one less than correct because you stopped the long division a step early.",
+      "why_it_fails": "You can still subtract the divisor one more time; the remainder should be less than the divisor.",
+      "mini_example": "451/16 -> 27 R 19 (wrong); correct is 28 R 3",
+      "applies_when": "q >= 1"
+    },
+    {
+      "id": "misplaced_quotient_digit",
+      "topic_ids": [
+        "g5-divide"
+      ],
+      "kid_label": "You wrote the quotient in the wrong place",
+      "diagnosis": "You multiplied the quotient by 10, placing it in the wrong column.",
+      "why_it_fails": "Each digit of the quotient belongs in a specific place-value column.",
+      "mini_example": "451/16 -> 280 R 3 (wrong); correct is 28 R 3",
+      "applies_when": "operation_is_divide"
+    },
+    {
+      "id": "rounded_quotient_up_kept_remainder",
+      "topic_ids": [
+        "g5-divide"
+      ],
+      "kid_label": "You rounded the quotient up",
+      "diagnosis": "You rounded the quotient to the next whole number but kept the original remainder.",
+      "why_it_fails": "Rounding up the quotient changes the subtraction and therefore changes the remainder too.",
+      "mini_example": "451/16 -> 29 R 3 (wrong); correct is 28 R 3",
+      "applies_when": "operation_is_divide"
+    }
+  ]
+}
