@@ -1,0 +1,877 @@
+{
+  "topic_id": "g5-volume",
+  "generated_at": "2026-10-25T17:17:01.825271+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v2",
+  "counts": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6
+  },
+  "questions": [
+    {
+      "id": "g5-volume-easy-1",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "easy",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-easy-games",
+      "params": {
+        "l": 2,
+        "w": 6,
+        "h": 2
+      },
+      "stem": "A toy chest is 2 cm long, 6 cm wide, and 2 cm high. What volume of toys can it hold?",
+      "expression": "2 * 6 * 2",
+      "options": [
+        {
+          "id": "A",
+          "text": "24",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "10",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "C",
+          "text": "12",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "D",
+          "text": "56",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "24",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 2 x 6 = 12. Then multiply by height: 12 x 2 = 24 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-easy-2",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "easy",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-easy-sports",
+      "params": {
+        "l": 6,
+        "w": 5,
+        "h": 2
+      },
+      "stem": "A gym locker is 6 ft long, 5 ft wide, and 2 ft tall. What volume does it hold?",
+      "expression": "6 * 5 * 2",
+      "options": [
+        {
+          "id": "A",
+          "text": "13",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "60",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "30",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "D",
+          "text": "104",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "60",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 6 x 5 = 30. Then multiply by height: 30 x 2 = 60 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-easy-3",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "easy",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-easy-school",
+      "params": {
+        "l": 2,
+        "w": 2,
+        "h": 3
+      },
+      "stem": "A pencil case is 2 cm long, 2 cm wide, and 3 cm deep. What is its volume?",
+      "expression": "2 * 2 * 3",
+      "options": [
+        {
+          "id": "A",
+          "text": "7",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "4",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "C",
+          "text": "12",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "32",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "12",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 2 x 2 = 4. Then multiply by height: 4 x 3 = 12 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-easy-4",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "easy",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-easy-nature",
+      "params": {
+        "l": 3,
+        "w": 6,
+        "h": 6
+      },
+      "stem": "A fish tank is 3 cm long, 6 cm wide, and 6 cm high. What is its volume?",
+      "expression": "3 * 6 * 6",
+      "options": [
+        {
+          "id": "A",
+          "text": "15",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "18",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "C",
+          "text": "144",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        },
+        {
+          "id": "D",
+          "text": "108",
+          "misconception": null,
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "108",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 3 x 6 = 18. Then multiply by height: 18 x 6 = 108 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-easy-5",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "easy",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-easy-food",
+      "params": {
+        "l": 2,
+        "w": 6,
+        "h": 3
+      },
+      "stem": "A lunch box is 2 cm long, 6 cm wide, and 3 cm tall. What is its volume?",
+      "expression": "2 * 6 * 3",
+      "options": [
+        {
+          "id": "A",
+          "text": "11",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "36",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "12",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "D",
+          "text": "72",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "36",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 2 x 6 = 12. Then multiply by height: 12 x 3 = 36 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-easy-6",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "easy",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-easy-games",
+      "params": {
+        "l": 6,
+        "w": 5,
+        "h": 3
+      },
+      "stem": "A toy chest is 6 cm long, 5 cm wide, and 3 cm high. What volume of toys can it hold?",
+      "expression": "6 * 5 * 3",
+      "options": [
+        {
+          "id": "A",
+          "text": "90",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "14",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "C",
+          "text": "30",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "D",
+          "text": "126",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "90",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 6 x 5 = 30. Then multiply by height: 30 x 3 = 90 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-medium-1",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "medium",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-medium-sports",
+      "params": {
+        "l": 9,
+        "w": 7,
+        "h": 6
+      },
+      "stem": "A trophy base is 9 cm long, 7 cm wide, and 6 cm tall. Find its volume.",
+      "expression": "9 * 7 * 6",
+      "options": [
+        {
+          "id": "A",
+          "text": "22",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "63",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "C",
+          "text": "318",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        },
+        {
+          "id": "D",
+          "text": "378",
+          "misconception": null,
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "378",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 9 x 7 = 63. Then multiply by height: 63 x 6 = 378 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-medium-2",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "medium",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-medium-nature",
+      "params": {
+        "l": 6,
+        "w": 5,
+        "h": 5
+      },
+      "stem": "A flower pot (rectangular) is 6 cm long, 5 cm wide, and 5 cm deep. What volume of soil fits inside?",
+      "expression": "6 * 5 * 5",
+      "options": [
+        {
+          "id": "A",
+          "text": "16",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "30",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "C",
+          "text": "150",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "170",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "150",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 6 x 5 = 30. Then multiply by height: 30 x 5 = 150 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-medium-3",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "medium",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-medium-food",
+      "params": {
+        "l": 10,
+        "w": 6,
+        "h": 4
+      },
+      "stem": "A cake mold is 10 inches long, 6 inches wide, and 4 inches deep. What is the volume of batter it can hold?",
+      "expression": "10 * 6 * 4",
+      "options": [
+        {
+          "id": "A",
+          "text": "20",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "60",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "C",
+          "text": "240",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "248",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "240",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 10 x 6 = 60. Then multiply by height: 60 x 4 = 240 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-medium-4",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "medium",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-medium-school",
+      "params": {
+        "l": 4,
+        "w": 7,
+        "h": 4
+      },
+      "stem": "A storage bin in the classroom is 4 cm long, 7 cm wide, and 4 cm tall. What is its volume?",
+      "expression": "4 * 7 * 4",
+      "options": [
+        {
+          "id": "A",
+          "text": "15",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "28",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "C",
+          "text": "144",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        },
+        {
+          "id": "D",
+          "text": "112",
+          "misconception": null,
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "112",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 4 x 7 = 28. Then multiply by height: 28 x 4 = 112 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-medium-5",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "medium",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-medium-games",
+      "params": {
+        "l": 6,
+        "w": 10,
+        "h": 6
+      },
+      "stem": "A game board box is 6 cm by 10 cm by 6 cm. What is the volume of the box?",
+      "expression": "6 * 10 * 6",
+      "options": [
+        {
+          "id": "A",
+          "text": "360",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "22",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "C",
+          "text": "60",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "D",
+          "text": "312",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "360",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 6 x 10 = 60. Then multiply by height: 60 x 6 = 360 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-medium-6",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "medium",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-medium-sports",
+      "params": {
+        "l": 8,
+        "w": 6,
+        "h": 10
+      },
+      "stem": "A trophy base is 8 cm long, 6 cm wide, and 10 cm tall. Find its volume.",
+      "expression": "8 * 6 * 10",
+      "options": [
+        {
+          "id": "A",
+          "text": "24",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "480",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "48",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "D",
+          "text": "376",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "480",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 8 x 6 = 48. Then multiply by height: 48 x 10 = 480 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-hard-1",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "hard",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-hard-sports",
+      "params": {
+        "l": 14,
+        "w": 9,
+        "h": 16
+      },
+      "stem": "A swimming pool section is 14 m long, 9 m wide, and 16 m deep. A pump fills 6 cubic metres per minute. How many minutes to fill it?",
+      "expression": "14 * 9 * 16",
+      "options": [
+        {
+          "id": "A",
+          "text": "39",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "126",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "C",
+          "text": "988",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        },
+        {
+          "id": "D",
+          "text": "2016",
+          "misconception": null,
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "2016",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 14 x 9 = 126. Then multiply by height: 126 x 16 = 2016 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-hard-2",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "hard",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-hard-nature",
+      "params": {
+        "l": 12,
+        "w": 18,
+        "h": 17
+      },
+      "stem": "A rectangular pond is 12 m long, 18 m wide, and 17 m deep. Water evaporates at 2 cubic metres per hour. After 3 hours, how much water remains?",
+      "expression": "12 * 18 * 17",
+      "options": [
+        {
+          "id": "A",
+          "text": "3672",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "47",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "C",
+          "text": "216",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "D",
+          "text": "1452",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "3672",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 12 x 18 = 216. Then multiply by height: 216 x 17 = 3672 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-hard-3",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "hard",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-hard-school",
+      "params": {
+        "l": 13,
+        "w": 17,
+        "h": 11
+      },
+      "stem": "A bookshelf cubby is 13 cm long, 17 cm wide, and 11 cm deep. Each book occupies 3 cubic cm. How many books fit?",
+      "expression": "13 * 17 * 11",
+      "options": [
+        {
+          "id": "A",
+          "text": "41",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "2431",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "221",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "D",
+          "text": "1102",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "2431",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 13 x 17 = 221. Then multiply by height: 221 x 11 = 2431 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-hard-4",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "hard",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-hard-games",
+      "params": {
+        "l": 19,
+        "w": 9,
+        "h": 8
+      },
+      "stem": "A dungeon room in a game is 19 units long, 9 units wide, and 8 units tall. What is the total volume?",
+      "expression": "19 * 9 * 8",
+      "options": [
+        {
+          "id": "A",
+          "text": "36",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "171",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "C",
+          "text": "1368",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "790",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "1368",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 19 x 9 = 171. Then multiply by height: 171 x 8 = 1368 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-hard-5",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "hard",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-hard-food",
+      "params": {
+        "l": 18,
+        "w": 11,
+        "h": 20
+      },
+      "stem": "A refrigerator shelf is 18 cm long, 11 cm wide, and 20 cm high. It holds containers of 4 cubic cm each. How many containers fit?",
+      "expression": "18 * 11 * 20",
+      "options": [
+        {
+          "id": "A",
+          "text": "3960",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "49",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "C",
+          "text": "198",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "D",
+          "text": "1556",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "3960",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 18 x 11 = 198. Then multiply by height: 198 x 20 = 3960 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-volume-hard-6",
+      "topic_id": "g5-volume",
+      "standard": "5.GSR.8.3",
+      "difficulty": "hard",
+      "verifier_type": "volume_geometry",
+      "template_id": "g5-volume-hard-sports",
+      "params": {
+        "l": 12,
+        "w": 9,
+        "h": 11
+      },
+      "stem": "A swimming pool section is 12 m long, 9 m wide, and 11 m deep. A pump fills 6 cubic metres per minute. How many minutes to fill it?",
+      "expression": "12 * 9 * 11",
+      "options": [
+        {
+          "id": "A",
+          "text": "32",
+          "misconception": "added_the_sides",
+          "misconception_id": "added_the_sides"
+        },
+        {
+          "id": "B",
+          "text": "108",
+          "misconception": "found_base_area_only",
+          "misconception_id": "found_base_area_only"
+        },
+        {
+          "id": "C",
+          "text": "1188",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "678",
+          "misconception": "used_surface_area_formula",
+          "misconception_id": "used_surface_area_formula"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "1188",
+      "hint": "Volume needs all three dimensions multiplied together — length, width, and height.",
+      "explanation": "Volume = length x width x height. First multiply length x width: 12 x 9 = 108. Then multiply by height: 108 x 11 = 1188 cubic units.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    }
+  ]
+}

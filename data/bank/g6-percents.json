@@ -1,0 +1,859 @@
+{
+  "topic_id": "g6-percents",
+  "generated_at": "2026-10-25T17:17:01.827511+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v2",
+  "counts": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6
+  },
+  "questions": [
+    {
+      "id": "g6-percents-easy-1",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-easy-games",
+      "params": {
+        "p": 20,
+        "n": 60
+      },
+      "stem": "A player earns 60 coins. Spending 20% on upgrades, how many coins are spent?",
+      "expression": "20% of 60",
+      "options": [
+        {
+          "id": "A",
+          "text": "12",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "1200",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "C",
+          "text": "120",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "D",
+          "text": "48",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "12",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "20% means 20 per 100, so convert to a decimal: 20 ÷ 100 = 0.2. Multiply: 0.2 × 60 = 12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-easy-2",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-easy-sports",
+      "params": {
+        "p": 20,
+        "n": 40
+      },
+      "stem": "A team won 20% of their 40 games this season. How many games did they win?",
+      "expression": "20% of 40",
+      "options": [
+        {
+          "id": "A",
+          "text": "800",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "8",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "80",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "D",
+          "text": "32",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "8",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "20% means 20 per 100, so convert to a decimal: 20 ÷ 100 = 0.2. Multiply: 0.2 × 40 = 8.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-easy-3",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-easy-school",
+      "params": {
+        "p": 10,
+        "n": 120
+      },
+      "stem": "There are 120 students in school. 10% brought their own lunch. How many students brought lunch?",
+      "expression": "10% of 120",
+      "options": [
+        {
+          "id": "A",
+          "text": "1200",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "120",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "C",
+          "text": "12",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "108",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "12",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "10% means 10 per 100, so convert to a decimal: 10 ÷ 100 = 0.1. Multiply: 0.1 × 120 = 12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-easy-4",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-easy-nature",
+      "params": {
+        "p": 50,
+        "n": 40
+      },
+      "stem": "A forest has 40 trees. 50% are oak trees. How many oak trees are there?",
+      "expression": "50% of 40",
+      "options": [
+        {
+          "id": "A",
+          "text": "2000",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "200",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "C",
+          "text": "0.8",
+          "misconception": "divided_instead_of_multiplying",
+          "misconception_id": "divided_instead_of_multiplying"
+        },
+        {
+          "id": "D",
+          "text": "20",
+          "misconception": null,
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "20",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "50% means 50 per 100, so convert to a decimal: 50 ÷ 100 = 0.5. Multiply: 0.5 × 40 = 20.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-easy-5",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-easy-food",
+      "params": {
+        "p": 10,
+        "n": 40
+      },
+      "stem": "A restaurant bill is $40. You leave a 10% tip. How much is the tip?",
+      "expression": "10% of 40",
+      "options": [
+        {
+          "id": "A",
+          "text": "400",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "4",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "40",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "D",
+          "text": "36",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "4",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "10% means 10 per 100, so convert to a decimal: 10 ÷ 100 = 0.1. Multiply: 0.1 × 40 = 4.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-easy-6",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "easy",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-easy-games",
+      "params": {
+        "p": 20,
+        "n": 60
+      },
+      "stem": "A player earns 60 coins. Spending 20% on upgrades, how many coins are spent?",
+      "expression": "20% of 60",
+      "options": [
+        {
+          "id": "A",
+          "text": "12",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "1200",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "C",
+          "text": "120",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "D",
+          "text": "48",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "12",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "20% means 20 per 100, so convert to a decimal: 20 ÷ 100 = 0.2. Multiply: 0.2 × 60 = 12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-medium-1",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-medium-sports",
+      "params": {
+        "p": 40,
+        "n": 80
+      },
+      "stem": "An athlete runs 80 metres in a race. 40% of the route is uphill. How many metres are uphill?",
+      "expression": "40% of 80",
+      "options": [
+        {
+          "id": "A",
+          "text": "3200",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "320",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "C",
+          "text": "48",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        },
+        {
+          "id": "D",
+          "text": "32",
+          "misconception": null,
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "32",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "40% means 40 per 100, so convert to a decimal: 40 ÷ 100 = 0.4. Multiply: 0.4 × 80 = 32.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-medium-2",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-medium-games",
+      "params": {
+        "p": 40,
+        "n": 200
+      },
+      "stem": "A dungeon has 200 rooms. 40% have treasure. How many rooms have treasure?",
+      "expression": "40% of 200",
+      "options": [
+        {
+          "id": "A",
+          "text": "8000",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "800",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "C",
+          "text": "80",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "120",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "80",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "40% means 40 per 100, so convert to a decimal: 40 ÷ 100 = 0.4. Multiply: 0.4 × 200 = 80.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-medium-3",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-medium-school",
+      "params": {
+        "p": 30,
+        "n": 60
+      },
+      "stem": "A school raised $60 for charity. 30% goes to the food bank. How much money goes to the food bank?",
+      "expression": "30% of 60",
+      "options": [
+        {
+          "id": "A",
+          "text": "1800",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "180",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "C",
+          "text": "18",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "42",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "18",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "30% means 30 per 100, so convert to a decimal: 30 ÷ 100 = 0.3. Multiply: 0.3 × 60 = 18.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-medium-4",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-medium-food",
+      "params": {
+        "p": 20,
+        "n": 150
+      },
+      "stem": "A bag of trail mix has 150 grams. 20% of it is nuts. How many grams of nuts are there?",
+      "expression": "20% of 150",
+      "options": [
+        {
+          "id": "A",
+          "text": "3000",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "300",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "C",
+          "text": "120",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        },
+        {
+          "id": "D",
+          "text": "30",
+          "misconception": null,
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "30",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "20% means 20 per 100, so convert to a decimal: 20 ÷ 100 = 0.2. Multiply: 0.2 × 150 = 30.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-medium-5",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-medium-nature",
+      "params": {
+        "p": 30,
+        "n": 120
+      },
+      "stem": "A lake has 120 species of fish. 30% are endangered. How many species are endangered?",
+      "expression": "30% of 120",
+      "options": [
+        {
+          "id": "A",
+          "text": "36",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "3600",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "C",
+          "text": "360",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "D",
+          "text": "84",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "36",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "30% means 30 per 100, so convert to a decimal: 30 ÷ 100 = 0.3. Multiply: 0.3 × 120 = 36.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-medium-6",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "medium",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-medium-sports",
+      "params": {
+        "p": 20,
+        "n": 80
+      },
+      "stem": "An athlete runs 80 metres in a race. 20% of the route is uphill. How many metres are uphill?",
+      "expression": "20% of 80",
+      "options": [
+        {
+          "id": "A",
+          "text": "1600",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "16",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "160",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "D",
+          "text": "64",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "16",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "20% means 20 per 100, so convert to a decimal: 20 ÷ 100 = 0.2. Multiply: 0.2 × 80 = 16.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-hard-1",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-hard-nature",
+      "params": {
+        "p": 15,
+        "n": 120
+      },
+      "stem": "A reef has 120 coral formations. Scientists say 15% are healthy. How many are healthy?",
+      "expression": "15% of 120",
+      "options": [
+        {
+          "id": "A",
+          "text": "1800",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "180",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "C",
+          "text": "102",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        },
+        {
+          "id": "D",
+          "text": "18",
+          "misconception": null,
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "18",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "15% means 15 per 100, so convert to a decimal: 15 ÷ 100 = 0.15. Multiply: 0.15 × 120 = 18.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-hard-2",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-hard-sports",
+      "params": {
+        "p": 35,
+        "n": 240
+      },
+      "stem": "A team scores 240 points total. 35% come from three-pointers. How many points come from three-pointers?",
+      "expression": "35% of 240",
+      "options": [
+        {
+          "id": "A",
+          "text": "84",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "8400",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "C",
+          "text": "840",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "D",
+          "text": "156",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "84",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "35% means 35 per 100, so convert to a decimal: 35 ÷ 100 = 0.35. Multiply: 0.35 × 240 = 84.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-hard-3",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-hard-games",
+      "params": {
+        "p": 35,
+        "n": 80
+      },
+      "stem": "A village has 80 villagers. During a storm, 35% took shelter indoors. How many took shelter?",
+      "expression": "35% of 80",
+      "options": [
+        {
+          "id": "A",
+          "text": "2800",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "28",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "280",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "D",
+          "text": "52",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "28",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "35% means 35 per 100, so convert to a decimal: 35 ÷ 100 = 0.35. Multiply: 0.35 × 80 = 28.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-hard-4",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-hard-food",
+      "params": {
+        "p": 40,
+        "n": 240
+      },
+      "stem": "A store has 240 apples. 40% are bruised and removed. How many apples are NOT bruised?",
+      "expression": "40% of 240",
+      "options": [
+        {
+          "id": "A",
+          "text": "9600",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "960",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "C",
+          "text": "96",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "144",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "96",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "40% means 40 per 100, so convert to a decimal: 40 ÷ 100 = 0.4. Multiply: 0.4 × 240 = 96.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-hard-5",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-hard-school",
+      "params": {
+        "p": 15,
+        "n": 200
+      },
+      "stem": "A test has 200 questions. A student got 15% correct. How many questions did they get right?",
+      "expression": "15% of 200",
+      "options": [
+        {
+          "id": "A",
+          "text": "30",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "3000",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "C",
+          "text": "300",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "D",
+          "text": "170",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "30",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "15% means 15 per 100, so convert to a decimal: 15 ÷ 100 = 0.15. Multiply: 0.15 × 200 = 30.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-percents-hard-6",
+      "topic_id": "g6-percents",
+      "standard": "6.NR.4.6",
+      "difficulty": "hard",
+      "verifier_type": "percent_calculation",
+      "template_id": "g6-percents-hard-nature",
+      "params": {
+        "p": 15,
+        "n": 240
+      },
+      "stem": "A reef has 240 coral formations. Scientists say 15% are healthy. How many are healthy?",
+      "expression": "15% of 240",
+      "options": [
+        {
+          "id": "A",
+          "text": "3600",
+          "misconception": "multiplied_by_percent_number",
+          "misconception_id": "multiplied_by_percent_number"
+        },
+        {
+          "id": "B",
+          "text": "360",
+          "misconception": "moved_decimal_wrong_way",
+          "misconception_id": "moved_decimal_wrong_way"
+        },
+        {
+          "id": "C",
+          "text": "36",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "204",
+          "misconception": "found_the_leftover_amount",
+          "misconception_id": "found_the_leftover_amount"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "36",
+      "hint": "Convert the percent to a decimal by dividing by 100 first, then multiply.",
+      "explanation": "15% means 15 per 100, so convert to a decimal: 15 ÷ 100 = 0.15. Multiply: 0.15 × 240 = 36.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    }
+  ]
+}

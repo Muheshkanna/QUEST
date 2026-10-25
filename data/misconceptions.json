@@ -956,6 +956,61 @@
       "why_it_fails": "Rounding up the quotient changes the subtraction and therefore changes the remainder too.",
       "mini_example": "451/16 -> 29 R 3 (wrong); correct is 28 R 3",
       "applies_when": "operation_is_divide"
+    },
+    {
+      "id": "ignored_the_added_value",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "You wrote the total as your answer",
+      "diagnosis": "You wrote the right-hand side of the equation as x instead of subtracting the added value.",
+      "why_it_fails": "The equation has a number added to x; that number must be removed before x can be identified.",
+      "mini_example": "x+5=12 -> x=12 (wrong); correct is x=7",
+      "applies_when": "form == xpa_b"
+    },
+    {
+      "id": "used_added_value_as_answer",
+      "topic_ids": [
+        "g6-equations"
+      ],
+      "kid_label": "You wrote the added number as your answer",
+      "diagnosis": "You identified the constant being added to x, but wrote that number as the answer for x.",
+      "why_it_fails": "The constant is added to x; x equals the total minus that constant, not the constant itself.",
+      "mini_example": "x+5=12 -> x=5 (wrong); correct is x=7",
+      "applies_when": "form == xpa_b"
+    },
+    {
+      "id": "calculation_error",
+      "topic_ids": [
+        "g5-divide"
+      ],
+      "kid_label": "Arithmetic error during division",
+      "diagnosis": "Made a basic arithmetic mistake while calculating.",
+      "why_it_fails": "A calculation mistake produces the wrong quotient or remainder.",
+      "mini_example": "125/6 -> 20 R 3",
+      "applies_when": "operation_is_divide"
+    },
+    {
+      "id": "rounded_wrong",
+      "topic_ids": [
+        "g5-divide"
+      ],
+      "kid_label": "Rounded quotient incorrectly",
+      "diagnosis": "Rounded the quotient incorrectly.",
+      "why_it_fails": "Division with remainder requires exact whole number division.",
+      "mini_example": "125/6 -> 21 R 1",
+      "applies_when": "operation_is_divide"
+    },
+    {
+      "id": "underestimated_quotient",
+      "topic_ids": [
+        "g5-divide"
+      ],
+      "kid_label": "Stopped dividing too early",
+      "diagnosis": "Underestimated the quotient.",
+      "why_it_fails": "The remainder cannot be greater than or equal to the divisor.",
+      "mini_example": "125/6 -> 19 R 5",
+      "applies_when": "operation_is_divide"
     }
   ]
 }

@@ -71,8 +71,9 @@ def test_normalize_currency_and_units():
 
 
 def test_normalize_text_fallback():
-    assert normalize_option("equal") == ("equal", None)
-    assert normalize_option("Greater Than") == ("greater than", None)
+    assert normalize_option("equal") == ("=", None)
+    assert normalize_option("Greater Than") == (">", None)
+    assert normalize_option("equivalent") == ("equivalent", None)
 
 
 # ==========================================
@@ -477,3 +478,43 @@ def test_all_15_verifier_types_pass_and_fail(case):
     )
     res_fail = verify_question(q_fail)
     assert res_fail.passed is False, f"Failed failing test for {v_type}: should have rejected"
+
+
+def test_divmod_rem_and_equiv_verifiers():
+    # Test divmod_rem question
+    q_div = Question(
+        id="q-divmod-test",
+        topic_id="g5-divide",
+        difficulty=Difficulty.MEDIUM,
+        verifier_type="division_with_remainder",
+        stem="Divide 125 by 6. What is the quotient and remainder?",
+        expression="divmod_rem(125, 6)",
+        options=[
+            Option(id="A", text="20 R 5"),
+            Option(id="B", text="20 R 3", misconception="calculation_error"),
+            Option(id="C", text="21 R 1", misconception="rounded_wrong"),
+            Option(id="D", text="19 R 5", misconception="underestimated_quotient"),
+        ],
+        correct_index=0,
+        explanation="125 = 6 * 20 + 5, so the quotient is 20 with remainder 5.",
+    )
+    assert verify_question(q_div).passed is True
+
+    # Test check_equiv question
+    q_eq = Question(
+        id="q-equiv-test",
+        topic_id="g6-equiv-expressions",
+        difficulty=Difficulty.MEDIUM,
+        verifier_type="expression_equivalence",
+        stem="Are 3 * (2 * x + 4) and 6 * x + 12 equivalent?",
+        expression="check_equiv('3 * (2 * x + 4)', '6 * x + 12')",
+        options=[
+            Option(id="A", text="equivalent"),
+            Option(id="B", text="not equivalent", misconception="distributed_only_to_first_term"),
+            Option(id="C", text="equal only when x=0", misconception="tested_single_point"),
+            Option(id="D", text="cannot be determined", misconception="confused_equivalence"),
+        ],
+        correct_index=0,
+        explanation="Distributing 3 across (2x + 4) gives 6x + 12, so the expressions are equivalent.",
+    )
+    assert verify_question(q_eq).passed is True

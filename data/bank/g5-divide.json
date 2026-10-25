@@ -1,0 +1,895 @@
+{
+  "topic_id": "g5-divide",
+  "generated_at": "2026-10-25T17:17:01.831806+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v2",
+  "counts": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6
+  },
+  "questions": [
+    {
+      "id": "g5-divide-easy-1",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-easy-games",
+      "params": {
+        "n": 41,
+        "d": 5,
+        "q": 8,
+        "r": 1
+      },
+      "stem": "41 game tokens are split into groups of 5. How many full groups are there, and how many tokens remain?",
+      "expression": "divmod_rem(41, 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "8 R 1",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "8 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "C",
+          "text": "1 R 8",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "D",
+          "text": "7 R 6",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "8 R 1",
+      "hint": "Think: what is the biggest multiple of 5 that fits inside 41? The leftover is the remainder.",
+      "explanation": "Divide 41 by 5. 5 fits into 41 exactly 8 times (5 × 8 = 40). The leftover is 41 − 40 = 1. So the answer is 8 R 1.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-easy-2",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-easy-sports",
+      "params": {
+        "n": 85,
+        "d": 8,
+        "q": 10,
+        "r": 5
+      },
+      "stem": "85 team stickers are divided equally into 8 boxes. How many stickers are in each box, and how many are left over?",
+      "expression": "divmod_rem(85, 8)",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "10 R 5",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "5 R 10",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "D",
+          "text": "9 R 13",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "10 R 5",
+      "hint": "Think: what is the biggest multiple of 8 that fits inside 85? The leftover is the remainder.",
+      "explanation": "Divide 85 by 8. 8 fits into 85 exactly 10 times (8 × 10 = 80). The leftover is 85 − 80 = 5. So the answer is 10 R 5.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-easy-3",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-easy-school",
+      "params": {
+        "n": 21,
+        "d": 5,
+        "q": 4,
+        "r": 1
+      },
+      "stem": "21 books are placed equally on 5 shelves. How many books per shelf, and how many are left over?",
+      "expression": "divmod_rem(21, 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "1 R 4",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "C",
+          "text": "4 R 1",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "3 R 6",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "4 R 1",
+      "hint": "Think: what is the biggest multiple of 5 that fits inside 21? The leftover is the remainder.",
+      "explanation": "Divide 21 by 5. 5 fits into 21 exactly 4 times (5 × 4 = 20). The leftover is 21 − 20 = 1. So the answer is 4 R 1.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-easy-4",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-easy-nature",
+      "params": {
+        "n": 39,
+        "d": 2,
+        "q": 19,
+        "r": 1
+      },
+      "stem": "39 leaves are bundled in groups of 2. How many bundles fit, and how many leaves are left over?",
+      "expression": "divmod_rem(39, 2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "19 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "1 R 19",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "C",
+          "text": "18 R 3",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        },
+        {
+          "id": "D",
+          "text": "19 R 1",
+          "misconception": null,
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "19 R 1",
+      "hint": "Think: what is the biggest multiple of 2 that fits inside 39? The leftover is the remainder.",
+      "explanation": "Divide 39 by 2. 2 fits into 39 exactly 19 times (2 × 19 = 38). The leftover is 39 − 38 = 1. So the answer is 19 R 1.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-easy-5",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-easy-food",
+      "params": {
+        "n": 81,
+        "d": 5,
+        "q": 16,
+        "r": 1
+      },
+      "stem": "81 grapes are shared equally among 5 kids. How many does each kid get, and how many are left over?",
+      "expression": "divmod_rem(81, 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "16 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "16 R 1",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "1 R 16",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "D",
+          "text": "15 R 6",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "16 R 1",
+      "hint": "Think: what is the biggest multiple of 5 that fits inside 81? The leftover is the remainder.",
+      "explanation": "Divide 81 by 5. 5 fits into 81 exactly 16 times (5 × 16 = 80). The leftover is 81 − 80 = 1. So the answer is 16 R 1.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-easy-6",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-easy-games",
+      "params": {
+        "n": 93,
+        "d": 8,
+        "q": 11,
+        "r": 5
+      },
+      "stem": "93 game tokens are split into groups of 8. How many full groups are there, and how many tokens remain?",
+      "expression": "divmod_rem(93, 8)",
+      "options": [
+        {
+          "id": "A",
+          "text": "11 R 5",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "11 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "C",
+          "text": "5 R 11",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "D",
+          "text": "10 R 13",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "11 R 5",
+      "hint": "Think: what is the biggest multiple of 8 that fits inside 93? The leftover is the remainder.",
+      "explanation": "Divide 93 by 8. 8 fits into 93 exactly 11 times (8 × 11 = 88). The leftover is 93 − 88 = 5. So the answer is 11 R 5.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-medium-1",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-medium-food",
+      "params": {
+        "n": 928,
+        "d": 10,
+        "q": 92,
+        "r": 8
+      },
+      "stem": "A baker made 928 cookies. Each tray holds 10 cookies. How many full trays are there, and how many cookies are left over?",
+      "expression": "divmod_rem(928, 10)",
+      "options": [
+        {
+          "id": "A",
+          "text": "92 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "8 R 92",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "C",
+          "text": "91 R 18",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        },
+        {
+          "id": "D",
+          "text": "92 R 8",
+          "misconception": null,
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "92 R 8",
+      "hint": "Think: what is the biggest multiple of 10 that fits inside 928? The leftover is the remainder.",
+      "explanation": "Divide 928 by 10. 10 fits into 928 exactly 92 times (10 × 92 = 920). The leftover is 928 − 920 = 8. So the answer is 92 R 8.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-medium-2",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-medium-nature",
+      "params": {
+        "n": 877,
+        "d": 30,
+        "q": 29,
+        "r": 7
+      },
+      "stem": "877 seeds are packed 30 per envelope. How many full envelopes, and how many seeds are left unpacked?",
+      "expression": "divmod_rem(877, 30)",
+      "options": [
+        {
+          "id": "A",
+          "text": "29 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "7 R 29",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "C",
+          "text": "29 R 7",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "28 R 37",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "29 R 7",
+      "hint": "Think: what is the biggest multiple of 30 that fits inside 877? The leftover is the remainder.",
+      "explanation": "Divide 877 by 30. 30 fits into 877 exactly 29 times (30 × 29 = 870). The leftover is 877 − 870 = 7. So the answer is 29 R 7.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-medium-3",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-medium-school",
+      "params": {
+        "n": 814,
+        "d": 64,
+        "q": 12,
+        "r": 46
+      },
+      "stem": "A school printed 814 worksheets. Each pack holds 64 sheets. How many full packs are there, and how many sheets remain?",
+      "expression": "divmod_rem(814, 64)",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "46 R 12",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "C",
+          "text": "12 R 46",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "11 R 110",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "12 R 46",
+      "hint": "Think: what is the biggest multiple of 64 that fits inside 814? The leftover is the remainder.",
+      "explanation": "Divide 814 by 64. 64 fits into 814 exactly 12 times (64 × 12 = 768). The leftover is 814 − 768 = 46. So the answer is 12 R 46.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-medium-4",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-medium-games",
+      "params": {
+        "n": 448,
+        "d": 45,
+        "q": 9,
+        "r": 43
+      },
+      "stem": "448 gold coins are divided into chests of 45 each. How many full chests fit, and how many coins are left over?",
+      "expression": "divmod_rem(448, 45)",
+      "options": [
+        {
+          "id": "A",
+          "text": "9 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "43 R 9",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "C",
+          "text": "8 R 88",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        },
+        {
+          "id": "D",
+          "text": "9 R 43",
+          "misconception": null,
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "9 R 43",
+      "hint": "Think: what is the biggest multiple of 45 that fits inside 448? The leftover is the remainder.",
+      "explanation": "Divide 448 by 45. 45 fits into 448 exactly 9 times (45 × 9 = 405). The leftover is 448 − 405 = 43. So the answer is 9 R 43.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-medium-5",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-medium-sports",
+      "params": {
+        "n": 881,
+        "d": 53,
+        "q": 16,
+        "r": 33
+      },
+      "stem": "881 fans are seated in rows of 53. How many full rows are there, and how many fans don't fill a row?",
+      "expression": "divmod_rem(881, 53)",
+      "options": [
+        {
+          "id": "A",
+          "text": "16 R 33",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "16 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "C",
+          "text": "33 R 16",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "D",
+          "text": "15 R 86",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "16 R 33",
+      "hint": "Think: what is the biggest multiple of 53 that fits inside 881? The leftover is the remainder.",
+      "explanation": "Divide 881 by 53. 53 fits into 881 exactly 16 times (53 × 16 = 848). The leftover is 881 − 848 = 33. So the answer is 16 R 33.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-medium-6",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-medium-food",
+      "params": {
+        "n": 204,
+        "d": 21,
+        "q": 9,
+        "r": 15
+      },
+      "stem": "A baker made 204 cookies. Each tray holds 21 cookies. How many full trays are there, and how many cookies are left over?",
+      "expression": "divmod_rem(204, 21)",
+      "options": [
+        {
+          "id": "A",
+          "text": "9 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "9 R 15",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "15 R 9",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "D",
+          "text": "8 R 36",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "9 R 15",
+      "hint": "Think: what is the biggest multiple of 21 that fits inside 204? The leftover is the remainder.",
+      "explanation": "Divide 204 by 21. 21 fits into 204 exactly 9 times (21 × 9 = 189). The leftover is 204 − 189 = 15. So the answer is 9 R 15.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-hard-1",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-hard-nature",
+      "params": {
+        "n": 5333,
+        "d": 15,
+        "q": 355,
+        "r": 8
+      },
+      "stem": "5333 snowflakes fell on 15-snowflake squares drawn in sand. How many full squares, and how many snowflakes are left over?",
+      "expression": "divmod_rem(5333, 15)",
+      "options": [
+        {
+          "id": "A",
+          "text": "355 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "8 R 355",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "C",
+          "text": "354 R 23",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        },
+        {
+          "id": "D",
+          "text": "355 R 8",
+          "misconception": null,
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "355 R 8",
+      "hint": "Think: what is the biggest multiple of 15 that fits inside 5333? The leftover is the remainder.",
+      "explanation": "Divide 5333 by 15. 15 fits into 5333 exactly 355 times (15 × 355 = 5325). The leftover is 5333 − 5325 = 8. So the answer is 355 R 8.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-hard-2",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-hard-school",
+      "params": {
+        "n": 8527,
+        "d": 78,
+        "q": 109,
+        "r": 25
+      },
+      "stem": "A library has 8527 books to sort. Each shelf holds 78 books. How many shelves are completely full, and how many books go on a partially filled shelf?",
+      "expression": "divmod_rem(8527, 78)",
+      "options": [
+        {
+          "id": "A",
+          "text": "109 R 25",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "109 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "C",
+          "text": "25 R 109",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "D",
+          "text": "108 R 103",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "109 R 25",
+      "hint": "Think: what is the biggest multiple of 78 that fits inside 8527? The leftover is the remainder.",
+      "explanation": "Divide 8527 by 78. 78 fits into 8527 exactly 109 times (78 × 109 = 8502). The leftover is 8527 − 8502 = 25. So the answer is 109 R 25.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-hard-3",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-hard-sports",
+      "params": {
+        "n": 3045,
+        "d": 58,
+        "q": 52,
+        "r": 29
+      },
+      "stem": "An arena sold 3045 tickets. Each section holds 58 fans. How many full sections are filled, and how many fans are in a partially filled section?",
+      "expression": "divmod_rem(3045, 58)",
+      "options": [
+        {
+          "id": "A",
+          "text": "52 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "52 R 29",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "29 R 52",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "D",
+          "text": "51 R 87",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "52 R 29",
+      "hint": "Think: what is the biggest multiple of 58 that fits inside 3045? The leftover is the remainder.",
+      "explanation": "Divide 3045 by 58. 58 fits into 3045 exactly 52 times (58 × 52 = 3016). The leftover is 3045 − 3016 = 29. So the answer is 52 R 29.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-hard-4",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-hard-food",
+      "params": {
+        "n": 2291,
+        "d": 80,
+        "q": 28,
+        "r": 51
+      },
+      "stem": "A factory produced 2291 jars of jam. Each shipping crate holds 80 jars. How many full crates are packed, and how many jars remain?",
+      "expression": "divmod_rem(2291, 80)",
+      "options": [
+        {
+          "id": "A",
+          "text": "28 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "51 R 28",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "C",
+          "text": "28 R 51",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "27 R 131",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "28 R 51",
+      "hint": "Think: what is the biggest multiple of 80 that fits inside 2291? The leftover is the remainder.",
+      "explanation": "Divide 2291 by 80. 80 fits into 2291 exactly 28 times (80 × 28 = 2240). The leftover is 2291 − 2240 = 51. So the answer is 28 R 51.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-hard-5",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-hard-games",
+      "params": {
+        "n": 5803,
+        "d": 90,
+        "q": 64,
+        "r": 43
+      },
+      "stem": "5803 monster health points are reduced in rounds of 90. How many full rounds to reduce it, and how many HP are left after the last full round?",
+      "expression": "divmod_rem(5803, 90)",
+      "options": [
+        {
+          "id": "A",
+          "text": "64 R 43",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "64 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "C",
+          "text": "43 R 64",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "D",
+          "text": "63 R 133",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "64 R 43",
+      "hint": "Think: what is the biggest multiple of 90 that fits inside 5803? The leftover is the remainder.",
+      "explanation": "Divide 5803 by 90. 90 fits into 5803 exactly 64 times (90 × 64 = 5760). The leftover is 5803 − 5760 = 43. So the answer is 64 R 43.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-hard-6",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-hard-nature",
+      "params": {
+        "n": 6925,
+        "d": 83,
+        "q": 83,
+        "r": 36
+      },
+      "stem": "6925 snowflakes fell on 83-snowflake squares drawn in sand. How many full squares, and how many snowflakes are left over?",
+      "expression": "divmod_rem(6925, 83)",
+      "options": [
+        {
+          "id": "A",
+          "text": "83 R 0",
+          "misconception": "dropped_the_remainder",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "B",
+          "text": "36 R 83",
+          "misconception": "swapped_quotient_and_remainder",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "C",
+          "text": "83 R 36",
+          "misconception": null,
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "82 R 119",
+          "misconception": "stopped_subtracting_too_early",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "83 R 36",
+      "hint": "Think: what is the biggest multiple of 83 that fits inside 6925? The leftover is the remainder.",
+      "explanation": "Divide 6925 by 83. 83 fits into 6925 exactly 83 times (83 × 83 = 6889). The leftover is 6925 − 6889 = 36. So the answer is 83 R 36.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    }
+  ]
+}

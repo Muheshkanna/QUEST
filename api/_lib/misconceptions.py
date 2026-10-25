@@ -1,4 +1,4 @@
-﻿from fractions import Fraction
+from fractions import Fraction
 from math import lcm
 from typing import Dict, Optional, Callable, Tuple
 import json, os
@@ -110,6 +110,16 @@ def subtracted_the_wrong_way(p): return _fmt_num(p['a'] - p['b'])
 def subtracted_the_wrong_way_applies(p):
     return p.get('form') == 'xpa_b' and (p['a'] - p['b']) != (p['b'] - p['a'])
 
+def ignored_the_added_value(p): return _fmt_num(p['b'])
+def ignored_the_added_value_applies(p):
+    correct = p['b'] - p['a']
+    return p.get('form') == 'xpa_b' and p['b'] != correct
+
+def used_added_value_as_answer(p): return _fmt_num(p['a'])
+def used_added_value_as_answer_applies(p):
+    correct = p['b'] - p['a']
+    return p.get('form') == 'xpa_b' and p['a'] != correct
+
 def undid_multiplication_first(p):
     return _fmt_frac(Fraction(p['c'], p['a']) - p['b'])
 def undid_multiplication_first_applies(p): return p.get('form') == 'axpb_c'
@@ -164,6 +174,8 @@ RULES: Dict[str, Tuple] = {
     'undid_multiplication_first':    (undid_multiplication_first,    undid_multiplication_first_applies,    ['g6-equations']),
     'added_the_constant':            (added_the_constant,            added_the_constant_applies,            ['g6-equations']),
     'ignored_the_constant_term':     (ignored_the_constant_term,     ignored_the_constant_term_applies,     ['g6-equations']),
+    'ignored_the_added_value':       (ignored_the_added_value,       ignored_the_added_value_applies,       ['g6-equations']),
+    'used_added_value_as_answer':    (used_added_value_as_answer,    used_added_value_as_answer_applies,    ['g6-equations']),
     'dropped_the_remainder':         (dropped_the_remainder,         dropped_the_remainder_applies,         ['g5-divide']),
     'swapped_quotient_and_remainder':(swapped_quotient_and_remainder,swapped_quotient_and_remainder_applies, ['g5-divide']),
     'stopped_subtracting_too_early': (stopped_subtracting_too_early, stopped_subtracting_too_early_applies,  ['g5-divide']),

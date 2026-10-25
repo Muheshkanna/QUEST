@@ -8,6 +8,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from pydantic import BaseModel, Field
 
 from api._lib.schemas import Question, Lesson
+from api._lib.misconceptions import load_registry, apply_rule, RULES
 
 MAX_EXPR_LENGTH = 300
 MAX_EXPONENT = 100
@@ -73,6 +74,22 @@ def normalize_option(raw: str) -> Tuple[str, Optional[Fraction]]:
             return (f"frac:{frac.numerator}/{frac.denominator}", frac)
         except Exception:
             return (s, None)
+
+    # Division with remainder format e.g. "12 R 3" or "12 r 3" or "12 remainder 3"
+    rem_match = re.match(r"^(-?\d+)\s*(?:R|r|remainder)\s*(\d+)$", s, re.I)
+    if rem_match:
+        q = int(rem_match.group(1))
+        r = int(rem_match.group(2))
+        return (f"rem:{q} R {r}", None)
+
+    # Comparison symbols / words normalization
+    comp_map = {
+        ">": ">", "greater": ">", "greater than": ">",
+        "<": "<", "less": "<", "less than": "<",
+        "=": "=", "equal": "=", "equal to": "="
+    }
+    if s.lower() in comp_map:
+        return (comp_map[s.lower()], None)
 
     # Ratio syntax e.g. "3:4" or "3 to 4"
     ratio_match = re.match(r"^(-?\d+)\s*(?::|to)\s*(-?\d+)$", s, re.I)
@@ -261,6 +278,9 @@ def math_lcm(a: Any, b: Any) -> Fraction:
 
 
 def compare(a: Any, b: Any) -> str:
+    """Computes comparison between two numeric quantities, returning '<', '>', or '='.
+    Options may be '<', '>', '=', or word forms like 'less than', 'greater than', 'equal to'.
+    """
     fa = safe_fraction(a)
     fb = safe_fraction(b)
     if fa < fb:
@@ -268,6 +288,38 @@ def compare(a: Any, b: Any) -> str:
     elif fa > fb:
         return ">"
     return "="
+
+
+def divmod_rem(dividend: Any, divisor: Any) -> str:
+    """Computes integer division with remainder and returns formatted string 'Q R r'.
+    Verified by exact divmod computation on integers: dividend = q * divisor + r, with 0 <= r < divisor.
+    """
+    a = int(safe_fraction(dividend))
+    b = int(safe_fraction(divisor))
+    if b == 0:
+        raise VerificationError("Division by zero in divmod_rem")
+    q, r = divmod(a, b)
+    return f"{q} R {r}"
+
+
+def check_equiv(expr_a: str, expr_b: str, var: str = "x") -> str:
+    """Numerically verifies whether two algebraic expressions are equivalent.
+    Evaluates both expressions at several fixed sample points (e.g. x = 0, 1, 2, -1, 5, 1/2) using exact Fractions.
+    Returns 'equivalent' if both expressions yield identical Fractions at all test points, else 'not equivalent'.
+    NOTE: This is a numeric sample check with documented limits (can fail on pathological high-degree or piecewise functions).
+    """
+    test_points = [0, 1, 2, -1, 5, Fraction(1, 2)]
+    for val in test_points:
+        sub_a = re.sub(rf"\b{var}\b", f"({val})", str(expr_a))
+        sub_b = re.sub(rf"\b{var}\b", f"({val})", str(expr_b))
+        try:
+            res_a = evaluate_expression(sub_a)
+            res_b = evaluate_expression(sub_b)
+            if safe_fraction(res_a) != safe_fraction(res_b):
+                return "not equivalent"
+        except Exception:
+            return "not equivalent"
+    return "equivalent"
 
 
 WHITELISTED_FUNCS = {
@@ -287,6 +339,8 @@ WHITELISTED_FUNCS = {
     "volume_box": volume_box,
     "solve_linear": solve_linear,
     "compare": compare,
+    "divmod_rem": divmod_rem,
+    "check_equiv": check_equiv,
 }
 
 
@@ -429,7 +483,7 @@ def verify_question(q: Union[Question, Dict[str, Any]], verifier_type: str = "fr
             q = Question.model_validate(q)
         except Exception as e:
             return VerificationResult(passed=False, reasons=[f"Schema validation failed: {str(e)}"])
-
+    registry = load_registry()
     # Check for placeholder leaks
     placeholder_pattern = re.compile(r"\{[a-zA-Z0-9_]+\}|\[TODO\]|\[INSERT\]", re.I)
     for field_name, val in [("stem", q.stem), ("explanation", q.explanation), ("hint", q.hint)]:
@@ -457,7 +511,8 @@ def verify_question(q: Union[Question, Dict[str, Any]], verifier_type: str = "fr
             if opt.misconception is not None and opt.misconception != "":
                 reasons.append(f"Correct option {i} must have null misconception, found '{opt.misconception}'")
         else:
-            if not opt.misconception or not str(opt.misconception).strip():
+            tag = (getattr(opt, "misconception_id", None) or opt.misconception or "").strip()
+            if not tag:
                 reasons.append(f"Wrong option {i} ('{opt.text}') is missing a misconception tag")
 
     # Distinctness check
@@ -472,8 +527,9 @@ def verify_question(q: Union[Question, Dict[str, Any]], verifier_type: str = "fr
             # String comparison
             target_str = str(computed_val).strip().lower()
             for idx, key in enumerate(normalized_keys):
-                clean_opt = key.replace("frac:", "").replace("ratio:", "").strip().lower()
-                if clean_opt == target_str or str(q.options[idx].text).strip().lower() == target_str:
+                clean_opt = key.replace("frac:", "").replace("ratio:", "").replace("rem:", "").strip().lower()
+                clean_raw = str(q.options[idx].text).strip().lower()
+                if clean_opt == target_str or clean_raw == target_str or key == target_str:
                     matching_indices.append(idx)
         else:
             try:
@@ -491,7 +547,145 @@ def verify_question(q: Union[Question, Dict[str, Any]], verifier_type: str = "fr
         elif matching_indices[0] != q.correct_index:
             reasons.append(f"correct_index ({q.correct_index}) does not agree with computed answer match ({matching_indices[0]})")
 
+    # 5. Distractor Provenance and Misconception Verification
+    has_params = q.params is not None
+    is_dict_params = isinstance(q.params, dict)
+
+    if has_params:
+        params_dict = q.params if is_dict_params else {}
+        all_distractors_verified = True
+        for i, opt in enumerate(q.options):
+            if i == q.correct_index:
+                continue
+            tag = str(getattr(opt, "misconception_id", None) or opt.misconception or "").strip()
+            if not tag:
+                reasons.append(f"Option {i} ('{opt.text}') is missing a misconception tag")
+                all_distractors_verified = False
+                continue
+            if tag not in registry:
+                reasons.append(f"Option {i} has unknown misconception id '{tag}'")
+                all_distractors_verified = False
+                continue
+            entry = registry[tag]
+            topic_ids = entry.get("topic_ids", [])
+            if q.topic_id not in topic_ids:
+                reasons.append(f"Option {i} misconception tag '{tag}' is not listed for topic '{q.topic_id}'")
+                all_distractors_verified = False
+                continue
+            if tag not in RULES:
+                reasons.append(f"Option {i} rule '{tag}' is not implemented in RULES")
+                all_distractors_verified = False
+                continue
+            fn, applies_fn, _ = RULES[tag]
+            if not applies_fn(params_dict):
+                reasons.append(f"Option {i} rule '{tag}' applies_when is false for params")
+                all_distractors_verified = False
+                continue
+            expected = fn(params_dict)
+            if expected is None:
+                reasons.append(f"Option {i} rule '{tag}' returned None for params")
+                all_distractors_verified = False
+                continue
+            norm_exp, frac_exp = normalize_option(expected)
+            norm_opt, frac_opt = normalize_option(opt.text)
+            match = False
+            if frac_exp is not None and frac_opt is not None and frac_exp == frac_opt:
+                match = True
+            elif norm_exp == norm_opt:
+                match = True
+            else:
+                clean_exp = norm_exp.replace("frac:", "").replace("ratio:", "").replace("rem:", "").strip().lower()
+                clean_opt = norm_opt.replace("frac:", "").replace("ratio:", "").replace("rem:", "").strip().lower()
+                if clean_exp == clean_opt or str(expected).strip().lower() == str(opt.text).strip().lower():
+                    match = True
+            if not match:
+                reasons.append(f"Option {i} with tag '{tag}' expected '{expected}', but option text is '{opt.text}'")
+                all_distractors_verified = False
+
+        q.provenance = "verified" if (all_distractors_verified and len(reasons) == 0) else "unchecked"
+        if q.provenance == "verified":
+            q.verified = True
+    else:
+        # Without params (e.g. LLM generated questions)
+        any_rule_verified = False
+        for i, opt in enumerate(q.options):
+            if i == q.correct_index:
+                continue
+            tag = str(getattr(opt, "misconception_id", None) or opt.misconception or "").strip()
+            if not tag:
+                reasons.append(f"Option {i} ('{opt.text}') is missing a misconception tag")
+                continue
+            if tag in registry:
+                entry = registry[tag]
+                topic_ids = entry.get("topic_ids", [])
+                if q.topic_id.startswith(("g5-", "g6-")) and q.topic_id not in topic_ids:
+                    reasons.append(f"Option {i} misconception tag '{tag}' is not listed for topic '{q.topic_id}'")
+                # Try to reproduce from expression
+                parsed = _parse_params_from_expr(q.expression, q.topic_id)
+                if parsed and tag in RULES:
+                    fn, applies_fn, _ = RULES[tag]
+                    if applies_fn(parsed):
+                        expected = fn(parsed)
+                        norm_exp, frac_exp = normalize_option(expected)
+                        norm_opt, frac_opt = normalize_option(opt.text)
+                        match = False
+                        if frac_exp is not None and frac_opt is not None and frac_exp == frac_opt:
+                            match = True
+                        elif norm_exp == norm_opt:
+                            match = True
+                        else:
+                            clean_exp = norm_exp.replace("frac:", "").replace("ratio:", "").replace("rem:", "").strip().lower()
+                            clean_opt = norm_opt.replace("frac:", "").replace("ratio:", "").replace("rem:", "").strip().lower()
+                            if clean_exp == clean_opt or str(expected).strip().lower() == str(opt.text).strip().lower():
+                                match = True
+                        if not match:
+                            reasons.append(f"Option {i} with tag '{tag}' ran on parsed expression and expected '{expected}', but option text is '{opt.text}'")
+                        else:
+                            any_rule_verified = True
+            elif tag and q.topic_id in {"g5-fractions-add", "g5-volume", "g6-percents", "g6-equations", "g5-divide"}:
+                reasons.append(f"Option {i} misconception tag '{tag}' not found in registry")
+
+        if any_rule_verified and len(reasons) == 0:
+            q.provenance = "verified"
+            q.verified = True
+        else:
+            q.provenance = "unchecked"
     return VerificationResult(passed=(len(reasons) == 0), reasons=reasons)
+
+
+def _parse_params_from_expr(expr: str, topic_id: str) -> Optional[Dict[str, Any]]:
+    s = str(expr).strip()
+    if topic_id == "g5-fractions-add":
+        m = re.match(r"^(\d+)/(\d+)\s*\+\s*(\d+)/(\d+)$", s)
+        if m:
+            return {"a": int(m.group(1)), "b": int(m.group(2)), "c": int(m.group(3)), "d": int(m.group(4))}
+    elif topic_id == "g5-volume":
+        m = re.match(r"^(\d+)\s*\*\s*(\d+)\s*\*\s*(\d+)$", s)
+        if m:
+            return {"l": int(m.group(1)), "w": int(m.group(2)), "h": int(m.group(3))}
+    elif topic_id == "g6-percents":
+        m = re.match(r"^(\d+(?:\.\d+)?)\s*%\s*of\s*(\d+(?:\.\d+)?)$", s, re.I)
+        if m:
+            p_val = float(m.group(1)) if "." in m.group(1) else int(m.group(1))
+            n_val = float(m.group(2)) if "." in m.group(2) else int(m.group(2))
+            return {"p": p_val, "n": n_val}
+    elif topic_id == "g6-equations":
+        m1 = re.match(r"^(\d+)\s*\*\s*x\s*=\s*(\d+)$", s)
+        if m1:
+            return {"form": "ax_b", "a": int(m1.group(1)), "b": int(m1.group(2))}
+        m2 = re.match(r"^x\s*\+\s*(\d+)\s*=\s*(\d+)$", s)
+        if m2:
+            return {"form": "xpa_b", "a": int(m2.group(1)), "b": int(m2.group(2))}
+        m3 = re.match(r"^(\d+)\s*\*\s*x\s*\+\s*(\d+)\s*=\s*(\d+)$", s)
+        if m3:
+            return {"form": "axpb_c", "a": int(m3.group(1)), "b": int(m3.group(2)), "c": int(m3.group(3))}
+    elif topic_id == "g5-divide":
+        m = re.match(r"^(\d+)\s*/\s*(\d+)$", s)
+        if m:
+            n_val, d_val = int(m.group(1)), int(m.group(2))
+            if d_val != 0:
+                return {"n": n_val, "d": d_val, "q": n_val // d_val, "r": n_val % d_val}
+    return None
 
 
 def verify_lesson(lesson: Union[Lesson, Dict[str, Any]]) -> VerificationResult:

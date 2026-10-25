@@ -1,6 +1,6 @@
 from __future__ import annotations
 from enum import Enum
-from typing import List, Optional, Any, Dict
+from typing import List, Optional, Any, Dict, Union
 from pydantic import BaseModel, Field, model_validator
 
 
@@ -11,8 +11,10 @@ class Difficulty(str, Enum):
 
 
 class Option(BaseModel):
+    id: Optional[str] = Field(None, description="Option identifier A, B, C, D")
     text: str = Field(..., min_length=1, description="Option text or number representation")
     misconception: Optional[str] = Field(None, description="Tag identifying the conceptual mistake if wrong; null if correct")
+    misconception_id: Optional[str] = Field(None, description="Tag/ID identifying the conceptual mistake if wrong; null if correct")
 
 
 class Question(BaseModel):
@@ -23,6 +25,9 @@ class Question(BaseModel):
     verifier_type: str = Field(default="fraction_arithmetic", min_length=1)
     stem: str = Field(..., min_length=1)
     expression: str = Field(..., min_length=1)
+    params: Optional[Union[List[Any], Dict[str, Any]]] = Field(None, description="Parameters used to generate the question")
+    template_id: Optional[str] = Field(None, description="Identifier of the stem template used for this question")
+    answer: Optional[str] = Field(None, description="Canonical answer text")
     options: List[Option]
     correct_index: int = Field(..., ge=0, le=3)
     explanation: str = Field(..., min_length=1)
@@ -30,6 +35,7 @@ class Question(BaseModel):
     model: str = Field(default="gemini-1.5-flash", min_length=1)
     prompt_version: str = Field(default="v2", min_length=1)
     verified: bool = Field(default=False)
+    provenance: Optional[str] = Field(default=None, description="Provenance status: 'verified' or 'unchecked'")
 
     @model_validator(mode="after")
     def validate_options_structure(self) -> Question:
@@ -89,6 +95,15 @@ class ExplainerScript(BaseModel):
 class MisconceptionEntry(BaseModel):
     tag: str = Field(..., min_length=1)
     description: str = Field(..., min_length=1)
+
+class RegistryMisconception(BaseModel):
+    id: str = Field(..., min_length=1)
+    topic_ids: List[str] = Field(..., min_items=1)
+    kid_label: str = Field(..., min_length=1)
+    diagnosis: str = Field(..., min_length=1)
+    why_it_fails: str = Field(..., min_length=1)
+    mini_example: str = Field(..., min_length=1)
+    applies_when: str = Field(..., min_length=1)
 
 
 class TopicEntry(BaseModel):
