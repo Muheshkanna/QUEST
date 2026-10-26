@@ -6,7 +6,6 @@ never need a Turso account just to run the project locally.
 """
 from __future__ import annotations
 
-import asyncio
 import hashlib
 import json
 import os
@@ -16,12 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Optional
 
-# ---------------------------------------------------------------------------
-# Configuration
-# ---------------------------------------------------------------------------
-
-TURSO_URL: str = os.environ.get("TURSO_DATABASE_URL", "")
-TURSO_TOKEN: str = os.environ.get("TURSO_AUTH_TOKEN", "")
+import httpx
 
 
 def _use_turso() -> bool:
@@ -79,32 +73,102 @@ def _local_connection() -> sqlite3.Connection:
 
 
 # ---------------------------------------------------------------------------
-# Turso helpers (async → sync bridge via asyncio.run)
+# Turso helpers (synchronous HTTP pipeline via httpx - avoids event loop conflicts)
 # ---------------------------------------------------------------------------
 
 
+def _get_turso_config() -> tuple[str, str]:
+    """Return normalized (url, token) for Turso."""
+    url = os.environ.get("TURSO_DATABASE_URL", "").strip()
+    if url.startswith("libsql://"):
+        url = "https://" + url[len("libsql://"):]
+    elif url.startswith("http://"):
+        url = "https://" + url[len("http://"):]
+    url = url.rstrip("/")
+    token = os.environ.get("TURSO_AUTH_TOKEN", "").strip()
+    return url, token
+
+
+def _use_turso() -> bool:
+    """Return True when Turso credentials are present in the environment."""
+    url, token = _get_turso_config()
+    return bool(url and token)
+
+
+def _format_hrana_arg(val: Any) -> dict:
+    if val is None:
+        return {"type": "null"}
+    elif isinstance(val, bool):
+        return {"type": "integer", "value": "1" if val else "0"}
+    elif isinstance(val, int):
+        return {"type": "integer", "value": str(val)}
+    elif isinstance(val, float):
+        return {"type": "float", "value": val}
+    elif isinstance(val, bytes):
+        import base64
+        return {"type": "blob", "base64": base64.b64encode(val).decode("ascii")}
+    else:
+        return {"type": "text", "value": str(val)}
+
+
 def _turso_execute(sql: str, args: tuple = ()) -> list[dict]:
-    """Execute one SQL statement against Turso; returns list of row dicts."""
-    import libsql_client  # type: ignore
+    """Execute one SQL statement against Turso HTTP /v2/pipeline synchronously."""
+    url, token = _get_turso_config()
+    hrana_args = [_format_hrana_arg(a) for a in args]
+    payload = {
+        "requests": [
+            {"type": "execute", "stmt": {"sql": sql, "args": hrana_args}}
+        ]
+    }
+    with httpx.Client(timeout=10.0) as client:
+        resp = client.post(
+            f"{url}/v2/pipeline",
+            headers={"Authorization": f"Bearer {token}"},
+            json=payload,
+        )
+        resp.raise_for_status()
+        data = resp.json()
 
-    async def _run() -> list[dict]:
-        async with libsql_client.create_client(url=TURSO_URL, auth_token=TURSO_TOKEN) as client:
-            rs = await client.execute(sql, list(args))
-            return [{col: rs.rows[i][j] for j, col in enumerate(rs.columns)} for i in range(len(rs.rows))]
+    res = data["results"][0]
+    if res.get("type") == "error":
+        err_msg = res.get("error", {}).get("message", "Turso query error")
+        raise RuntimeError(f"Turso error: {err_msg}")
 
-    return asyncio.run(_run())
+    result = res.get("response", {}).get("result", {})
+    cols = [c["name"] for c in result.get("cols", [])]
+    rows = []
+    for raw_row in result.get("rows", []):
+        row_dict = {}
+        for c, cell in zip(cols, raw_row):
+            row_dict[c] = cell.get("value")
+        rows.append(row_dict)
+    return rows
 
 
 def _turso_batch(statements: list[dict]) -> None:
-    """Execute multiple statements as a single Turso transaction."""
-    import libsql_client  # type: ignore
+    """Execute multiple statements as a single Turso pipeline transaction."""
+    url, token = _get_turso_config()
+    requests = []
+    for s in statements:
+        sql = s["sql"]
+        raw_args = s.get("args", [])
+        hrana_args = [_format_hrana_arg(a) for a in raw_args]
+        requests.append({"type": "execute", "stmt": {"sql": sql, "args": hrana_args}})
 
-    async def _run() -> None:
-        async with libsql_client.create_client(url=TURSO_URL, auth_token=TURSO_TOKEN) as client:
-            stmts = [libsql_client.Statement(s["sql"], s.get("args", [])) for s in statements]
-            await client.batch(stmts)
+    payload = {"requests": requests}
+    with httpx.Client(timeout=10.0) as client:
+        resp = client.post(
+            f"{url}/v2/pipeline",
+            headers={"Authorization": f"Bearer {token}"},
+            json=payload,
+        )
+        resp.raise_for_status()
+        data = resp.json()
 
-    asyncio.run(_run())
+    for res in data.get("results", []):
+        if res.get("type") == "error":
+            err_msg = res.get("error", {}).get("message", "Turso batch error")
+            raise RuntimeError(f"Turso batch error: {err_msg}")
 
 
 # ---------------------------------------------------------------------------
