@@ -1,0 +1,816 @@
+{
+  "topic_id": "g6-fraction-division",
+  "version": "1.0.0",
+  "questions": [
+    {
+      "id": "g6-fraction-division-easy-1",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-easy-games",
+      "params": {
+        "a": 2,
+        "b": 3,
+        "c": 1,
+        "d": 3
+      },
+      "stem": "A wizard holds 2/3 of a mana crystal. Each spell cast consumes 1/3 of a crystal. How many spells can be cast?",
+      "expression": "(2 / 3) / (1 / 3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "2/9",
+          "misconception_id": "multiplied_without_flipping"
+        },
+        {
+          "id": "B",
+          "text": "2",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "1/2",
+          "misconception_id": "flipped_the_first_fraction"
+        },
+        {
+          "id": "D",
+          "text": "9/2",
+          "misconception_id": "flipped_both_fractions"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "2",
+      "hint": "Keep the first fraction, change division to multiplication, and flip the second fraction.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 2/3 \u00f7 1/3 = 2/3 \u00d7 3 = 6/3. Simplify by dividing the top and bottom by 3: 6/3 simplifies to 2.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-easy-2",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-easy-sports",
+      "params": {
+        "a": 2,
+        "b": 3,
+        "c": 1,
+        "d": 2
+      },
+      "stem": "A runner has 2/3 of an energy bar. Each bite is 1/2 of a bar. How many bites can the runner take?",
+      "expression": "(2 / 3) / (1 / 2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/4",
+          "misconception_id": "flipped_the_first_fraction"
+        },
+        {
+          "id": "B",
+          "text": "3",
+          "misconception_id": "flipped_both_fractions"
+        },
+        {
+          "id": "C",
+          "text": "4/3",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "7/6",
+          "misconception_id": "added_instead_of_dividing"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "4/3",
+      "hint": "Keep the first fraction, change division to multiplication, and flip the second fraction.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 2/3 \u00f7 1/2 = 2/3 \u00d7 2 = 4/3.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-easy-3",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-easy-school",
+      "params": {
+        "a": 5,
+        "b": 6,
+        "c": 1,
+        "d": 6
+      },
+      "stem": "A teacher has 5/6 of a poster board. Each student badge requires 1/6 of a board. How many badges can be made?",
+      "expression": "(5 / 6) / (1 / 6)",
+      "options": [
+        {
+          "id": "A",
+          "text": "5",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "36/5",
+          "misconception_id": "flipped_both_fractions"
+        },
+        {
+          "id": "C",
+          "text": "1",
+          "misconception_id": "added_instead_of_dividing"
+        },
+        {
+          "id": "D",
+          "text": "5/36",
+          "misconception_id": "multiplied_without_flipping"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "5",
+      "hint": "Keep the first fraction, change division to multiplication, and flip the second fraction.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 5/6 \u00f7 1/6 = 5/6 \u00d7 6 = 30/6. Simplify by dividing the top and bottom by 6: 30/6 simplifies to 5.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-easy-4",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-easy-nature",
+      "params": {
+        "a": 1,
+        "b": 2,
+        "c": 1,
+        "d": 6
+      },
+      "stem": "A garden path covers 1/2 of a lawn. Stepping stones each cover 1/6 of the lawn. How many stepping stones fit along the path?",
+      "expression": "(1 / 2) / (1 / 6)",
+      "options": [
+        {
+          "id": "A",
+          "text": "3",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "2/3",
+          "misconception_id": "added_instead_of_dividing"
+        },
+        {
+          "id": "C",
+          "text": "1/12",
+          "misconception_id": "multiplied_without_flipping"
+        },
+        {
+          "id": "D",
+          "text": "1/3",
+          "misconception_id": "flipped_the_first_fraction"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "3",
+      "hint": "Keep the first fraction, change division to multiplication, and flip the second fraction.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 1/2 \u00f7 1/6 = 1/2 \u00d7 6 = 6/2. Simplify by dividing the top and bottom by 2: 6/2 simplifies to 3.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-easy-5",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-easy-food",
+      "params": {
+        "a": 3,
+        "b": 5,
+        "c": 1,
+        "d": 2
+      },
+      "stem": "A baker has 3/5 of a kilogram of icing. Each cupcake requires 1/2 of a kilogram. How many cupcakes can be frosted?",
+      "expression": "(3 / 5) / (1 / 2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/10",
+          "misconception_id": "multiplied_without_flipping"
+        },
+        {
+          "id": "B",
+          "text": "5/6",
+          "misconception_id": "flipped_the_first_fraction"
+        },
+        {
+          "id": "C",
+          "text": "10/3",
+          "misconception_id": "flipped_both_fractions"
+        },
+        {
+          "id": "D",
+          "text": "6/5",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "6/5",
+      "hint": "Keep the first fraction, change division to multiplication, and flip the second fraction.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 3/5 \u00f7 1/2 = 3/5 \u00d7 2 = 6/5.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-easy-6",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-easy-games",
+      "params": {
+        "a": 2,
+        "b": 3,
+        "c": 1,
+        "d": 3
+      },
+      "stem": "A wizard holds 2/3 of a mana crystal. Each spell cast consumes 1/3 of a crystal. How many spells can be cast?",
+      "expression": "(2 / 3) / (1 / 3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2",
+          "misconception_id": "flipped_the_first_fraction"
+        },
+        {
+          "id": "B",
+          "text": "9/2",
+          "misconception_id": "flipped_both_fractions"
+        },
+        {
+          "id": "C",
+          "text": "2",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "1",
+          "misconception_id": "added_instead_of_dividing"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "2",
+      "hint": "Keep the first fraction, change division to multiplication, and flip the second fraction.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 2/3 \u00f7 1/3 = 2/3 \u00d7 3 = 6/3. Simplify by dividing the top and bottom by 3: 6/3 simplifies to 2.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-medium-1",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-medium-sports",
+      "params": {
+        "a": 1,
+        "b": 3,
+        "c": 4,
+        "d": 5
+      },
+      "stem": "A practice lap is 4/5 of a mile. An athlete completed 1/3 of a mile. How many practice laps is that?",
+      "expression": "(1 / 3) / (4 / 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "15/4",
+          "misconception_id": "flipped_both_fractions"
+        },
+        {
+          "id": "B",
+          "text": "17/15",
+          "misconception_id": "added_instead_of_dividing"
+        },
+        {
+          "id": "C",
+          "text": "5/12",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "4/15",
+          "misconception_id": "multiplied_without_flipping"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "5/12",
+      "hint": "To divide by a fraction, multiply by its reciprocal: invert the second fraction.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 1/3 \u00f7 4/5 = 1/3 \u00d7 5/4 = 5/12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-medium-2",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-medium-games",
+      "params": {
+        "a": 3,
+        "b": 5,
+        "c": 3,
+        "d": 4
+      },
+      "stem": "A blacksmith needs 3/4 of an ingot to forge an arrow. The forge has 3/5 of an ingot. How many arrows can be forged?",
+      "expression": "(3 / 5) / (3 / 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "27/20",
+          "misconception_id": "added_instead_of_dividing"
+        },
+        {
+          "id": "B",
+          "text": "4/5",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "9/20",
+          "misconception_id": "multiplied_without_flipping"
+        },
+        {
+          "id": "D",
+          "text": "5/4",
+          "misconception_id": "flipped_the_first_fraction"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "4/5",
+      "hint": "To divide by a fraction, multiply by its reciprocal: invert the second fraction.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 3/5 \u00f7 3/4 = 3/5 \u00d7 4/3 = 12/15. Simplify by dividing the top and bottom by 3: 12/15 simplifies to 4/5.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-medium-3",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-medium-school",
+      "params": {
+        "a": 3,
+        "b": 5,
+        "c": 4,
+        "d": 5
+      },
+      "stem": "An art project uses 4/5 of a bottle of glue per craft. A student has 3/5 of a bottle. How many crafts can be made?",
+      "expression": "(3 / 5) / (4 / 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "12/25",
+          "misconception_id": "multiplied_without_flipping"
+        },
+        {
+          "id": "B",
+          "text": "4/3",
+          "misconception_id": "flipped_the_first_fraction"
+        },
+        {
+          "id": "C",
+          "text": "25/12",
+          "misconception_id": "flipped_both_fractions"
+        },
+        {
+          "id": "D",
+          "text": "3/4",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "3/4",
+      "hint": "To divide by a fraction, multiply by its reciprocal: invert the second fraction.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 3/5 \u00f7 4/5 = 3/5 \u00d7 5/4 = 15/20. Simplify by dividing the top and bottom by 5: 15/20 simplifies to 3/4.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-medium-4",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-medium-food",
+      "params": {
+        "a": 2,
+        "b": 5,
+        "c": 1,
+        "d": 4
+      },
+      "stem": "A soup recipe requires 1/4 of a cup of broth per bowl. If a pot holds 2/5 of a cup, how many bowls can be served?",
+      "expression": "(2 / 5) / (1 / 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "8/5",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "5/8",
+          "misconception_id": "flipped_the_first_fraction"
+        },
+        {
+          "id": "C",
+          "text": "10",
+          "misconception_id": "flipped_both_fractions"
+        },
+        {
+          "id": "D",
+          "text": "13/20",
+          "misconception_id": "added_instead_of_dividing"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "8/5",
+      "hint": "To divide by a fraction, multiply by its reciprocal: invert the second fraction.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 2/5 \u00f7 1/4 = 2/5 \u00d7 4 = 8/5.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-medium-5",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-medium-nature",
+      "params": {
+        "a": 1,
+        "b": 4,
+        "c": 2,
+        "d": 3
+      },
+      "stem": "A bird feeder holds 1/4 of a pound of seed. Each feeding scoop is 2/3 of a pound. How many scoops can be poured?",
+      "expression": "(1 / 4) / (2 / 3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "6",
+          "misconception_id": "flipped_both_fractions"
+        },
+        {
+          "id": "B",
+          "text": "11/12",
+          "misconception_id": "added_instead_of_dividing"
+        },
+        {
+          "id": "C",
+          "text": "1/6",
+          "misconception_id": "multiplied_without_flipping"
+        },
+        {
+          "id": "D",
+          "text": "3/8",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "3/8",
+      "hint": "To divide by a fraction, multiply by its reciprocal: invert the second fraction.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 1/4 \u00f7 2/3 = 1/4 \u00d7 3/2 = 3/8.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-medium-6",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-medium-sports",
+      "params": {
+        "a": 3,
+        "b": 4,
+        "c": 1,
+        "d": 3
+      },
+      "stem": "A practice lap is 1/3 of a mile. An athlete completed 3/4 of a mile. How many practice laps is that?",
+      "expression": "(3 / 4) / (1 / 3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "13/12",
+          "misconception_id": "added_instead_of_dividing"
+        },
+        {
+          "id": "B",
+          "text": "1/4",
+          "misconception_id": "multiplied_without_flipping"
+        },
+        {
+          "id": "C",
+          "text": "9/4",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "4/9",
+          "misconception_id": "flipped_the_first_fraction"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "9/4",
+      "hint": "To divide by a fraction, multiply by its reciprocal: invert the second fraction.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 3/4 \u00f7 1/3 = 3/4 \u00d7 3 = 9/4.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-hard-1",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-hard-nature",
+      "params": {
+        "a": 5,
+        "b": 6,
+        "c": 5,
+        "d": 8
+      },
+      "stem": "A park trail spans 5/6 of a mountain pass. Distance markers are placed every 5/8 of a pass. How many intervals fit along the trail?",
+      "expression": "(5 / 6) / (5 / 8)",
+      "options": [
+        {
+          "id": "A",
+          "text": "25/48",
+          "misconception_id": "multiplied_without_flipping"
+        },
+        {
+          "id": "B",
+          "text": "3/4",
+          "misconception_id": "flipped_the_first_fraction"
+        },
+        {
+          "id": "C",
+          "text": "4/3",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "48/25",
+          "misconception_id": "flipped_both_fractions"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "4/3",
+      "hint": "Multiply the first fraction by the reciprocal of the second fraction, then simplify.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 5/6 \u00f7 5/8 = 5/6 \u00d7 8/5 = 40/30. Simplify by dividing the top and bottom by 10: 40/30 simplifies to 4/3.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-hard-2",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-hard-food",
+      "params": {
+        "a": 2,
+        "b": 7,
+        "c": 3,
+        "d": 5
+      },
+      "stem": "A pastry chef has 2/7 of a block of butter. A delicate pastry batch takes 3/5 of a block. How many batches can be baked?",
+      "expression": "(2 / 7) / (3 / 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "10/21",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "21/10",
+          "misconception_id": "flipped_the_first_fraction"
+        },
+        {
+          "id": "C",
+          "text": "35/6",
+          "misconception_id": "flipped_both_fractions"
+        },
+        {
+          "id": "D",
+          "text": "31/35",
+          "misconception_id": "added_instead_of_dividing"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "10/21",
+      "hint": "Multiply the first fraction by the reciprocal of the second fraction, then simplify.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 2/7 \u00f7 3/5 = 2/7 \u00d7 5/3 = 10/21.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-hard-3",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-hard-sports",
+      "params": {
+        "a": 3,
+        "b": 8,
+        "c": 3,
+        "d": 4
+      },
+      "stem": "A sprint interval is 3/4 of a stadium circuit. A training session covered 3/8 of a circuit. How many intervals were completed?",
+      "expression": "(3 / 8) / (3 / 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "32/9",
+          "misconception_id": "flipped_both_fractions"
+        },
+        {
+          "id": "B",
+          "text": "1/2",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "9/8",
+          "misconception_id": "added_instead_of_dividing"
+        },
+        {
+          "id": "D",
+          "text": "9/32",
+          "misconception_id": "multiplied_without_flipping"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "1/2",
+      "hint": "Multiply the first fraction by the reciprocal of the second fraction, then simplify.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 3/8 \u00f7 3/4 = 3/8 \u00d7 4/3 = 12/24. Simplify by dividing the top and bottom by 12: 12/24 simplifies to 1/2.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-hard-4",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-hard-school",
+      "params": {
+        "a": 4,
+        "b": 7,
+        "c": 3,
+        "d": 5
+      },
+      "stem": "A science lab has 4/7 of a litre of reagent. Each test tube requires 3/5 of a litre. How many test tubes can be prepared?",
+      "expression": "(4 / 7) / (3 / 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "41/35",
+          "misconception_id": "added_instead_of_dividing"
+        },
+        {
+          "id": "B",
+          "text": "12/35",
+          "misconception_id": "multiplied_without_flipping"
+        },
+        {
+          "id": "C",
+          "text": "21/20",
+          "misconception_id": "flipped_the_first_fraction"
+        },
+        {
+          "id": "D",
+          "text": "20/21",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "20/21",
+      "hint": "Multiply the first fraction by the reciprocal of the second fraction, then simplify.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 4/7 \u00f7 3/5 = 4/7 \u00d7 5/3 = 20/21.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-hard-5",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-hard-games",
+      "params": {
+        "a": 2,
+        "b": 7,
+        "c": 3,
+        "d": 5
+      },
+      "stem": "A portal gate consumes 3/5 of a power cell per transit. The terminal retains 2/7 of a power cell. How many transits can occur?",
+      "expression": "(2 / 7) / (3 / 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "10/21",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "6/35",
+          "misconception_id": "multiplied_without_flipping"
+        },
+        {
+          "id": "C",
+          "text": "21/10",
+          "misconception_id": "flipped_the_first_fraction"
+        },
+        {
+          "id": "D",
+          "text": "35/6",
+          "misconception_id": "flipped_both_fractions"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "10/21",
+      "hint": "Multiply the first fraction by the reciprocal of the second fraction, then simplify.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 2/7 \u00f7 3/5 = 2/7 \u00d7 5/3 = 10/21.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-fraction-division-hard-6",
+      "topic_id": "g6-fraction-division",
+      "standard": "6.NR.1.2",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g6-fraction-division-hard-nature",
+      "params": {
+        "a": 3,
+        "b": 8,
+        "c": 5,
+        "d": 8
+      },
+      "stem": "A park trail spans 3/8 of a mountain pass. Distance markers are placed every 5/8 of a pass. How many intervals fit along the trail?",
+      "expression": "(3 / 8) / (5 / 8)",
+      "options": [
+        {
+          "id": "A",
+          "text": "5/3",
+          "misconception_id": "flipped_the_first_fraction"
+        },
+        {
+          "id": "B",
+          "text": "3/5",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "64/15",
+          "misconception_id": "flipped_both_fractions"
+        },
+        {
+          "id": "D",
+          "text": "1",
+          "misconception_id": "added_instead_of_dividing"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "3/5",
+      "hint": "Multiply the first fraction by the reciprocal of the second fraction, then simplify.",
+      "explanation": "To divide by a fraction, multiply by its reciprocal: flip the second fraction. 3/8 \u00f7 5/8 = 3/8 \u00d7 8/5 = 24/40. Simplify by dividing the top and bottom by 8: 24/40 simplifies to 3/5.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    }
+  ]
+}

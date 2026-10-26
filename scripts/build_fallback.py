@@ -18,6 +18,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_ROOT / "data"
 TARGET_ROOT = PROJECT_ROOT / "app" / "public" / "fallback"
+TARGET_ROOT_ALT = PROJECT_ROOT / "public" / "fallback"
 
 
 def compute_topic_playability():
@@ -134,6 +135,13 @@ def main():
             copy_dir(src_folder)
         else:
             print(f"Warning: source directory missing: {src_folder}")
+
+    # 4. Mirror to public/fallback so Nuxt dev & generate serve it directly
+    if TARGET_ROOT.is_dir():
+        if TARGET_ROOT_ALT.exists():
+            shutil.rmtree(TARGET_ROOT_ALT)
+        shutil.copytree(TARGET_ROOT, TARGET_ROOT_ALT)
+        print(f"Synced fallback bundle -> {TARGET_ROOT_ALT}")
 
 
 if __name__ == "__main__":

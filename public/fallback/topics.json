@@ -1,0 +1,886 @@
+[
+  {
+    "id": "g5-place-value",
+    "grade": 5,
+    "realm": "Enchanted Forest",
+    "title": "Place Value & Powers of 10",
+    "fantasy_name": "Leyline Numerology",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.1",
+    "standard_text": "Use place value understanding to solve real-life, mathematical problems (including relationships between places and powers of 10).",
+    "standard_verified": false,
+    "verifier_type": "integer_arithmetic",
+    "misconceptions": [
+      {
+        "id": "additive_power_of_ten",
+        "kid_label": "Added instead of shifting"
+      },
+      {
+        "id": "confuses_ten_times_with_add_ten",
+        "kid_label": "Ten times vs add ten"
+      },
+      {
+        "id": "decimal_point_shift_reversed",
+        "kid_label": "Decimal point moved wrong way"
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 1,
+    "icon": "tree",
+    "island_theme": "Whispering Canopy of Digits",
+    "playable": false,
+    "content_source": "coming-soon",
+    "play_order": null
+  },
+  {
+    "id": "g5-decimal-ops",
+    "grade": 5,
+    "realm": "Enchanted Forest",
+    "title": "Decimal Addition and Subtraction",
+    "fantasy_name": "Dewdrop Sums",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.4",
+    "standard_text": "Read, write, and compare decimal numbers to the thousandths place, and round and perform operations with decimal numbers to the hundredths place.",
+    "standard_verified": false,
+    "verifier_type": "decimal_arithmetic",
+    "misconceptions": [
+      {
+        "id": "carries_over_decimal_point_incorrectly",
+        "kid_label": "Wrong carry in decimals"
+      },
+      {
+        "id": "ignores_empty_place_value",
+        "kid_label": "Forgot a zero place"
+      },
+      {
+        "id": "unaligned_decimals",
+        "kid_label": "Decimals not lined up"
+      },
+      {
+        "id": "ignored_the_decimal_point",
+        "kid_label": "You ignored the decimal points when adding or subtracting."
+      },
+      {
+        "id": "subtracted_smaller_digit_from_larger",
+        "kid_label": "You subtracted the smaller digit from the larger digit without regrouping."
+      },
+      {
+        "id": "dropped_the_carry",
+        "kid_label": "You forgot to carry into the next place value."
+      },
+      {
+        "id": "used_the_wrong_operation",
+        "kid_label": "You performed the wrong operation."
+      },
+      {
+        "id": "forgot_the_decimal_point",
+        "kid_label": "You forgot to include the decimal point in your answer."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 2,
+    "icon": "droplet",
+    "island_theme": "Spring of Floating Decimals",
+    "playable": true,
+    "content_source": "verified-bank",
+    "play_order": 1
+  },
+  {
+    "id": "g5-decimal-compare-round",
+    "grade": 5,
+    "realm": "Enchanted Forest",
+    "title": "Comparing & Rounding Decimals",
+    "fantasy_name": "Mossy Scales of Accuracy",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.4",
+    "standard_text": "Read, write, and compare decimal numbers to the thousandths place, and round and perform operations with decimal numbers to the hundredths place.",
+    "standard_verified": false,
+    "verifier_type": "decimal_comparison",
+    "misconceptions": [
+      {
+        "id": "confuses_tenths_and_hundredths",
+        "kid_label": "You mixed up tenths and hundredths"
+      },
+      {
+        "id": "longer_decimal_is_larger",
+        "kid_label": "Longer decimal looks bigger"
+      },
+      {
+        "id": "round_down_without_truncation_rule",
+        "kid_label": "You rounded down incorrectly"
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 3,
+    "icon": "scale",
+    "island_theme": "Grove of Harmonic Measures",
+    "playable": false,
+    "content_source": "coming-soon",
+    "play_order": null
+  },
+  {
+    "id": "g5-fractions-add",
+    "grade": 5,
+    "realm": "Temple of Wisdom",
+    "title": "Adding & Subtracting Fractions",
+    "fantasy_name": "Fractional Alchemy",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.3.3",
+    "standard_text": "Model and solve problems involving addition and subtraction of fractions and mixed numbers with unlike denominators.",
+    "standard_verified": true,
+    "verifier_type": "fraction_arithmetic",
+    "misconceptions": [
+      {
+        "id": "add_denominators",
+        "kid_label": "You added denominators"
+      },
+      {
+        "id": "added_tops_and_bottoms",
+        "kid_label": "You added the tops and the bottoms"
+      },
+      {
+        "id": "renamed_bottom_kept_tops",
+        "kid_label": "You found a common bottom but forgot to change the tops"
+      },
+      {
+        "id": "multiplied_instead_of_adding",
+        "kid_label": "You multiplied the fractions instead of adding"
+      },
+      {
+        "id": "subtracted_instead_of_adding",
+        "kid_label": "You subtracted instead of adding"
+      },
+      {
+        "id": "added_tops_kept_first_bottom",
+        "kid_label": "You added the tops but kept just one bottom"
+      }
+    ],
+    "tier": "flagship",
+    "unlock_order": 4,
+    "icon": "flask",
+    "island_theme": "Sunken Crucible of Denominators",
+    "playable": true,
+    "content_source": "verified-bank",
+    "play_order": 2
+  },
+  {
+    "id": "g5-fractions-multiply",
+    "grade": 5,
+    "realm": "Temple of Wisdom",
+    "title": "Multiplying Fractions & Whole Numbers",
+    "fantasy_name": "Gilded Fraction Multipliers",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.3.4",
+    "standard_text": "Model and solve problems involving multiplication of a fraction and a whole number.",
+    "standard_verified": true,
+    "verifier_type": "fraction_arithmetic",
+    "misconceptions": [
+      {
+        "id": "believes_multiplication_always_increases",
+        "kid_label": "Multiplication always makes bigger"
+      },
+      {
+        "id": "cross_multiplies_instead_of_multiplying_straight",
+        "kid_label": "You cross\u2011multiplied incorrectly"
+      },
+      {
+        "id": "added_fractions_instead",
+        "kid_label": "You added the fractions instead of multiplying them."
+      },
+      {
+        "id": "multiplies_tops_adds_bottoms",
+        "kid_label": "You multiplied the top numbers but added the bottom numbers."
+      },
+      {
+        "id": "added_tops_multiplied_bottoms",
+        "kid_label": "You added the top numbers instead of multiplying them."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 5,
+    "icon": "scroll",
+    "island_theme": "Hall of Scaled Sigils",
+    "playable": true,
+    "content_source": "verified-bank",
+    "play_order": 3
+  },
+  {
+    "id": "g5-fractions-divide-unit",
+    "grade": 5,
+    "realm": "Temple of Wisdom",
+    "title": "Division of Unit Fractions & Whole Numbers",
+    "fantasy_name": "Prism of Unit Fission",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.3.6",
+    "standard_text": "Model and solve problems involving division of a unit fraction by a whole number and a whole number by a unit fraction.",
+    "standard_verified": true,
+    "verifier_type": "fraction_arithmetic",
+    "misconceptions": [
+      {
+        "id": "confuses_division_order",
+        "kid_label": "Wrong division order"
+      },
+      {
+        "id": "fractional_quotient_confused_with_remainder",
+        "kid_label": "Quotient vs remainder mix\u2011up"
+      },
+      {
+        "id": "multiplies_instead_of_dividing",
+        "kid_label": "You multiplied instead of dividing"
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 6,
+    "icon": "gem",
+    "island_theme": "Axiom of Equal Partitions",
+    "playable": false,
+    "content_source": "coming-soon",
+    "play_order": null
+  },
+  {
+    "id": "g5-volume",
+    "grade": 5,
+    "realm": "Temple of Wisdom",
+    "title": "Volume of Rectangular Prisms",
+    "fantasy_name": "Sanctuary of Cubic Volumetrics",
+    "domain": "Geometric & Spatial Reasoning",
+    "standard": "5.GSR.8.3",
+    "standard_text": "Investigate volume of right rectangular prisms by packing them with unit cubes without gaps or overlaps. Then, determine the total volume to solve problems.",
+    "standard_verified": true,
+    "verifier_type": "volume_geometry",
+    "misconceptions": [
+      {
+        "id": "adds_dimensions_instead_of_multiplying",
+        "kid_label": "Added dimensions instead of multiplying"
+      },
+      {
+        "id": "confuses_surface_area_with_volume",
+        "kid_label": "Surface area vs volume mix\u2011up"
+      },
+      {
+        "id": "forgets_height_layering",
+        "kid_label": "Forgot height layer"
+      },
+      {
+        "id": "added_the_sides",
+        "kid_label": "You added all three sides instead of multiplying"
+      },
+      {
+        "id": "found_base_area_only",
+        "kid_label": "You only found the base area"
+      },
+      {
+        "id": "used_surface_area_formula",
+        "kid_label": "You calculated surface area instead of volume"
+      },
+      {
+        "id": "multiplied_two_sides_then_added_height",
+        "kid_label": "You multiplied two sides then just added the height"
+      },
+      {
+        "id": "cubed_one_side",
+        "kid_label": "You cubed just one side"
+      }
+    ],
+    "tier": "flagship",
+    "unlock_order": 7,
+    "icon": "cube",
+    "island_theme": "The Obsidian Cubic Monolith",
+    "playable": true,
+    "content_source": "verified-bank",
+    "play_order": 4
+  },
+  {
+    "id": "g5-multiply",
+    "grade": 5,
+    "realm": "Celestial Frontier",
+    "title": "Multi-Digit Multiplication",
+    "fantasy_name": "Astral Matrix Products",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.2",
+    "standard_text": "Multiply and divide multi-digit whole numbers to solve relevant, mathematical problems.",
+    "standard_verified": false,
+    "verifier_type": "integer_arithmetic",
+    "misconceptions": [
+      {
+        "id": "aligns_partial_products_incorrectly",
+        "kid_label": "Partial products misaligned"
+      },
+      {
+        "id": "forgets_tens_place_zero",
+        "kid_label": "Missing tens zero"
+      },
+      {
+        "id": "miscalculates_regrouping_additions",
+        "kid_label": "Regrouping error in addition"
+      },
+      {
+        "id": "forgot_the_placeholder_zero",
+        "kid_label": "You forgot the placeholder zero when multiplying by the tens digit."
+      },
+      {
+        "id": "multiplied_only_the_ones_digit",
+        "kid_label": "You only multiplied by the ones digit."
+      },
+      {
+        "id": "skipped_the_cross_products",
+        "kid_label": "You only multiplied tens times tens and ones times ones."
+      },
+      {
+        "id": "added_instead_of_multiplying",
+        "kid_label": "You added the numbers instead of multiplying them."
+      },
+      {
+        "id": "put_the_zero_on_the_wrong_row",
+        "kid_label": "You placed the placeholder zero on the wrong row."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 8,
+    "icon": "sparkles",
+    "island_theme": "Starlight Grid Observatory",
+    "playable": true,
+    "content_source": "verified-bank",
+    "play_order": 5
+  },
+  {
+    "id": "g5-divide",
+    "grade": 5,
+    "realm": "Celestial Frontier",
+    "title": "Multi-Digit Division with Remainders",
+    "fantasy_name": "Orbit of Quotients",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.2.2",
+    "standard_text": "Multiply and divide multi-digit whole numbers to solve relevant, mathematical problems.",
+    "standard_verified": true,
+    "verifier_type": "division_with_remainder",
+    "misconceptions": [
+      {
+        "id": "ignores_remainder_context",
+        "kid_label": "Forgot the remainder"
+      },
+      {
+        "id": "misplaces_quotient_digit_column",
+        "kid_label": "Quotient in wrong column"
+      },
+      {
+        "id": "subtraction_substep_error",
+        "kid_label": "Wrong subtraction step"
+      },
+      {
+        "id": "dropped_the_remainder",
+        "kid_label": "You forgot the remainder"
+      },
+      {
+        "id": "swapped_quotient_and_remainder",
+        "kid_label": "You swapped the quotient and the remainder"
+      },
+      {
+        "id": "stopped_subtracting_too_early",
+        "kid_label": "You stopped dividing one step too early"
+      },
+      {
+        "id": "misplaced_quotient_digit",
+        "kid_label": "You wrote the quotient in the wrong place"
+      },
+      {
+        "id": "rounded_quotient_up_kept_remainder",
+        "kid_label": "You rounded the quotient up"
+      },
+      {
+        "id": "calculation_error",
+        "kid_label": "Arithmetic error during division"
+      },
+      {
+        "id": "rounded_wrong",
+        "kid_label": "Rounded quotient incorrectly"
+      },
+      {
+        "id": "underestimated_quotient",
+        "kid_label": "Stopped dividing too early"
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 9,
+    "icon": "compass",
+    "island_theme": "Vortex of Equal Portions",
+    "playable": true,
+    "content_source": "verified-bank",
+    "play_order": 6
+  },
+  {
+    "id": "g5-order-ops",
+    "grade": 5,
+    "realm": "Celestial Frontier",
+    "title": "Order of Operations & Expressions",
+    "fantasy_name": "Chrono-Order of Axioms",
+    "domain": "Numerical Reasoning",
+    "standard": "5.NR.5",
+    "standard_text": "Write, interpret, and evaluate numerical expressions within authentic problems.",
+    "standard_verified": false,
+    "verifier_type": "expression_evaluation",
+    "misconceptions": [
+      {
+        "id": "addition_before_subtraction_dogma",
+        "kid_label": "Add before subtract always"
+      },
+      {
+        "id": "ignores_parentheses_grouping",
+        "kid_label": "Skipped parentheses"
+      },
+      {
+        "id": "left_to_right_disregards_precedence",
+        "kid_label": "Left\u2011to\u2011right only"
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 10,
+    "icon": "hourglass",
+    "island_theme": "Celestial Time-Wheel Spire",
+    "playable": false,
+    "content_source": "coming-soon",
+    "play_order": null
+  },
+  {
+    "id": "g6-ratios",
+    "grade": 6,
+    "realm": "Enchanted Forest",
+    "title": "Ratios & Equivalent Ratios",
+    "fantasy_name": "Botanical Proportions",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.4.1",
+    "standard_text": "Explain the concept of a ratio, represent ratios, and use ratio language to describe a relationship between two quantities.",
+    "standard_verified": true,
+    "verifier_type": "ratio_comparison",
+    "misconceptions": [
+      {
+        "id": "additive_ratio_scaling",
+        "kid_label": "Added instead of scaling"
+      },
+      {
+        "id": "inverts_ratio_terms_order",
+        "kid_label": "Reversed ratio order"
+      },
+      {
+        "id": "part_to_part_vs_part_to_whole",
+        "kid_label": "Part\u2011to\u2011part vs part\u2011to\u2011whole"
+      },
+      {
+        "id": "multiplied_only_first_term",
+        "kid_label": "You only multiplied the first number in the ratio."
+      },
+      {
+        "id": "squared_terms",
+        "kid_label": "You multiplied each number by itself instead of the scaling factor."
+      }
+    ],
+    "tier": "flagship",
+    "unlock_order": 11,
+    "icon": "balance",
+    "island_theme": "Verdant Spire of Harmonic Vines",
+    "playable": true,
+    "content_source": "verified-bank",
+    "play_order": 1
+  },
+  {
+    "id": "g6-unit-rates",
+    "grade": 6,
+    "realm": "Enchanted Forest",
+    "title": "Unit Rates & Unit Pricing",
+    "fantasy_name": "The Merchant's Equivalence",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.4.4",
+    "standard_text": "Describe the concept of rates and unit rate in the context of a ratio relationship.",
+    "standard_verified": true,
+    "verifier_type": "rate_division",
+    "misconceptions": [
+      {
+        "id": "multiplies_instead_of_dividing",
+        "kid_label": "You multiplied instead of dividing"
+      },
+      {
+        "id": "divides_in_reversed_order",
+        "kid_label": "Divided in reverse order"
+      },
+      {
+        "id": "forgets_unit_rate_denominator_is_one",
+        "kid_label": "Forgot denominator should be 1"
+      },
+      {
+        "id": "misinterprets_speed_units",
+        "kid_label": "Speed units reversed"
+      },
+      {
+        "id": "multiplied_instead_of_dividing",
+        "kid_label": "You multiplied both numbers together"
+      },
+      {
+        "id": "subtracts_quantities",
+        "kid_label": "You subtracted the numbers instead of dividing to find the rate."
+      },
+      {
+        "id": "adds_quantities",
+        "kid_label": "You added the numbers together instead of dividing."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 12,
+    "icon": "tag",
+    "island_theme": "Canopy Trading Bazaar",
+    "playable": true,
+    "content_source": "verified-bank",
+    "play_order": 2
+  },
+  {
+    "id": "g6-percents",
+    "grade": 6,
+    "realm": "Enchanted Forest",
+    "title": "Percents as Rates per 100",
+    "fantasy_name": "Century Runes of Portion",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.4.6",
+    "standard_text": "Calculate a percent of a quantity as a rate per 100 and solve everyday problems given a percent.",
+    "standard_verified": true,
+    "verifier_type": "percent_calculation",
+    "misconceptions": [
+      {
+        "id": "confuses_percent_of_vs_percent_change",
+        "kid_label": "Percent of vs change mix\u2011up"
+      },
+      {
+        "id": "decimal_place_percent_shift",
+        "kid_label": "Shifted decimal wrong"
+      },
+      {
+        "id": "multiplies_percent_directly_without_hundredth_conversion",
+        "kid_label": "Multiplied without converting to hundredths"
+      },
+      {
+        "id": "multiplied_by_percent_number",
+        "kid_label": "You multiplied by the percent number directly"
+      },
+      {
+        "id": "moved_decimal_wrong_way",
+        "kid_label": "You shifted the decimal point the wrong way"
+      },
+      {
+        "id": "found_the_leftover_amount",
+        "kid_label": "You found what was left over, not the percent"
+      },
+      {
+        "id": "divided_instead_of_multiplying",
+        "kid_label": "You divided instead of multiplying"
+      },
+      {
+        "id": "found_one_percent_only",
+        "kid_label": "You found 1% instead of the asked percent"
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 13,
+    "icon": "target",
+    "island_theme": "Arch of the Hundredth Rune",
+    "playable": true,
+    "content_source": "verified-bank",
+    "play_order": 3
+  },
+  {
+    "id": "g6-fraction-division",
+    "grade": 6,
+    "realm": "Temple of Wisdom",
+    "title": "Dividing Fractions by Fractions",
+    "fantasy_name": "The Reciprocal Crucible",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.1.2",
+    "standard_text": "Multiply and divide any combination of whole numbers, fractions, and mixed numbers using a student-selected strategy, and interpret products/quotients.",
+    "standard_verified": true,
+    "verifier_type": "fraction_arithmetic",
+    "misconceptions": [
+      {
+        "id": "divides_numerators_and_denominators_directly",
+        "kid_label": "Divided numerators and denominators directly"
+      },
+      {
+        "id": "inverts_both_fractions",
+        "kid_label": "Inverted both fractions"
+      },
+      {
+        "id": "inverts_dividend_instead_of_divisor",
+        "kid_label": "Inverted the wrong fraction"
+      },
+      {
+        "id": "multiplied_without_flipping",
+        "kid_label": "You multiplied straight across without flipping the second fraction."
+      },
+      {
+        "id": "flipped_the_first_fraction",
+        "kid_label": "You flipped the first fraction instead of the second."
+      },
+      {
+        "id": "flipped_both_fractions",
+        "kid_label": "You flipped both fractions instead of just the divisor."
+      },
+      {
+        "id": "added_instead_of_dividing",
+        "kid_label": "You added the fractions instead of dividing."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 14,
+    "icon": "pie",
+    "island_theme": "Chamber of Inverted Mirrors",
+    "playable": true,
+    "content_source": "verified-bank",
+    "play_order": 4
+  },
+  {
+    "id": "g6-decimals",
+    "grade": 6,
+    "realm": "Temple of Wisdom",
+    "title": "Multi-Digit Decimal Operations",
+    "fantasy_name": "Precision Stone Scribing",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.1.3",
+    "standard_text": "Perform operations with multi-digit decimal numbers fluently using models and strategies.",
+    "standard_verified": true,
+    "verifier_type": "decimal_arithmetic",
+    "misconceptions": [
+      {
+        "id": "drops_zeros_before_decimal_place",
+        "kid_label": "Dropped leading zeros"
+      },
+      {
+        "id": "fails_to_shift_divisor_decimal",
+        "kid_label": "Did not shift divisor decimal"
+      },
+      {
+        "id": "miscounts_decimal_places_in_product",
+        "kid_label": "Wrong decimal count in product"
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 15,
+    "icon": "diamond",
+    "island_theme": "Sanctuary of Thousandth Shards",
+    "playable": false,
+    "content_source": "coming-soon",
+    "play_order": null
+  },
+  {
+    "id": "g6-integers",
+    "grade": 6,
+    "realm": "Temple of Wisdom",
+    "title": "Integers & Opposites on Number Lines",
+    "fantasy_name": "Subterranean Abyss of Negatives",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.3.1",
+    "standard_text": "Identify and compare integers and explain the meaning of zero based on multiple authentic situations.",
+    "standard_verified": true,
+    "verifier_type": "integer_comparison",
+    "misconceptions": [
+      {
+        "id": "confuses_absolute_value_with_opposite",
+        "kid_label": "Absolute value vs opposite"
+      },
+      {
+        "id": "larger_magnitude_negative_is_greater",
+        "kid_label": "Bigger negative is greater"
+      },
+      {
+        "id": "misplaces_negative_numbers_on_numberline",
+        "kid_label": "Wrong order on number line"
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 16,
+    "icon": "thermometer",
+    "island_theme": "The Deep Axis of Symmetries",
+    "playable": false,
+    "content_source": "coming-soon",
+    "play_order": null
+  },
+  {
+    "id": "g6-equiv-expressions",
+    "grade": 6,
+    "realm": "Celestial Frontier",
+    "title": "Generating Equivalent Expressions",
+    "fantasy_name": "Astral Algebraic Polyforms",
+    "domain": "Patterning & Algebraic Reasoning",
+    "standard": "6.PAR.6.5",
+    "standard_text": "Apply the properties of operations to identify and generate equivalent expressions.",
+    "standard_verified": true,
+    "verifier_type": "expression_equivalence",
+    "misconceptions": [
+      {
+        "id": "combines_unlike_terms",
+        "kid_label": "Combined unlike terms"
+      },
+      {
+        "id": "incomplete_distribution",
+        "kid_label": "Forgot part of distribution"
+      },
+      {
+        "id": "sign_error_distributing_negative",
+        "kid_label": "Wrong sign when distributing negative"
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 17,
+    "icon": "crystal",
+    "island_theme": "Forge of Variable Glyphs",
+    "playable": false,
+    "content_source": "coming-soon",
+    "play_order": null
+  },
+  {
+    "id": "g6-equations",
+    "grade": 6,
+    "realm": "Celestial Frontier",
+    "title": "Solving One-Step Equations",
+    "fantasy_name": "The Celestial Equilibrium",
+    "domain": "Patterning & Algebraic Reasoning",
+    "standard": "6.PAR.7.2",
+    "standard_text": "Write and solve one-step equations and inequalities as mathematical models to explain authentic, realistic situations.",
+    "standard_verified": true,
+    "verifier_type": "equation_solving",
+    "misconceptions": [
+      {
+        "id": "multiplies_instead_of_dividing_coefficients",
+        "kid_label": "Multiplied when should divide"
+      },
+      {
+        "id": "operates_on_one_side_only",
+        "kid_label": "Changed one side only"
+      },
+      {
+        "id": "performs_same_operation_instead_of_inverse",
+        "kid_label": "Did same operation instead of inverse"
+      },
+      {
+        "id": "subtracted_instead_of_dividing",
+        "kid_label": "You subtracted the coefficient instead of dividing"
+      },
+      {
+        "id": "multiplied_instead_of_dividing",
+        "kid_label": "You multiplied both numbers together"
+      },
+      {
+        "id": "divided_the_wrong_way",
+        "kid_label": "You divided the wrong way around"
+      },
+      {
+        "id": "ignored_the_coefficient",
+        "kid_label": "You ignored the number in front of x"
+      },
+      {
+        "id": "added_instead_of_subtracting",
+        "kid_label": "You added instead of subtracting"
+      },
+      {
+        "id": "subtracted_the_wrong_way",
+        "kid_label": "You subtracted but in the wrong order"
+      },
+      {
+        "id": "undid_multiplication_first",
+        "kid_label": "You divided before subtracting the constant"
+      },
+      {
+        "id": "added_the_constant",
+        "kid_label": "You added the constant instead of subtracting it"
+      },
+      {
+        "id": "ignored_the_constant_term",
+        "kid_label": "You ignored the extra number added to x"
+      },
+      {
+        "id": "ignored_the_added_value",
+        "kid_label": "You wrote the total as your answer"
+      },
+      {
+        "id": "used_added_value_as_answer",
+        "kid_label": "You wrote the added number as your answer"
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 18,
+    "icon": "scales",
+    "island_theme": "Orrery of Dynamic Balance",
+    "playable": true,
+    "content_source": "verified-bank",
+    "play_order": 5
+  },
+  {
+    "id": "g6-mean-median",
+    "grade": 6,
+    "realm": "Celestial Frontier",
+    "title": "Measures of Center: Mean & Median",
+    "fantasy_name": "Constellation Equal Shares",
+    "domain": "Numerical Reasoning",
+    "standard": "6.NR.2.1",
+    "standard_text": "Describe and interpret the center of the distribution by the equal share value (mean).",
+    "standard_verified": false,
+    "verifier_type": "statistical_center",
+    "misconceptions": [
+      {
+        "id": "confuses_mean_with_median",
+        "kid_label": "Mean vs median mix\u2011up"
+      },
+      {
+        "id": "gave_the_total_instead_of_the_mean",
+        "kid_label": "You added all the numbers up but forgot to divide by how many there are."
+      },
+      {
+        "id": "finds_median_without_ordering_data",
+        "kid_label": "Median without sorting"
+      },
+      {
+        "id": "finds_range_instead",
+        "kid_label": "You found the range (highest minus lowest) instead of the middle value."
+      },
+      {
+        "id": "ignores_middle_average_for_even_count",
+        "kid_label": "For an even number of values, you must find the halfway point between the two middle numbers."
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 19,
+    "icon": "chart",
+    "island_theme": "Pillars of Balanced Starlight",
+    "playable": true,
+    "content_source": "verified-bank",
+    "play_order": 6
+  },
+  {
+    "id": "g6-exponents",
+    "grade": 6,
+    "realm": "Celestial Frontier",
+    "title": "Numerical Expressions with Exponents",
+    "fantasy_name": "Stellar Powers of the Void",
+    "domain": "Patterning & Algebraic Reasoning",
+    "standard": "6.PAR.6.1",
+    "standard_text": "Write and evaluate numerical expressions involving rational bases and whole-number exponents.",
+    "standard_verified": true,
+    "verifier_type": "exponent_evaluation",
+    "misconceptions": [
+      {
+        "id": "confuses_exponent_order",
+        "kid_label": "Swapped base and exponent"
+      },
+      {
+        "id": "evaluates_exponent_zero_as_zero",
+        "kid_label": "Zero exponent gave zero"
+      },
+      {
+        "id": "multiplies_base_by_exponent",
+        "kid_label": "Multiplied base by exponent"
+      }
+    ],
+    "tier": "standard",
+    "unlock_order": 20,
+    "icon": "zap",
+    "island_theme": "Apex of Exponential Novae",
+    "playable": false,
+    "content_source": "coming-soon",
+    "play_order": null
+  }
+]

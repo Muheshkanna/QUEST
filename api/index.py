@@ -731,9 +731,9 @@ def get_infographic(topic_id: str):
     clean_prompt = re.sub(r"[^a-zA-Z0-9\s,\-\.]", " ", raw_prompt).strip()
     clean_prompt = re.sub(r"\s+", " ", clean_prompt)[:200]
     encoded_prompt = urllib.parse.quote_plus(clean_prompt)
-    pollinations_url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=800&height=600&nologo=true"
-
-    data["image_url"] = pollinations_url
+    # Use Unsplash to fetch a topic‑related image without API keys or rate limits
+    unsplash_url = f"https://source.unsplash.com/800x600/?{encoded_prompt}"
+    data["image_url"] = unsplash_url
     data["fallback_image"] = f"/fallback/infographics/{topic_id}.svg"
     data["source"] = "offline"
     return data

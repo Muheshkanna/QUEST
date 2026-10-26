@@ -1,0 +1,823 @@
+{
+  "topic_id": "g5-divide",
+  "generated_at": "2026-10-25T18:25:29.320564+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v2",
+  "counts": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6
+  },
+  "questions": [
+    {
+      "id": "g5-divide-easy-1",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-easy-games",
+      "params": {
+        "n": 38,
+        "d": 5,
+        "q": 7,
+        "r": 3
+      },
+      "stem": "38 game tokens are split into groups of 5. How many full groups are there, and how many tokens remain?",
+      "expression": "divmod_rem(38, 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "8 R 3",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "7 R 3",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "70 R 3",
+          "misconception_id": "misplaced_quotient_digit"
+        },
+        {
+          "id": "D",
+          "text": "6 R 8",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "7 R 3",
+      "hint": "Find the biggest multiple of 5 that fits inside 38. The leftover amount is your remainder.",
+      "explanation": "Divide 38 by 5. 5 goes into 38 exactly 7 times because 5 × 7 = 35. The leftover amount is 38 − 35 = 3. So the answer is 7 R 3.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-easy-2",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-easy-sports",
+      "params": {
+        "n": 23,
+        "d": 4,
+        "q": 5,
+        "r": 3
+      },
+      "stem": "23 team stickers are divided equally into 4 boxes. How many stickers are in each box, and how many are left over?",
+      "expression": "divmod_rem(23, 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 R 3",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "5 R 3",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "4 R 7",
+          "misconception_id": "stopped_subtracting_too_early"
+        },
+        {
+          "id": "D",
+          "text": "5 R 0",
+          "misconception_id": "dropped_the_remainder"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "5 R 3",
+      "hint": "Find the biggest multiple of 4 that fits inside 23. The leftover amount is your remainder.",
+      "explanation": "Divide 23 by 4. 4 goes into 23 exactly 5 times because 4 × 5 = 20. The leftover amount is 23 − 20 = 3. So the answer is 5 R 3.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-easy-3",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-easy-school",
+      "params": {
+        "n": 85,
+        "d": 3,
+        "q": 28,
+        "r": 1
+      },
+      "stem": "85 books are placed equally on 3 shelves. How many books per shelf, and how many are left over?",
+      "expression": "divmod_rem(85, 3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "28 R 1",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "29 R 1",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "C",
+          "text": "28 R 0",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "D",
+          "text": "1 R 28",
+          "misconception_id": "swapped_quotient_and_remainder"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "28 R 1",
+      "hint": "Find the biggest multiple of 3 that fits inside 85. The leftover amount is your remainder.",
+      "explanation": "Divide 85 by 3. 3 goes into 85 exactly 28 times because 3 × 28 = 84. The leftover amount is 85 − 84 = 1. So the answer is 28 R 1.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-easy-4",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-easy-nature",
+      "params": {
+        "n": 14,
+        "d": 8,
+        "q": 1,
+        "r": 6
+      },
+      "stem": "14 leaves are bundled in groups of 8. How many bundles fit, and how many leaves are left over?",
+      "expression": "divmod_rem(14, 8)",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 R 6",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "6 R 1",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "C",
+          "text": "1 R 6",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "10 R 6",
+          "misconception_id": "misplaced_quotient_digit"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "1 R 6",
+      "hint": "Find the biggest multiple of 8 that fits inside 14. The leftover amount is your remainder.",
+      "explanation": "Divide 14 by 8. 8 goes into 14 exactly 1 times because 8 × 1 = 8. The leftover amount is 14 − 8 = 6. So the answer is 1 R 6.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-easy-5",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-easy-food",
+      "params": {
+        "n": 21,
+        "d": 2,
+        "q": 10,
+        "r": 1
+      },
+      "stem": "21 grapes are shared equally among 2 kids. How many does each kid get, and how many are left over?",
+      "expression": "divmod_rem(21, 2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 R 1",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "11 R 1",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "C",
+          "text": "100 R 1",
+          "misconception_id": "misplaced_quotient_digit"
+        },
+        {
+          "id": "D",
+          "text": "9 R 3",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "10 R 1",
+      "hint": "Find the biggest multiple of 2 that fits inside 21. The leftover amount is your remainder.",
+      "explanation": "Divide 21 by 2. 2 goes into 21 exactly 10 times because 2 × 10 = 20. The leftover amount is 21 − 20 = 1. So the answer is 10 R 1.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-easy-6",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "easy",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-easy-games",
+      "params": {
+        "n": 39,
+        "d": 5,
+        "q": 7,
+        "r": 4
+      },
+      "stem": "39 game tokens are split into groups of 5. How many full groups are there, and how many tokens remain?",
+      "expression": "divmod_rem(39, 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "8 R 4",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "6 R 9",
+          "misconception_id": "stopped_subtracting_too_early"
+        },
+        {
+          "id": "C",
+          "text": "7 R 0",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "D",
+          "text": "7 R 4",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "7 R 4",
+      "hint": "Find the biggest multiple of 5 that fits inside 39. The leftover amount is your remainder.",
+      "explanation": "Divide 39 by 5. 5 goes into 39 exactly 7 times because 5 × 7 = 35. The leftover amount is 39 − 35 = 4. So the answer is 7 R 4.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-medium-1",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-medium-sports",
+      "params": {
+        "n": 818,
+        "d": 94,
+        "q": 8,
+        "r": 66
+      },
+      "stem": "818 fans are seated in rows of 94. How many full rows are there, and how many fans are in a partially filled row?",
+      "expression": "divmod_rem(818, 94)",
+      "options": [
+        {
+          "id": "A",
+          "text": "9 R 66",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "8 R 66",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "8 R 0",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "D",
+          "text": "66 R 8",
+          "misconception_id": "swapped_quotient_and_remainder"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "8 R 66",
+      "hint": "How many full groups of 94 can you make from 818? The leftover is the remainder.",
+      "explanation": "Divide 818 by 94. 94 goes into 818 exactly 8 times because 94 × 8 = 752. The leftover amount is 818 − 752 = 66. So the answer is 8 R 66.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-medium-2",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-medium-games",
+      "params": {
+        "n": 703,
+        "d": 68,
+        "q": 10,
+        "r": 23
+      },
+      "stem": "703 gold coins are stored in chests holding 68 coins each. How many full chests are filled, and how many coins remain?",
+      "expression": "divmod_rem(703, 68)",
+      "options": [
+        {
+          "id": "A",
+          "text": "11 R 23",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "10 R 23",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "23 R 10",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "D",
+          "text": "100 R 23",
+          "misconception_id": "misplaced_quotient_digit"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "10 R 23",
+      "hint": "How many full groups of 68 can you make from 703? The leftover is the remainder.",
+      "explanation": "Divide 703 by 68. 68 goes into 703 exactly 10 times because 68 × 10 = 680. The leftover amount is 703 − 680 = 23. So the answer is 10 R 23.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-medium-3",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-medium-school",
+      "params": {
+        "n": 928,
+        "d": 46,
+        "q": 20,
+        "r": 8
+      },
+      "stem": "A school printed 928 worksheets in packs of 46. How many full packs are there, and how many sheets are left over?",
+      "expression": "divmod_rem(928, 46)",
+      "options": [
+        {
+          "id": "A",
+          "text": "21 R 8",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "200 R 8",
+          "misconception_id": "misplaced_quotient_digit"
+        },
+        {
+          "id": "C",
+          "text": "20 R 8",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "19 R 54",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "20 R 8",
+      "hint": "How many full groups of 46 can you make from 928? The leftover is the remainder.",
+      "explanation": "Divide 928 by 46. 46 goes into 928 exactly 20 times because 46 × 20 = 920. The leftover amount is 928 − 920 = 8. So the answer is 20 R 8.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-medium-4",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-medium-food",
+      "params": {
+        "n": 877,
+        "d": 11,
+        "q": 79,
+        "r": 8
+      },
+      "stem": "A bakery made 877 cookies. Each tray holds 11 cookies. How many full trays are packed, and how many cookies remain?",
+      "expression": "divmod_rem(877, 11)",
+      "options": [
+        {
+          "id": "A",
+          "text": "79 R 8",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "80 R 8",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "C",
+          "text": "78 R 19",
+          "misconception_id": "stopped_subtracting_too_early"
+        },
+        {
+          "id": "D",
+          "text": "79 R 0",
+          "misconception_id": "dropped_the_remainder"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "79 R 8",
+      "hint": "How many full groups of 11 can you make from 877? The leftover is the remainder.",
+      "explanation": "Divide 877 by 11. 11 goes into 877 exactly 79 times because 11 × 79 = 869. The leftover amount is 877 − 869 = 8. So the answer is 79 R 8.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-medium-5",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-medium-nature",
+      "params": {
+        "n": 814,
+        "d": 31,
+        "q": 26,
+        "r": 8
+      },
+      "stem": "814 tree seedlings are bundled in groups of 31. How many full bundles are there, and how many seedlings are left?",
+      "expression": "divmod_rem(814, 31)",
+      "options": [
+        {
+          "id": "A",
+          "text": "27 R 8",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "26 R 0",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "C",
+          "text": "8 R 26",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "D",
+          "text": "26 R 8",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "26 R 8",
+      "hint": "How many full groups of 31 can you make from 814? The leftover is the remainder.",
+      "explanation": "Divide 814 by 31. 31 goes into 814 exactly 26 times because 31 × 26 = 806. The leftover amount is 814 − 806 = 8. So the answer is 26 R 8.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-medium-6",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "medium",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-medium-sports",
+      "params": {
+        "n": 448,
+        "d": 65,
+        "q": 6,
+        "r": 58
+      },
+      "stem": "448 fans are seated in rows of 65. How many full rows are there, and how many fans are in a partially filled row?",
+      "expression": "divmod_rem(448, 65)",
+      "options": [
+        {
+          "id": "A",
+          "text": "7 R 58",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "58 R 6",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "C",
+          "text": "6 R 58",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "60 R 58",
+          "misconception_id": "misplaced_quotient_digit"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "6 R 58",
+      "hint": "How many full groups of 65 can you make from 448? The leftover is the remainder.",
+      "explanation": "Divide 448 by 65. 65 goes into 448 exactly 6 times because 65 × 6 = 390. The leftover amount is 448 − 390 = 58. So the answer is 6 R 58.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-hard-1",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-hard-nature",
+      "params": {
+        "n": 2519,
+        "d": 24,
+        "q": 104,
+        "r": 23
+      },
+      "stem": "Scientists tracked 2519 bird migration sightings across 24 observation zones. How many sightings per zone on average, and how many were leftover?",
+      "expression": "divmod_rem(2519, 24)",
+      "options": [
+        {
+          "id": "A",
+          "text": "105 R 23",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "1040 R 23",
+          "misconception_id": "misplaced_quotient_digit"
+        },
+        {
+          "id": "C",
+          "text": "103 R 47",
+          "misconception_id": "stopped_subtracting_too_early"
+        },
+        {
+          "id": "D",
+          "text": "104 R 23",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "104 R 23",
+      "hint": "Use place-value division step by step. Remember that your remainder must be smaller than 24.",
+      "explanation": "Divide 2519 by 24. 24 goes into 2519 exactly 104 times because 24 × 104 = 2496. The leftover amount is 2519 − 2496 = 23. So the answer is 104 R 23.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-hard-2",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-hard-games",
+      "params": {
+        "n": 2584,
+        "d": 59,
+        "q": 43,
+        "r": 47
+      },
+      "stem": "A dungeon crawler requires 2584 experience points divided across 59 quest chapters. How many points per full chapter, and what is the remainder?",
+      "expression": "divmod_rem(2584, 59)",
+      "options": [
+        {
+          "id": "A",
+          "text": "43 R 47",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "44 R 47",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "C",
+          "text": "42 R 106",
+          "misconception_id": "stopped_subtracting_too_early"
+        },
+        {
+          "id": "D",
+          "text": "43 R 0",
+          "misconception_id": "dropped_the_remainder"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "43 R 47",
+      "hint": "Use place-value division step by step. Remember that your remainder must be smaller than 59.",
+      "explanation": "Divide 2584 by 59. 59 goes into 2584 exactly 43 times because 59 × 43 = 2537. The leftover amount is 2584 − 2537 = 47. So the answer is 43 R 47.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-hard-3",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-hard-food",
+      "params": {
+        "n": 6635,
+        "d": 56,
+        "q": 118,
+        "r": 27
+      },
+      "stem": "A fruit orchard packed 6635 apples into crates of 56 apples each. How many full crates were packed, and how many apples were left over?",
+      "expression": "divmod_rem(6635, 56)",
+      "options": [
+        {
+          "id": "A",
+          "text": "119 R 27",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "118 R 0",
+          "misconception_id": "dropped_the_remainder"
+        },
+        {
+          "id": "C",
+          "text": "27 R 118",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "D",
+          "text": "118 R 27",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "118 R 27",
+      "hint": "Use place-value division step by step. Remember that your remainder must be smaller than 56.",
+      "explanation": "Divide 6635 by 56. 56 goes into 6635 exactly 118 times because 56 × 118 = 6608. The leftover amount is 6635 − 6608 = 27. So the answer is 118 R 27.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-hard-4",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-hard-sports",
+      "params": {
+        "n": 5333,
+        "d": 88,
+        "q": 60,
+        "r": 53
+      },
+      "stem": "An arena distributed 5333 programs equally into 88 concession stands. How many full bundles per stand, and how many remain?",
+      "expression": "divmod_rem(5333, 88)",
+      "options": [
+        {
+          "id": "A",
+          "text": "61 R 53",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "53 R 60",
+          "misconception_id": "swapped_quotient_and_remainder"
+        },
+        {
+          "id": "C",
+          "text": "60 R 53",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "600 R 53",
+          "misconception_id": "misplaced_quotient_digit"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "60 R 53",
+      "hint": "Use place-value division step by step. Remember that your remainder must be smaller than 88.",
+      "explanation": "Divide 5333 by 88. 88 goes into 5333 exactly 60 times because 88 × 60 = 5280. The leftover amount is 5333 − 5280 = 53. So the answer is 60 R 53.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-hard-5",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-hard-school",
+      "params": {
+        "n": 8527,
+        "d": 16,
+        "q": 532,
+        "r": 15
+      },
+      "stem": "A district warehouse received 8527 notebooks to pack into boxes of 16. How many full boxes are packed, and how many are left over?",
+      "expression": "divmod_rem(8527, 16)",
+      "options": [
+        {
+          "id": "A",
+          "text": "533 R 15",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "B",
+          "text": "5320 R 15",
+          "misconception_id": "misplaced_quotient_digit"
+        },
+        {
+          "id": "C",
+          "text": "532 R 15",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "531 R 31",
+          "misconception_id": "stopped_subtracting_too_early"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "532 R 15",
+      "hint": "Use place-value division step by step. Remember that your remainder must be smaller than 16.",
+      "explanation": "Divide 8527 by 16. 16 goes into 8527 exactly 532 times because 16 × 532 = 8512. The leftover amount is 8527 − 8512 = 15. So the answer is 532 R 15.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-divide-hard-6",
+      "topic_id": "g5-divide",
+      "standard": "5.NR.2.2",
+      "difficulty": "hard",
+      "verifier_type": "division_with_remainder",
+      "template_id": "g5-divide-hard-nature",
+      "params": {
+        "n": 3045,
+        "d": 79,
+        "q": 38,
+        "r": 43
+      },
+      "stem": "Scientists tracked 3045 bird migration sightings across 79 observation zones. How many sightings per zone on average, and how many were leftover?",
+      "expression": "divmod_rem(3045, 79)",
+      "options": [
+        {
+          "id": "A",
+          "text": "38 R 43",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "39 R 43",
+          "misconception_id": "rounded_quotient_up_kept_remainder"
+        },
+        {
+          "id": "C",
+          "text": "37 R 122",
+          "misconception_id": "stopped_subtracting_too_early"
+        },
+        {
+          "id": "D",
+          "text": "38 R 0",
+          "misconception_id": "dropped_the_remainder"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "38 R 43",
+      "hint": "Use place-value division step by step. Remember that your remainder must be smaller than 79.",
+      "explanation": "Divide 3045 by 79. 79 goes into 3045 exactly 38 times because 79 × 38 = 3002. The leftover amount is 3045 − 3002 = 43. So the answer is 38 R 43.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    }
+  ]
+}

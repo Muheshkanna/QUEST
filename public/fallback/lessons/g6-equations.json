@@ -1,0 +1,37 @@
+{
+  "title": "Solving One-Step Equations",
+  "big_idea": "An equation is a balanced scale; perform inverse operations on both sides to solve for the unknown variable.",
+  "explanation": "To isolate the variable, perform the opposite (inverse) operation on both sides of the equal sign. Undo addition with subtraction, subtraction with addition, multiplication with division, and division with multiplication.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Solve x + 7 = 19 by subtracting 7 from both sides",
+      "math": "19 - 7 = 12"
+    },
+    {
+      "step": 2,
+      "text": "Check solution in equation",
+      "math": "12 + 7 = 19"
+    },
+    {
+      "step": 3,
+      "text": "Solve 3x = 18 by dividing by 3",
+      "math": "18 / 3 = 6"
+    }
+  ],
+  "key_vocab": [
+    "Equation",
+    "Variable",
+    "Inverse Operation",
+    "Isolate",
+    "Solution"
+  ],
+  "real_world_example": "If a mystery pouch plus 7 gold coins weighs 19 coins, the pouch holds 12 coins.",
+  "common_mistakes": [
+    "Adding when the equation already has addition instead of subtracting.",
+    "Performing the inverse operation on one side without balancing the other side.",
+    "Multiplying coefficients instead of dividing."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g6-equations"
+}

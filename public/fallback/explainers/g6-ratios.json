@@ -1,0 +1,40 @@
+{
+  "slides": [
+    {
+      "title": "The Merchant's Scale",
+      "visual_hint": "A balance scale with 2 blue gems on the left and 3 amber gems on the right.",
+      "narration": "A ratio is a relationship comparing two amounts. Here, for every two blue gems, we need three amber gems.",
+      "highlight": "two to three"
+    },
+    {
+      "title": "Scaling the Magic",
+      "visual_hint": "Two pouches appearing beside each pile.",
+      "narration": "What if we need a larger batch? We must scale both amounts by the same multiplier.",
+      "highlight": "multiplier"
+    },
+    {
+      "title": "Avoid the Addition Trap",
+      "visual_hint": "A warning rune glowing red over a '+1' icon.",
+      "narration": "Never add a number to both sides. Ratios scale by multiplication, not addition!",
+      "highlight": "multiplication"
+    },
+    {
+      "title": "Multiplying in Harmony",
+      "visual_hint": "2 times 3 becomes 6 gems; 3 times 3 becomes 9 gems.",
+      "narration": "Multiplying both sides by three yields six blue gems to nine amber gems. The balance holds!",
+      "highlight": "six to nine"
+    },
+    {
+      "title": "Simplifying Back",
+      "visual_hint": "Dividing 6 and 9 by 3 to return to 2:3.",
+      "narration": "Dividing both terms by their common factor brings us right back to simplest form: two to three.",
+      "highlight": "simplest form"
+    },
+    {
+      "title": "Proportion Mastery",
+      "visual_hint": "A glowing heraldic crest of the merchant guild.",
+      "narration": "Keep your ratios balanced and your trades will always be true. Well done, scholar!",
+      "highlight": "balanced"
+    }
+  ]
+}

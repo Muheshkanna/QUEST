@@ -1,0 +1,37 @@
+{
+  "title": "Multiplying Fractions and Whole Numbers",
+  "big_idea": "Multiplying a whole number by a fraction means finding a fractional part of that whole group.",
+  "explanation": "To multiply a whole number by a fraction, multiply the whole number by the numerator and keep the denominator. You can write the whole number over 1 and multiply numerators together and denominators together.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Multiply 4 by 2/3 as repeated parts",
+      "math": "4 * 2/3"
+    },
+    {
+      "step": 2,
+      "text": "Multiply whole number 4 by numerator 2",
+      "math": "4 * 2 = 8"
+    },
+    {
+      "step": 3,
+      "text": "Write over denominator 3",
+      "math": "4 * 2/3 = 8/3"
+    }
+  ],
+  "key_vocab": [
+    "Factor",
+    "Product",
+    "Numerator",
+    "Denominator",
+    "Improper Fraction"
+  ],
+  "real_world_example": "If 4 scholars each drink 2/3 pint of elixir, they drink 8/3 pints in total.",
+  "common_mistakes": [
+    "Multiplying both numerator and denominator by the whole number.",
+    "Believing multiplication always results in a larger number.",
+    "Cross-multiplying instead of multiplying straight across."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g5-fractions-multiply"
+}

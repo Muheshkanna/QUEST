@@ -1,0 +1,816 @@
+{
+  "topic_id": "g5-fractions-multiply",
+  "version": "1.0.0",
+  "questions": [
+    {
+      "id": "g5-fractions-multiply-easy-1",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-easy-games",
+      "params": {
+        "a": 1,
+        "b": 3,
+        "c": 3,
+        "d": 4
+      },
+      "stem": "A game board fills 1/3 of a table. A castle map occupies 3/4 of that board. What fraction of the table does the castle map occupy?",
+      "expression": "(1 / 3) * (3 / 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "13/12",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
+          "id": "B",
+          "text": "1/4",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "4/9",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
+          "id": "D",
+          "text": "3/7",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "1/4",
+      "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 3 = 3. Multiply bottom \u00d7 bottom: 3 \u00d7 4 = 12, giving 3/12. Simplify by dividing the top and bottom by 3: 3/12 simplifies to 1/4.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-easy-2",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-easy-sports",
+      "params": {
+        "a": 3,
+        "b": 4,
+        "c": 2,
+        "d": 3
+      },
+      "stem": "A practice track covers 3/4 of a sports field. Cones mark off 2/3 of that track. What fraction of the sports field is marked by cones?",
+      "expression": "(3 / 4) * (2 / 3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "9/8",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
+          "id": "B",
+          "text": "1/2",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "6/7",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        },
+        {
+          "id": "D",
+          "text": "5/12",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "1/2",
+      "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
+      "explanation": "Multiply top \u00d7 top: 3 \u00d7 2 = 6. Multiply bottom \u00d7 bottom: 4 \u00d7 3 = 12, giving 6/12. Simplify by dividing the top and bottom by 6: 6/12 simplifies to 1/2.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-easy-3",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-easy-school",
+      "params": {
+        "a": 1,
+        "b": 2,
+        "c": 2,
+        "d": 3
+      },
+      "stem": "A display board takes up 1/2 of a classroom wall. Science posters cover 2/3 of that board. What fraction of the wall is covered by science posters?",
+      "expression": "(1 / 2) * (2 / 3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/3",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "2/5",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        },
+        {
+          "id": "C",
+          "text": "1/2",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        },
+        {
+          "id": "D",
+          "text": "7/6",
+          "misconception_id": "added_fractions_instead"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "1/3",
+      "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 2 = 2. Multiply bottom \u00d7 bottom: 2 \u00d7 3 = 6, giving 2/6. Simplify by dividing the top and bottom by 2: 2/6 simplifies to 1/3.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-easy-4",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-easy-nature",
+      "params": {
+        "a": 1,
+        "b": 5,
+        "c": 1,
+        "d": 2
+      },
+      "stem": "A garden bed takes up 1/5 of a yard. Bean plants cover 1/2 of that bed. What fraction of the yard is planted with beans?",
+      "expression": "(1 / 5) * (1 / 2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/5",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        },
+        {
+          "id": "B",
+          "text": "7/10",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
+          "id": "C",
+          "text": "1/10",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "2/5",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "1/10",
+      "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 1 = 1. Multiply bottom \u00d7 bottom: 5 \u00d7 2 = 10, giving 1/10.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-easy-5",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-easy-food",
+      "params": {
+        "a": 1,
+        "b": 2,
+        "c": 2,
+        "d": 3
+      },
+      "stem": "A cake recipe uses 1/2 of a bag of flour. A baker makes a small batch using 2/3 of that amount. What fraction of the bag of flour is used?",
+      "expression": "(1 / 2) * (2 / 3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/3",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "7/6",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
+          "id": "C",
+          "text": "3/4",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
+          "id": "D",
+          "text": "2/5",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "1/3",
+      "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 2 = 2. Multiply bottom \u00d7 bottom: 2 \u00d7 3 = 6, giving 2/6. Simplify by dividing the top and bottom by 2: 2/6 simplifies to 1/3.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-easy-6",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-easy-games",
+      "params": {
+        "a": 1,
+        "b": 3,
+        "c": 3,
+        "d": 4
+      },
+      "stem": "A game board fills 1/3 of a table. A castle map occupies 3/4 of that board. What fraction of the table does the castle map occupy?",
+      "expression": "(1 / 3) * (3 / 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "4/9",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
+          "id": "B",
+          "text": "3/7",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        },
+        {
+          "id": "C",
+          "text": "1/3",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        },
+        {
+          "id": "D",
+          "text": "1/4",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "1/4",
+      "hint": "Find a fraction of a fraction by multiplying the tops together and the bottoms together.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 3 = 3. Multiply bottom \u00d7 bottom: 3 \u00d7 4 = 12, giving 3/12. Simplify by dividing the top and bottom by 3: 3/12 simplifies to 1/4.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-medium-1",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-medium-school",
+      "params": {
+        "a": 1,
+        "b": 4,
+        "c": 2,
+        "d": 5
+      },
+      "stem": "A student spends 1/4 of a study session on math. Problem sets take up 2/5 of that math time. What fraction of the study session is spent on problem sets?",
+      "expression": "(1 / 4) * (2 / 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "2/9",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        },
+        {
+          "id": "B",
+          "text": "1/10",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "3/20",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        },
+        {
+          "id": "D",
+          "text": "13/20",
+          "misconception_id": "added_fractions_instead"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "1/10",
+      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 2 = 2. Multiply bottom \u00d7 bottom: 4 \u00d7 5 = 20, giving 2/20. Simplify by dividing the top and bottom by 2: 2/20 simplifies to 1/10.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-medium-2",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-medium-sports",
+      "params": {
+        "a": 2,
+        "b": 3,
+        "c": 4,
+        "d": 5
+      },
+      "stem": "A gym locker holds 2/3 of the school's sports gear. Basketball gear takes up 4/5 of that locker. What fraction of the school's sports gear is basketball gear?",
+      "expression": "(2 / 3) * (4 / 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "2/5",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        },
+        {
+          "id": "B",
+          "text": "8/15",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "22/15",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
+          "id": "D",
+          "text": "5/6",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "8/15",
+      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
+      "explanation": "Multiply top \u00d7 top: 2 \u00d7 4 = 8. Multiply bottom \u00d7 bottom: 3 \u00d7 5 = 15, giving 8/15.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-medium-3",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-medium-food",
+      "params": {
+        "a": 4,
+        "b": 5,
+        "c": 3,
+        "d": 4
+      },
+      "stem": "A fruit bowl is 4/5 full of berries. Strawberries make up 3/4 of those berries. What fraction of the bowl is strawberries?",
+      "expression": "(4 / 5) * (3 / 4)",
+      "options": [
+        {
+          "id": "A",
+          "text": "31/20",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
+          "id": "B",
+          "text": "16/15",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
+          "id": "C",
+          "text": "3/5",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "4/3",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "3/5",
+      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
+      "explanation": "Multiply top \u00d7 top: 4 \u00d7 3 = 12. Multiply bottom \u00d7 bottom: 5 \u00d7 4 = 20, giving 12/20. Simplify by dividing the top and bottom by 4: 12/20 simplifies to 3/5.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-medium-4",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-medium-games",
+      "params": {
+        "a": 1,
+        "b": 3,
+        "c": 3,
+        "d": 5
+      },
+      "stem": "A treasure chest holds 1/3 of a dungeon's gold. Gold coins make up 3/5 of that loot. What fraction of the dungeon's gold is in coins?",
+      "expression": "(1 / 3) * (3 / 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/5",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "5/9",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
+          "id": "C",
+          "text": "3/8",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        },
+        {
+          "id": "D",
+          "text": "4/15",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "1/5",
+      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
+      "explanation": "Multiply top \u00d7 top: 1 \u00d7 3 = 3. Multiply bottom \u00d7 bottom: 3 \u00d7 5 = 15, giving 3/15. Simplify by dividing the top and bottom by 3: 3/15 simplifies to 1/5.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-medium-5",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-medium-nature",
+      "params": {
+        "a": 4,
+        "b": 5,
+        "c": 2,
+        "d": 5
+      },
+      "stem": "A nature reserve covers 4/5 of a county. Oak trees cover 2/5 of that reserve. What fraction of the county is covered by oak trees?",
+      "expression": "(4 / 5) * (2 / 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "4/5",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        },
+        {
+          "id": "B",
+          "text": "6/25",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        },
+        {
+          "id": "C",
+          "text": "6/5",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
+          "id": "D",
+          "text": "8/25",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "8/25",
+      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
+      "explanation": "Multiply top \u00d7 top: 4 \u00d7 2 = 8. Multiply bottom \u00d7 bottom: 5 \u00d7 5 = 25, giving 8/25.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-medium-6",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-medium-school",
+      "params": {
+        "a": 3,
+        "b": 5,
+        "c": 2,
+        "d": 3
+      },
+      "stem": "A student spends 3/5 of a study session on math. Problem sets take up 2/3 of that math time. What fraction of the study session is spent on problem sets?",
+      "expression": "(3 / 5) * (2 / 3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/3",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        },
+        {
+          "id": "B",
+          "text": "19/15",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
+          "id": "C",
+          "text": "2/5",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "9/10",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "2/5",
+      "hint": "Multiply straight across: top times top, bottom times bottom, then simplify.",
+      "explanation": "Multiply top \u00d7 top: 3 \u00d7 2 = 6. Multiply bottom \u00d7 bottom: 5 \u00d7 3 = 15, giving 6/15. Simplify by dividing the top and bottom by 3: 6/15 simplifies to 2/5.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-hard-1",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-hard-food",
+      "params": {
+        "a": 5,
+        "b": 8,
+        "c": 3,
+        "d": 5
+      },
+      "stem": "A farmer's pantry is 5/8 stocked with grain. Wheat accounts for 3/5 of that grain. What fraction of the pantry is wheat?",
+      "expression": "(5 / 8) * (3 / 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "49/40",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
+          "id": "B",
+          "text": "25/24",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
+          "id": "C",
+          "text": "15/13",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        },
+        {
+          "id": "D",
+          "text": "3/8",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "3/8",
+      "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
+      "explanation": "Multiply top \u00d7 top: 5 \u00d7 3 = 15. Multiply bottom \u00d7 bottom: 8 \u00d7 5 = 40, giving 15/40. Simplify by dividing the top and bottom by 5: 15/40 simplifies to 3/8.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-hard-2",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-hard-sports",
+      "params": {
+        "a": 3,
+        "b": 7,
+        "c": 3,
+        "d": 8
+      },
+      "stem": "A swimming pool fills 3/7 of a recreation area. The deep end occupies 3/8 of that pool. What fraction of the recreation area is the deep end?",
+      "expression": "(3 / 7) * (3 / 8)",
+      "options": [
+        {
+          "id": "A",
+          "text": "9/56",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "8/7",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
+          "id": "C",
+          "text": "3/5",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        },
+        {
+          "id": "D",
+          "text": "3/28",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "9/56",
+      "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
+      "explanation": "Multiply top \u00d7 top: 3 \u00d7 3 = 9. Multiply bottom \u00d7 bottom: 7 \u00d7 8 = 56, giving 9/56.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-hard-3",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-hard-games",
+      "params": {
+        "a": 2,
+        "b": 7,
+        "c": 3,
+        "d": 5
+      },
+      "stem": "A guild library stores 2/7 of the world's scrolls. Magic spells fill 3/5 of those scrolls. What fraction of the world's scrolls are magic spells?",
+      "expression": "(2 / 7) * (3 / 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        },
+        {
+          "id": "B",
+          "text": "1/7",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        },
+        {
+          "id": "C",
+          "text": "31/35",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
+          "id": "D",
+          "text": "6/35",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "6/35",
+      "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
+      "explanation": "Multiply top \u00d7 top: 2 \u00d7 3 = 6. Multiply bottom \u00d7 bottom: 7 \u00d7 5 = 35, giving 6/35.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-hard-4",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-hard-nature",
+      "params": {
+        "a": 3,
+        "b": 8,
+        "c": 3,
+        "d": 5
+      },
+      "stem": "A lake fills 3/8 of a valley. A wildlife sanctuary covers 3/5 of that lake. What fraction of the valley is the sanctuary?",
+      "expression": "(3 / 8) * (3 / 5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/20",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        },
+        {
+          "id": "B",
+          "text": "39/40",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
+          "id": "C",
+          "text": "9/40",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "5/8",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "9/40",
+      "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
+      "explanation": "Multiply top \u00d7 top: 3 \u00d7 3 = 9. Multiply bottom \u00d7 bottom: 8 \u00d7 5 = 40, giving 9/40.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-hard-5",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-hard-school",
+      "params": {
+        "a": 2,
+        "b": 7,
+        "c": 5,
+        "d": 6
+      },
+      "stem": "An art studio uses 2/7 of a school budget. Painting supplies take up 5/6 of that art budget. What fraction of the total budget goes to painting supplies?",
+      "expression": "(2 / 7) * (5 / 6)",
+      "options": [
+        {
+          "id": "A",
+          "text": "47/42",
+          "misconception_id": "added_fractions_instead"
+        },
+        {
+          "id": "B",
+          "text": "12/35",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
+          "id": "C",
+          "text": "5/21",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "10/13",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "5/21",
+      "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
+      "explanation": "Multiply top \u00d7 top: 2 \u00d7 5 = 10. Multiply bottom \u00d7 bottom: 7 \u00d7 6 = 42, giving 10/42. Simplify by dividing the top and bottom by 2: 10/42 simplifies to 5/21.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-multiply-hard-6",
+      "topic_id": "g5-fractions-multiply",
+      "standard": "5.NR.3.4",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-multiply-hard-food",
+      "params": {
+        "a": 5,
+        "b": 8,
+        "c": 3,
+        "d": 7
+      },
+      "stem": "A farmer's pantry is 5/8 stocked with grain. Wheat accounts for 3/7 of that grain. What fraction of the pantry is wheat?",
+      "expression": "(5 / 8) * (3 / 7)",
+      "options": [
+        {
+          "id": "A",
+          "text": "15/56",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "35/24",
+          "misconception_id": "cross_multiplies_instead_of_multiplying_straight"
+        },
+        {
+          "id": "C",
+          "text": "1",
+          "misconception_id": "multiplies_tops_adds_bottoms"
+        },
+        {
+          "id": "D",
+          "text": "1/7",
+          "misconception_id": "added_tops_multiplied_bottoms"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "15/56",
+      "hint": "Multiply the two fractions straight across to find what portion of the whole is used.",
+      "explanation": "Multiply top \u00d7 top: 5 \u00d7 3 = 15. Multiply bottom \u00d7 bottom: 8 \u00d7 7 = 56, giving 15/56.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    }
+  ]
+}

@@ -1,0 +1,805 @@
+{
+  "topic_id": "g5-decimal-ops",
+  "generated_at": "2026-10-25T18:25:29.348030+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v2",
+  "counts": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6
+  },
+  "questions": [
+    {
+      "id": "g5-decimal-ops-easy-1",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "easy",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-easy-+-food",
+      "params": {
+        "a": 1.4,
+        "b": 1.32,
+        "op": "+"
+      },
+      "stem": "A baker mixes 1.4 kg of white sugar and 1.32 kg of brown sugar. What is the total mass?",
+      "expression": "1.4 + 1.32",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.46",
+          "misconception_id": "ignored_the_decimal_point"
+        },
+        {
+          "id": "B",
+          "text": "0.08",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "C",
+          "text": "272",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "D",
+          "text": "2.72",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "2.72",
+      "hint": "Line up the decimal points vertically before adding or subtracting each column.",
+      "explanation": "Line up the decimal points first. Add column by column from right to left, carrying to the next place value when a column reaches 10 or more. 1.4 + 1.32 = 2.72.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-easy-2",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "easy",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-easy-+-sports",
+      "params": {
+        "a": 2.3,
+        "b": 2.14,
+        "op": "+"
+      },
+      "stem": "A runner ran 2.3 miles in the morning and 2.14 miles in the afternoon. What was the total distance?",
+      "expression": "2.3 + 2.14",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.16",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "B",
+          "text": "4.44",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "444",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "D",
+          "text": "2.37",
+          "misconception_id": "ignored_the_decimal_point"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "4.44",
+      "hint": "Line up the decimal points vertically before adding or subtracting each column.",
+      "explanation": "Line up the decimal points first. Add column by column from right to left, carrying to the next place value when a column reaches 10 or more. 2.3 + 2.14 = 4.44.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-easy-3",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "easy",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-easy-+-school",
+      "params": {
+        "a": 2.5,
+        "b": 1.23,
+        "op": "+"
+      },
+      "stem": "A student has 2.5 metres of blue yarn and 1.23 metres of yellow yarn. How many metres of yarn in total?",
+      "expression": "2.5 + 1.23",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.27",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "B",
+          "text": "373",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "C",
+          "text": "3.73",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "1.48",
+          "misconception_id": "ignored_the_decimal_point"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "3.73",
+      "hint": "Line up the decimal points vertically before adding or subtracting each column.",
+      "explanation": "Line up the decimal points first. Add column by column from right to left, carrying to the next place value when a column reaches 10 or more. 2.5 + 1.23 = 3.73.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-easy-4",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "easy",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-easy---games",
+      "params": {
+        "a": 5.76,
+        "b": 1.3,
+        "op": "-"
+      },
+      "stem": "A bag held 5.76 ounces of magic powder before a potion used 1.3 ounces. How many ounces remain?",
+      "expression": "5.76 - 1.3",
+      "options": [
+        {
+          "id": "A",
+          "text": "7.06",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "B",
+          "text": "4.46",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "446",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "D",
+          "text": "5.63",
+          "misconception_id": "ignored_the_decimal_point"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "4.46",
+      "hint": "Line up the decimal points vertically before adding or subtracting each column.",
+      "explanation": "Line up the decimal points first, placing placeholder zeros where needed. Subtract column by column from right to left, regrouping from the next place value when needed. 5.76 - 1.3 = 4.46.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-easy-5",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "easy",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-easy-+-nature",
+      "params": {
+        "a": 2.3,
+        "b": 2.14,
+        "op": "+"
+      },
+      "stem": "A rain gauge recorded 2.3 cm of rain on Monday and 2.14 cm on Tuesday. What was the total rainfall?",
+      "expression": "2.3 + 2.14",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.44",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "444",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "C",
+          "text": "2.37",
+          "misconception_id": "ignored_the_decimal_point"
+        },
+        {
+          "id": "D",
+          "text": "0.16",
+          "misconception_id": "used_the_wrong_operation"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "4.44",
+      "hint": "Line up the decimal points vertically before adding or subtracting each column.",
+      "explanation": "Line up the decimal points first. Add column by column from right to left, carrying to the next place value when a column reaches 10 or more. 2.3 + 2.14 = 4.44.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-easy-6",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "easy",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-easy-+-food",
+      "params": {
+        "a": 2.5,
+        "b": 2.14,
+        "op": "+"
+      },
+      "stem": "A baker mixes 2.5 kg of white sugar and 2.14 kg of brown sugar. What is the total mass?",
+      "expression": "2.5 + 2.14",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.64",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "2.39",
+          "misconception_id": "ignored_the_decimal_point"
+        },
+        {
+          "id": "C",
+          "text": "0.36",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "D",
+          "text": "464",
+          "misconception_id": "forgot_the_decimal_point"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "4.64",
+      "hint": "Line up the decimal points vertically before adding or subtracting each column.",
+      "explanation": "Line up the decimal points first. Add column by column from right to left, carrying to the next place value when a column reaches 10 or more. 2.5 + 2.14 = 4.64.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-medium-1",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "medium",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-medium---food",
+      "params": {
+        "a": 6.75,
+        "b": 2.1,
+        "op": "-"
+      },
+      "stem": "A bottle held 6.75 litres of olive oil before a chef poured out 2.1 litres. How many litres remain?",
+      "expression": "6.75 - 2.1",
+      "options": [
+        {
+          "id": "A",
+          "text": "8.85",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "B",
+          "text": "465",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "C",
+          "text": "6.54",
+          "misconception_id": "ignored_the_decimal_point"
+        },
+        {
+          "id": "D",
+          "text": "4.65",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "4.65",
+      "hint": "Write placeholder zeros so both numbers have the same number of digits after the decimal point.",
+      "explanation": "Line up the decimal points first, placing placeholder zeros where needed. Subtract column by column from right to left, regrouping from the next place value when needed. 6.75 - 2.1 = 4.65.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-medium-2",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "medium",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-medium---sports",
+      "params": {
+        "a": 5.45,
+        "b": 1.4,
+        "op": "-"
+      },
+      "stem": "A running track lap is 5.45 km and an athlete has run 1.4 km. How much of the lap remains?",
+      "expression": "5.45 - 1.4",
+      "options": [
+        {
+          "id": "A",
+          "text": "6.85",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "B",
+          "text": "405",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "C",
+          "text": "5.31",
+          "misconception_id": "ignored_the_decimal_point"
+        },
+        {
+          "id": "D",
+          "text": "4.05",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "4.05",
+      "hint": "Write placeholder zeros so both numbers have the same number of digits after the decimal point.",
+      "explanation": "Line up the decimal points first, placing placeholder zeros where needed. Subtract column by column from right to left, regrouping from the next place value when needed. 5.45 - 1.4 = 4.05.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-medium-3",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "medium",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-medium---school",
+      "params": {
+        "a": 4.85,
+        "b": 3.2,
+        "op": "-"
+      },
+      "stem": "A roll of craft paper was 4.85 metres long before 3.2 metres was cut for a poster. How much paper is left?",
+      "expression": "4.85 - 3.2",
+      "options": [
+        {
+          "id": "A",
+          "text": "8.05",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "B",
+          "text": "165",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "C",
+          "text": "1.65",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "4.53",
+          "misconception_id": "ignored_the_decimal_point"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "1.65",
+      "hint": "Write placeholder zeros so both numbers have the same number of digits after the decimal point.",
+      "explanation": "Line up the decimal points first, placing placeholder zeros where needed. Subtract column by column from right to left, regrouping from the next place value when needed. 4.85 - 3.2 = 1.65.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-medium-4",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "medium",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-medium-+-games",
+      "params": {
+        "a": 2.5,
+        "b": 1.35,
+        "op": "+"
+      },
+      "stem": "A treasure stash has 2.5 kg of silver bars and 1.35 kg of gold coins. What is the combined weight?",
+      "expression": "2.5 + 1.35",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.85",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "385",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "C",
+          "text": "1.6",
+          "misconception_id": "ignored_the_decimal_point"
+        },
+        {
+          "id": "D",
+          "text": "1.15",
+          "misconception_id": "used_the_wrong_operation"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "3.85",
+      "hint": "Write placeholder zeros so both numbers have the same number of digits after the decimal point.",
+      "explanation": "Line up the decimal points first. Add column by column from right to left, carrying to the next place value when a column reaches 10 or more. 2.5 + 1.35 = 3.85.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-medium-5",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "medium",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-medium-+-nature",
+      "params": {
+        "a": 1.5,
+        "b": 2.45,
+        "op": "+"
+      },
+      "stem": "A garden path is 1.5 metres long and an extension adds 2.45 metres. What is the new total length?",
+      "expression": "1.5 + 2.45",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.6",
+          "misconception_id": "ignored_the_decimal_point"
+        },
+        {
+          "id": "B",
+          "text": "3.95",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "0.95",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "D",
+          "text": "395",
+          "misconception_id": "forgot_the_decimal_point"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "3.95",
+      "hint": "Write placeholder zeros so both numbers have the same number of digits after the decimal point.",
+      "explanation": "Line up the decimal points first. Add column by column from right to left, carrying to the next place value when a column reaches 10 or more. 1.5 + 2.45 = 3.95.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-medium-6",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "medium",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-medium-+-food",
+      "params": {
+        "a": 3.5,
+        "b": 1.35,
+        "op": "+"
+      },
+      "stem": "A juice bottle contains 3.5 litres of apple juice and 1.35 litres of berry juice. What is the total volume?",
+      "expression": "3.5 + 1.35",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.15",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "B",
+          "text": "485",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "C",
+          "text": "4.85",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "1.7",
+          "misconception_id": "ignored_the_decimal_point"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "4.85",
+      "hint": "Write placeholder zeros so both numbers have the same number of digits after the decimal point.",
+      "explanation": "Line up the decimal points first. Add column by column from right to left, carrying to the next place value when a column reaches 10 or more. 3.5 + 1.35 = 4.85.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-hard-1",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "hard",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-hard-+-food",
+      "params": {
+        "a": 3.98,
+        "b": 2.8,
+        "op": "+"
+      },
+      "stem": "A caterer mixed 3.98 kg of pasta with 2.8 kg of fresh sauce for an event. What was the total weight of the dish?",
+      "expression": "3.98 + 2.8",
+      "options": [
+        {
+          "id": "A",
+          "text": "5.78",
+          "misconception_id": "dropped_the_carry"
+        },
+        {
+          "id": "B",
+          "text": "1.18",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "C",
+          "text": "6.78",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "678",
+          "misconception_id": "forgot_the_decimal_point"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "6.78",
+      "hint": "Line up the decimals and regroup carefully across the place value columns.",
+      "explanation": "Line up the decimal points first. Add column by column from right to left, carrying to the next place value when a column reaches 10 or more. 3.98 + 2.8 = 6.78.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-hard-2",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "hard",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-hard---sports",
+      "params": {
+        "a": 8.5,
+        "b": 2.38,
+        "op": "-"
+      },
+      "stem": "An endurance course is 8.5 km long. A runner has completed 2.38 km so far. How many kilometres are left to run?",
+      "expression": "8.5 - 2.38",
+      "options": [
+        {
+          "id": "A",
+          "text": "6.12",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "10.88",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "C",
+          "text": "612",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "D",
+          "text": "6.28",
+          "misconception_id": "subtracted_smaller_digit_from_larger"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "6.12",
+      "hint": "Line up the decimals and regroup carefully across the place value columns.",
+      "explanation": "Line up the decimal points first, placing placeholder zeros where needed. Subtract column by column from right to left, regrouping from the next place value when needed. 8.5 - 2.38 = 6.12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-hard-3",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "hard",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-hard---school",
+      "params": {
+        "a": 9.1,
+        "b": 1.27,
+        "op": "-"
+      },
+      "stem": "An art canvas was 9.1 metres long before a border trim of 1.27 metres was removed. What is the length of the trimmed canvas?",
+      "expression": "9.1 - 1.27",
+      "options": [
+        {
+          "id": "A",
+          "text": "783",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "B",
+          "text": "7.83",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "8.17",
+          "misconception_id": "subtracted_smaller_digit_from_larger"
+        },
+        {
+          "id": "D",
+          "text": "10.37",
+          "misconception_id": "used_the_wrong_operation"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "7.83",
+      "hint": "Line up the decimals and regroup carefully across the place value columns.",
+      "explanation": "Line up the decimal points first, placing placeholder zeros where needed. Subtract column by column from right to left, regrouping from the next place value when needed. 9.1 - 1.27 = 7.83.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-hard-4",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "hard",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-hard---games",
+      "params": {
+        "a": 5.4,
+        "b": 1.28,
+        "op": "-"
+      },
+      "stem": "A guild vault stored 5.4 ounces of crystal essence before a spell consumed 1.28 ounces. How many ounces remain in the vault?",
+      "expression": "5.4 - 1.28",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.28",
+          "misconception_id": "subtracted_smaller_digit_from_larger"
+        },
+        {
+          "id": "B",
+          "text": "6.68",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "C",
+          "text": "412",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "D",
+          "text": "4.12",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "4.12",
+      "hint": "Line up the decimals and regroup carefully across the place value columns.",
+      "explanation": "Line up the decimal points first, placing placeholder zeros where needed. Subtract column by column from right to left, regrouping from the next place value when needed. 5.4 - 1.28 = 4.12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-hard-5",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "hard",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-hard-+-nature",
+      "params": {
+        "a": 4.86,
+        "b": 3.7,
+        "op": "+"
+      },
+      "stem": "An environmental study measured 4.86 mm of rain at the valley station and 3.7 mm at the ridge station. What was the combined rainfall?",
+      "expression": "4.86 + 3.7",
+      "options": [
+        {
+          "id": "A",
+          "text": "8.56",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "7.56",
+          "misconception_id": "dropped_the_carry"
+        },
+        {
+          "id": "C",
+          "text": "1.16",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "D",
+          "text": "856",
+          "misconception_id": "forgot_the_decimal_point"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "8.56",
+      "hint": "Line up the decimals and regroup carefully across the place value columns.",
+      "explanation": "Line up the decimal points first. Add column by column from right to left, carrying to the next place value when a column reaches 10 or more. 4.86 + 3.7 = 8.56.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-decimal-ops-hard-6",
+      "topic_id": "g5-decimal-ops",
+      "standard": "5.NR.4",
+      "difficulty": "hard",
+      "verifier_type": "decimal_arithmetic",
+      "template_id": "g5-decimal-ops-hard---food",
+      "params": {
+        "a": 8.2,
+        "b": 3.17,
+        "op": "-"
+      },
+      "stem": "A baker prepared 8.2 kg of dough, and a morning delivery used 3.17 kg. How much dough remains for the bakery?",
+      "expression": "8.2 - 3.17",
+      "options": [
+        {
+          "id": "A",
+          "text": "11.37",
+          "misconception_id": "used_the_wrong_operation"
+        },
+        {
+          "id": "B",
+          "text": "503",
+          "misconception_id": "forgot_the_decimal_point"
+        },
+        {
+          "id": "C",
+          "text": "5.03",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "5.17",
+          "misconception_id": "subtracted_smaller_digit_from_larger"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "5.03",
+      "hint": "Line up the decimals and regroup carefully across the place value columns.",
+      "explanation": "Line up the decimal points first, placing placeholder zeros where needed. Subtract column by column from right to left, regrouping from the next place value when needed. 8.2 - 3.17 = 5.03.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    }
+  ]
+}

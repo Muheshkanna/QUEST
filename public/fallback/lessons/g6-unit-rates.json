@@ -1,0 +1,37 @@
+{
+  "title": "Unit Rates & Unit Pricing",
+  "big_idea": "A unit rate compares a quantity to one single unit of another quantity.",
+  "explanation": "To find a unit rate, divide the first quantity by the second quantity so the denominator becomes 1. Common unit rates include miles per hour, dollars per pound, and words per minute.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Start with $18 for 3 books",
+      "math": "18 / 3 = 6"
+    },
+    {
+      "step": 2,
+      "text": "Confirm unit cost per book",
+      "math": "unit_rate(18, 3) = 6"
+    },
+    {
+      "step": 3,
+      "text": "Check cost for 5 books at unit rate",
+      "math": "6 * 5 = 30"
+    }
+  ],
+  "key_vocab": [
+    "Rate",
+    "Unit Rate",
+    "Unit Price",
+    "Per",
+    "Denominator of One"
+  ],
+  "real_world_example": "Traveling 150 miles in 3 hours means traveling at a unit rate of 50 miles per hour.",
+  "common_mistakes": [
+    "Dividing in reverse order (dividing hours by miles instead of miles by hours).",
+    "Forgetting that the unit rate must express a comparison to exactly 1 unit.",
+    "Confusing the units when interpreting speed or unit prices."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g6-unit-rates"
+}

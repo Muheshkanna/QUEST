@@ -1,0 +1,37 @@
+{
+  "title": "Multi-Digit Division with Remainders",
+  "big_idea": "Division shares a total into equal groups; any leftover amount that cannot form a full group is the remainder.",
+  "explanation": "When dividing whole numbers using long division, divide, multiply, subtract, and bring down. If the final number remaining is smaller than the divisor, record it as remainder R.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Divide 85 by 4 to find quotient",
+      "math": "85 // 4 = 21"
+    },
+    {
+      "step": 2,
+      "text": "Multiply quotient by divisor",
+      "math": "21 * 4 = 84"
+    },
+    {
+      "step": 3,
+      "text": "Subtract to find remainder",
+      "math": "85 - 84 = 1"
+    }
+  ],
+  "key_vocab": [
+    "Dividend",
+    "Divisor",
+    "Quotient",
+    "Remainder",
+    "Long Division"
+  ],
+  "real_world_example": "Packing 85 apples into boxes of 4 leaves 21 full boxes and 1 leftover apple.",
+  "common_mistakes": [
+    "Leaving a remainder that is larger than or equal to the divisor.",
+    "Making mistakes during intermediate subtraction steps.",
+    "Misplacing the quotient digits above the wrong place-value column."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g5-divide"
+}

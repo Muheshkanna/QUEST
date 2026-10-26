@@ -1,0 +1,40 @@
+{
+  "slides": [
+    {
+      "title": "Entering the Third Dimension",
+      "visual_hint": "A flat 2D blueprint rising into a 3D glass box.",
+      "narration": "Area covers a flat floor, but volume fills an entire room. We measure volume using unit cubes.",
+      "highlight": "unit cubes"
+    },
+    {
+      "title": "The Floor Layer",
+      "visual_hint": "A grid of 4 cubes long by 3 cubes wide.",
+      "narration": "Look at the base. A length of four and a width of three creates a floor of twelve cubes.",
+      "highlight": "twelve cubes"
+    },
+    {
+      "title": "Stacking the Height",
+      "visual_hint": "Five layers of twelve cubes stacking vertically.",
+      "narration": "Now stack that base five layers high. Each layer holds twelve cubes.",
+      "highlight": "five layers"
+    },
+    {
+      "title": "The Volume Equation",
+      "visual_hint": "Length times Width times Height = 4 * 3 * 5 = 60.",
+      "narration": "Multiply length times width times height. Four times three times five equals sixty cubic units.",
+      "highlight": "sixty cubic units"
+    },
+    {
+      "title": "No Gaps, No Overlaps",
+      "visual_hint": "The box sealing tight with solid blue glowing cubes.",
+      "narration": "Every single cube fits perfectly inside with no gaps and no overlaps.",
+      "highlight": "no gaps"
+    },
+    {
+      "title": "Master of Dimensions",
+      "visual_hint": "A glowing isometric prism badge.",
+      "narration": "You now understand volume from the foundation to the ceiling. Great questing!",
+      "highlight": "foundation"
+    }
+  ]
+}

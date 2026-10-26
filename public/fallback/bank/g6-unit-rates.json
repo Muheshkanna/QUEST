@@ -1,0 +1,787 @@
+{
+  "topic_id": "g6-unit-rates",
+  "generated_at": "2026-10-25T18:25:29.330134+00:00",
+  "model": "template-seed",
+  "prompt_version": "seed-v2",
+  "counts": {
+    "easy": 6,
+    "medium": 6,
+    "hard": 6
+  },
+  "questions": [
+    {
+      "id": "g6-unit-rates-easy-1",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "easy",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-easy-games",
+      "params": {
+        "a": 36,
+        "b": 3
+      },
+      "stem": "A player earns 36 gold in 3 quests. How much gold per quest?",
+      "expression": "36 / 3",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/12",
+          "misconception_id": "divides_in_reversed_order"
+        },
+        {
+          "id": "B",
+          "text": "108",
+          "misconception_id": "multiplied_instead_of_dividing"
+        },
+        {
+          "id": "C",
+          "text": "36",
+          "misconception_id": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "id": "D",
+          "text": "12",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "12",
+      "hint": "Divide the total amount by how many groups there are.",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 36 ÷ 3 = 12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-easy-2",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "easy",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-easy-sports",
+      "params": {
+        "a": 36,
+        "b": 2
+      },
+      "stem": "A swimmer covers 36 metres in 2 minutes. What is the speed in metres per minute?",
+      "expression": "36 / 2",
+      "options": [
+        {
+          "id": "A",
+          "text": "72",
+          "misconception_id": "multiplied_instead_of_dividing"
+        },
+        {
+          "id": "B",
+          "text": "18",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "36",
+          "misconception_id": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "id": "D",
+          "text": "34",
+          "misconception_id": "subtracts_quantities"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "18",
+      "hint": "Divide the total amount by how many groups there are.",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 36 ÷ 2 = 18.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-easy-3",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "easy",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-easy-school",
+      "params": {
+        "a": 72,
+        "b": 2
+      },
+      "stem": "A student reads 72 pages in 2 hours. How many pages per hour?",
+      "expression": "72 / 2",
+      "options": [
+        {
+          "id": "A",
+          "text": "36",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "72",
+          "misconception_id": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "id": "C",
+          "text": "70",
+          "misconception_id": "subtracts_quantities"
+        },
+        {
+          "id": "D",
+          "text": "74",
+          "misconception_id": "adds_quantities"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "36",
+      "hint": "Divide the total amount by how many groups there are.",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 72 ÷ 2 = 36.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-easy-4",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "easy",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-easy-nature",
+      "params": {
+        "a": 72,
+        "b": 6
+      },
+      "stem": "A bird flies 72 miles in 6 hours. What is the speed in miles per hour?",
+      "expression": "72 / 6",
+      "options": [
+        {
+          "id": "A",
+          "text": "66",
+          "misconception_id": "subtracts_quantities"
+        },
+        {
+          "id": "B",
+          "text": "78",
+          "misconception_id": "adds_quantities"
+        },
+        {
+          "id": "C",
+          "text": "1/12",
+          "misconception_id": "divides_in_reversed_order"
+        },
+        {
+          "id": "D",
+          "text": "12",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "12",
+      "hint": "Divide the total amount by how many groups there are.",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 72 ÷ 6 = 12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-easy-5",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "easy",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-easy-food",
+      "params": {
+        "a": 24,
+        "b": 2
+      },
+      "stem": "A baker makes 24 cookies in 2 batches. How many cookies per batch?",
+      "expression": "24 / 2",
+      "options": [
+        {
+          "id": "A",
+          "text": "26",
+          "misconception_id": "adds_quantities"
+        },
+        {
+          "id": "B",
+          "text": "12",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "1/12",
+          "misconception_id": "divides_in_reversed_order"
+        },
+        {
+          "id": "D",
+          "text": "48",
+          "misconception_id": "multiplied_instead_of_dividing"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "12",
+      "hint": "Divide the total amount by how many groups there are.",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 24 ÷ 2 = 12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-easy-6",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "easy",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-easy-games",
+      "params": {
+        "a": 24,
+        "b": 3
+      },
+      "stem": "A player earns 24 gold in 3 quests. How much gold per quest?",
+      "expression": "24 / 3",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/8",
+          "misconception_id": "divides_in_reversed_order"
+        },
+        {
+          "id": "B",
+          "text": "72",
+          "misconception_id": "multiplied_instead_of_dividing"
+        },
+        {
+          "id": "C",
+          "text": "8",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "24",
+          "misconception_id": "forgets_unit_rate_denominator_is_one"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "8",
+      "hint": "Divide the total amount by how many groups there are.",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 24 ÷ 3 = 8.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-medium-1",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "medium",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-medium-nature",
+      "params": {
+        "a": 180,
+        "b": 6
+      },
+      "stem": "A river flows 180 gallons past a point in 6 seconds. What is the flow rate per second?",
+      "expression": "180 / 6",
+      "options": [
+        {
+          "id": "A",
+          "text": "1080",
+          "misconception_id": "multiplied_instead_of_dividing"
+        },
+        {
+          "id": "B",
+          "text": "30",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "180",
+          "misconception_id": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "id": "D",
+          "text": "174",
+          "misconception_id": "subtracts_quantities"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "30",
+      "hint": "What single number tells you the amount for just one group?",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 180 ÷ 6 = 30.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-medium-2",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "medium",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-medium-games",
+      "params": {
+        "a": 96,
+        "b": 6
+      },
+      "stem": "A team completes 96 levels in 6 days. How many levels per day?",
+      "expression": "96 / 6",
+      "options": [
+        {
+          "id": "A",
+          "text": "96",
+          "misconception_id": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "id": "B",
+          "text": "90",
+          "misconception_id": "subtracts_quantities"
+        },
+        {
+          "id": "C",
+          "text": "102",
+          "misconception_id": "adds_quantities"
+        },
+        {
+          "id": "D",
+          "text": "16",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "16",
+      "hint": "What single number tells you the amount for just one group?",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 96 ÷ 6 = 16.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-medium-3",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "medium",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-medium-school",
+      "params": {
+        "a": 180,
+        "b": 5
+      },
+      "stem": "A printer prints 180 pages in 5 minutes. How many pages per minute?",
+      "expression": "180 / 5",
+      "options": [
+        {
+          "id": "A",
+          "text": "175",
+          "misconception_id": "subtracts_quantities"
+        },
+        {
+          "id": "B",
+          "text": "185",
+          "misconception_id": "adds_quantities"
+        },
+        {
+          "id": "C",
+          "text": "36",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "1/36",
+          "misconception_id": "divides_in_reversed_order"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "36",
+      "hint": "What single number tells you the amount for just one group?",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 180 ÷ 5 = 36.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-medium-4",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "medium",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-medium-food",
+      "params": {
+        "a": 72,
+        "b": 4
+      },
+      "stem": "A farm produces 72 kilograms of apples over 4 weeks. What is the weekly rate?",
+      "expression": "72 / 4",
+      "options": [
+        {
+          "id": "A",
+          "text": "18",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "76",
+          "misconception_id": "adds_quantities"
+        },
+        {
+          "id": "C",
+          "text": "1/18",
+          "misconception_id": "divides_in_reversed_order"
+        },
+        {
+          "id": "D",
+          "text": "288",
+          "misconception_id": "multiplied_instead_of_dividing"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "18",
+      "hint": "What single number tells you the amount for just one group?",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 72 ÷ 4 = 18.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-medium-5",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "medium",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-medium-sports",
+      "params": {
+        "a": 150,
+        "b": 5
+      },
+      "stem": "An athlete runs 150 laps in 5 practice sessions. How many laps per session?",
+      "expression": "150 / 5",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/30",
+          "misconception_id": "divides_in_reversed_order"
+        },
+        {
+          "id": "B",
+          "text": "750",
+          "misconception_id": "multiplied_instead_of_dividing"
+        },
+        {
+          "id": "C",
+          "text": "150",
+          "misconception_id": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "id": "D",
+          "text": "30",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "30",
+      "hint": "What single number tells you the amount for just one group?",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 150 ÷ 5 = 30.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-medium-6",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "medium",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-medium-nature",
+      "params": {
+        "a": 120,
+        "b": 4
+      },
+      "stem": "A river flows 120 gallons past a point in 4 seconds. What is the flow rate per second?",
+      "expression": "120 / 4",
+      "options": [
+        {
+          "id": "A",
+          "text": "480",
+          "misconception_id": "multiplied_instead_of_dividing"
+        },
+        {
+          "id": "B",
+          "text": "120",
+          "misconception_id": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "id": "C",
+          "text": "30",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "116",
+          "misconception_id": "subtracts_quantities"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "30",
+      "hint": "What single number tells you the amount for just one group?",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 120 ÷ 4 = 30.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-hard-1",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "hard",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-hard-nature",
+      "params": {
+        "a": 300,
+        "b": 4
+      },
+      "stem": "A weather station records 300 millimetres of rain over 4 days. What is the daily rainfall?",
+      "expression": "300 / 4",
+      "options": [
+        {
+          "id": "A",
+          "text": "75",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "300",
+          "misconception_id": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "id": "C",
+          "text": "296",
+          "misconception_id": "subtracts_quantities"
+        },
+        {
+          "id": "D",
+          "text": "304",
+          "misconception_id": "adds_quantities"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "75",
+      "hint": "Find how much happens in exactly 1 unit by dividing the total.",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 300 ÷ 4 = 75.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-hard-2",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "hard",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-hard-games",
+      "params": {
+        "a": 240,
+        "b": 6
+      },
+      "stem": "A guild earns 240 experience points in 6 raids. What is the rate per raid?",
+      "expression": "240 / 6",
+      "options": [
+        {
+          "id": "A",
+          "text": "40",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "234",
+          "misconception_id": "subtracts_quantities"
+        },
+        {
+          "id": "C",
+          "text": "246",
+          "misconception_id": "adds_quantities"
+        },
+        {
+          "id": "D",
+          "text": "1/40",
+          "misconception_id": "divides_in_reversed_order"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "40",
+      "hint": "Find how much happens in exactly 1 unit by dividing the total.",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 240 ÷ 6 = 40.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-hard-3",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "hard",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-hard-food",
+      "params": {
+        "a": 360,
+        "b": 6
+      },
+      "stem": "A factory packages 360 bottles in 6 hours. What is the rate per hour?",
+      "expression": "360 / 6",
+      "options": [
+        {
+          "id": "A",
+          "text": "366",
+          "misconception_id": "adds_quantities"
+        },
+        {
+          "id": "B",
+          "text": "1/60",
+          "misconception_id": "divides_in_reversed_order"
+        },
+        {
+          "id": "C",
+          "text": "60",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "2160",
+          "misconception_id": "multiplied_instead_of_dividing"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "60",
+      "hint": "Find how much happens in exactly 1 unit by dividing the total.",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 360 ÷ 6 = 60.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-hard-4",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "hard",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-hard-school",
+      "params": {
+        "a": 144,
+        "b": 12
+      },
+      "stem": "A class completes 144 math problems across 12 study sessions. How many problems per session?",
+      "expression": "144 / 12",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/12",
+          "misconception_id": "divides_in_reversed_order"
+        },
+        {
+          "id": "B",
+          "text": "12",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "1728",
+          "misconception_id": "multiplied_instead_of_dividing"
+        },
+        {
+          "id": "D",
+          "text": "144",
+          "misconception_id": "forgets_unit_rate_denominator_is_one"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "12",
+      "hint": "Find how much happens in exactly 1 unit by dividing the total.",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 144 ÷ 12 = 12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-hard-5",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "hard",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-hard-sports",
+      "params": {
+        "a": 144,
+        "b": 8
+      },
+      "stem": "A cyclist rides 144 kilometres in 8 hours. What is the speed in km per hour?",
+      "expression": "144 / 8",
+      "options": [
+        {
+          "id": "A",
+          "text": "18",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "1152",
+          "misconception_id": "multiplied_instead_of_dividing"
+        },
+        {
+          "id": "C",
+          "text": "144",
+          "misconception_id": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "id": "D",
+          "text": "136",
+          "misconception_id": "subtracts_quantities"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "18",
+      "hint": "Find how much happens in exactly 1 unit by dividing the total.",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 144 ÷ 8 = 18.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g6-unit-rates-hard-6",
+      "topic_id": "g6-unit-rates",
+      "standard": "6.NR.4.4",
+      "difficulty": "hard",
+      "verifier_type": "rate_division",
+      "template_id": "g6-unit-rates-hard-nature",
+      "params": {
+        "a": 144,
+        "b": 9
+      },
+      "stem": "A weather station records 144 millimetres of rain over 9 days. What is the daily rainfall?",
+      "expression": "144 / 9",
+      "options": [
+        {
+          "id": "A",
+          "text": "144",
+          "misconception_id": "forgets_unit_rate_denominator_is_one"
+        },
+        {
+          "id": "B",
+          "text": "135",
+          "misconception_id": "subtracts_quantities"
+        },
+        {
+          "id": "C",
+          "text": "16",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "153",
+          "misconception_id": "adds_quantities"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "16",
+      "hint": "Find how much happens in exactly 1 unit by dividing the total.",
+      "explanation": "To find the unit rate, divide the total by the number of groups. 144 ÷ 9 = 16.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    }
+  ]
+}

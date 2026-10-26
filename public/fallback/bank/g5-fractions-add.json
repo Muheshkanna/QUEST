@@ -1,0 +1,816 @@
+{
+  "topic_id": "g5-fractions-add",
+  "version": "1.0.0",
+  "questions": [
+    {
+      "id": "g5-fractions-add-easy-1",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-easy-games",
+      "params": {
+        "a": 2,
+        "b": 6,
+        "c": 1,
+        "d": 6
+      },
+      "stem": "In a board game you moved 2/6 of the track on your first turn and 1/6 on your second. How far did you travel?",
+      "expression": "2/6 + 1/6",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/4",
+          "misconception_id": "added_tops_and_bottoms"
+        },
+        {
+          "id": "B",
+          "text": "1/18",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "C",
+          "text": "1/6",
+          "misconception_id": "subtracted_instead_of_adding"
+        },
+        {
+          "id": "D",
+          "text": "1/2",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "1/2",
+      "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
+      "explanation": "Both fractions have 6 on the bottom. Add the top numbers: 2 + 1 = 3, giving 3/6. Simplify by dividing the top and bottom by 3: 3/6 simplifies to 1/2.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-easy-2",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-easy-sports",
+      "params": {
+        "a": 1,
+        "b": 4,
+        "c": 2,
+        "d": 4
+      },
+      "stem": "A runner drank 1/4 litre of water before the race and 2/4 litre after. How much did they drink total?",
+      "expression": "1/4 + 2/4",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/8",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "B",
+          "text": "3/4",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "1/4",
+          "misconception_id": "subtracted_instead_of_adding"
+        },
+        {
+          "id": "D",
+          "text": "3/8",
+          "misconception_id": "added_tops_and_bottoms"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "3/4",
+      "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
+      "explanation": "Both fractions have 4 on the bottom. Add the top numbers: 1 + 2 = 3, giving 3/4.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-easy-3",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-easy-school",
+      "params": {
+        "a": 1,
+        "b": 12,
+        "c": 9,
+        "d": 12
+      },
+      "stem": "You coloured 1/12 of a page in art class and 9/12 more for the border. What fraction of the page is coloured?",
+      "expression": "1/12 + 9/12",
+      "options": [
+        {
+          "id": "A",
+          "text": "5/6",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "1/16",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "C",
+          "text": "2/3",
+          "misconception_id": "subtracted_instead_of_adding"
+        },
+        {
+          "id": "D",
+          "text": "5/12",
+          "misconception_id": "added_tops_and_bottoms"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "5/6",
+      "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
+      "explanation": "Both fractions have 12 on the bottom. Add the top numbers: 1 + 9 = 10, giving 10/12. Simplify by dividing the top and bottom by 2: 10/12 simplifies to 5/6.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-easy-4",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-easy-nature",
+      "params": {
+        "a": 4,
+        "b": 6,
+        "c": 1,
+        "d": 6
+      },
+      "stem": "A garden path has 4/6 metres of gravel on the left side and 1/6 metres on the right. What is the total length?",
+      "expression": "4/6 + 1/6",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2",
+          "misconception_id": "subtracted_instead_of_adding"
+        },
+        {
+          "id": "B",
+          "text": "5/12",
+          "misconception_id": "added_tops_and_bottoms"
+        },
+        {
+          "id": "C",
+          "text": "1/9",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "D",
+          "text": "5/6",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "5/6",
+      "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
+      "explanation": "Both fractions have 6 on the bottom. Add the top numbers: 4 + 1 = 5, giving 5/6.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-easy-5",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-easy-food",
+      "params": {
+        "a": 5,
+        "b": 10,
+        "c": 1,
+        "d": 10
+      },
+      "stem": "A baker used 5/10 cup of flour for cookies and 1/10 cup for a cake. How much flour was used in all?",
+      "expression": "5/10 + 1/10",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/10",
+          "misconception_id": "added_tops_and_bottoms"
+        },
+        {
+          "id": "B",
+          "text": "3/5",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "1/20",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "D",
+          "text": "2/5",
+          "misconception_id": "subtracted_instead_of_adding"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "3/5",
+      "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
+      "explanation": "Both fractions have 10 on the bottom. Add the top numbers: 5 + 1 = 6, giving 6/10. Simplify by dividing the top and bottom by 2: 6/10 simplifies to 3/5.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-easy-6",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "easy",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-easy-games",
+      "params": {
+        "a": 4,
+        "b": 6,
+        "c": 1,
+        "d": 6
+      },
+      "stem": "In a board game you moved 4/6 of the track on your first turn and 1/6 on your second. How far did you travel?",
+      "expression": "4/6 + 1/6",
+      "options": [
+        {
+          "id": "A",
+          "text": "5/12",
+          "misconception_id": "added_tops_and_bottoms"
+        },
+        {
+          "id": "B",
+          "text": "1/9",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "C",
+          "text": "5/6",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "1/2",
+          "misconception_id": "subtracted_instead_of_adding"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "5/6",
+      "hint": "The bottom numbers match, so you can add just the top numbers and keep the bottom.",
+      "explanation": "Both fractions have 6 on the bottom. Add the top numbers: 4 + 1 = 5, giving 5/6.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-medium-1",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-medium-nature",
+      "params": {
+        "a": 2,
+        "b": 3,
+        "c": 1,
+        "d": 6
+      },
+      "stem": "A plant grew 2/3 metre in spring and 1/6 metre in summer. How much did it grow altogether?",
+      "expression": "2/3 + 1/6",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2",
+          "misconception_id": "renamed_bottom_kept_tops"
+        },
+        {
+          "id": "B",
+          "text": "5/6",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "1/9",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "D",
+          "text": "1",
+          "misconception_id": "added_tops_kept_first_bottom"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "5/6",
+      "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
+      "explanation": "The smallest number both 3 and 6 go into is 6. Rename 2/3 as 4/6 and 1/6 as 1/6 so the bottoms match. Add the top numbers: 4 + 1 = 5, giving 5/6.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-medium-2",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-medium-games",
+      "params": {
+        "a": 1,
+        "b": 3,
+        "c": 3,
+        "d": 6
+      },
+      "stem": "A game map shows treasure at 1/3 across the island. A second chest is 3/6 further. How far from the start is the second chest?",
+      "expression": "1/3 + 3/6",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/6",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "B",
+          "text": "4/3",
+          "misconception_id": "added_tops_kept_first_bottom"
+        },
+        {
+          "id": "C",
+          "text": "4/9",
+          "misconception_id": "added_tops_and_bottoms"
+        },
+        {
+          "id": "D",
+          "text": "5/6",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "5/6",
+      "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
+      "explanation": "The smallest number both 3 and 6 go into is 6. Rename 1/3 as 2/6 and 3/6 as 3/6 so the bottoms match. Add the top numbers: 2 + 3 = 5, giving 5/6.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-medium-3",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-medium-food",
+      "params": {
+        "a": 3,
+        "b": 5,
+        "c": 3,
+        "d": 15
+      },
+      "stem": "A smoothie needs 3/5 cup of berries and 3/15 cup of mango. How much fruit is needed altogether?",
+      "expression": "3/5 + 3/15",
+      "options": [
+        {
+          "id": "A",
+          "text": "2/5",
+          "misconception_id": "subtracted_instead_of_adding"
+        },
+        {
+          "id": "B",
+          "text": "6/5",
+          "misconception_id": "added_tops_kept_first_bottom"
+        },
+        {
+          "id": "C",
+          "text": "4/5",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "3/10",
+          "misconception_id": "added_tops_and_bottoms"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "4/5",
+      "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
+      "explanation": "The smallest number both 5 and 15 go into is 15. Rename 3/5 as 9/15 and 3/15 as 3/15 so the bottoms match. Add the top numbers: 9 + 3 = 12, giving 12/15. Simplify by dividing the top and bottom by 3: 12/15 simplifies to 4/5.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-medium-4",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-medium-sports",
+      "params": {
+        "a": 3,
+        "b": 5,
+        "c": 1,
+        "d": 10
+      },
+      "stem": "A swimmer swam 3/5 of a length in training and 1/10 of a length for cool-down. What is the total fraction swum?",
+      "expression": "3/5 + 1/10",
+      "options": [
+        {
+          "id": "A",
+          "text": "7/10",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "4/5",
+          "misconception_id": "added_tops_kept_first_bottom"
+        },
+        {
+          "id": "C",
+          "text": "4/15",
+          "misconception_id": "added_tops_and_bottoms"
+        },
+        {
+          "id": "D",
+          "text": "2/5",
+          "misconception_id": "renamed_bottom_kept_tops"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "7/10",
+      "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
+      "explanation": "The smallest number both 5 and 10 go into is 10. Rename 3/5 as 6/10 and 1/10 as 1/10 so the bottoms match. Add the top numbers: 6 + 1 = 7, giving 7/10.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-medium-5",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-medium-school",
+      "params": {
+        "a": 3,
+        "b": 6,
+        "c": 3,
+        "d": 12
+      },
+      "stem": "One shelf holds 3/6 of a set of books and a second shelf holds 3/12 of the same set. What fraction is shelved?",
+      "expression": "3/6 + 3/12",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/3",
+          "misconception_id": "added_tops_and_bottoms"
+        },
+        {
+          "id": "B",
+          "text": "1/2",
+          "misconception_id": "renamed_bottom_kept_tops"
+        },
+        {
+          "id": "C",
+          "text": "1/8",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "D",
+          "text": "3/4",
+          "misconception_id": null
+        }
+      ],
+      "correct_index": 3,
+      "answer": "3/4",
+      "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
+      "explanation": "The smallest number both 6 and 12 go into is 12. Rename 3/6 as 6/12 and 3/12 as 3/12 so the bottoms match. Add the top numbers: 6 + 3 = 9, giving 9/12. Simplify by dividing the top and bottom by 3: 9/12 simplifies to 3/4.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-medium-6",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "medium",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-medium-nature",
+      "params": {
+        "a": 3,
+        "b": 6,
+        "c": 8,
+        "d": 18
+      },
+      "stem": "A plant grew 3/6 metre in spring and 8/18 metre in summer. How much did it grow altogether?",
+      "expression": "3/6 + 8/18",
+      "options": [
+        {
+          "id": "A",
+          "text": "11/18",
+          "misconception_id": "renamed_bottom_kept_tops"
+        },
+        {
+          "id": "B",
+          "text": "2/9",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "C",
+          "text": "17/18",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "1/18",
+          "misconception_id": "subtracted_instead_of_adding"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "17/18",
+      "hint": "Look at the bottom numbers. What needs to match before you can combine these two parts?",
+      "explanation": "The smallest number both 6 and 18 go into is 18. Rename 3/6 as 9/18 and 8/18 as 8/18 so the bottoms match. Add the top numbers: 9 + 8 = 17, giving 17/18.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-hard-1",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-hard-nature",
+      "params": {
+        "a": 1,
+        "b": 5,
+        "c": 2,
+        "d": 8
+      },
+      "stem": "A river flooded 1/5 of a valley in January and 2/8 more in February. What fraction of the valley flooded over those two months?",
+      "expression": "1/5 + 2/8",
+      "options": [
+        {
+          "id": "A",
+          "text": "9/20",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "1/20",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "C",
+          "text": "3/5",
+          "misconception_id": "added_tops_kept_first_bottom"
+        },
+        {
+          "id": "D",
+          "text": "3/13",
+          "misconception_id": "added_tops_and_bottoms"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "9/20",
+      "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
+      "explanation": "The smallest number both 5 and 8 go into is 40. Rename 1/5 as 8/40 and 2/8 as 10/40 so the bottoms match. Add the top numbers: 8 + 10 = 18, giving 18/40. Simplify by dividing the top and bottom by 2: 18/40 simplifies to 9/20.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-hard-2",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-hard-school",
+      "params": {
+        "a": 3,
+        "b": 4,
+        "c": 1,
+        "d": 6
+      },
+      "stem": "One project takes 3/4 of a week and a second project takes 1/6 of a week. How much of the week do both projects take in total?",
+      "expression": "3/4 + 1/6",
+      "options": [
+        {
+          "id": "A",
+          "text": "11/12",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "7/12",
+          "misconception_id": "subtracted_instead_of_adding"
+        },
+        {
+          "id": "C",
+          "text": "1",
+          "misconception_id": "added_tops_kept_first_bottom"
+        },
+        {
+          "id": "D",
+          "text": "2/5",
+          "misconception_id": "added_tops_and_bottoms"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "11/12",
+      "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
+      "explanation": "The smallest number both 4 and 6 go into is 12. Rename 3/4 as 9/12 and 1/6 as 2/12 so the bottoms match. Add the top numbers: 9 + 2 = 11, giving 11/12.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-hard-3",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-hard-food",
+      "params": {
+        "a": 3,
+        "b": 4,
+        "c": 1,
+        "d": 5
+      },
+      "stem": "A recipe needs 3/4 litre of milk for the batter and 1/5 litre for the sauce. A chef already has 1/4 litre. How much MORE milk must they buy to have enough for both?",
+      "expression": "3/4 + 1/5",
+      "options": [
+        {
+          "id": "A",
+          "text": "1",
+          "misconception_id": "added_tops_kept_first_bottom"
+        },
+        {
+          "id": "B",
+          "text": "4/9",
+          "misconception_id": "added_tops_and_bottoms"
+        },
+        {
+          "id": "C",
+          "text": "19/20",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "1/5",
+          "misconception_id": "renamed_bottom_kept_tops"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "19/20",
+      "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
+      "explanation": "The smallest number both 4 and 5 go into is 20. Rename 3/4 as 15/20 and 1/5 as 4/20 so the bottoms match. Add the top numbers: 15 + 4 = 19, giving 19/20.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-hard-4",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-hard-games",
+      "params": {
+        "a": 3,
+        "b": 5,
+        "c": 1,
+        "d": 8
+      },
+      "stem": "A wizard has two spell scrolls that restore 3/5 and 1/8 of a health bar. Together, what fraction of the health bar is restored?",
+      "expression": "3/5 + 1/8",
+      "options": [
+        {
+          "id": "A",
+          "text": "4/13",
+          "misconception_id": "added_tops_and_bottoms"
+        },
+        {
+          "id": "B",
+          "text": "29/40",
+          "misconception_id": null
+        },
+        {
+          "id": "C",
+          "text": "1/10",
+          "misconception_id": "renamed_bottom_kept_tops"
+        },
+        {
+          "id": "D",
+          "text": "3/40",
+          "misconception_id": "multiplied_instead_of_adding"
+        }
+      ],
+      "correct_index": 1,
+      "answer": "29/40",
+      "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
+      "explanation": "The smallest number both 5 and 8 go into is 40. Rename 3/5 as 24/40 and 1/8 as 5/40 so the bottoms match. Add the top numbers: 24 + 5 = 29, giving 29/40.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-hard-5",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-hard-sports",
+      "params": {
+        "a": 2,
+        "b": 4,
+        "c": 2,
+        "d": 6
+      },
+      "stem": "Two relay runners cover 2/4 and 2/6 of the total course. What fraction of the total course have they completed together?",
+      "expression": "2/4 + 2/6",
+      "options": [
+        {
+          "id": "A",
+          "text": "5/6",
+          "misconception_id": null
+        },
+        {
+          "id": "B",
+          "text": "1/3",
+          "misconception_id": "renamed_bottom_kept_tops"
+        },
+        {
+          "id": "C",
+          "text": "1/6",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "D",
+          "text": "1",
+          "misconception_id": "added_tops_kept_first_bottom"
+        }
+      ],
+      "correct_index": 0,
+      "answer": "5/6",
+      "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
+      "explanation": "The smallest number both 4 and 6 go into is 12. Rename 2/4 as 6/12 and 2/6 as 4/12 so the bottoms match. Add the top numbers: 6 + 4 = 10, giving 10/12. Simplify by dividing the top and bottom by 2: 10/12 simplifies to 5/6.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    },
+    {
+      "id": "g5-fractions-add-hard-6",
+      "topic_id": "g5-fractions-add",
+      "standard": "5.NR.3.3",
+      "difficulty": "hard",
+      "verifier_type": "fraction_arithmetic",
+      "template_id": "g5-fractions-add-hard-nature",
+      "params": {
+        "a": 1,
+        "b": 5,
+        "c": 3,
+        "d": 6
+      },
+      "stem": "A river flooded 1/5 of a valley in January and 3/6 more in February. What fraction of the valley flooded over those two months?",
+      "expression": "1/5 + 3/6",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/10",
+          "misconception_id": "multiplied_instead_of_adding"
+        },
+        {
+          "id": "B",
+          "text": "3/10",
+          "misconception_id": "subtracted_instead_of_adding"
+        },
+        {
+          "id": "C",
+          "text": "7/10",
+          "misconception_id": null
+        },
+        {
+          "id": "D",
+          "text": "4/5",
+          "misconception_id": "added_tops_kept_first_bottom"
+        }
+      ],
+      "correct_index": 2,
+      "answer": "7/10",
+      "hint": "Take this step by step. First find how much is needed in all before checking what is left to get.",
+      "explanation": "The smallest number both 5 and 6 go into is 30. Rename 1/5 as 6/30 and 3/6 as 15/30 so the bottoms match. Add the top numbers: 6 + 15 = 21, giving 21/30. Simplify by dividing the top and bottom by 3: 21/30 simplifies to 7/10.",
+      "provenance": "verified",
+      "model": "template-seed",
+      "prompt_version": "seed-v2"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Measures of Center: Mean & Median",
+  "big_idea": "Mean and median summarize a whole set of data points into a single central representative value.",
+  "explanation": "The mean (equal share value) is found by adding all data points and dividing by the total number of points. The median is the physical middle value when data is arranged in numerical order from least to greatest.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Find sum of scores 10, 20, 30, 40",
+      "math": "10 + 20 + 30 + 40 = 100"
+    },
+    {
+      "step": 2,
+      "text": "Divide sum by count of 4",
+      "math": "100 / 4 = 25"
+    },
+    {
+      "step": 3,
+      "text": "Verify with mean function",
+      "math": "mean(10, 20, 30, 40) = 25"
+    }
+  ],
+  "key_vocab": [
+    "Mean",
+    "Median",
+    "Center",
+    "Data Set",
+    "Equal Share"
+  ],
+  "real_world_example": "If 4 friends catch 10, 20, 30, and 40 fish, sharing them equally gives a mean of 25 fish each.",
+  "common_mistakes": [
+    "Picking the middle number before sorting the data in numerical order.",
+    "Dividing the sum by 2 instead of the number of data points.",
+    "Confusing mean (average) with median (middle value)."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g6-mean-median"
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Multi-Digit Multiplication",
+  "big_idea": "Multi-digit multiplication breaks numbers into place-value partial products and combines them.",
+  "explanation": "To multiply two-digit or three-digit numbers, multiply each digit of the top number by the ones digit of the bottom number, then by the tens digit (placing a 0 placeholder in the ones column), and add the results.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Multiply 24 by ones digit 3",
+      "math": "24 * 3 = 72"
+    },
+    {
+      "step": 2,
+      "text": "Multiply 24 by tens digit 10",
+      "math": "24 * 10 = 240"
+    },
+    {
+      "step": 3,
+      "text": "Add the partial products",
+      "math": "72 + 240 = 312"
+    }
+  ],
+  "key_vocab": [
+    "Partial Product",
+    "Regrouping",
+    "Tens Place",
+    "Factor",
+    "Standard Algorithm"
+  ],
+  "real_world_example": "An auditorium with 24 rows of 13 seats has 312 total seats.",
+  "common_mistakes": [
+    "Forgetting to put a zero in the ones place when multiplying by the tens digit.",
+    "Multiplying carried numbers instead of adding them.",
+    "Misaligning columns when adding partial products."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g5-multiply"
+}

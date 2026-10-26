@@ -1,0 +1,37 @@
+{
+  "title": "Powers of Ten and Place Value Shifts",
+  "big_idea": "Each place value is ten times greater than the place to its right and one-tenth of the place to its left.",
+  "explanation": "When you multiply a whole number by 10, every digit shifts one place to the left, which adds a zero in the ones place. Multiplying by 100 shifts digits two places to the left. Dividing by 10 shifts digits one place to the right.",
+  "worked_example": [
+    {
+      "step": 1,
+      "text": "Start with 45 and multiply by 10",
+      "math": "45 * 10 = 450"
+    },
+    {
+      "step": 2,
+      "text": "Multiply the new value by 10 again to see a shift of 100",
+      "math": "450 * 10 = 4500"
+    },
+    {
+      "step": 3,
+      "text": "Check that 45 times 100 matches",
+      "math": "45 * 100 = 4500"
+    }
+  ],
+  "key_vocab": [
+    "Place Value",
+    "Power of Ten",
+    "Tenths",
+    "Hundredths",
+    "Shift"
+  ],
+  "real_world_example": "If 1 gold coin buys 10 arrows, then 45 gold coins buy 45 * 10 = 450 arrows.",
+  "common_mistakes": [
+    "Adding the number 10 instead of multiplying by 10.",
+    "Adding zeros without understanding that digits shifted to higher place values.",
+    "Moving the decimal point in the wrong direction when multiplying."
+  ],
+  "source": "hand-authored",
+  "topic_id": "g5-place-value"
+}
