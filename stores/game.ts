@@ -75,6 +75,61 @@ export const useGameStore = defineStore('game', {
       } catch (e) {
         console.warn('Failed to save to storage', e)
       }
+
+      // Automatically sync name, grade, and progression to SQLite database
+      if (this.student?.name && this.student.name.trim()) {
+        fetch('/api/user', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: this.student.name.trim(),
+            grade: this.student.grade || 5,
+            level: this.student.level || 1,
+            currentXp: this.student.currentXp || 0,
+            xpToNextLevel: this.student.xpToNextLevel || 1000,
+            totalXp: this.student.totalXp || 0,
+            streakDays: this.student.streakDays || 0,
+            streakShields: this.student.streakShields || 0,
+            equippedTitle: this.student.equippedTitle || 'Seeker Initiate',
+            state: {
+              topicMasteries: this.topicMasteries,
+              achievements: this.achievements,
+              activities: this.activities
+            }
+          })
+        }).catch(() => {})
+      }
+    },
+    async loadUserFromDb(name: string): Promise<{ exists: boolean; user: any | null }> {
+      const clean = name.trim()
+      if (!clean) return { exists: false, user: null }
+      try {
+        const res = await fetch(`/api/user?name=${encodeURIComponent(clean)}`)
+        if (res.ok) {
+          const data = await res.json()
+          if (data.exists && data.user) {
+            const u = data.user
+            this.student.name = u.name
+            this.student.grade = u.grade === 6 ? 6 : 5
+            this.student.level = u.level || 1
+            this.student.currentXp = u.currentXp || 0
+            this.student.xpToNextLevel = u.xpToNextLevel || 1000
+            this.student.totalXp = u.totalXp || 0
+            this.student.streakDays = u.streakDays || 0
+            this.student.streakShields = u.streakShields || 0
+            this.student.equippedTitle = u.equippedTitle || 'Seeker Initiate'
+            if (u.state) {
+              if (Array.isArray(u.state.topicMasteries)) this.topicMasteries = u.state.topicMasteries
+              if (Array.isArray(u.state.achievements)) this.achievements = u.state.achievements
+              if (Array.isArray(u.state.activities)) this.activities = u.state.activities
+            }
+            return { exists: true, user: u }
+          }
+        }
+      } catch (err) {
+        console.warn('Failed to load user from database', err)
+      }
+      return { exists: false, user: null }
     },
     awardXp(amount: number, reason: string) {
       this.student.currentXp += amount
@@ -151,7 +206,24 @@ export const useGameStore = defineStore('game', {
         const res = await fetch(`/api/questions?topic=${topicId}`)
         if (res.ok) {
           const data = await res.json()
-          this.quiz.questions = data.questions?.slice(0, 10) || []
+          const raw = Array.isArray(data.questions) ? data.questions : []
+          this.quiz.questions = raw.map((q: any) => ({
+            ...q,
+            stem: q.stem || q.question || '',
+            question: q.stem || q.question || '',
+            correctIndex: q.correct_index !== undefined ? q.correct_index : (q.correctIndex ?? 0),
+            correct_index: q.correct_index !== undefined ? q.correct_index : (q.correctIndex ?? 0),
+            options: (q.options || []).map((opt: any, idx: number) => {
+              if (typeof opt === 'string') {
+                return { id: ['A', 'B', 'C', 'D'][idx], text: opt, misconception_id: null }
+              }
+              return {
+                id: opt.id || ['A', 'B', 'C', 'D'][idx],
+                text: opt.text !== undefined ? String(opt.text) : String(opt),
+                misconception_id: opt.misconception_id || opt.misconception || null
+              }
+            })
+          })).slice(0, 10)
         }
       } catch (e) {
         this.quiz.questions = []
@@ -160,7 +232,8 @@ export const useGameStore = defineStore('game', {
     submitAnswer(optionIndex: number) {
       const q = this.quiz.questions[this.quiz.currentIndex]
       if (!q) return
-      const correct = optionIndex === q.correctIndex
+      const targetCorrectIdx = q.correct_index !== undefined ? q.correct_index : q.correctIndex
+      const correct = optionIndex === targetCorrectIdx
       if (correct) {
         this.quiz.score += 10
         this.quiz.correctStreak += 1
@@ -169,7 +242,9 @@ export const useGameStore = defineStore('game', {
           this.quiz.correctStreak = 0
         }
       } else {
-        this.quiz.lastMisconception = q.misconception || null
+        const chosenOpt = q.options?.[optionIndex]
+        const misc = (typeof chosenOpt === 'object' && chosenOpt ? (chosenOpt.misconception_id || chosenOpt.misconception) : null) || q.misconception || null
+        this.quiz.lastMisconception = misc
         this.quiz.correctStreak = 0
         if (this.quiz.difficulty === 'hard') this.quiz.difficulty = 'medium'
         else if (this.quiz.difficulty === 'medium') this.quiz.difficulty = 'easy'

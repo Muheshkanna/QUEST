@@ -20,6 +20,7 @@ ENV/
 # Logs
 logs
 *.log
+*.db
 
 # Misc
 .DS_Store

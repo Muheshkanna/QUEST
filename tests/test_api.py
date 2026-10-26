@@ -348,3 +348,71 @@ def test_api_answer_overrides_corrupted_stored_correct_index(client, monkeypatch
     # The API MUST override corrupted_stored_index and correctly identify true_index
     assert data["correct_index"] == true_index
     assert data["correct"] is True
+
+
+def test_user_persistence_db(client):
+    """Verify that user profile, grade, and quest progression persist in SQLite database."""
+    # 1. Unknown user returns exists: false
+    r_unknown = client.get("/api/user?name=NonExistentScholarXYZ")
+    assert r_unknown.status_code == 200
+    assert r_unknown.json()["exists"] is False
+
+    # 2. Save user profile with specific grade and state
+    payload = {
+        "name": "Alex Scholar",
+        "grade": 6,
+        "level": 3,
+        "totalXp": 1250,
+        "equippedTitle": "Decimal Knight",
+        "state": {
+            "topicMasteries": [{"topicId": "g6-equations", "attempts": 2, "bestScore": 90}]
+        }
+    }
+    r_save = client.post("/api/user", json=payload)
+    assert r_save.status_code == 200
+    assert r_save.json()["success"] is True
+    saved_user = r_save.json()["user"]
+    assert saved_user["name"] == "Alex Scholar"
+    assert saved_user["grade"] == 6
+    assert saved_user["level"] == 3
+    assert saved_user["totalXp"] == 1250
+
+    # 3. Retrieve user by case-insensitive name (simulating a new session)
+    r_get = client.get("/api/user?name=alex scholar")
+    assert r_get.status_code == 200
+    res = r_get.json()
+    assert res["exists"] is True
+    loaded_user = res["user"]
+    assert loaded_user["name"] == "Alex Scholar"
+    assert loaded_user["grade"] == 6
+    assert loaded_user["totalXp"] == 1250
+    assert loaded_user["equippedTitle"] == "Decimal Knight"
+    assert loaded_user["state"]["topicMasteries"][0]["topicId"] == "g6-equations"
+
+
+def test_user_password_auth(client):
+    """Verify password protection, duplicate avoidance, and authenticated session loading."""
+    username = "UniqueScholar42"
+    pwd = "secretPassword42"
+
+    # 1. Register with name, password, grade
+    r_reg = client.post("/api/user/register", json={"name": username, "password": pwd, "grade": 6})
+    assert r_reg.status_code == 200
+    assert r_reg.json()["success"] is True
+    assert r_reg.json()["user"]["grade"] == 6
+
+    # 2. Duplicate registration attempt should be rejected with 409 Conflict
+    r_dup = client.post("/api/user/register", json={"name": username, "password": "otherPassword", "grade": 5})
+    assert r_dup.status_code == 409
+
+    # 3. Wrong password on login should be rejected with 401 Unauthorized
+    r_wrong = client.post("/api/user/login", json={"name": username, "password": "wrongPassword"})
+    assert r_wrong.status_code == 401
+
+    # 4. Correct password loads the user's saved data and grade
+    r_login = client.post("/api/user/login", json={"name": username, "password": pwd})
+    assert r_login.status_code == 200
+    assert r_login.json()["success"] is True
+    assert r_login.json()["user"]["name"] == username
+    assert r_login.json()["user"]["grade"] == 6
+

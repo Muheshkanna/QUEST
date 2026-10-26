@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import type { StudentProfile } from '~/types/quest'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 
 const props = defineProps<{
   student: StudentProfile
@@ -12,12 +14,44 @@ const emit = defineEmits<{
   (e: 'resetDemo'): void
 }>()
 
+const route = useRoute()
+
+// Defensive wrapper — prevents crashes if student fields are undefined during hydration
+const s = computed(() => ({
+  name: props.student?.name ?? '',
+  title: props.student?.title ?? '',
+  avatar: props.student?.avatar ?? '⚔️',
+  level: props.student?.level ?? 1,
+  currentXp: props.student?.currentXp ?? 0,
+  xpToNextLevel: props.student?.xpToNextLevel ?? 1000,
+  totalXp: props.student?.totalXp ?? 0,
+  streakDays: props.student?.streakDays ?? 0,
+  streakShields: props.student?.streakShields ?? 0,
+  grade: props.student?.grade ?? 5,
+}))
+
 const navItems = [
-  { id: 'command-center', label: 'Command Center', icon: '🏛️' },
-  { id: 'realms', label: 'Realms of Study', icon: '🗺️' },
-  { id: 'codex', label: 'Scholar Codex', icon: '📜' },
-  { id: 'achievements', label: 'Vault of Glory', icon: '🏆' }
+  { id: 'command-center', label: 'Command Center', icon: '🏛️', to: '/' },
+  { id: 'realms', label: 'Realms of Study', icon: '🗺️', to: '/map' },
+  { id: 'codex', label: 'Scholar Codex', icon: '📜', to: '/codex' },
+  { id: 'achievements', label: 'Vault of Glory', icon: '🏆', to: '/vault' }
 ]
+
+const isTabActive = (item: typeof navItems[0]) => {
+  if (item.id === 'command-center') {
+    return route.path === '/'
+  }
+  if (item.id === 'realms') {
+    return route.path === '/map' || route.path.startsWith('/lesson') || route.path.startsWith('/quiz') || route.path.startsWith('/results')
+  }
+  if (item.id === 'codex') {
+    return route.path.startsWith('/codex')
+  }
+  if (item.id === 'achievements') {
+    return route.path.startsWith('/vault')
+  }
+  return props.activeNav === item.id
+}
 </script>
 
 <template>
@@ -41,18 +75,18 @@ const navItems = [
 
       <!-- Main Navigation -->
       <nav class="header-nav" aria-label="Main Navigation">
-        <button
+        <NuxtLink
           v-for="item in navItems"
           :key="item.id"
+          :to="item.to"
           class="nav-tab"
-          :class="{ 'is-active': activeNav === item.id }"
+          :class="{ 'is-active': isTabActive(item) }"
           @click="emit('update:activeNav', item.id)"
-          type="button"
         >
           <span class="nav-icon" aria-hidden="true">{{ item.icon }}</span>
           <span class="nav-label">{{ item.label }}</span>
-          <span v-if="activeNav === item.id" class="active-indicator" />
-        </button>
+          <span v-if="isTabActive(item)" class="active-indicator" />
+        </NuxtLink>
       </nav>
 
       <!-- Student HUD / Metrics Pill -->
@@ -62,7 +96,7 @@ const navItems = [
           <button
             type="button"
             class="btn-grade-toggle"
-            :class="{ 'is-active': student.grade === 5 }"
+            :class="{ 'is-active': s.grade === 5 }"
             @click="emit('update:grade', 5)"
             title="Switch curriculum to Grade 5"
           >
@@ -71,7 +105,7 @@ const navItems = [
           <button
             type="button"
             class="btn-grade-toggle"
-            :class="{ 'is-active': student.grade === 6 }"
+            :class="{ 'is-active': s.grade === 6 }"
             @click="emit('update:grade', 6)"
             title="Switch curriculum to Grade 6"
           >
@@ -83,11 +117,11 @@ const navItems = [
         <div class="hud-streak" title="Daily Learning Streak">
           <span class="streak-icon" role="img" aria-label="Streak Flame">🔥</span>
           <div class="streak-data">
-            <span class="streak-count">{{ student.streakDays }}</span>
+            <span class="streak-count">{{ s.streakDays }}</span>
             <span class="streak-label">Days</span>
           </div>
-          <div v-if="student.streakShields > 0" class="streak-shield" title="Streak Freeze Shield Active">
-            🛡️{{ student.streakShields }}
+          <div v-if="s.streakShields > 0" class="streak-shield" title="Streak Freeze Shield Active">
+            🛡️{{ s.streakShields }}
           </div>
         </div>
 
@@ -95,31 +129,31 @@ const navItems = [
         <div class="hud-level-group" title="Current Level and Progress">
           <div class="level-seal">
             <span class="level-text">LVL</span>
-            <span class="level-num">{{ student.level }}</span>
+            <span class="level-num">{{ s.level }}</span>
           </div>
           <div class="xp-mini-track">
             <div class="xp-mini-meta">
               <span class="xp-label">XP Progress</span>
-              <span class="xp-numbers">{{ student.currentXp.toLocaleString() }} / {{ student.xpToNextLevel.toLocaleString() }}</span>
+              <span class="xp-numbers">{{ s.currentXp.toLocaleString() }} / {{ s.xpToNextLevel.toLocaleString() }}</span>
             </div>
-            <div class="xp-bar-outer" role="progressbar" :aria-valuenow="student.currentXp" :aria-valuemin="0" :aria-valuemax="student.xpToNextLevel">
+            <div class="xp-bar-outer" role="progressbar" :aria-valuenow="s.currentXp" :aria-valuemin="0" :aria-valuemax="s.xpToNextLevel">
               <div 
                 class="xp-bar-inner" 
-                :style="{ width: Math.min(100, Math.round((student.currentXp / student.xpToNextLevel) * 100)) + '%' }" 
+                :style="{ width: Math.min(100, Math.round((s.currentXp / (s.xpToNextLevel || 1000)) * 100)) + '%' }" 
               />
             </div>
           </div>
         </div>
 
         <!-- Student Profile Avatar -->
-        <div class="student-avatar-pill" title="Kaelen Vance — Arcanist of Axioms">
+        <div class="student-avatar-pill">
           <div class="avatar-frame">
-            <span class="avatar-glyph">{{ student.avatar }}</span>
+            <span class="avatar-glyph">{{ s.avatar || '⚔️' }}</span>
             <span class="avatar-status-dot" />
           </div>
           <div class="student-names">
-            <span class="student-name">{{ student.name }}</span>
-            <span class="student-title">{{ student.title }}</span>
+            <span class="student-name">{{ s.name || 'Seeker' }}</span>
+            <span class="student-title">{{ s.title || 'Initiate' }}</span>
           </div>
         </div>
 
@@ -217,6 +251,7 @@ const navItems = [
   position: relative;
   background: transparent;
   border: none;
+  text-decoration: none;
   color: var(--quest-parchment-muted);
   font-family: var(--font-body);
   font-size: 13px;

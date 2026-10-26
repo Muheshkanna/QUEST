@@ -25,6 +25,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from api._lib.adaptive import compute_xp, update_difficulty
 from api._lib.bkt import update as update_bkt
+from api._lib.db import authenticate_user, get_user, register_user, save_user
 from api._lib.grounding import (
     build_lesson_prompt,
     get_misconception_by_id,
@@ -414,6 +415,130 @@ def get_questions(
         "total": len(verified_questions),
         "source": "offline",
     }
+
+
+@app.get(
+    "/api/questions",
+    response_model=Dict[str, Any],
+    responses={404: {"model": ErrorEnvelope}},
+)
+def get_questions_query(
+    topic: Optional[str] = Query(None, description="Topic ID (query parameter)"),
+    topic_id: Optional[str] = Query(None, description="Topic ID alias"),
+    difficulty: Optional[str] = Query(None, description="Filter by difficulty (easy, medium, hard)"),
+    exclude: Optional[str] = Query(None, description="Comma-separated question IDs to exclude"),
+    limit: Optional[int] = Query(10, ge=1, le=50, description="Maximum questions to return"),
+):
+    """Alias for /api/questions/{topic_id} accepting ?topic= query parameter."""
+    target_topic = topic or topic_id
+    if not target_topic:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Missing 'topic' or 'topic_id' query parameter",
+        )
+    return get_questions(
+        topic_id=target_topic,
+        difficulty=difficulty,
+        exclude=exclude,
+        limit=limit,
+    )
+
+
+@app.get("/api/user", response_model=Dict[str, Any])
+def api_get_user(name: str = Query(..., min_length=1, description="Student name or username")):
+    """Look up a student profile by name in the SQLite database."""
+    user = get_user(name)
+    if not user:
+        return {"exists": False, "user": None}
+    return {"exists": True, "user": user}
+
+
+@app.post("/api/user", response_model=Dict[str, Any])
+async def api_save_user(request: Request):
+    """Save or update student profile, grade, and quest progress in the SQLite database."""
+    try:
+        body = await request.json()
+    except Exception:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid JSON payload",
+        )
+    if not body.get("name") or not str(body.get("name")).strip():
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Student name is required",
+        )
+    saved = save_user(body)
+    return {"success": True, "user": saved}
+
+
+@app.post("/api/user/register", response_model=Dict[str, Any])
+async def api_register_user(request: Request):
+    """Register a new scholar with a unique name, password, and grade."""
+    try:
+        body = await request.json()
+    except Exception:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid JSON payload",
+        )
+    name = str(body.get("name", "")).strip()
+    password = str(body.get("password", "")).strip()
+    grade = int(body.get("grade", 5))
+
+    if not name:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Scholar name is required",
+        )
+    if len(password) < 3:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Password must be at least 3 characters",
+        )
+
+    try:
+        user = register_user(name, password, grade)
+        return {"success": True, "user": user}
+    except ValueError as e:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=str(e),
+        )
+
+
+@app.post("/api/user/login", response_model=Dict[str, Any])
+async def api_login_user(request: Request):
+    """Authenticate returning scholar by name and password to retrieve saved session."""
+    try:
+        body = await request.json()
+    except Exception:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid JSON payload",
+        )
+    name = str(body.get("name", "")).strip()
+    password = str(body.get("password", "")).strip()
+
+    if not name or not password:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Both name and password are required to access your account",
+        )
+
+    try:
+        user = authenticate_user(name, password)
+        return {"success": True, "user": user}
+    except LookupError as e:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=str(e),
+        )
+    except PermissionError as e:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=str(e),
+        )
 
 
 @app.post(

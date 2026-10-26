@@ -12,12 +12,31 @@ const answered = ref(false)
 const selectedIdx = ref<number | null>(null)
 const isCorrect = ref(false)
 const showMisconception = ref(false)
+const diagnosedMisconception = ref<string | null>(null)
 
 const currentQ = computed(() => store.quiz.questions[store.quiz.currentIndex])
 const progress = computed(() => {
   const total = store.quiz.questions.length || 10
   return Math.round(((store.quiz.currentIndex) / total) * 100)
 })
+
+const correctIndex = computed(() => {
+  const q = currentQ.value
+  if (!q) return 0
+  return q.correct_index !== undefined ? q.correct_index : (q.correctIndex ?? 0)
+})
+
+const getOptionLetter = (opt: any, idx: number) => {
+  if (typeof opt === 'object' && opt && opt.id) return opt.id
+  return ['A', 'B', 'C', 'D'][idx] || ''
+}
+
+const getOptionText = (opt: any) => {
+  if (typeof opt === 'object' && opt !== null) {
+    return opt.text !== undefined ? String(opt.text) : JSON.stringify(opt)
+  }
+  return String(opt ?? '')
+}
 
 onMounted(() => {
   store.startQuiz(topicId)
@@ -30,14 +49,47 @@ watch(() => store.quiz.completed, (done) => {
   }
 })
 
-function pick(idx: number) {
+async function pick(idx: number) {
   if (answered.value) return
   answered.value = true
   selectedIdx.value = idx
   const q = currentQ.value
-  isCorrect.value = idx === q.correctIndex
-  if (!isCorrect.value && q.misconception) {
+  if (!q) return
+
+  const targetIdx = correctIndex.value
+  isCorrect.value = idx === targetIdx
+
+  if (!isCorrect.value) {
     showMisconception.value = true
+    const chosenOpt = q.options?.[idx]
+    const rawMisc = typeof chosenOpt === 'object' && chosenOpt ? (chosenOpt.misconception_id || chosenOpt.misconception) : null
+    if (rawMisc) {
+      diagnosedMisconception.value = String(rawMisc).replace(/_/g, ' ')
+    } else {
+      diagnosedMisconception.value = null
+    }
+
+    try {
+      const res = await fetch('/api/answer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          topic_id: topicId,
+          question_id: q.id,
+          chosen_index: idx,
+          attempt: 1,
+          state: { combo: store.quiz.correctStreak, difficulty: store.quiz.difficulty }
+        })
+      })
+      if (res.ok) {
+        const data = await res.json()
+        if (data.diagnosis?.kid_label) {
+          diagnosedMisconception.value = data.diagnosis.kid_label
+        }
+      }
+    } catch {
+      // offline fallback
+    }
   }
 }
 
@@ -47,6 +99,7 @@ function next() {
   selectedIdx.value = null
   isCorrect.value = false
   showMisconception.value = false
+  diagnosedMisconception.value = null
 }
 </script>
 
@@ -85,7 +138,7 @@ function next() {
           <span class="difficulty-badge" :class="`diff-${store.quiz.difficulty}`">{{ store.quiz.difficulty.toUpperCase() }}</span>
           <span class="q-number font-mono">Q{{ store.quiz.currentIndex + 1 }}</span>
         </div>
-        <p class="question-text font-display" v-html="currentQ.question"></p>
+        <p class="question-text font-display" v-html="currentQ.stem || currentQ.question"></p>
 
         <!-- Options -->
         <div class="options-grid">
@@ -94,16 +147,16 @@ function next() {
             :key="i"
             class="option-btn"
             :class="{
-              'opt-correct': answered && i === currentQ.correctIndex,
-              'opt-wrong': answered && selectedIdx === i && i !== currentQ.correctIndex,
-              'opt-disabled': answered && i !== currentQ.correctIndex && i !== selectedIdx
+              'opt-correct': answered && i === correctIndex,
+              'opt-wrong': answered && selectedIdx === i && i !== correctIndex,
+              'opt-disabled': answered && i !== correctIndex && i !== selectedIdx
             }"
             :disabled="answered"
             :aria-pressed="selectedIdx === i"
             @click="pick(i)"
           >
-            <span class="option-letter">{{ ['A','B','C','D'][i] }}</span>
-            <span class="option-text">{{ opt }}</span>
+            <span class="option-letter">{{ getOptionLetter(opt, i) }}</span>
+            <span class="option-text">{{ getOptionText(opt) }}</span>
           </button>
         </div>
 
@@ -120,12 +173,12 @@ function next() {
 
         <!-- Misconception card -->
         <transition name="slide-up">
-          <div v-if="showMisconception && currentQ.misconception" class="misconception-card">
+          <div v-if="showMisconception && (diagnosedMisconception || currentQ.misconception)" class="misconception-card">
             <div class="misconception-header">
               <span class="misc-icon">🔍</span>
               <strong class="misc-title font-display">Common Mistake Detected</strong>
             </div>
-            <p class="misc-body">{{ currentQ.misconception }}</p>
+            <p class="misc-body">{{ diagnosedMisconception || currentQ.misconception }}</p>
           </div>
         </transition>
 
