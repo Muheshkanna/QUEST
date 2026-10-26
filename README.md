@@ -1,151 +1,179 @@
-# QUEST: Math Quest
+# Math Quest (QUEST)
 
-A gamified math learning adventure for Grade 5 and Grade 6 students aligned with the official **Georgia Mathematics Standards (K-12)**. Every question is AI-generated and verified by deterministic code (`fractions.Fraction` and safe AST parsing), misconceptions are diagnosed with targeted conceptual feedback, and an empirical evaluation dashboard (`/eval`) tracks AI reliability.
+A gamified math practice app for **Grade 5 and Grade 6** students, aligned to the Georgia Mathematics Standards. This is my submission for **Task 1: Gamified Math Learning Platform**.
 
----
+- **Live demo:** https://potterhead-math-quest.vercel.app/
+- **GitHub:** https://github.com/Muheshkanna/QUEST
+- **Author:** MUHESH KANNA M
 
-## Architecture Overview
-
-- **Frontend**: Nuxt 3 (Vue 3) + TypeScript, Pinia, GSAP, `canvas-confetti`, Web Speech API. Deployed as a static SPA (`ssr: false`, `nuxt generate` into `.output/public`).
-- **Backend API**: Python 3.11, FastAPI, Pydantic v2, `httpx`, `python-dotenv`. Deployed as a Vercel Serverless Function (`api/index.py`).
-- **Mathematical Verifier**: AST-based arithmetic evaluator and exact `fractions.Fraction` equality comparator.
-- **Evaluation Benchmark**: Bayesian Knowledge Tracing (BKT) engine and offline Gemini vs. Groq benchmark scripts (`scripts/run_eval.py`).
+> **Core idea:** every practice question is checked by code, and every wrong answer is diagnosed as a specific misconception. The app recomputes each answer on the server, so a wrong question cannot reach a student.
 
 ---
 
-## Local Development
+## What the app does
 
-### 1. Frontend (Nuxt 3)
+- **Onboarding without accounts.** The student picks Grade 5 or 6 and a nickname. There is no password, no sign-in and no personal data. Progress is saved in the browser (`localStorage`).
+- **World map.** Three themed realms (Enchanted Forest, Temple of Wisdom, Celestial Frontier) group the topics for each grade. 20 topics are registered, and **12 are playable** (see the table below). The rest show "Coming soon".
+- **Lessons.** A plain-language explanation, a step-by-step worked example, vocabulary and common mistakes. A badge shows whether the content is **AI-generated** or **Offline content**.
+- **"Refresh with AI".** Calls Gemini through the backend for a fresh lesson. The result is validated, and the app falls back to the stored lesson on any failure.
+- **Infographic.** An AI-generated illustration (Pollinations.ai) next to an animated SVG step diagram. The math text is drawn by code, so it is always correct.
+- **Narrated explainer.** A slide walkthrough narrated with the browser's Web Speech API, with play/pause, speed control and a transcript.
+- **Adaptive boss quiz.** 10 questions across easy, medium and hard.
+- **Misconception cards.** A wrong answer explains the specific mistake that led to it, then gives a hint and the correct answer with an explanation.
+- **Gamification.** Difficulty-weighted XP, combo multiplier, boss HP bar, levels, badges, a results screen (score, accuracy by difficulty, mastery, top misconception to fix) and confetti.
+- **Mastery tracking.** Bayesian Knowledge Tracing estimates mastery per topic (Novice, Learning, Proficient, Mastered).
+- **Resilience.** If the API is down, the app uses bundled fallback content and shows an "offline content" notice.
+
+### Playable topics (12)
+
+| Grade 5 | Grade 6 |
+|---|---|
+| Adding and Subtracting Fractions (flagship) | Ratios (flagship) |
+| Volume of Rectangular Prisms (flagship) | Unit Rates |
+| Multiplying Fractions | Percents |
+| Decimal Addition and Subtraction | Dividing Fractions by Fractions |
+| Multi-Digit Multiplication | One-Variable Equations |
+| Multi-Digit Division with Remainders | Mean and Median |
+
+**Registered but "Coming soon" (8):** Place Value, Comparing and Rounding Decimals, Dividing Unit Fractions, Order of Operations (Grade 5); Multi-Digit Decimals, Integers, Equivalent Expressions, Exponents (Grade 6). I chose to ship fewer topics that are fully verified rather than more topics with weak content. A topic is only playable if its bank has enough verified questions (at least 3 per level).
+
+**Infographic and narrated explainer available for:** [LIST THE TOPICS THAT HAVE BOTH, e.g. Adding and Subtracting Fractions, Ratios, Volume, ...]
+
+---
+
+## How AI is used
+
+| Where | What it does |
+|---|---|
+| **Gemini API** (`GEMINI_MODEL`) | Generates a fresh lesson on request (`POST /api/lesson/{id}/refresh`). The output is validated with Pydantic and a math check, and the stored lesson is returned on timeout, bad JSON or wrong math. |
+| **Pollinations.ai** | Generates the illustration for the infographic. A local fallback is shown if the image fails to load. |
+| **Web Speech API** (browser) | Reads the explainer narration aloud. |
+| **Versioned prompts** (`prompts/v1/`) | Prompt templates with the standard text and misconception registry injected. |
+
+**Honest note on question generation:** the shipped question bank is **not produced by an LLM at runtime**. It comes from deterministic templates, so every distractor is computed from a known student error and every answer is checked by code. The LLM client (`api/_lib/llm.py`) and the question prompt (`prompts/v1/questions.md`) exist, but bulk LLM question generation was not completed in the time available. Any LLM-written question would have to pass the same verifier before it could be shown.
+
+---
+
+## Correctness: how questions are verified
+
+1. **Safe evaluator.** Every question stores a machine-checkable `expression`, evaluated with Python `fractions.Fraction` through an AST whitelist. There is no `eval()`, and guards limit length, exponent size and node count.
+2. **Server-side recomputation.** `POST /api/answer` recomputes the correct answer from the expression instead of trusting the stored `correct_index`. A test corrupts the stored index and checks the server overrides it.
+3. **Structural checks.** Exactly 4 options, exactly one equals the computed answer, options are distinct after normalization (for example `1/2` and `0.5`), and `correct_index` agrees.
+4. **Distractor provenance.** Every wrong option stores a `misconception_id`. The verifier re-runs that misconception's rule on the question's saved numbers (`params`) and requires the result to equal the option text. A mislabeled or filler distractor fails verification.
+5. **Misconception registry** (`data/misconceptions.json`, rules in `api/_lib/misconceptions.py`). Each entry has a kid-friendly label, a diagnosis, why the mistake fails, and a mini example. Rules describe exactly what the student did, for example `added_tops_and_bottoms`: 1/4 + 1/8 becomes 2/12.
+6. **Audit script.** `python scripts/audit_bank.py` re-verifies every bank and checks answer-position balance (no position above 35%), per-level counts and use of each misconception rule.
+
+**Limit:** the verifier proves the options match the expression. It cannot prove the story in the stem matches the expression, so stems were reviewed by hand (`data/template_review.md`).
+
+## Adaptive logic and scoring
+
+- Start at medium. **2 correct in a row moves up a level. 1 wrong moves down a level.** A wrong answer on hard shows a hint and allows one retry for 50% XP. Levels are clamped at easy and hard.
+- **XP:** easy 10, medium 20, hard 35, multiplied by a combo multiplier capped at 2.0x. XP is awarded only for correct answers.
+- **Mastery:** Bayesian Knowledge Tracing with different guess/slip values per difficulty (`api/_lib/bkt.py`).
+- The ladder, XP and BKT logic exist in both Python and TypeScript so the quiz works offline, and tests check that both give the same results on shared fixtures.
+
+---
+
+## Tech stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | Nuxt 3 (Vue 3), TypeScript, Pinia, GSAP, canvas-confetti (static/SPA build) |
+| Backend | Python, FastAPI, Pydantic v2, httpx |
+| Math checking | `fractions.Fraction` plus an AST-based safe evaluator |
+| AI | Google Gemini API, Pollinations.ai, browser Web Speech API |
+| Data | Static JSON in `data/` and browser `localStorage` (no database) |
+| Tests | pytest, Vitest |
+| Hosting | Vercel (static frontend and Python serverless function, one URL) |
+
+## Repository structure
+
+```
+app/                  Nuxt frontend (pages, components, stores, composables, public/fallback)
+api/index.py          FastAPI app (Vercel function entry)
+api/_lib/             verifier, misconceptions, adaptive, bkt, llm, grounding, schemas
+data/                 topics.json, misconceptions.json, bank/, lessons/, infographics/, explainers/
+prompts/v1/           prompt templates
+scripts/              seedgen/ (template generators), audit_bank.py, build_fallback.py
+tests/                pytest suites
+vercel.json           routing and build settings
+```
+
+## Running locally
+
+Requirements: Node 18+ and Python 3.11+.
+
 ```bash
+# 1. Frontend
 npm install
-npm run dev
-```
-Access the application at `http://localhost:3000`.
+npm run dev                      # http://localhost:3000
 
-### 2. Backend (FastAPI)
-Install Python dependencies and run Uvicorn:
-```bash
+# 2. Backend (second terminal)
 pip install -r requirements.txt
-pip install -r scripts/requirements-dev.txt
-uvicorn api.index:app --reload --port 8000
+uvicorn api.index:app --reload   # http://127.0.0.1:8000  (docs at /api/docs)
 ```
-Verify the health endpoint at:
-`http://localhost:8000/api/health`
 
-### 3. Static Generation
+Create a local `.env` (never commit it):
+
+```
+GEMINI_API_KEY=your_key_here
+GEMINI_MODEL=gemini-2.5-flash
+```
+
+Without a key the app still works fully. Only "Refresh with AI" falls back to the stored lesson.
+
+### Environment variables (names only)
+
+| Name | Purpose |
+|---|---|
+| `GEMINI_API_KEY` | Gemini API key. Read only by the server. |
+| `GEMINI_MODEL` | Model name, for example `gemini-2.5-flash`. |
+| `GEMINI_MODEL_FALLBACKS` | Optional comma-separated backup models. |
+
+### Tests and checks
+
 ```bash
-npm run generate
+pytest -q                       # backend, verifier, rules, provenance, API
+npx vitest run                  # frontend adaptive logic and parity with Python
+python scripts/audit_bank.py    # re-verify every question bank
+python scripts/build_fallback.py  # rebuild offline bundle in app/public/fallback
 ```
-Builds the static application to `.output/public/` with `200.html` SPA routing.
+
+## Deploying to Vercel
+
+1. Push the repo to GitHub and import it in Vercel.
+2. Set **Framework Preset** to **Other**.
+3. Build command `npx nuxt generate`, output directory `.output/public` (also set in `vercel.json`).
+4. Add environment variables `GEMINI_API_KEY` and `GEMINI_MODEL` in Project Settings.
+5. Deploy, then open `/api/health` to confirm the backend is running.
+
+## How to test the main features
+
+1. Open the live URL in a private window and pick a grade and nickname.
+2. Open **Adding and Subtracting Fractions**. Read the lesson, and check the **Infographic** and **Explainer** tabs (press play to hear the narration).
+3. Click **Refresh with AI**. The badge shows whether the lesson is AI-generated or fell back to offline content.
+4. Start the boss battle. Answer some correctly and watch the difficulty ladder move up. Answer one wrong to see the misconception card.
+5. Finish the 10 questions to see the results screen, XP and badges.
+6. Open `/api/docs` to try the API directly.
 
 ---
 
-## Deploy to Vercel
+## Known limitations
 
-Follow these exact steps to deploy to Vercel:
+- **Only 12 of the 20 registered topics are playable.** The others are marked "Coming soon" rather than shipped with unverified content.
+- **The shipped question bank is template-generated, not LLM-generated.** LLM generation is supported by the client and prompts but was not completed. The LLM is used for lesson refresh.
+- **No LLM evaluation dashboard.** `/api/eval` returns an empty state. No model-comparison results are claimed.
+- **No accounts, by design.** Progress is stored per browser. A new device or private window starts fresh. This keeps the app free of personal data for children.
+- **Standards:** every topic has a `standard_verified` flag in `data/topics.json`, and the standard badge is only shown when it is true. Codes not confirmed against georgiastandards.org are marked unverified: [LIST THEM, e.g. g5-place-value, g5-decimal-ops, g5-multiply]. Please check codes against the official site.
+- **Image generation depends on Pollinations.ai**, which can be slow. A local fallback image is shown when it fails.
+- **Narration depends on the browser's voices.** If speech is unavailable, the explainer advances on a timer with text only.
+- **Free-tier Gemini limits** apply to "Refresh with AI" and may cause fallbacks to stored lessons during heavy use.
+- Stem wording was checked by hand, but a small number of awkward questions may remain.
 
-1. **GitHub Push**:
-   Ensure all local changes are committed and push to your GitHub repository:
-   ```bash
-   git push origin main
-   ```
+## Privacy and safety
 
-2. **Import into Vercel**:
-   - Navigate to the [Vercel Dashboard](https://vercel.com/dashboard) and click **Add New Project**.
-   - Select your imported GitHub repository (`QUEST` or `math-quest`).
-   - Keep framework preset as `Other` (or null, as configured in `vercel.json`).
-   - Build Command is automatically configured as `npx nuxt generate`.
-   - Output Directory is automatically set to `.output/public`.
-   - Python Serverless Function is automatically configured at `api/index.py` via `vercel.json` (`includeFiles: "data/**"`).
+No personal data is collected. The nickname is stored only in the student's browser. API keys are read only on the server from environment variables and are not in the repository or the client bundle.
 
-3. **Set Environment Variables**:
-   In Vercel **Project Settings > Environment Variables**, add the following required variables:
-   - `GEMINI_API_KEY`: Your Google AI Studio API key (obtainable at [aistudio.google.com](https://aistudio.google.com)).
-   - `GEMINI_MODEL`: The Gemini model to use for live content (e.g. `gemini-1.5-flash` or `gemini-2.0-flash`).
-   - `GROQ_API_KEY`: (Optional) Groq API key if running comparative evaluation benchmarks.
+## AI-assistance disclosure
 
-4. **Verify Live Deployment**:
-   - Once deployment completes, verify the health endpoint on your live URL:
-     ```bash
-     curl https://<your-project>.vercel.app/api/health
-     ```
-     Expected output:
-     ```json
-     {"status":"online","version":"1.0.0","time":"...","engine":"FastAPI + Python 3.11"}
-     ```
-   - Verify `/api/topics?grade=5` and `/api/questions/g5-fractions-add?difficulty=easy&limit=3`.
-   - In the frontend application HUD, verify that the status indicator displays `API: online`.
-
-
----
-
-## Fallback Architecture Note
-
-> **Serverless Python Fallback Notice:**
-> If Vercel encounters platform restrictions deploying Python Serverless Functions alongside Nuxt static assets, the architecture supports a direct, zero-breaking-change fallback:
-> - Port `api/index.py` and `api/_lib/` into Nuxt Nitro server routes at `server/api/` using TypeScript and the `fraction.js` library.
-> - Maintain the exact same endpoint routes (`/api/health`, `/api/question`, `/api/answer`, `/api/eval`) and Pydantic-equivalent Zod/TypeScript schemas.
-> *Do NOT switch to this fallback unless instructed.*
-
----
-
-## TODO: Georgia Mathematics Standards Verification
-
-All 20 curriculum topics are mapped to official Georgia K-12 standards:
-
-| Topic ID | Grade | Georgia Standard Code | Standard Title / Description | Status |
-|---|---|---|---|---|
-| `g5-place-value` | Grade 5 | `5.NR.1` | Place Value & Powers of 10 | Unverified (cluster code) |
-| `g5-multiply` | Grade 5 | `5.NR.2` | Multi-Digit Whole Number Multiplication | Unverified (cluster code) |
-| `g5-divide` | Grade 5 | `5.NR.2.2` | Multi-Digit Whole Number Division | Verified |
-| `g5-decimal-ops` | Grade 5 | `5.NR.4` | Decimal Addition and Subtraction to Hundredths | Unverified (cluster code) |
-| `g5-fractions-add` | Grade 5 | `5.NR.3.3` | Addition & Subtraction of Fractions with Unlike Denominators | Verified |
-| `g5-fractions-multiply` | Grade 5 | `5.NR.3.4` | Multiplying Fractions and Whole Numbers | Verified |
-| `g5-fractions-divide-unit`| Grade 5 | `5.NR.3.6` | Division of Unit Fractions and Whole Numbers | Verified |
-| `g5-volume` | Grade 5 | `5.GSR.8.3` | Discovering Volume by Packing Right Rectangular Prisms | Verified |
-| `g5-order-ops` | Grade 5 | `5.NR.5` | Order of Operations & Numerical Expressions | Unverified (cluster code) |
-| `g5-decimal-compare-round`| Grade 5| `5.NR.4` | Comparing & Rounding Decimals to Thousandths | Unverified (cluster code) |
-| `g6-ratios` | Grade 6 | `6.NR.4.1` | Ratios and Describing Relationships Between Quantities | Verified |
-| `g6-unit-rates` | Grade 6 | `6.NR.4.4` | Rates and Unit Rates in Ratio Relationships | Verified |
-| `g6-percents` | Grade 6 | `6.NR.4.6` | Calculating Percent as Rate per 100 | Verified |
-| `g6-fraction-division` | Grade 6 | `6.NR.1.2` | Dividing Fractions by Fractions | Verified |
-| `g6-decimals` | Grade 6 | `6.NR.1.3` | Multi-Digit Decimal Operations | Verified |
-| `g6-integers` | Grade 6 | `6.NR.3.1` | Integers, Opposites, and Zero Reference Points | Verified |
-| `g6-equiv-expressions` | Grade 6 | `6.PAR.6.5` | Applying Properties of Operations to Generate Equivalent Expressions | Verified |
-| `g6-equations` | Grade 6 | `6.PAR.7.2` | Writing and Solving One-Step Linear Equations | Verified |
-| `g6-mean-median` | Grade 6 | `6.NR.2.1` | Measures of Center: Mean as Equal Share and Median | Unverified (needs 6.DS.8.2) |
-| `g6-exponents` | Grade 6 | `6.PAR.6.1` | Numerical Expressions Involving Whole-Number Exponents | Verified |
-
-*(Standard codes confirmed against the official Georgia K-12 Mathematics Standards on `georgiastandards.org`; cluster-level codes 5.NR.1, 5.NR.2, 5.NR.4, 5.NR.5 and mismatched standard numbers are marked Unverified).*
-
----
-
-## Rollout Status & Content Safety Valve
-
-In accordance with the content safety valve policy, only curriculum topics that pass full audit verification (deterministic distractor provenance, rule diversity, position distributions <= 35%, and complete per-level counts) are shipped to the active question bank. Topics awaiting rollout have empty banks and display as **"Coming Soon"** on the world map.
-
-| Topic ID | Status | Bank Size | Provenance |
-|---|---|---|---|
-| `g5-fractions-add` | Shipped (Pilot) | 18 questions | Verified (18/18) |
-| `g5-volume` | Shipped (Pilot) | 18 questions | Verified (18/18) |
-| `g6-percents` | Shipped (Pilot) | 18 questions | Verified (18/18) |
-| `g6-equations` | Shipped (Pilot) | 18 questions | Verified (18/18) |
-| `g5-divide` | Shipped (Pilot) | 18 questions | Verified (18/18) |
-| `g6-ratios` | Shipped (Batch A) | 18 questions | Verified (18/18) |
-| `g6-unit-rates` | Shipped (Batch A) | 18 questions | Verified (18/18) |
-| `g5-fractions-multiply` | Shipped (Batch A) | 18 questions | Verified (18/18) |
-| `g6-mean-median` | Shipped (Batch A) | 18 questions | Verified (18/18) |
-| `g5-decimal-ops` | Shipped (Batch B) | 18 questions | Verified (18/18) |
-| `g5-multiply` | Shipped (Batch B) | 18 questions | Verified (18/18) |
-| `g6-fraction-division` | Shipped (Batch B) | 18 questions | Verified (18/18) |
-| `g5-place-value` | Coming Soon (Incomplete) | 0 questions | Empty bank |
-| `g5-decimal-compare-round`| Coming Soon (Incomplete) | 0 questions | Empty bank |
-| `g5-fractions-divide-unit`| Coming Soon (Incomplete) | 0 questions | Empty bank |
-| `g5-order-ops` | Coming Soon (Incomplete) | 0 questions | Empty bank |
-| `g6-decimals` | Coming Soon (Incomplete) | 0 questions | Empty bank |
-| `g6-integers` | Coming Soon (Incomplete) | 0 questions | Empty bank |
-| `g6-equiv-expressions` | Coming Soon (Incomplete) | 0 questions | Empty bank |
-| `g6-exponents` | Coming Soon (Incomplete) | 0 questions | Empty bank |
-
-#   Q U E S T  
- 
+I used AI coding assistants during development, as the assessment allows. I reviewed and tested the code, and I can explain the verifier, the misconception rules, the adaptive logic, BKT and the deployment setup.
