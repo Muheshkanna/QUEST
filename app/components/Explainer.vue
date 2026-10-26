@@ -132,14 +132,15 @@ function speakCurrentSlide() {
 
     utterance.onend = () => {
       if (!isPlaying.value || isDestroyed.value) return
-      isPlaying.value = false
       // Auto-advance to next slide if not on the last slide
       if (currentSlideIndex.value < slides.value.length - 1) {
         timerAdvanceId = setTimeout(() => {
           if (!isDestroyed.value && isPlaying.value) {
             nextSlide()
           }
-        }, 1200)
+        }, 1000)
+      } else {
+        isPlaying.value = false
       }
     }
 
@@ -194,9 +195,10 @@ function startFallbackTimer() {
 
   timerAdvanceId = setTimeout(() => {
     if (isDestroyed.value || !isPlaying.value) return
-    isPlaying.value = false
     if (currentSlideIndex.value < slides.value.length - 1) {
       nextSlide()
+    } else {
+      isPlaying.value = false
     }
   }, durationMs)
 }
@@ -277,6 +279,12 @@ const visualSceneType = computed(() => {
   return 'generic'
 })
 
+function handleVisibilityChange() {
+  if (typeof document !== 'undefined' && document.hidden && isPlaying.value) {
+    stopSpeech()
+  }
+}
+
 onMounted(() => {
   isDestroyed.value = false
   if (typeof window !== 'undefined') {
@@ -285,6 +293,7 @@ onMounted(() => {
       window.speechSynthesis.onvoiceschanged = loadVoices
     }
     window.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('visibilitychange', handleVisibilityChange)
   }
   // Start slide 1 automatically
   speakCurrentSlide()
@@ -295,6 +304,7 @@ onBeforeUnmount(() => {
   stopSpeech()
   if (typeof window !== 'undefined') {
     window.removeEventListener('keydown', handleKeyDown)
+    document.removeEventListener('visibilitychange', handleVisibilityChange)
     if ('speechSynthesis' in window) {
       try {
         window.speechSynthesis.cancel()
