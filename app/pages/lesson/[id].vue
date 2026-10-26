@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useGameStore } from '~/stores/game'
-import { onMounted, ref, computed } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { onMounted, onBeforeUnmount, ref, computed } from 'vue'
+import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router'
 import Infographic from '~/components/Infographic.vue'
 import Explainer from '~/components/Explainer.vue'
 
@@ -17,6 +17,22 @@ const loading = ref(true)
 
 type TabKey = 'lesson' | 'infographic' | 'explainer'
 const activeTab = ref<TabKey>('lesson')
+
+function stopAllSpeech() {
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    try {
+      window.speechSynthesis.cancel()
+    } catch {}
+  }
+}
+
+onBeforeRouteLeave(() => {
+  stopAllSpeech()
+})
+
+onBeforeUnmount(() => {
+  stopAllSpeech()
+})
 
 // Fetch helper with graceful fallback to /fallback/*
 async function fetchWithFallback(apiPath: string, fallbackPath: string): Promise<any | null> {
@@ -75,10 +91,14 @@ const availableTabs = computed(() => {
 })
 
 function selectTab(key: TabKey) {
+  if (activeTab.value === 'explainer' && key !== 'explainer') {
+    stopAllSpeech()
+  }
   activeTab.value = key
 }
 
 function startBattle() {
+  stopAllSpeech()
   router.push(`/quiz/${topicId}`)
 }
 </script>
@@ -512,5 +532,66 @@ function startBattle() {
 .btn-battle:focus-visible {
   outline: 2px solid var(--quest-gold);
   outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .lesson-page {
+    padding: var(--space-md) var(--space-sm);
+    gap: var(--space-md);
+  }
+
+  /* Flagship topics: override split max-width so it doesn't push viewport */
+  .lesson-page.has-split-layout {
+    max-width: 100%;
+  }
+
+  /* Un-stick the infographic on mobile so it scrolls normally */
+  .sticky-visual-wrapper {
+    position: static;
+  }
+
+  .tabs-bar {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+  }
+  .tab-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+    flex: 1;
+    justify-content: center;
+  }
+  .lesson-body,
+  .key-steps,
+  .example-card {
+    padding: 18px 16px;
+  }
+  .lesson-title {
+    font-size: 22px;
+  }
+  .btn-battle {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+
+  /* Ensure lesson-container never causes horizontal scroll */
+  .lesson-container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  /* Right column visual comes after lesson content on mobile */
+  .lesson-right-col {
+    order: -1; /* Show infographic first on mobile, before the text */
+  }
+
+  /* tab-panel should respect viewport */
+  .tab-panel,
+  .tab-panel-focused {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 </style>

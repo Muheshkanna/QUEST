@@ -237,4 +237,20 @@ function masteryFor(id: string) {
 }
 .topic-arrow { font-size: 16px; color: var(--quest-parchment-muted); flex-shrink: 0; transition: transform 0.2s; }
 .topic-node:hover .topic-arrow { transform: translateX(3px); color: var(--realm-color); }
+
+@media (max-width: 640px) {
+  .map-page {
+    padding: var(--space-md) var(--space-sm);
+    gap: var(--space-lg);
+  }
+  .map-title {
+    font-size: 22px;
+  }
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+  .topic-node {
+    padding: 12px;
+  }
+}
 </style>

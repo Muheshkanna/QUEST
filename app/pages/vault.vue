@@ -448,4 +448,24 @@ function getRarityBadgeClass(rarity: string) {
 }
 .req-label { color: var(--quest-gold); font-weight: 700; font-size: 11px; text-transform: uppercase; }
 .req-text { color: var(--quest-parchment-muted); }
+
+@media (max-width: 640px) {
+  .vault-page {
+    padding: var(--space-md) var(--space-sm);
+    gap: var(--space-lg);
+  }
+  .header-banner {
+    padding: 18px 16px;
+    gap: 16px;
+  }
+  .banner-left {
+    gap: 12px;
+  }
+  .page-title {
+    font-size: 24px;
+  }
+  .trophies-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>

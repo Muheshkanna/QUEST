@@ -524,4 +524,36 @@ const xpPct = computed(() => {
 
 .fade-enter-active, .fade-leave-active { transition: opacity 0.4s; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
+
+@media (max-width: 640px) {
+  .home-page {
+    padding: var(--space-md) var(--space-sm);
+  }
+  .onboarding-overlay {
+    padding: var(--space-sm);
+  }
+  .onboarding-card {
+    padding: 24px 18px;
+    gap: 16px;
+  }
+  .onboarding-title {
+    font-size: 22px;
+  }
+  .hero-title {
+    font-size: 22px;
+  }
+  .hero-top-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-switch-scholar {
+    text-align: center;
+  }
+  .action-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .action-card {
+    padding: 14px;
+  }
+}
 </style>

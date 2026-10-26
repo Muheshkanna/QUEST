@@ -489,4 +489,25 @@ const avgScore = computed(() => {
   border-color: var(--quest-gold);
   color: var(--quest-gold);
 }
+
+@media (max-width: 640px) {
+  .codex-page {
+    padding: var(--space-md) var(--space-sm);
+    gap: var(--space-lg);
+  }
+  .page-title {
+    font-size: 24px;
+  }
+  .profile-card, .activity-card, .mastery-matrix-card, .trophy-teaser {
+    padding: 16px;
+  }
+  .trophy-teaser {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .btn-vault {
+    width: 100%;
+    text-align: center;
+  }
+}
 </style>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useGameStore } from '~/stores/game'
-import { onMounted, watch, computed, ref } from 'vue'
+import { onMounted, onBeforeUnmount, watch, computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 const store = useGameStore()
@@ -38,8 +38,21 @@ const getOptionText = (opt: any) => {
   return String(opt ?? '')
 }
 
+function stopSpeech() {
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    try {
+      window.speechSynthesis.cancel()
+    } catch {}
+  }
+}
+
 onMounted(() => {
+  stopSpeech()
   store.startQuiz(topicId)
+})
+
+onBeforeUnmount(() => {
+  stopSpeech()
 })
 
 // Navigate when quiz completes
@@ -360,4 +373,19 @@ function next() {
 .fade-enter-from, .fade-leave-to { opacity: 0; }
 .slide-up-enter-active { transition: all 0.35s ease; }
 .slide-up-enter-from { opacity: 0; transform: translateY(10px); }
+
+@media (max-width: 600px) {
+  .quiz-battle {
+    padding: var(--space-md) var(--space-sm);
+  }
+  .question-card {
+    padding: 20px 16px;
+  }
+  .question-text {
+    font-size: 17px;
+  }
+  .btn-next {
+    width: 100%;
+  }
+}
 </style>

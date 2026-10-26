@@ -642,12 +642,13 @@ onBeforeUnmount(() => {
 .svg-stage-wrapper {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .step-diagram-svg {
   width: 100%;
   height: auto;
-  min-width: 580px;
+  min-width: 440px;
   display: block;
 }
 
@@ -680,6 +681,33 @@ onBeforeUnmount(() => {
   .step-node,
   .flow-arrow {
     transition: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .infographic-container {
+    gap: var(--space-md);
+  }
+  .image-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+  .diagram-panel {
+    padding: var(--space-sm);
+  }
+  .diagram-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .diagram-title {
+    font-size: 15px;
+  }
+  .svg-stage-wrapper {
+    margin: 0 -4px;
+    width: calc(100% + 8px);
+  }
+  .step-diagram-svg {
+    min-width: 360px;
   }
 }
 </style>

@@ -23,6 +23,7 @@ const currentSlide = computed(() => slides.value[currentSlideIndex.value] || nul
 
 // ── Web Speech API Narration State ────────────────────────────────────────
 const isPlaying = ref(false)
+const isDestroyed = ref(false)
 const isSpeechSupported = ref(true)
 const speechNotice = ref('')
 const playbackRate = ref(1.0)
@@ -32,6 +33,7 @@ const currentSentenceIndex = ref(0)
 const showTranscript = ref(false)
 
 let timerAdvanceId: ReturnType<typeof setTimeout> | null = null
+let fallbackStepInterval: ReturnType<typeof setInterval> | null = null
 let utterance: SpeechSynthesisUtterance | null = null
 
 // Split current narration into sentences
@@ -69,13 +71,26 @@ function stopSpeech() {
     clearTimeout(timerAdvanceId)
     timerAdvanceId = null
   }
+  if (fallbackStepInterval) {
+    clearInterval(fallbackStepInterval)
+    fallbackStepInterval = null
+  }
+  if (utterance) {
+    utterance.onend = null
+    utterance.onerror = null
+    utterance.onboundary = null
+    utterance = null
+  }
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-    window.speechSynthesis.cancel()
+    try {
+      window.speechSynthesis.cancel()
+    } catch {}
   }
   isPlaying.value = false
 }
 
 function speakCurrentSlide() {
+  if (isDestroyed.value) return
   stopSpeech()
   if (!currentSlide.value) return
 
@@ -101,6 +116,7 @@ function speakCurrentSlide() {
 
     // Boundary tracking for sentence highlight
     utterance.onboundary = (event) => {
+      if (!isPlaying.value || isDestroyed.value) return
       if (event.name === 'sentence' || event.name === 'word') {
         const charIndex = event.charIndex
         let cumulative = 0
@@ -115,17 +131,24 @@ function speakCurrentSlide() {
     }
 
     utterance.onend = () => {
+      if (!isPlaying.value || isDestroyed.value) return
       isPlaying.value = false
       // Auto-advance to next slide if not on the last slide
       if (currentSlideIndex.value < slides.value.length - 1) {
         timerAdvanceId = setTimeout(() => {
-          nextSlide()
+          if (!isDestroyed.value && isPlaying.value) {
+            nextSlide()
+          }
         }, 1200)
       }
     }
 
     utterance.onerror = (e) => {
-      console.warn('Speech synthesis error or interrupted:', e)
+      // Prevent interrupted or cancelled speech from restarting or advancing slides
+      if (!isPlaying.value || isDestroyed.value || e.error === 'interrupted' || e.error === 'canceled') {
+        return
+      }
+      console.warn('Speech synthesis error:', e)
       speechNotice.value = 'Audio narration unavailable in this browser. Running in visual autoplay mode.'
       startFallbackTimer()
     }
@@ -138,6 +161,7 @@ function speakCurrentSlide() {
 }
 
 function startFallbackTimer() {
+  if (isDestroyed.value) return
   isPlaying.value = true
   const wordCount = (currentSlide.value?.narration || '').split(/\s+/).length
   // Approx 130 words per minute scaled by rate
@@ -148,17 +172,28 @@ function startFallbackTimer() {
   if (sentCount > 1) {
     const stepMs = durationMs / sentCount
     let step = 0
-    const stepInterval = setInterval(() => {
+    fallbackStepInterval = setInterval(() => {
+      if (isDestroyed.value || !isPlaying.value) {
+        if (fallbackStepInterval) {
+          clearInterval(fallbackStepInterval)
+          fallbackStepInterval = null
+        }
+        return
+      }
       step++
       if (step < sentCount) {
         currentSentenceIndex.value = step
       } else {
-        clearInterval(stepInterval)
+        if (fallbackStepInterval) {
+          clearInterval(fallbackStepInterval)
+          fallbackStepInterval = null
+        }
       }
     }, stepMs)
   }
 
   timerAdvanceId = setTimeout(() => {
+    if (isDestroyed.value || !isPlaying.value) return
     isPlaying.value = false
     if (currentSlideIndex.value < slides.value.length - 1) {
       nextSlide()
@@ -179,6 +214,7 @@ function restartSlide() {
 }
 
 function goToSlide(index: number) {
+  if (isDestroyed.value) return
   if (index < 0 || index >= slides.value.length) return
   currentSlideIndex.value = index
   speakCurrentSlide()
@@ -242,6 +278,7 @@ const visualSceneType = computed(() => {
 })
 
 onMounted(() => {
+  isDestroyed.value = false
   if (typeof window !== 'undefined') {
     loadVoices()
     if ('speechSynthesis' in window) {
@@ -254,9 +291,15 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
+  isDestroyed.value = true
   stopSpeech()
   if (typeof window !== 'undefined') {
     window.removeEventListener('keydown', handleKeyDown)
+    if ('speechSynthesis' in window) {
+      try {
+        window.speechSynthesis.cancel()
+      } catch {}
+    }
   }
 })
 
@@ -485,7 +528,7 @@ watch(() => props.topicId, () => {
       <!-- Last Slide "Try It" Action Overlay -->
       <div v-if="currentSlideIndex === slides.length - 1" class="try-it-banner">
         <p class="try-it-text font-display">Walkthrough Complete! Test your skills in battle:</p>
-        <NuxtLink :to="`/quiz/${topicId}`" class="btn-try-it font-display">
+        <NuxtLink :to="`/quiz/${topicId}`" class="btn-try-it font-display" @click="stopSpeech">
           ⚔️ Try It: Enter the Battle →
         </NuxtLink>
       </div>
@@ -1012,5 +1055,58 @@ watch(() => props.topicId, () => {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+@media (max-width: 768px) {
+  .stage-frame {
+    aspect-ratio: auto;
+    min-height: 380px;
+  }
+  .stage-hud {
+    padding: 10px 14px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .hud-title {
+    font-size: 15px;
+  }
+  .scene-svg {
+    max-height: 200px;
+  }
+  .stage-subtitles {
+    padding: 12px 16px;
+  }
+  .subtitle-text {
+    font-size: 13px;
+  }
+  .controls-dock {
+    padding: 10px 12px;
+    gap: 12px;
+  }
+  .dock-playback {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .dock-btn {
+    padding: 8px 10px;
+    font-size: 12px;
+    flex: 1;
+    min-width: 0;
+  }
+  .dock-settings {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .voice-picker-wrapper {
+    flex: 1;
+  }
+  .voice-select {
+    width: 100%;
+  }
+  .try-it-banner {
+    width: 90%;
+    padding: 18px 20px;
+    text-align: center;
+  }
 }
 </style>
